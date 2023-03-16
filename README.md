@@ -70,7 +70,10 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### E) SEO
 
-_Further research needed._
+_Furthermore research is needed._
+
+- Human search: https://humanstxt.org/
+- Robot search: https://www.robotstxt.org/
 
 ### FEATURES
 
