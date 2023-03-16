@@ -104,7 +104,7 @@ _Further research needed._
 -  Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
 
-### - WEBSITE ARCHITECTURE
+### WEBSITE ARCHITECTURE
 
 #### A) About me section:
 
