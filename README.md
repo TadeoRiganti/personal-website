@@ -9,7 +9,7 @@ I don't know yet how to write a proper project's documentation, but for now I wa
 
 ## REQUIREMENTS
 
-### - Sections
+### WEBSITE ARCHITECTURE
 
 #### 1) Landing page
 
@@ -46,7 +46,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 1. Blog posts.
 2. Newsletter subscription (with prefered topics selection if possible).
 
-### - Optimization
+### OPTIMIZATION
 
 #### A) Mobile first
 
@@ -72,7 +72,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 _Further research needed._
 
-### - Features
+### FEATURES
 
 #### A) Essential
 
@@ -88,7 +88,7 @@ _Further research needed._
 
 ## MOODBOARD / REFERENCES
 
-### - Style
+### STYLE
 
 #### A) Visual style: 
 
@@ -104,7 +104,7 @@ _Further research needed._
 -  Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
 
-### - Architecture
+### - WEBSITE ARCHITECTURE
 
 #### A) About me section:
 
@@ -114,7 +114,7 @@ _Further research needed._
 
 - https://phuctm97.com/
 
-### - Features
+### FEATURES
 
 #### A) UI
 
@@ -126,7 +126,7 @@ _Further research needed._
 
 ## DISCOVERY 
 
-### A) References sites
+#### A) References sites
 
 - https://1mb.club/
 - https://512kb.club/
