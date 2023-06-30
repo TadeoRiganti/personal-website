@@ -85,6 +85,7 @@ _Furthermore research is needed._
 
 #### B) Extras / Experimental
 
+- Add some motion (but trying to setting up in a way that users can deactivate it; for accesibility reasons)
 - Model-viewer (because I work on AR/3D solutions).
 - "Blog post to Email HTML system subsription" (Don't know if it's a thing, yet).
 - "Data visualization / interactive infography feeded with a post tag system" (idem). Now I'm thinking about an interactive infographic connected to a timeline; featuring how I went from a T to Pi-shaped skills, letting users to expand information and link projects... but, on second thought, my inner project manager & developer thinks it's a wat too much for me to handle.. 
@@ -104,6 +105,7 @@ _Furthermore research is needed._
 
 #### B) Section:
 
+- Navigation bar: I like the way it reveals information / swap elements while scrolling down: https://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
 -  Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
 
