@@ -122,6 +122,7 @@ _Furthermore research is needed._
 #### B) About me section:
 
 - https://brittanychiang.com/
+- https://lucasestebanlps.github.io/
 - https://leolarrea.com/sobre-mi/
 
 #### C) Blog 
