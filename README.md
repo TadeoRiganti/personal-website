@@ -117,6 +117,7 @@ _Furthermore research is needed._
 ### WEBSITE ARCHITECTURE
 
 #### A) Landing page:
+- https://carolgarciadelbusto.com/
 - https://webflow.com/blog/landing-page-design#:~:text=Components%3A%20These%20landing%20pages%20typically,visitors%20to%20submit%20their%20details.
 
 #### B) About me section:
