@@ -116,11 +116,15 @@ _Furthermore research is needed._
 
 ### WEBSITE ARCHITECTURE
 
-#### A) About me section:
+#### A) Landing page:
+- https://webflow.com/blog/landing-page-design#:~:text=Components%3A%20These%20landing%20pages%20typically,visitors%20to%20submit%20their%20details.
+
+#### B) About me section:
 
 - https://brittanychiang.com/
+- https://leolarrea.com/sobre-mi/
 
-#### B) Blog 
+#### C) Blog 
 
 - https://phuctm97.com/
 
