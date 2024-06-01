@@ -5,9 +5,14 @@ Althought I've just finished learning the basics of HTML and a bit of CSS, my id
 
 I don't know yet how to write a proper project's documentation, but for now I want to keep a non exhaustive list (althought it will get more specific overtime)of the requisites I think would be cool to implement in the future.  
 
+# TABLE OF CONTENTS
+1. [Requirements](#requirements)
+2. [References](#references)
+3. [Discovery](#discovery)
+4. [Backlog](#backlog)
 
 
-## REQUIREMENTS
+## REQUIREMENTS 
 
 ### WEBSITE ARCHITECTURE
 
@@ -90,7 +95,7 @@ _Furthermore research is needed._
 - "Blog post to Email HTML system subsription" (Don't know if it's a thing, yet).
 - "Data visualization / interactive infography feeded with a post tag system" (idem). Now I'm thinking about an interactive infographic connected to a timeline; featuring how I went from a T to Pi-shaped skills, letting users to expand information and link projects... but, on second thought, my inner project manager & developer thinks it's a wat too much for me to handle.. 
 
-## MOODBOARD / REFERENCES
+## REFERENCES
 
 ### STYLE
 
@@ -153,4 +158,23 @@ _Furthermore research is needed._
 - https://cleberg.net/blog/
 - https://funnylookinhat.com/  
 
+## BACKLOG 
+
+### Sprint #1
+1. Develop a basic Home page, with a rudimentary navigation bar, a footer, and a hello world placeholder.
+
+2. Add a basic level of CSS; set colors, font, basic layout. 
+I will try to implement a grid, very similar to the technique explained in the video of <a href="https://www.youtube.com/watch?v=_lEkD8IGkwo&list=PLJY_V4DjUsO4tHMvk2B2drdY9XN3gY6Mr&index=19&t=24s">The easiest way to get started with GRID layout</a> by <a href="https://www.youtube.com/@KevinPowell">Kevin Powell</a>. 
+
+
+### Sprint #2
+Develop the blog page. 
+I know, i know!... I should start with the landing page. But one of my main motivations to build my own website is just to public any content from my site; and try to start blog about topics I want to talk reducing platform reliance and harness SEO strength or something like that. 
+
+↑↑↑ Hey future me!  change this later ↑↑↑
+
+
+___
+
 Well, that's all for today. Thanks for reading!
+
