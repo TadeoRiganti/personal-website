@@ -111,7 +111,7 @@ _Furthermore research is needed._
 #### B) Section:
 
 - Navigation bar: I like the way it reveals information / swap elements while scrolling down: https://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
--  Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
+- Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
 
 ### WEBSITE ARCHITECTURE
@@ -127,19 +127,25 @@ _Furthermore research is needed._
 - https://brittanychiang.com/
 - https://lucasestebanlps.github.io/
 - https://leolarrea.com/sobre-mi/
+- https://www.annefreude.com/cv
 
 #### C) Services:
-https://www.cassmackenzie.com/freelance-graphic-design-services
+- https://www.ryangittings.co.uk/services/
+- https://www.davejonesdesign.co.uk/design-process
+- https://www.cassmackenzie.com/freelance-graphic-design-services
 - https://www.cassmackenzie.com/freelance-brand-strategy-services-melbourne
 
 #### D) Portfolio
 - https://www.cassmackenzie.com/tilda-cacao-branding-packaging
 - https://www.cassmackenzie.com/costafox-property-developer-branding
+- https://www.annefreude.com/work/elli
 
 
 #### E) Blog 
-
 - https://phuctm97.com/
+
+#### F) Contact 
+- https://adamgreenough.net/contact/ 
 
 ### FEATURES
 
