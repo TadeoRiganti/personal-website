@@ -23,6 +23,18 @@
     --error-color: #ba1a1a;
 }
 
+/* --- Themes --- */
+
+.light-theme {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+.dark-theme {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 /* --- Reset style --- */
 
 * {
@@ -74,8 +86,9 @@ SOURCE:
  */
 
 section {
-    margin: 100px auto; /* Temporary */
+    padding: 50px 50px; /* Temporary as I'll use a Grid layout */
 }
+
 
 
 /* === 1. PRIMARY LAYOUT STRUCTURE === */
@@ -87,15 +100,15 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 h3 {
-    font-size: clamp(1.25rem, 2.25vw, 2rem);
+    font-size: clamp(1.125rem, 1.5vw, 1.75rem);
 }
 
 p {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
 
