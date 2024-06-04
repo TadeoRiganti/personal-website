@@ -19,12 +19,14 @@
     --error-color: #ba1a1a;
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
+
 
 .bebas-neue-regular {
     font-family: "Bebas Neue", sans-serif;
@@ -41,12 +43,16 @@
 }
 
  /* 
-    Note:
+    SETTINGS:
     <uniquifier>: Use a unique and descriptive class name
     <weight ("wgt")>: Use a value from 300 to 800
     <italic ("ital")>
     <width ("wdth")>: 100 → Regular | 87.5 → Semicondensed | 75 → condensed
-*/
+
+    SOURCE: https://fonts.google.com/knowledge/using_type/styling_type_on_the_web_with_variable_fonts
+    
+ */
+
 
 
 /* === 1. PRIMARY LAYOUT STRUCTURE === */
