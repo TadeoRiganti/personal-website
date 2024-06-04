@@ -1,3 +1,12 @@
+/* CSS DIRECTORY
+	0. = GLOBAL SETTINGS (resets, scrollbars, etc.)
+	1. = PRIMARY LAYOUT STRUCTURE (body, primary divs)
+	2. = SECONDARY LAYOUT STRUCTURE (header, footer, sidebar)
+	3. = TERTIARY LAYOUT STRUCTURE (page regions, floats)
+*/
+
+/* === 0. GLOBAL SETTINGS === */
+
 :root {
     --primary-color: #FFFFFF;
     --secondary-color: #252525;
@@ -16,3 +25,10 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+
+/* === 1. PRIMARY LAYOUT STRUCTURE === */
+
+/* === 2. SECONDARY LAYOUT STRUCTURE === */
+
+/* === 3. TERTIARY LAYOUT STRUCTURE === */
