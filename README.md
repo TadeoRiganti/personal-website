@@ -117,8 +117,10 @@ _Furthermore research is needed._
 ### WEBSITE ARCHITECTURE
 
 #### A) Landing page:
+- https://matthewwoodard.com/
 - https://carolgarciadelbusto.com/
 - https://webflow.com/blog/landing-page-design#:~:text=Components%3A%20These%20landing%20pages%20typically,visitors%20to%20submit%20their%20details.
+- https://www.cassmackenzie.com/freelance-brand-strategy-services-melbourne
 
 #### B) About me section:
 
@@ -126,7 +128,16 @@ _Furthermore research is needed._
 - https://lucasestebanlps.github.io/
 - https://leolarrea.com/sobre-mi/
 
-#### C) Blog 
+#### C) Services:
+https://www.cassmackenzie.com/freelance-graphic-design-services
+- https://www.cassmackenzie.com/freelance-brand-strategy-services-melbourne
+
+#### D) Portfolio
+- https://www.cassmackenzie.com/tilda-cacao-branding-packaging
+- https://www.cassmackenzie.com/costafox-property-developer-branding
+
+
+#### E) Blog 
 
 - https://phuctm97.com/
 
