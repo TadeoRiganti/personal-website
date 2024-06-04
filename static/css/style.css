@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #252525;
+    --tertiary-color: #00A650;
+
+    --neutral-color-75: hwb(0 25% 75%); 
+    --neutral-color-50: hwb(0 50% 50%);
+    --neutral-color-25: hwb(0 75% 25%);
+
+    --error-color: #ba1a1a;
+}
+
 * {
     margin: 0;
     padding: 0;
