@@ -12,13 +12,15 @@
 
 /* --- Layout  --- */
 
-.content-grid {
+.content-grid, 
+.full-width {
     display: grid;
     grid-template-columns: 
        [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
 }
 
-.content-grid > * {
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
     grid-column: content;
 }
 
@@ -56,6 +58,7 @@
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
+
 
 /* --- Reset style --- */
 
