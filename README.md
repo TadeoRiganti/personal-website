@@ -117,6 +117,7 @@ _Furthermore research is needed._
 ### WEBSITE ARCHITECTURE
 
 #### A) Landing page:
+- https://www.foxgr.com/
 - https://matthewwoodard.com/
 - https://carolgarciadelbusto.com/
 - https://webflow.com/blog/landing-page-design#:~:text=Components%3A%20These%20landing%20pages%20typically,visitors%20to%20submit%20their%20details.
@@ -183,6 +184,7 @@ _Furthermore research is needed._
 
 #### D) Type of content
 - https://www.mjvinnovation.com/blog/innovation-strategy-unleashing-growth-through-strategic-ingenuity/
+- https://www.foxgr.com/insights/the-role-of-a-strategy-consultant
 
 ## BACKLOG 
 
