@@ -9,6 +9,13 @@
 
 /* === 0. GLOBAL SETTINGS === */
 
+/* --- Layout  --- */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 /* --- Colors --- */
 
 :root {
