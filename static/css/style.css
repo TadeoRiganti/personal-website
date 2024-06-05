@@ -15,7 +15,7 @@
 .content-grid {
     display: grid;
     grid-template-columns: 
-        100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px;
+       [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
 }
 
 .content-grid > * {
@@ -24,6 +24,10 @@
 
 .content-grid > .breakout {
     grid-column: breakout;
+}
+
+.content-grid > .full-width {
+    grid-column: full-width;
 }
 
 
