@@ -179,7 +179,10 @@ _Furthermore research is needed._
 - https://danluu.com/
 - https://datatxt.org/
 - https://cleberg.net/blog/
-- https://funnylookinhat.com/  
+- https://funnylookinhat.com/
+
+#### D) Type of content
+- https://www.mjvinnovation.com/blog/innovation-strategy-unleashing-growth-through-strategic-ingenuity/
 
 ## BACKLOG 
 
