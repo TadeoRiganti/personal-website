@@ -13,10 +13,11 @@
 
 .content-grid, 
 .full-width {
+    /* Only need to change this variables */
     --padding-inline: 2rem;
     --content-max-width: 70ch;
     --breakout-max-width: 85ch;
-
+    
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
     display: grid;
@@ -41,7 +42,13 @@
     grid-column: full-width;
 }
 
+/* REFERENCE 1: An alternate approach to wrappers and containers, by Kevin Powell: https://www.youtube.com/watch?v=c13gpBrnGEw&list=PLJY_V4DjUsO4tHMvk2B2drdY9XN3gY6Mr&index=18&t=162s */
+/* REFERENCE 2: Original article about this technique, by Ryan Mulligan: https://ryanmulligan.dev/blog/layout-breakouts/ */
+/* NOTE FOR MY FUTURE ME: Try the Layout setup of Ryan, wich adds:
+    - Popout
+    - Full size is different */
 
+    
 /* --- Colors --- */
 
 :root {
