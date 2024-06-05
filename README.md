@@ -89,11 +89,11 @@ _Furthermore research is needed._
 - Variable fonts; weight, style and width. 
 
 #### B) Extras / Experimental
-
 - Add some motion (but trying to setting up in a way that users can deactivate it; for accesibility reasons)
 - Model-viewer (because I work on AR/3D solutions).
 - "Blog post to Email HTML system subsription" (Don't know if it's a thing, yet).
 - "Data visualization / interactive infography feeded with a post tag system" (idem). Now I'm thinking about an interactive infographic connected to a timeline; featuring how I went from a T to Pi-shaped skills, letting users to expand information and link projects... but, on second thought, my inner project manager & developer thinks it's a wat too much for me to handle.. 
+- https://realestate-neotix.vercel.app/
 
 ## REFERENCES
 
