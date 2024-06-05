@@ -1,0 +1,154 @@
+/* CSS DIRECTORY
+	0. = GLOBAL SETTINGS (resets, scrollbars, etc.)
+	1. = PRIMARY LAYOUT STRUCTURE (body, primary divs)
+	2. = SECONDARY LAYOUT STRUCTURE (header, footer, sidebar)
+	3. = TERTIARY LAYOUT STRUCTURE (page regions, floats)
+*/
+
+
+
+/* === 0. GLOBAL SETTINGS === */
+
+/* --- Layout  --- */
+
+.content-grid, 
+.full-width {
+    /* Only need to change this variables */
+    --padding-inline: 2rem;
+    --content-max-width: 70ch;
+    --breakout-max-width: 85ch;
+    
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+
+    display: grid;
+    grid-template-columns: 
+       [full-width-start] minmax(var(--padding-inline), 1fr) 
+       [breakout-start] minmax(0, var(--breakout-size) )
+       [content-start] min(100% - var(--padding-inline) * 2, var(--content-max-width)) [content-end] 
+       minmax(0, var(--breakout-size)) [breakout-end] 
+       minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+
+.content-grid > .full-width {
+    grid-column: full-width;
+}
+
+/* REFERENCE 1: An alternate approach to wrappers and containers, by Kevin Powell: https://www.youtube.com/watch?v=c13gpBrnGEw&list=PLJY_V4DjUsO4tHMvk2B2drdY9XN3gY6Mr&index=18&t=162s */
+/* REFERENCE 2: Original article about this technique, by Ryan Mulligan: https://ryanmulligan.dev/blog/layout-breakouts/ */
+/* NOTE FOR MY FUTURE ME: Try the Layout setup of Ryan, wich adds:
+    - Popout
+    - Full size is different */
+
+
+/* --- Colors --- */
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #252525;
+    --tertiary-color: #00A650;
+
+    --neutral-color-75: hwb(0 25% 75%); 
+    --neutral-color-50: hwb(0 50% 50%);
+    --neutral-color-25: hwb(0 75% 25%);
+
+    --error-color: #ba1a1a;
+}
+
+/* --- Themes --- */
+
+.light-theme {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+.dark-theme {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/* --- Reset style --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* --- Typefaces --- */
+
+/* Display Font */
+
+h1 {
+    font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Text font */
+
+:not(h1) {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+/* About fonts
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}  
+    
+SETTINGS:
+    <uniquifier>: Use a unique and descriptive class name
+    <weight ("wgt")>: Use a value from 300 to 800
+    <italic ("ital")>
+    <width ("wdth")>: 100 → Regular | 87.5 → Semicondensed | 75 → condensed
+
+SOURCE:
+    https://fonts.google.com/knowledge/using_type/styling_type_on_the_web_with_variable_fonts
+    
+ */
+
+
+/* === 1. PRIMARY LAYOUT STRUCTURE === */
+
+/* --- 1.1 Elements --- */
+
+h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.125rem, 1.5vw, 1.75rem);
+}
+
+p {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+}
+
+
+
+/* === 2. SECONDARY LAYOUT STRUCTURE === */
+
+/* === 3. TERTIARY LAYOUT STRUCTURE === */
