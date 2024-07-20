@@ -4,6 +4,10 @@
     1fr [content-start] 1fr [content-end] 1fr;
 }
 
+.content-grid > * {
+    grid-column: content;
+}
+
 :root {
     --color-scheme: dark;
   
