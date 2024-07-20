@@ -1,4 +1,5 @@
 .content-grid {
+    /* Only update this */
     --padding-inline: 2rem;
     --content-max-width: 70ch; 
     --breakout-max-width: 85ch;
