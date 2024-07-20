@@ -170,12 +170,15 @@
     grid-template-areas: "sidebar main-content";
   }
   
+header {
+  background-color: var(--clr-secondary-500);
+}
+
   nav {
     top: 0;
     position: sticky;
     /* svh prevents to overflow in movile */
     max-height: 100svh;
-    background-color: var(--nav-bg);
 }
 
 .nav-list {
@@ -183,11 +186,12 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    cursor: pointer;
 
     /* Space in beteween items */
     display: grid;
-    gap: 2rem;
-    padding-block: 2rem;
+    /* gap: 2rem;
+    padding-block: 2rem; */
 }
 
 /* Hover  state*/
@@ -205,7 +209,7 @@
 .nav-list li.active {
     /* demo-color */
     /* background-color: red; */
-    background-color: var(--body-bg);
+    background-color: var(--clr-accent-500);
 }
 
 /* reset style hyper-links */
