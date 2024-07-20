@@ -48,6 +48,10 @@ nav {
 .nav-list li {
     /* demo color */
     background-color: pink;
+    padding: 1rem 2rem;
+    /* It's like margin-left but as a logic property */
+    /* althought this attribute is not usually set here; it's common to do it in '.nav-list' */
+    margin-inline-start: 1rem;
 
 }
 .nav-list li.active {
