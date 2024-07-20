@@ -25,7 +25,5 @@ body {
 }
 
 nav {
-    height: 100%;
     background-color: var(--nav-bg);
-
 }
