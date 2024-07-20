@@ -1,0 +1,69 @@
+:root {
+    --body-bg: #123;
+    --nav-bg: rgb(69, 92, 115);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-size: 1.25rem;
+    background-color: var(--body-bg);
+    color: white;
+    /* Grid layout */
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 2rem;
+
+}
+
+nav {
+    top: 0;
+    position: sticky;
+    /* svh prevents to overflow in movile */
+    max-height: 100svh;
+    background-color: var(--nav-bg);
+}
+
+.nav-list {
+    /* Reset style */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /* Space in beteween items */
+    display: grid;
+    gap: 2rem;
+    padding-block: 2rem;
+}
+
+/* Hover  state*/
+.nav-list li {
+    /* demo color */
+    /* background-color: pink; */
+    padding: 1rem 2rem;
+    /* It's like margin-left but as a logic property */
+    /* althought this attribute is not usually set here; it's common to do it in '.nav-list' */
+    margin-inline-start: 1rem;
+    /* Pill left shape */
+    border-radius: 100vw 0 0 100vw;
+
+}
+.nav-list li.active {
+    /* demo-color */
+    /* background-color: red; */
+    background-color: var(--body-bg);
+}
+
+/* reset style hyper-links */
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
