@@ -1,11 +1,21 @@
 .content-grid {
     display: grid;
     grid-template-columns: 
-    1fr [content-start] 1fr [content-end] 1fr;
+    /* Added content area */
+    /* 1fr [content-start] 1fr [content-end] 1fr; */
+
+    /* Added breakout area */
+    100px [breakout-start] 100px 1fr [content-start] 1fr [content-end] 1fr 100px [breakout-end] 100px ;
 }
 
+/* pseudo container CONTENT */
 .content-grid > * {
     grid-column: content;
+}
+
+/* pseudo container BREAKOUT */
+.content-grid > .breakout {
+    grid-column: breakout;
 }
 
 :root {
