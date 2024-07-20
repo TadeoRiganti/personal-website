@@ -1,14 +1,14 @@
-.content-grid, .full-width {
+.content-grid {
     display: grid;
     grid-template-columns: 
     /* Added 'content' area */
     /* 1fr [content-start] 1fr [content-end] 1fr; */
 
     /* Added 'breakout' area */
-    /* 100px [breakout-start] 100px 1fr [content-start] 1fr [content-end] 1fr 100px [breakout-end] 100px ; */
+    /* 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px ; */
 
     /* Added 'full-width' area */
-    [full-width-start] 100px [breakout-start] 100px 1fr [content-start] 1fr [content-end] 1fr 100px [breakout-end] 100px [full-width-end];
+    [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
 }
 
 /* pseudo container CONTENT */
@@ -17,15 +17,19 @@
     grid-column: content;
 }
 
+
+
 /* pseudo container BREAKOUT */
 .content-grid > .breakout {
     grid-column: breakout;
-}
+  }
 
 /* pseudo container FULL-WIDTH */
 .content-grid > .full-width {
     grid-column: full-width;
-}
+    display: grid;
+    grid-template-columns: inherit;
+  }
 
 :root {
     --color-scheme: dark;
