@@ -1,3 +1,10 @@
+.content-grid {
+    display: grid;
+    grid-template-columns: 
+    /* Added 'content' area */
+    1fr [content-start] 1fr [content-end] 1fr;
+}
+
 :root {
     --body-bg: #123;
     --nav-bg: rgb(69, 92, 115);
