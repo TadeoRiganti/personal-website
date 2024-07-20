@@ -33,7 +33,14 @@ nav {
 }
 
 .nav-list {
+    /* Reset style */
     margin: 0;
     padding: 0;
     list-style: none;
+
+    /* Space in beteween items */
+    display: grid;
+    gap: 2rem;
+    padding-block: 2rem;
 }
+
