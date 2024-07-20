@@ -17,7 +17,7 @@ body {
     font-size: 1.25rem;
     background-color: var(--body-bg);
     color: white;
-    /* Grid */
+    /* Grid layout */
     display: grid;
     grid-template-columns: 20rem 1fr;
     gap: 2rem;
@@ -44,7 +44,20 @@ nav {
     padding-block: 2rem;
 }
 
+.nav-list li {
+    /* demo color */
+    background-color: pink;
+
+}
+
+.nav-list li.active {
+    /* demo-color */
+    background-color: red;
+}
+
+/* reset style hyper-links */
 .nav-list a {
     color: white;
     text-decoration: none;
 }
+
