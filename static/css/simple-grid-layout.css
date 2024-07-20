@@ -3,7 +3,7 @@
     --content-max-width: 70ch; 
     --breakout-max-width: 85ch;
     /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each column */
-    --breakout-size: (var(--breakout-max-width) - var(--content-max-width)) / 2;
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
     display: grid;
     grid-template-columns: 
