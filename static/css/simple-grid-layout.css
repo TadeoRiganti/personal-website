@@ -13,7 +13,14 @@
     /* 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px ; */
 
     /* Added 'full-width' area */
-    [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
+    /* [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end]; */
+
+    /* Reorganize layout diagram */
+    [full-width-start] 100px 
+    [breakout-start] 100px 
+    [content-start] 1fr [content-end] 
+    100px [breakout-end] 
+    100px [full-width-end];
 }
 
 /* pseudo container CONTENT */
