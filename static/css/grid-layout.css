@@ -25,5 +25,9 @@ body {
 }
 
 nav {
+    top: 0;
+    position: sticky;
+    /* svh prevents to overflow in movile */
+    max-height: 100svh;
     background-color: var(--nav-bg);
 }
