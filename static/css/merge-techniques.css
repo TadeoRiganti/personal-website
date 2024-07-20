@@ -1,11 +1,14 @@
 .content-grid {
     display: grid;
     grid-template-columns: 
-        /* Added 'content' area */
+ /* Added 'content' area */
     /* 1fr [content-start] 1fr [content-end] 1fr; */
 
     /* Added 'breakout' area */
-    100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px ;
+    /* 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px ; */
+
+    /* Added 'full-width' area */
+    [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
 }
 
 /* pseudo container CONTENT */
