@@ -1,4 +1,4 @@
-.content-grid {
+.content-grid, .full-width {
     display: grid;
     grid-template-columns: 
     /* Added 'content' area */
@@ -12,7 +12,8 @@
 }
 
 /* pseudo container CONTENT */
-.content-grid > * {
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
     grid-column: content;
 }
 
