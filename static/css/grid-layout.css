@@ -44,12 +44,12 @@ nav {
     padding-block: 2rem;
 }
 
+/* Hover  state*/
 .nav-list li {
     /* demo color */
     background-color: pink;
 
 }
-
 .nav-list li.active {
     /* demo-color */
     background-color: red;
