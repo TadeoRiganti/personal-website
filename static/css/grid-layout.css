@@ -58,7 +58,8 @@ nav {
 }
 .nav-list li.active {
     /* demo-color */
-    background-color: red;
+    /* background-color: red; */
+    background-color: var(--body-bg);
 }
 
 /* reset style hyper-links */
