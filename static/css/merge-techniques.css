@@ -5,6 +5,12 @@
     1fr [content-start] 1fr [content-end] 1fr;
 }
 
+/* pseudo container CONTENT */
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+
 :root {
     --body-bg: #123;
     --nav-bg: rgb(69, 92, 115);
@@ -24,6 +30,7 @@ html {
 body {
     background-color: var(--body-bg);
 }
+
 
 .smol-sidebar {
     display: grid;
