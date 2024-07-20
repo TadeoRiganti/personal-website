@@ -164,26 +164,49 @@
     max-width: 250px;
   }
   
-  nav ul {
-    list-style: none;
+  nav {
+    top: 0;
+    position: sticky;
+    /* svh prevents to overflow in movile */
+    max-height: 100svh;
+    background-color: var(--nav-bg);
+}
+
+.nav-list {
+    /* Reset style */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: max(5vw, 1rem);
-  }
-  
-  nav a {
-    color: inherit;
+    list-style: none;
+
+    /* Space in beteween items */
+    display: grid;
+    gap: 2rem;
+    padding-block: 2rem;
+}
+
+/* Hover  state*/
+.nav-list li {
+    /* demo color */
+    /* background-color: pink; */
+    padding: 1rem 2rem;
+    /* It's like margin-left but as a logic property */
+    /* althought this attribute is not usually set here; it's common to do it in '.nav-list' */
+    margin-inline-start: 1rem;
+    /* Pill left shape */
+    border-radius: 100vw 0 0 100vw;
+
+}
+.nav-list li.active {
+    /* demo-color */
+    /* background-color: red; */
+    background-color: var(--body-bg);
+}
+
+/* reset style hyper-links */
+.nav-list a {
+    color: white;
     text-decoration: none;
-  }
-  
-  nav a:hover,
-  nav a:focus {
-    color: var(--clr-accent-500);
-    text-decoration: underline;
-  }
-  
+}
   .even-columns {
     display: flex;
     gap: 1rem;
