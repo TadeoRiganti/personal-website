@@ -1,11 +1,14 @@
 .content-grid {
     display: grid;
     grid-template-columns: 
-    /* Added content area */
+    /* Added 'content' area */
     /* 1fr [content-start] 1fr [content-end] 1fr; */
 
-    /* Added breakout area */
-    100px [breakout-start] 100px 1fr [content-start] 1fr [content-end] 1fr 100px [breakout-end] 100px ;
+    /* Added 'breakout' area */
+    /* 100px [breakout-start] 100px 1fr [content-start] 1fr [content-end] 1fr 100px [breakout-end] 100px ; */
+
+    /* Added 'full-width' area */
+    [full-width-start] 100px [breakout-start] 100px 1fr [content-start] 1fr [content-end] 1fr 100px [breakout-end] 100px [full-width-end];
 }
 
 /* pseudo container CONTENT */
@@ -16,6 +19,11 @@
 /* pseudo container BREAKOUT */
 .content-grid > .breakout {
     grid-column: breakout;
+}
+
+/* pseudo container FULL-WIDTH */
+.content-grid > .full-width {
+    grid-column: full-width;
 }
 
 :root {
