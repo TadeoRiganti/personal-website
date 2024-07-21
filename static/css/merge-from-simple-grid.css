@@ -169,6 +169,22 @@
     grid-template-columns: fit-content(20rem) minmax(min(50vw, 30ch), 1fr);
     grid-template-areas: "sidebar main-content";
   }
+
+  .smol-sidebar > nav {
+    grid-template-columns: "sidebar";
+  }
+
+  @media (max-width: 940px) {
+    .smol-sidebar {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-list {
+      display: none;
+    }
+    
+  }
   
 header {
   background-color: var(--clr-secondary-500);
