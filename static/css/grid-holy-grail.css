@@ -48,6 +48,16 @@
     "footer";
 }
 
+/* Tablet */
 
+@media (min-width: 540px) {
+    .content-grid {
+    grid-template:
+    "header header"
+    "sidebar content"
+    "navbar content"
+    "footer footer";
+    }
+}
 
 
