@@ -15,22 +15,36 @@
 
 
 /* Demo style */
+
 body {
     min-height: 100vh;
     display: flex;
 }
 
 .content-grid > * {
-    padding: 1rem;
-    border-radius: 0.5rem;
     background-color: aliceblue;
+    overflow: auto;
 }
 
+.topnav {
+    background-color: white;
+    padding: 1rem;
+}
+
+.actionbar {
+    background-color: whitesmoke ;
+    padding: .5rem;
+}
 
 /* Grid areas */
 
 .header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .content {
