@@ -53,10 +53,21 @@
 @media (min-width: 540px) {
     .content-grid {
     grid-template:
-    "header header"
-    "sidebar content"
-    "navbar content"
-    "footer footer";
+    "header   header"
+    "sidebar  content"
+    "navbar   content"
+    "footer   footer";
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 960px) {
+    .content-grid {
+    grid-template:
+    "header   header   header"
+    "sidebar  content  navbar"
+    "footer   footer   footer";
     }
 }
 
