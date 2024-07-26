@@ -33,6 +33,21 @@
     background-color: lightslategray;
 }
 
+/* Grid */
+
+/* Movile  */
+
+.content-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template: 
+    "header"
+    "navbar"
+    "sidebar"
+    "content"
+    "footer";
+}
+
 
 
 
