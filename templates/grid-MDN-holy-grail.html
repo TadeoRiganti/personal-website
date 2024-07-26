@@ -30,17 +30,26 @@
 
     </main>
 
-    <aside class="left-sidebar">
-        <nav class="toc">
-            <h3>Table of contents</h2>
-            <ul>
-                <li>Intro</li>
-                <li>Section X</li>
-                <li>Conclusion</li>
-            </ul>
+    <!-- Use aside if it's not the principal navigation bar. If it's a dashbord, then this tag should be <nav class="navbar"> -->
+    <aside class="sidebar">
+        <!-- MDN Barebone Structure -->
+        <nav class="related-topics">
+            <section class="toc">
+                <header>
+                    <h2>Table of contents</h2>
+                </header>
+                <ul class="toc-list">
+                    <li>Introduction</li>
+                    <li>Subsection X</li>
+                    <li>Conclusion</li>
+                </ul>
+            </section>
+            <!-- Another section could be used with the same structure to add a Wiki-ish / document navigation. If so, take in mind that if the list of links have a certain order, then it should be used an <ol> tag not <ul>. -->
         </nav>
     </aside>
-    <aside class="right-sidebar">Auxiliar sidebar</aside>
+
+    <aside class="ads">Optional content / Ads</aside>
+
     <footer class="footer">Footer</footer>
     
 </body>
