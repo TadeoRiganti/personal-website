@@ -1,4 +1,23 @@
+:root {
+    /* Layout variables */
+
+    /* Sizes */
+
+    --h-header: minmax(auto, 80px);
+    --h-footer: minmax(auto, 40px);
+    --h-fill: 1fr;
+
+    --w-fullwidth: 100%;
+    --w-aside: minmax(15rem, 20vw);
+    --w-fill: 1fr;
+}
+
+
 /* Demo style */
+body {
+    min-height: 100vh;
+}
+
 .content-grid > * {
     padding: 1rem;
     background-color: lightgray;
