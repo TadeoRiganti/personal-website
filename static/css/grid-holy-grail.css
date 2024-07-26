@@ -17,6 +17,7 @@
 /* Demo style */
 body {
     min-height: 100vh;
+    display: flex;
 }
 
 .content-grid > * {
@@ -58,6 +59,7 @@ body {
 /* Movile  */
 
 .content-grid {
+    margin: auto;
     display: grid;
     gap: 0.5rem;
     grid-template: 
@@ -86,6 +88,7 @@ body {
 
 @media (min-width: 960px) {
     .content-grid {
+        max-width: 1280px;
     grid-template:
     "header        header        header"       
     "sidebar       content       navbar"       var(--h-fill)
