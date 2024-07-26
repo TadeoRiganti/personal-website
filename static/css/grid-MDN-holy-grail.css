@@ -1,0 +1,101 @@
+:root {
+    /* Layout variables */
+
+    /* Sizes */
+
+    --h-header: minmax(auto, 80px);
+    --h-footer: minmax(auto, 40px);
+    --h-fitcontent: auto;
+    --h-fill: 1fr;
+
+    --w-fullwidth: 100%;
+    --w-aside: clamp(12rem, 20rem, 15vw);
+    --w-fill: 1fr;
+}
+
+
+/* Demo style */
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+.content-grid > * {
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+}
+
+
+/* Grid areas */
+
+.header {
+    grid-area: header;
+    background-color: lightgreen;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: aqua;
+}
+
+.content {
+    grid-area: content;
+    background-color: lightblue;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: lightcyan;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightslategray;
+}
+
+/* Grid */
+
+/* Movile  */
+
+.content-grid {
+    margin: auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template: 
+    "header"        
+    "navbar"        
+    "sidebar"       
+    "content"       var(--h-fill)
+    "footer"        ;
+}
+
+/* Tablet */
+
+@media (min-width: 540px) {
+    .content-grid {
+    grid-template:
+    "header        header"        
+    "sidebar       content"       
+    "navbar        content"       var(--h-fill)
+    "footer        footer"        /
+
+    var(--w-aside) var(--w-fill);
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 960px) {
+    .content-grid {
+        max-width: 1280px;
+    grid-template:
+    "header        header        header"       
+    "sidebar       content       navbar"       var(--h-fill)
+    "footer        footer        footer"       / 
+    
+    var(--w-aside) var(--w-fill) var(--w-aside);
+    }
+}
+
+
