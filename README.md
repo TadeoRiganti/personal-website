@@ -188,20 +188,15 @@ _Furthermore research is needed._
 - https://www.mjvinnovation.com/blog/innovation-strategy-unleashing-growth-through-strategic-ingenuity/
 - https://www.foxgr.com/insights/the-role-of-a-strategy-consultant
 
-## BACKLOG 
+## COMPONENTS:
 
-### Sprint #1
-1. Develop a basic Home page, with a rudimentary navigation bar, a footer, and a hello world placeholder.
-
-2. Add a basic level of CSS; set colors, font, basic layout. 
-I will try to implement a grid, very similar to the technique explained in the video of <a href="https://www.youtube.com/watch?v=_lEkD8IGkwo&list=PLJY_V4DjUsO4tHMvk2B2drdY9XN3gY6Mr&index=19&t=24s">The easiest way to get started with GRID layout</a> by <a href="https://www.youtube.com/@KevinPowell">Kevin Powell</a>. 
+### Blog / Wiki
+#### Table of contents:
+(UX Layout study)[https://www.nngroup.com/articles/table-of-contents/]
 
 
-### Sprint #2
-Develop the blog page. 
-I know, i know!... I should start with the landing page. But one of my main motivations to build my own website is just to public any content from my site; and try to start blog about topics I want to talk reducing platform reliance and harness SEO strength or something like that. 
 
-↑↑↑ Hey future me!  change this later ↑↑↑
+
 
 
 ___
