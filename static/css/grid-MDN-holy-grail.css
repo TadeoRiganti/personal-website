@@ -39,15 +39,34 @@ body {
     z-index: 999;
 }
 
-.topnav {
+.top-navigation {
     background-color: red;
     padding: 1rem;
 }
 
-.actionbar {
-    background-color: whitesmoke ;
+
+/* Breadcrumb navigation bar:
+   Adapted the Recipe from https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation */
+
+   .breadcrumb-container {
     padding: .5rem;
-}
+  }
+  
+  .breadcrumb-list li {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .breadcrumb-container li:not(:last-child):after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: "→";
+  }
+
+
 
 .content {
     grid-area: content;
