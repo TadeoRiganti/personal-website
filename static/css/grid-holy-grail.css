@@ -5,6 +5,7 @@
 
     --h-header: minmax(auto, 80px);
     --h-footer: minmax(auto, 40px);
+    --h-fitcontent: auto;
     --h-fill: 1fr;
 
     --w-fullwidth: 100%;
@@ -60,11 +61,11 @@ body {
     display: grid;
     gap: 0.5rem;
     grid-template: 
-    "header"
-    "navbar"
-    "sidebar"
-    "content"
-    "footer";
+    "header"        var(--h-header)
+    "navbar"        var(--h-fitcontent)
+    "sidebar"       var(--h-fitcontent)
+    "content"       var(--h-fill)
+    "footer"        var(--h-footer);
 }
 
 /* Tablet */
@@ -72,10 +73,12 @@ body {
 @media (min-width: 540px) {
     .content-grid {
     grid-template:
-    "header   header"
-    "sidebar  content"
-    "navbar   content"
-    "footer   footer";
+    "header        header"        var(--h-header)
+    "sidebar       content"       var(--h-fitcontent)
+    "navbar        content"       var(--h-fill)
+    "footer        footer"        var(--h-footer) /
+
+    var(--w-aside) var(--w-fill);
     }
 }
 
@@ -84,9 +87,11 @@ body {
 @media (min-width: 960px) {
     .content-grid {
     grid-template:
-    "header   header   header"
-    "sidebar  content  navbar"
-    "footer   footer   footer";
+    "header        header        header"       var(--h-header)
+    "sidebar       content       navbar"       var(--h-fill)
+    "footer        footer        footer"       var(--h-footer) / 
+    
+    var(--w-aside) var(--w-fill) var(--w-aside);
     }
 }
 
