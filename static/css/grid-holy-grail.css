@@ -61,11 +61,11 @@ body {
     display: grid;
     gap: 0.5rem;
     grid-template: 
-    "header"        var(--h-header)
-    "navbar"        var(--h-fitcontent)
-    "sidebar"       var(--h-fitcontent)
+    "header"        
+    "navbar"        
+    "sidebar"       
     "content"       var(--h-fill)
-    "footer"        var(--h-footer);
+    "footer"        ;
 }
 
 /* Tablet */
@@ -73,10 +73,10 @@ body {
 @media (min-width: 540px) {
     .content-grid {
     grid-template:
-    "header        header"        var(--h-header)
-    "sidebar       content"       var(--h-fitcontent)
+    "header        header"        
+    "sidebar       content"       
     "navbar        content"       var(--h-fill)
-    "footer        footer"        var(--h-footer) /
+    "footer        footer"        /
 
     var(--w-aside) var(--w-fill);
     }
@@ -87,9 +87,9 @@ body {
 @media (min-width: 960px) {
     .content-grid {
     grid-template:
-    "header        header        header"       var(--h-header)
+    "header        header        header"       
     "sidebar       content       navbar"       var(--h-fill)
-    "footer        footer        footer"       var(--h-footer) / 
+    "footer        footer        footer"       / 
     
     var(--w-aside) var(--w-fill) var(--w-aside);
     }
