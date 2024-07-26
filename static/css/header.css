@@ -1,0 +1,21 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #252525;
+    --tertiary-color: #00A650;
+    
+    --error-color: #ba1a1a;
+    --color-neutral-99: GhostWhite;
+    --color-neutral-95: hsl(216, 8%, 95%);
+    --color-neutral-80: LightGrey;
+    --color-neutral-60: DarkGrey;
+    --color-neutral-50: hsl(0, 0%, 50%);
+    --color-neutral-40: DimGrey;
+    --color-neutral-30: hsl(0, 0%, 30%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
