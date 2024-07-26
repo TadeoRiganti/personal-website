@@ -71,7 +71,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### D) Light-weight site
 
-- Aiming for a 512 kb / 1MB site. 
+~~Aiming for a 512 kb / 1MB site.~~ Fast 
 
 #### E) SEO
 
@@ -102,7 +102,7 @@ _Furthermore research is needed._
 #### A) Visual style: 
 
 - General: https://modelviewer.dev/
-- General: https://phuctm97.com/
+- General: [https://phuctm97.com/](https://stephvanlinden.com/)
 - General: https://timog.org/permanently-moved/
 - Animations: https://brittanychiang.com/
 - Navigation bar: https://phuctm97.com/
@@ -110,7 +110,8 @@ _Furthermore research is needed._
 
 #### B) Section:
 
-- Navigation bar: I like the way it reveals information / swap elements while scrolling down: https://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
+- Principal Navigation bar: I like the way it reveals information / swap elements while scrolling down: https://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
+- Secondary Navigation bar; Only for Blog and Wiki layouts, and it will be related to the main content / articles. It will have Breadcrumbs and a hamburger menu for TOC sidebar (visible on movile).
 - Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
 
@@ -144,6 +145,7 @@ _Furthermore research is needed._
 
 #### E) Blog 
 - https://phuctm97.com/
+- https://stephvanlinden.com/
 
 #### F) Contact 
 - https://adamgreenough.net/contact/ 
