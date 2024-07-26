@@ -1,3 +1,16 @@
+/* Demo style */
+.content-grid > * {
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+}
+
+
+/* Grid */
+
 .content-grid {
     display: grid;
+    gap: 0.5rem;
 }
+
+
