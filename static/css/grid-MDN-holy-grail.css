@@ -16,6 +16,8 @@
 
 /* Demo style */
 
+/* Find the proper way to center the grid AND letting the styles to extend full-width. */
+
 body {
     min-height: 100vh;
     display: flex;
@@ -28,7 +30,8 @@ body {
 
 
 
-/* Grid areas */
+/* HEADER */
+
 
 .header-container {
     grid-area: header;
@@ -73,25 +76,36 @@ body {
   }
 
 
+/* MAIN CONTENT */
+
 
 .content {
     grid-area: content;
 }
 
+
+/* SIDEBARS */
+
+/* MAIN SIDEBAR */
+
 .sidebar {
     grid-area: sidebar;
 }
+
+/* COMPLEMENTARY SIDEBAR */
 
 .ads {
     grid-area: ads;
 }
 
+/* FOOTER */
 
 .footer {
     grid-area: footer;
 }
 
-/* Grid */
+
+/* GRID LAYOUT */
 
 /* Movile  */
 
