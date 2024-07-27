@@ -44,6 +44,11 @@ body {
     padding: 1rem;
 }
 
+.article-actions-container {
+    display: flex;
+    flex-direction: row;
+}
+
 
 /* Breadcrumb navigation bar:
    Adapted the Recipe from https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation */
@@ -52,7 +57,7 @@ body {
     padding: .5rem;
   }
   
-  .breadcrumb-list li {
+  .breadcrumb-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
