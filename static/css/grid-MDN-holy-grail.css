@@ -37,7 +37,9 @@ body {
     grid-area: header;
     display: flex;
     flex-direction: column;
-    position: sticky;
+    /* The following rule, substracts the header from the grid, make it possible to expand its container size beyond the limits of the container grid. */
+    /* position: absolute;
+    width: 100%; */
     top: 0;
     z-index: 999;
 }
