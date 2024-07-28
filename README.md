@@ -107,6 +107,8 @@ _Furthermore research is needed._
 - Animations: https://brittanychiang.com/
 - Navigation bar: https://phuctm97.com/
 - Variable fonts: https://codepen.io/glyphe/pen/XxZzYV
+- Layout (wiki): https://rachelandrew.co.uk/
+- Layout (blog): https://cloudfour.com/thinks/breaking-out-with-css-grid-layout/
 
 #### B) Section:
 
