@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+     <link rel="stylesheet" href="..\static\css\style.css">
+    <!-- Grid Layout -->
+    <link rel="stylesheet" href="..\static\css\ultimate-grid.css">
+    <title>Ultimate grid: Simple grid + Holy grail layout</title>
+</head>
+<body>
+    <div class="header-container">
+        <header class="top-navigation">
+            <div class="container">
+                <div class="top-navigation-wrap">
+                    <!-- Logo / Home -->
+                    <a href="">HOME</a>
+                    <!-- Hamburger menu -->
+                    <button>
+                        <span>
+                            <span>≡</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="top-navigation-main">
+                    <nav class="main-nav-links">
+                        <ul class="main-menu">
+                            <!-- Dropdown -->
+                            <li><a href="#">Services</a></li>
+                            <!-- Links -->
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#" class="button-primary">Get a quote!</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Space reserved for other features -->
+                </div>
+            </div>
+        </header>
+        <div class="article-actions-container">
+            <!-- Hamburger menu -->
+            <button>
+                <span>
+                    <span>≡</span>
+                </span>
+            </button>
+            <!-- Breadcrumb navigation bar -->
+            <nav class="breadcrumb-container">
+                <ol class="breadcrumb-list">
+                    <!-- Add aria labels and resolve the accesibility issue with the content '→'. More info here: https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation -->
+                    <li><a href="">Grand parent page</a></li>
+                    <li><a href="">Parent page</a></li>
+                    <li><a href="">Page</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <main class="content">
+            <article>
+                <img src="https://picsum.photos/300/200" alt="Random image">
+                <div class="article__data">Author | Date | Reading time</div>
+                <h1>Title of the article</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio autem atque unde nesciunt repudiandae asperiores in, explicabo odio dolorum tempora, harum omnis suscipit eos, magni architecto ducimus. Aliquam minima doloremque quisquam quis.</p>
+                <h2>Title of the section</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam sequi suscipit eligendi neque magnam incidunt earum necessitatibus, inventore alias, ipsum dolorem vel quo enim rem doloribus repellendus impedit officiis numquam libero, consequatur eos placeat laudantium sit nihil. Unde, ipsam! Delectus dolorem quibusdam quos iste facilis, esse laborum reprehenderit.</p>
+            </article>
+    
+        </main>
+    
+        <!-- Use aside if it's not the principal navigation bar. If it's a dashbord, then this tag should be <nav class="navbar"> -->
+        <aside class="sidebar">
+            <!-- MDN Barebone Structure -->
+            <nav class="related-topics">
+                <section class="toc">
+                    <header>
+                        <h2>Table of contents</h2>
+                    </header>
+                    <ul class="toc-list">
+                        <li>Introduction</li>
+                        <li>Subsection X</li>
+                        <li>Conclusion</li>
+                    </ul>
+                </section>
+                <!-- Another section could be used with the same structure to add a Wiki-ish / document navigation. If so, take in mind that if the list of links have a certain order, then it should be used an <ol> tag not <ul>. -->
+            </nav>
+        </aside>
+    
+        <aside class="ads">Optional content / Ads</aside>
+    </div>
+
+    <footer class="footer">Footer</footer>
+</body>
+</html>
