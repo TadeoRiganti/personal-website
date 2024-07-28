@@ -1,0 +1,11 @@
+img {
+    object-fit: cover;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 
+        [full-width-start] minmax(1rem, 1fr)
+        [main-start] minmax(0, 40rem) [main-end]
+        minmax(1em, 1rem) [full-width-end];
+}
