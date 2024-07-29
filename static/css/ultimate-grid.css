@@ -3,8 +3,8 @@
 .content-grid {
     /* Only update this */
     --padding-inline: 2rem;
-    --content-max-width: 70ch; 
-    --breakout-max-width: 85ch;
+    --content-max-width: 1080px; 
+    --breakout-max-width: 1280px;
     /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each column */
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
@@ -58,8 +58,7 @@
 
   .sidebar {
     grid-area: sidebar;
-    display: ;
-  }
+}
 
   .content {
     grid-area: content;
@@ -82,4 +81,8 @@
         grid-template: 
         "sidebar content ads";
     }
+  }
+
+  .bg {
+    background-color: aqua;
   }
