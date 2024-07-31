@@ -16,7 +16,7 @@ I don't know yet how to write a proper project's documentation, but for now I wa
 
 ### WEBSITE ARCHITECTURE
 
-#### 1) Landing page
+#### 1) Landing pages
 
 _For business conversion._
 
@@ -30,8 +30,19 @@ _For business conversion._
 _The idea is to present my work with a similar treatment as I present them on Behance, but with the advantage of using animations to make it more dynamic._
 _However, I'm not sure if separate them into 2 sections or present them in the same page with a filter system._
 
-1. Designer.
-2. Developer.
+1. Past Works related to:
+  a. Design Strategist.
+  b. UX designer.
+
+2. Side projects:
+  a. AR developer
+  b. Experience Developer (CX features).
+
+3. Freebies or Tools I develop for the community (Most of them are the prototypes for :
+   a. Quotation / budget calculator for freelancers.
+   b. Interactive Fee tables.
+   c. Daily Petty cash for Freelancers.
+
 
 #### 3) About me 
 
@@ -50,6 +61,12 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 1. Blog posts.
 2. Newsletter subscription (with prefered topics selection if possible).
+
+#### 5) Resources
+
+##### Freebies
+
+##### Tools
 
 ### OPTIMIZATION
 
