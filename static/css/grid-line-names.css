@@ -226,7 +226,7 @@
 
   /* TABLETS */
 
-@media (min-width: 540px) {
+@media (min-width: 640px) {
     .holy-grail {
         grid-template: 
         "sidebar    main"
