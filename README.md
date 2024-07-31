@@ -90,10 +90,10 @@ _Furthermore research is needed._
 
 #### B) Sections
 
-- Landing page: (Breakout SMOL grid)[https://smolcss.dev/#smol-breakout-grid] layout, maybe (Kevin Powell's variation)[https://www.youtube.com/watch?v=c13gpBrnGEw].
-- Blog: Holy-grail Layout. Secondary navigation bar, related to articles alike (MDN guides page)[https://developer.mozilla.org/en-US/docs/Web/CSS]. Sticky sidebars. (Table of contents)[https://developer.mozilla.org/en-US/blog/exploring-the-broadcast-channel-api-for-cross-tab-communication/] with an animated indicator.
-- Documentation: Sidebar layout. Secondary navigation bar; idem blog section.
-- Portfolio: Header (hides when scrolling down)[https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp]. (Collapsable sidebar)[https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp] for the table of contents.
+- Landing page: [Breakout SMOL grid](https://smolcss.dev/#smol-breakout-grid) layout, maybe [Kevin Powell's variation](https://www.youtube.com/watch?v=c13gpBrnGEw).
+- Blog: Secondary navigation bar, related to articles alike [MDN guides page](https://developer.mozilla.org/en-US/docs/Web/CSS). Sticky sidebars. [Table of contents](https://developer.mozilla.org/en-US/blog/exploring-the-broadcast-channel-api-for-cross-tab-communication/) with an animated indicator.
+- Documentation: Secondary navigation bar; idem blog section.
+- Portfolio: Header [hides when scrolling down](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp). [Collapsable sidebar](https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp) for the table of contents.
 
 #### B) Extras / Experimental
 - Add some motion (but trying to setting up in a way that users can deactivate it; for accesibility reasons)
@@ -201,7 +201,7 @@ _Furthermore research is needed._
 
 ### Blog / Wiki
 #### Table of contents:
-(UX Layout study)[https://www.nngroup.com/articles/table-of-contents/]
+[UX Layout study](https://www.nngroup.com/articles/table-of-contents/)
 
 
 
