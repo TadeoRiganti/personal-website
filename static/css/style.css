@@ -1,10 +1,16 @@
 /* TABLE OF CONTENTS:
 
 || GENERAL STYLES
-|.. Color Palette
-|.. Layout settigns
+|.. Variables
+|.... Color Palette
+|.... Typography
+|.... Layout settigns
+|.. Reset browser style
 |.. Typography
 |.. Elements
+|.. Utility classes
+|.... Aesthetic classes
+|.... Layout classes
 
 || Layout
 |.. Breakout grid
@@ -23,24 +29,40 @@
 |.. Form
 
 
-References:
-  - "Organizing your CSS", a guide by MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+• Protip: You can navigate through principal sections looking for '||' (Ctrl+F). 
 
+• Notes: 
+
+    1) Instead of just gropuing "Utility classes" under that name, I'll group them in a semantic way**, by their types:
+        - Aesthetic classes
+        - Layout classes
+        - Spacing classes
+        
+    2) In the future, I'll reorganize it to complain with the BEM methodology.
+
+• References:
+
+  *) "Organizing your CSS", a guide by MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+
+  **) "The 3 Types of CSS Utility Classes", by JamesKerr: https://www.jameskerr.blog/posts/3-types-of-css-utility-classes/
 */
 
 
 
-/* GENERAL STYLES */
+
+/* || GENERAL STYLES */
+
+/* |.. VARIABLES */
 
 :root {
 
-    /* Color palette */
+    /* |.... COLOR PALETTE */
 
-    --primary-color: white;
-    --secondary-color: #252525;
-    --tertiary-color: #00A650;
+    --primary-color:    white;
+    --secondary-color:  #252525;
+    --tertiary-color:   #00A650;
     
-    --error-color: #ba1a1a;
+    --error-color:      #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-95: hsl(216, 8%, 95%);
     --color-neutral-80: LightGrey;
@@ -49,12 +71,29 @@ References:
     --color-neutral-40: DimGrey;
     --color-neutral-30: hsl(0, 0%, 30%);
 
-    /* Layout settings */
+    --color-scheme: light;
+    /* --color-scheme: dark; */
 
+
+    /* |.... TYPOGRAPHY */
+
+    --font-family: system-ui;
+  
+    --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+    --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+    --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); /* If it overflow in small sizes, reduce the last value*/
+
+
+     /* |.... LAYOUT SETTINGS */
 
 }
 
-/* Reset browser default style */
+
+/* |.. RESET BROWSER STYLE */
 
 * {
     margin: 0;
@@ -63,12 +102,146 @@ References:
     text-decoration: none;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 
-/* Elements */
+/* |.. TYPOGRAPHY */
 
-/* Keeps images from overflowing in the X axis */
+
+
+
+/* |.. ELEMENTS */
+
+html {
+    color-scheme: var(--color-scheme);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--fs-400);
+    line-height: 1.6;
+}
+
+.logo {
+    max-width: 250px;
+  }
+
+h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure {
+    margin: 0;
+  }
+
 img {
     max-width: 100%;
     display: block;
+}
+/* Keeps images from overflowing in the X axis */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(5vw, 1rem);
+}
+  
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+nav a:hover,
+nav a:focus {
+    color: var(--clr-accent-500);
+    text-decoration: underline;
+}
+
+
+/* |.. UTILITY CLASSES */
+
+
+/* |.... AESTHETIC CLASSES */
+
+.bg-tertiary {
+    background: var(--tertiary-color);
+}
+
+.call-to-action {
+    padding: 1rem;
+    background: var(--color-neutral-80);
   }
+
+.site-title {
+    font-size: var(--fs-900);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+  
+.section-title {
+    font-size: var(--fs-800);
+    line-height: 1.1;
+}
+
+
+/* |.... LAYOUT CLASSES */
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.wrapper {
+    width: calc(100% - 3rem);
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-spacing, 1em);
+}
+
+.even-columns {
+    display: flex;
+    gap: 1rem;
+  }
+
+
+/* |.... SPACING CLASSES */
+
+.section-padding {
+    padding-block: 2.5rem;
+}
+
+
+/* || SITEWIDE */
+
+/* |.. HEADER */
+
+.primary-header {
+    padding-block: 1rem;
+    margin-block-end: 3rem;
+    background: var(--clr-accent-200);
+    color: var(--clr-primary-500);
+}
+
+.primary-header__layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
