@@ -84,9 +84,16 @@ _Furthermore research is needed._
 
 #### A) Essential
 
-- Hover navigation bar (opaque or glossy effect).
+- Hover navigation bar (opaque or glossy effect). 
 - Themes button; dark / light / color blind / high contrast / font size.
-- Variable fonts; weight, style and width. 
+- Variable fonts; weight, style and width.
+
+#### B) Sections
+
+- Landing page: (Breakout SMOL grid)[https://smolcss.dev/#smol-breakout-grid] layout, maybe (Kevin Powell's variation)[https://www.youtube.com/watch?v=c13gpBrnGEw].
+- Blog: Holy-grail Layout. Secondary navigation bar, related to articles alike (MDN guides page)[https://developer.mozilla.org/en-US/docs/Web/CSS]. Sticky sidebars. (Table of contents)[https://developer.mozilla.org/en-US/blog/exploring-the-broadcast-channel-api-for-cross-tab-communication/] with an animated indicator.
+- Documentation: Sidebar layout. Secondary navigation bar; idem blog section.
+- Portfolio: Header (hides when scrolling down)[https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp]. (Collapsable sidebar)[https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp] for the table of contents.
 
 #### B) Extras / Experimental
 - Add some motion (but trying to setting up in a way that users can deactivate it; for accesibility reasons)
