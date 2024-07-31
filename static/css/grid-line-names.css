@@ -1,62 +1,126 @@
 :root {
   --aside-width: clamp(15rem, 20rem, 15svw);
   --grid-max-width: 1280px;
+  --padding-inline: 1rem;
 }
 
 
+/* 
+[IT WOULD BE FAR BETTER FOR MY FUTURE SELF, IF THE '.CONTENT-GRID'
+set of rules applies for 'landing-page', and adjust the other rules
+to adapt the '.content-grid' for it's kind of uses:
+
+The breakout grid layout (SMOL grid / Kevin Powells flavour) is
+mobile first by nature as it doesn't need media queries to function
+at any device. Therefore:
+
+The style sheet is by default used for Landing pages.
+In order to adapt the layout for other types of pages, we will use:
+
+[ALTERNATIVE LAYOUTS]
+
+BLOG PAGE → Used for blog content (and will contain ads).
+
+body.blog-page .content-grid {
+  --content-max-width: var(--breakout-max-width) * 0.5;
+}
+
+.holy-grail {
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template: 
+  "sidebar" 
+  "main" 
+  "ads";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  width: var(--aside-width);
+}
+
+.main {
+  grid-area: main;
+}
+
+.ads {
+  grid-area: ads;
+  width: var(--aside-width);
+}
+
+WIKI PAGE → Used for project's documentation.
+
+Adjust the container width size in relation to the sidebar
+body.wiki-page .content-grid {
+  --content-max-width: var(--breakout-max-width) * 0.625;
+}
+
+Hides auxiliar sidebar
+body.wiki-page :is(.ads) {
+  display: none;
+}
+
+
+*/
+
 .content-grid {
-    /* Only update this */
-    --padding-inline: 1rem;
-    --breakout-max-width: var(--grid-max-width);
+
+  /* Maximum width size for the breakout container */
+  --breakout-max-width: var(--grid-max-width);
      
-    /* Calculates the container's content width*/
-    --content-max-width: var(--breakout-max-width) * 0.6;
+  /* Calculates the content's width*/
+  --content-max-width: var(--breakout-max-width) * 0.6;
     
-    /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each column */
-    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+  /* Calculates the relative size of each extra space of the breakout width size: 
+  Substract the content width of the breakout width and divide it by half for each 
+  gutter on the sides */
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
   
-    display: grid;
-    grid-template-columns:
-      [full-width-start] minmax(var(--padding-inline), 1fr)
-      [breakout-start] minmax(0, var(--breakout-size))
-      [content-start] min(
-        100% - (var(--padding-inline) * 2),
-        var(--content-max-width)
-      )
-      [content-end]
-      minmax(0, var(--breakout-size)) [breakout-end]
-      minmax(var(--padding-inline), 1fr) [full-width-end];
-  }
+  /* Kevin Powell variation of the SMOL breakout grid */
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
 
+  
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+  
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+  
+.content-grid > .full-width {
+  grid-column: full-width;
+  
+  /* Allows to use the grid of it's parent container */
+  display: grid;
+  grid-template-columns: inherit;
+}
+  
+img.full-width {
+  width: 100%;
+  max-height: 45vh;
+  object-fit: cover;
+}
 
+/* [This should go upper in the document, however I will let this here
+because this are not my brand's ruleset] */
 
- 
-  
-  .content-grid > :not(.breakout, .full-width),
-  .full-width > :not(.breakout, .full-width) {
-    grid-column: content;
-  }
-  
-  .content-grid > .breakout {
-    grid-column: breakout;
-  }
-  
-  .content-grid > .full-width {
-    grid-column: full-width;
-  
-    display: grid;
-    grid-template-columns: inherit;
-  }
-  
-  img.full-width {
-    width: 100%;
-    max-height: 45vh;
-    object-fit: cover;
-  }
-  
-  :root {
-    --color-scheme: dark;
-    /* --color-scheme: light; */
+:root {
+  --color-scheme: dark;
+  /* --color-scheme: light; */
   
     --font-family: system-ui;
   
@@ -205,28 +269,28 @@
      'Holy-grail' layout
   */
   
-  .holy-grail {
-    max-width: var(--grid-max-width);
-    margin: 0 auto;
-    display: grid;
-    grid-template: 
-    "sidebar" 
-    "main" 
-    "ads";
-  }
+.holy-grail {
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template: 
+  "sidebar" 
+  "main" 
+  "ads";
+}
 
-  .sidebar {
-    grid-area: sidebar;
-    width: var(--aside-width);
-  }
+.sidebar {
+  grid-area: sidebar;
+  width: var(--aside-width);
+}
 
- .main {
-    grid-area: main;
+.main {
+  grid-area: main;
 }
 
 .ads {
-    grid-area: ads;
-    width: var(--aside-width);
+  grid-area: ads;
+  width: var(--aside-width);
 }
 
 
@@ -234,22 +298,22 @@
   /* TABLETS */
 
 @media (min-width: 640px) {
-    .holy-grail {
-        grid-template: 
-        "sidebar    main"
-        "ads        main" / 
-        auto        1fr;
-    }
+  .holy-grail {
+    grid-template: 
+    "sidebar    main"
+    "ads        main" / 
+    auto        1fr;
+  }
 }
 
 /* DESKTOP */
 
 @media (min-width: 960px) {
-    .holy-grail {
-        grid-template: 
-        "sidebar   main    ads" /
-        auto       1fr     auto ;
-    }
+  .holy-grail {
+    grid-template: 
+    "sidebar   main    ads" /
+    auto       1fr     auto ;
+  }
 }
 
 
@@ -310,3 +374,5 @@ This is equivalent to:
 body.landing-page .content-grid {
   --content-max-width: var(--breakout-max-width) * 0.75;
 }
+
+
