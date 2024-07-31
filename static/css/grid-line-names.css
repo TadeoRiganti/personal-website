@@ -1,16 +1,16 @@
 :root {
-  --sidebar-width: clamp(12rem, 16rem, 15svw);
+  --aside-width: clamp(15rem, 20rem, 15svw);
   --grid-max-width: 1280px;
 }
+
 
 .content-grid {
     /* Only update this */
     --padding-inline: 1rem;
     --breakout-max-width: var(--grid-max-width);
      
-    /* Calculates how much space can grow */
-    --available-space: calc(var(--breakout-max-width) - var(--sidebar-width)); 
-    --content-max-width: var(--available-space);
+    /* Calculates the container's content width*/
+    --content-max-width: var(--breakout-max-width) * 0.6;
     
     /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each column */
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
@@ -27,6 +27,10 @@
       minmax(0, var(--breakout-size)) [breakout-end]
       minmax(var(--padding-inline), 1fr) [full-width-end];
   }
+
+
+
+ 
   
   .content-grid > :not(.breakout, .full-width),
   .full-width > :not(.breakout, .full-width) {
@@ -196,7 +200,10 @@
   }
 
 
-  /* HOLY-GRAIL */
+  /* 
+    BLOG PAGE:
+     'Holy-grail' layout
+  */
   
   .holy-grail {
     max-width: var(--grid-max-width);
@@ -210,7 +217,7 @@
 
   .sidebar {
     grid-area: sidebar;
-    width: var(--sidebar-width);
+    width: var(--aside-width);
   }
 
  .main {
@@ -219,7 +226,7 @@
 
 .ads {
     grid-area: ads;
-    width: var(--sidebar-width);
+    width: var(--aside-width);
 }
 
 
@@ -258,34 +265,48 @@ This allows to alter the layout using an identifier as a condition
 to "trigger" it.
 */
 
-/* LANDING PAGE: 
 
-For example instead of creating a new layout like:
+/* ======================= WIKI PAGE =========================== */
 
-body.landing-page {
-  grid-template:
-  "sidebar  content"
+body.wiki-page :is(.ads) {
+  display: none;
+}
+/*      ↑↑↑
+This is equivalent to:
+
+  body.landing-page {
+    grid-template:
+    "sidebar content"
+  } 
+*/
+
+/* Calculates the container's content width */
+body.wiki-page .content-grid {
+  --content-max-width: var(--breakout-max-width) * 0.625;
 }
 
-We can achieve the same using:
-*/
+/* ========================== LANDING PAGE ==================== */ 
+
+/* In reality this rule is not needed as in a landing-page layout
+the '.holy-grail' class will not be used.. but it's kind of 
+a fallback just in case, for some reason, it's being used.
+
+If there is some elment using that class, full-bleed won't work
+as it will grow up to the parent width container.*/
 
 body.landing-page :is(.sidebar, .ads) {
   display: none;
 }
-
-
-
-/* WIKI PAGE:
-
+/*       ↑↑↑
 This is equivalent to:
 
-body.landing-page {
-  grid-template:
-  "sidebar  content"
-} 
-  */
+  body.landing-page {
+    grid-template:
+    "content"
+  } 
+*/
 
-body.wiki-page :is(.ads) {
-  display: none;
+/* Calculates the container's content width */
+body.landing-page .content-grid {
+  --content-max-width: var(--breakout-max-width) * 0.75;
 }
