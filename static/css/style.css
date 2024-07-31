@@ -13,9 +13,12 @@
 |.... Layout classes
 
 || Layout
-|.. Breakout grid
-|.. Holy-grail
-|.. Utility classes
+|.. Landing page (Movil-first)
+|.. Regular page
+|.... Responsive queries
+|...... Tablet
+|...... Desktop PC
+|.... Layout classes
 
 || Sitewide
 |.. Header
@@ -45,9 +48,8 @@
   *) "Organizing your CSS", a guide by MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
 
   **) "The 3 Types of CSS Utility Classes", by JamesKerr: https://www.jameskerr.blog/posts/3-types-of-css-utility-classes/
+
 */
-
-
 
 
 /* || GENERAL STYLES */
@@ -85,7 +87,8 @@
     --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
     --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
     --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); /* If it overflow in small sizes, reduce the last value*/
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem);
+    /* If it overflow in small sizes, reduce the last value*/
 
 
      /* |.... LAYOUT SETTINGS */
@@ -228,6 +231,141 @@ nav a:focus {
 .section-padding {
     padding-block: 2.5rem;
 }
+
+
+/* || LAYOUT */
+
+/* |.. LANDING PAGE 
+
+Notes:
+    Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell***
+    ***) References::after
+        - Youtube: https://www.youtube.com/watch?v=c13gpBrnGEw
+        - Codepen: https://codepen.io/kevinpowell/pen/ExrZrrw
+*/
+
+.content-grid {
+    
+    --breakout-max-width: var(--grid-max-width);
+    /* Maximum width size for the breakout container */
+       
+    --content-max-width: var(--breakout-max-width) * 0.75;
+    /* Calculates the content's width*/
+      
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+    /* Calculates the relative size of each extra space of the breakout width size: 
+    Substract the content width of the breakout width and divide it by half for each 
+    gutter on the sides */
+    
+    display: grid;
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+    
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+    
+.content-grid > .full-width {
+  grid-column: full-width;
+    
+  display: grid;
+  grid-template-columns: inherit;
+}
+/* Allows to use the grid of it's PARENT container */
+    
+
+/* |.... LAYOUT CLASSES */
+
+img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+}
+/* Makes an image to extend full width */
+
+
+/* |.. REGULAR PAGE */
+
+.holy-grail {
+    max-width: var(--grid-max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template: 
+    "sidebar" 
+    "main" 
+    "ads";
+}
+/* In order to properly work, there has to be a <div> containing
+the main and at least one asides element. */
+  
+.sidebar {
+    grid-area: sidebar;
+    width: var(--aside-width);
+}
+  
+.main {
+    grid-area: main;
+}
+  
+.ads {
+    grid-area: ads;
+    width: var(--aside-width);
+}
+
+/* |.... RESPONSIVE QUERIES */
+
+/* |...... TABLET */
+
+@media (min-width: 640px) {
+    .holy-grail {
+      grid-template: 
+      "sidebar    main"
+      "ads        main" / 
+      auto        1fr;
+    }
+  }
+  
+  /* |...... DESKTOP PC */
+  
+  @media (min-width: 960px) {
+    .holy-grail {
+      grid-template: 
+      "sidebar   main    ads" /
+      auto       1fr     auto ;
+    }
+  }
+
+
+/* |.... SPACING CLASSES */
+
+body.blog-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.5;
+}
+/* Adjust the container width size in relation to the sidebar */
+
+body.wiki-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.625;
+}
+/* Adjust the container width size in relation to the sidebar */
+  
+body.wiki-page :is(.ads) {
+    display: none;
+}
+/* Hides auxiliar sidebar */
 
 
 /* || SITEWIDE */
