@@ -72,7 +72,7 @@
     --color-neutral-30: hsl(0, 0%, 30%);
 
     --color-scheme: light;
-    /* --color-scheme: dark; */
+    --color-scheme: dark;
 
 
     /* |.... TYPOGRAPHY */
@@ -147,26 +147,6 @@ img {
 }
 /* Keeps images from overflowing in the X axis */
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: max(5vw, 1rem);
-}
-  
-nav a {
-    color: inherit;
-    text-decoration: none;
-}
-  
-nav a:hover,
-nav a:focus {
-    color: var(--clr-accent-500);
-    text-decoration: underline;
-}
-
 
 /* |.. UTILITY CLASSES */
 
@@ -179,7 +159,8 @@ nav a:focus {
 
 .call-to-action {
     padding: 1rem;
-    background: var(--color-neutral-80);
+    background: var(--color-neutral-50);
+    /* Note that it's contrast has to work in both light and dark color schemes */
   }
 
 .site-title {
@@ -233,6 +214,8 @@ nav a:focus {
 
 /* |.. HEADER */
 
+/* |.... PRINCIPAL NAVIGATION BAR */
+
 .primary-header {
     padding-block: 1rem;
     margin-block-end: 3rem;
@@ -245,3 +228,26 @@ nav a:focus {
     align-items: center;
     justify-content: space-between;
 }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(5vw, 1rem);
+}
+  
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+nav a:hover,
+nav a:focus {
+    color: var(--tertiary-color);
+    text-decoration: underline;
+}
+
+
+/* |.... SECONDARY NAVIGATION BAR */
