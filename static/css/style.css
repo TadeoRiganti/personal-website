@@ -151,6 +151,25 @@ img {
 }
 /* Keeps images from overflowing in the X axis */
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(5vw, 1rem);
+}
+  
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+nav a:hover,
+nav a:focus {
+    color: var(--tertiary-color);
+    text-decoration: underline;
+}
 
 /* |.. UTILITY CLASSES */
 
@@ -231,26 +250,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: max(5vw, 1rem);
-}
-  
-nav a {
-    color: inherit;
-    text-decoration: none;
-}
-  
-nav a:hover,
-nav a:focus {
-    color: var(--tertiary-color);
-    text-decoration: underline;
 }
 
 
