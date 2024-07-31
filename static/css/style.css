@@ -90,6 +90,10 @@
 
      /* |.... LAYOUT SETTINGS */
 
+    --aside-width: clamp(12rem, 20rem, 10svw);
+    --grid-max-width: 80rem; /* == 1280px */
+    --padding-inline: 1rem;
+
 }
 
 
