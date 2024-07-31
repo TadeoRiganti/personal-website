@@ -9,7 +9,7 @@
     --breakout-max-width: var(--grid-max-width);
      
     /* Calculates how much space can grow */
-    --available-space: calc(var(--breakout-max-width) - var(--sidebar-width) * 2); 
+    --available-space: calc(var(--breakout-max-width) - var(--sidebar-width)); 
     --content-max-width: var(--available-space);
     
     /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each column */
@@ -224,34 +224,64 @@
 
 
   /* TABLETS */
+
 @media (min-width: 540px) {
     .holy-grail {
         grid-template: 
-        "sidebar             main"
-        "ads                 main" / 
-        auto                 1fr;
+        "sidebar    main"
+        "ads        main" / 
+        auto        1fr;
     }
 }
 
 /* DESKTOP */
-@media (min-width: 700px) {
+
+@media (min-width: 960px) {
     .holy-grail {
         grid-template: 
-        "sidebar             main            ads" /
-        auto                 1fr             auto ;
+        "sidebar   main    ads" /
+        auto       1fr     auto ;
     }
 }
 
 
-/* TYPE OF TEMPLATES */
+/* LAYOUT VARIATIONS: 
 
-/* LANDING PAGE */
+Because the 'Holy-grid' layout is achieved through 'grid-template',
+when hidding some area with the property 'display:none', the next
+area-template gets to fill the missing space.
+
+This allows to alter the layout using an identifier as a condition
+to "trigger" it.
+*/
+
+/* LANDING PAGE: 
+
+For example instead of creating a new layout like:
+
+body.landing-page {
+  grid-template:
+  "sidebar  content"
+}
+
+We can achieve the same using:
+*/
 
 body.landing-page :is(.sidebar, .ads) {
   display: none;
 }
 
-/* WIKI */
+
+
+/* WIKI PAGE:
+
+This is equivalent to:
+
+body.landing-page {
+  grid-template:
+  "sidebar  content"
+} 
+  */
 
 body.wiki-page :is(.ads) {
   display: none;

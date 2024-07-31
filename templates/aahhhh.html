@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* .content-grid {
+            display: grid;
+            gap: .5rem;
+            grid-template: 
+            "header  header  header"  
+            "sidebar main    ads"     1fr
+            "footer  footer  footer" / 
+            auto    1fr     auto;
+        } */
+
+        :root {
+            --aside-width: 300px;
+            --container-max-size: 1280px;
+            /* --margin: calc((100vw - var(--container-max-size)) / 2) ;  */
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 
+            [full-width-start] 1rem
+            [container-start sidebar-start] auto
+            [sidebar-end content-start] 1fr [content-end ads-start]
+            auto [ads-end container-end]
+           1rem [full-width-end];
+        }
+
+        .content-grid > * {
+            background-color: blanchedalmond;
+        }
+
+        .header {
+            grid-column: container;
+        }
+
+        .sidebar {
+            grid-column: sidebar;
+            width: var(--aside-width);
+            /* display: none; */
+        }
+
+        .main {
+            grid-column: content;
+        }
+
+        .ads {
+            grid-column: ads;
+            width: var(--aside-width);
+            /* display: none; */
+        }
+
+        .footer {
+            grid-column: container;
+        }
+
+        .full-width {
+            grid-column: full-width;
+            background-color: aqua;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body class="content-grid">
+
+    <header class="header">I am the header</header>
+
+    <aside class="sidebar">I am sidebar 1</aside>
+
+    <main class="main">
+            <article class="">I am the main article</article>
+    </main>
+    <aside class="ads">I am sidebar 2</aside>
+    <footer class="footer">I am the footer</footer>
+          
+</body>
+</html>
+
