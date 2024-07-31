@@ -1,4 +1,41 @@
+/* TABLE OF CONTENTS:
+
+|| GENERAL STYLES
+|.. Color Palette
+|.. Layout settigns
+|.. Typography
+|.. Elements
+
+|| Layout
+|.. Breakout grid
+|.. Holy-grail
+|.. Utility classes
+
+|| Sitewide
+|.. Header
+|.... Principal navigation bar
+|.... Secondary navigation bar
+|.. Main
+|.. Aside
+|.. Footer
+
+|| Components
+|.. Form
+
+
+References:
+  - "Organizing your CSS", a guide by MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+
+*/
+
+
+
+/* GENERAL STYLES */
+
 :root {
+
+    /* Color palette */
+
     --primary-color: white;
     --secondary-color: #252525;
     --tertiary-color: #00A650;
@@ -11,7 +48,13 @@
     --color-neutral-50: hsl(0, 0%, 50%);
     --color-neutral-40: DimGrey;
     --color-neutral-30: hsl(0, 0%, 30%);
+
+    /* Layout settings */
+
+
 }
+
+/* Reset browser default style */
 
 * {
     margin: 0;
@@ -19,3 +62,13 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+
+
+/* Elements */
+
+/* Keeps images from overflowing in the X axis */
+img {
+    max-width: 100%;
+    display: block;
+  }
