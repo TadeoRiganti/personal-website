@@ -74,7 +74,7 @@
     --color-neutral-30: hsl(0, 0%, 30%);
 
     --color-scheme: light;
-    --color-scheme: dark;
+    /* --color-scheme: dark; */
 
 
     /* |.... TYPOGRAPHY */
@@ -192,11 +192,15 @@ nav a:focus {
       background-color: var(--color-neutral-30);
     }
 }
-/* This fixes the contrast issue when a dark color-scheme is applied.
-    
+/* This should fix the contrast issue when a dark color-scheme is applied.
+
+• Notes:
+    It doesn't work as it own, because color-scheme works with OS preference**, not the application itself. So I suppose this has to be fixed with JS, or implement this feature in a different way.
+
 • References: 
-    https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme#styling_based_on_color_schemes
+    *) https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme#styling_based_on_color_schemes
     
+    **) https://github.com/microsoft/vscode/issues/176698
 */
 
 .site-title {
@@ -257,8 +261,8 @@ nav a:focus {
 /* |.. LANDING PAGE 
 
 Notes:
-    Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell***
-    ***) References::after
+    Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
+    *) References::after
         - Youtube: https://www.youtube.com/watch?v=c13gpBrnGEw
         - Codepen: https://codepen.io/kevinpowell/pen/ExrZrrw
 */
@@ -272,9 +276,7 @@ Notes:
     /* Calculates the content's width*/
       
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
-    /* Calculates the relative size of each extra space of the breakout width size: 
-    Substract the content width of the breakout width and divide it by half for each 
-    gutter on the sides */
+    /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each gutter on the sides */
     
     display: grid;
     grid-template-columns:
