@@ -605,16 +605,16 @@ model-viewer {
 }
 /* Extends the width of the container */
 
-div > model-viewer {
-    height: 400px;
-}
+/* div > model-viewer {
+    height: 360px;
+} */
 
 /* |.... UTILITY CLASSES */
 
 /* |...... LAYOUT CLASSES */
 
 div.wide > model-viewer {
-    height: 200px;
+    height: clamp(150px, 33svw, 360px);
 }
 /* Changes the aspect ratio of its PARENT container */
 
