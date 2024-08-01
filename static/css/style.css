@@ -1,9 +1,70 @@
+/* TABLE OF CONTENTS:
+
+|| GENERAL STYLES
+|.. Variables
+|.... Color Palette
+|.... Typography
+|.... Layout settigns
+|.. Reset browser style
+|.. Typography
+|.. Elements
+|.. Utility classes
+|.... Aesthetic classes
+|.... Layout classes
+
+|| Layout
+|.. Landing page (Movil-first)
+|.. Regular page
+|.... Responsive queries
+|...... Tablet
+|...... Desktop PC
+|.... Layout classes
+
+|| Sitewide
+|.. Header
+|.... Principal navigation bar
+|.... Secondary navigation bar
+|.. Main
+|.. Aside
+|.. Footer
+
+|| Components
+|.. Form
+
+
+• Protip: You can navigate through principal sections looking for '||' (Ctrl+F). 
+
+• Notes: 
+
+    1) Instead of just gropuing "Utility classes" under that name, I'll group them in a semantic way**, by their types:
+        - Aesthetic classes
+        - Layout classes
+        - Spacing classes
+        
+    2) In the future, I'll reorganize it to complain with the BEM methodology.
+
+• References:
+
+  *) "Organizing your CSS", a guide by MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+
+  **) "The 3 Types of CSS Utility Classes", by JamesKerr: https://www.jameskerr.blog/posts/3-types-of-css-utility-classes/
+
+*/
+
+
+/* || GENERAL STYLES */
+
+/* |.. VARIABLES */
+
 :root {
-    --primary-color: white;
-    --secondary-color: #252525;
-    --tertiary-color: #00A650;
+
+    /* |.... COLOR PALETTE */
+
+    --primary-color:    white;
+    --secondary-color:  #252525;
+    --tertiary-color:   #00A650;
     
-    --error-color: #ba1a1a;
+    --error-color:      #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-95: hsl(216, 8%, 95%);
     --color-neutral-80: LightGrey;
@@ -11,7 +72,35 @@
     --color-neutral-50: hsl(0, 0%, 50%);
     --color-neutral-40: DimGrey;
     --color-neutral-30: hsl(0, 0%, 30%);
+
+    --color-scheme: light;
+    /* --color-scheme: dark; */
+
+
+    /* |.... TYPOGRAPHY */
+
+    --font-family: system-ui;
+  
+    --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+    --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+    --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem);
+    /* If it overflow in small sizes, reduce the last value*/
+
+
+     /* |.... LAYOUT SETTINGS */
+
+    --aside-width: clamp(12rem, 20rem, 10svw);
+    --grid-max-width: 80rem; /* == 1280px */
+    --padding-inline: 1rem;
+
 }
+
+
+/* |.. RESET BROWSER STYLE */
 
 * {
     margin: 0;
@@ -19,3 +108,309 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* |.. TYPOGRAPHY */
+
+
+/* |.. ELEMENTS */
+
+html {
+    color-scheme: var(--color-scheme);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--fs-400);
+    line-height: 1.6;
+}
+
+.logo {
+    max-width: 250px;
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+/* Keeps images from overflowing in the X axis */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(5vw, 1rem);
+}
+  
+:is(nav, ul, ol) a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+nav a:hover,
+nav a:focus {
+    color: var(--tertiary-color);
+    text-decoration: underline;
+}
+
+/* |.. UTILITY CLASSES */
+
+/* |.... AESTHETIC CLASSES */
+
+.call-to-action,
+.bg-tertiary {
+    padding: 1rem;
+    background: var(--tertiary-color);
+}
+
+.high-light,
+.bg-secondary {
+    padding: 1rem;
+    background: var(--color-neutral-80);
+}
+
+@media (prefers-color-scheme: dark) {
+    .high-light,
+    .bg-secondary {
+      background-color: var(--color-neutral-30);
+    }
+}
+/* This should fix the contrast issue when a dark color-scheme is applied.
+
+• Notes:
+    It doesn't work as it own, because color-scheme works with OS preference**, not the application itself. So I suppose this has to be fixed with JS, or implement this feature in a different way.
+
+• References: 
+    *) https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme#styling_based_on_color_schemes
+    
+    **) https://github.com/microsoft/vscode/issues/176698
+*/
+
+.site-title {
+    font-size: var(--fs-900);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+  
+.section-title {
+    font-size: var(--fs-800);
+    line-height: 1.1;
+}
+
+.toc-title,
+.aside-title {
+    font-size: var(--fs-400);
+    line-height: 2;
+}
+
+
+/* |.... LAYOUT CLASSES */
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.wrapper {
+    width: calc(100% - 3rem);
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-spacing, 1em);
+}
+
+.even-columns {
+    display: flex;
+    gap: 1rem;
+  }
+
+
+/* |.... SPACING CLASSES */
+
+.section-padding {
+    padding-block: 2.5rem;
+}
+
+
+/* || LAYOUT */
+
+/* |.. LANDING PAGE 
+
+Notes:
+    Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
+    *) References::after
+        - Youtube: https://www.youtube.com/watch?v=c13gpBrnGEw
+        - Codepen: https://codepen.io/kevinpowell/pen/ExrZrrw
+*/
+
+.content-grid {
+    
+    --breakout-max-width: var(--grid-max-width);
+    /* Maximum width size for the breakout container */
+       
+    --content-max-width: var(--breakout-max-width) * 0.75;
+    /* Calculates the content's width*/
+      
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+    /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each gutter on the sides */
+    
+    display: grid;
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+    
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+    
+.content-grid > .full-width {
+  grid-column: full-width;
+    
+  display: grid;
+  grid-template-columns: inherit;
+}
+/* Allows to use the grid of it's PARENT container */
+    
+
+/* |.... LAYOUT CLASSES */
+
+img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+}
+/* Makes an image to extend full width */
+
+
+/* |.. REGULAR PAGE */
+
+.holy-grail {
+    max-width: var(--grid-max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template: 
+    "sidebar" 
+    "main" 
+    "ads";
+}
+/* In order to properly work, there has to be a <div> containing
+the main and at least one asides element. */
+  
+.sidebar {
+    grid-area: sidebar;
+    width: var(--aside-width);
+}
+  
+.main {
+    grid-area: main;
+}
+  
+.ads {
+    grid-area: ads;
+    width: var(--aside-width);
+}
+
+/* |.... RESPONSIVE QUERIES */
+
+/* |...... TABLET */
+
+@media (min-width: 640px) {
+    .holy-grail {
+      grid-template: 
+      "sidebar    main"
+      "ads        main" / 
+      auto        1fr;
+    }
+  }
+  
+  /* |...... DESKTOP PC */
+  
+  @media (min-width: 960px) {
+    .holy-grail {
+      grid-template: 
+      "sidebar   main    ads" /
+      auto       1fr     auto ;
+    }
+  }
+
+
+/* |.... SPACING CLASSES */
+
+body.blog-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.5;
+}
+/* Adjust the container width size in relation to the sidebar */
+
+body.wiki-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.625;
+}
+/* Adjust the container width size in relation to the sidebar */
+  
+body.wiki-page :is(.ads) {
+    display: none;
+}
+/* Hides auxiliar sidebar */
+
+
+/* || SITEWIDE */
+
+/* |.. HEADER */
+
+/* |.... PRINCIPAL NAVIGATION BAR */
+
+.primary-header {
+    padding-block: 1rem;
+    margin-block-end: 3rem;
+    background: var(--clr-accent-200);
+    color: var(--clr-primary-500);
+}
+
+.primary-header__layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* |.... SECONDARY NAVIGATION BAR */
