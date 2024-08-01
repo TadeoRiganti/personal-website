@@ -178,17 +178,21 @@ nav a:focus {
 
 /* |.... AESTHETIC CLASSES */
 
+.call-to-action,
 .bg-tertiary {
+    padding: 1rem;
     background: var(--tertiary-color);
 }
 
-.call-to-action {
+.high-light,
+.bg-secondary {
     padding: 1rem;
     background: var(--color-neutral-80);
 }
 
 @media (prefers-color-scheme: dark) {
-    .call-to-action {
+    .high-light,
+    .bg-secondary {
       background-color: var(--color-neutral-30);
     }
 }
