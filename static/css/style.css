@@ -35,6 +35,8 @@
 
 || Components
 |.. Model-viewer
+|.... Utility classes
+|...... Layout classes
 
 
 • Protip: You can navigate through principal sections looking for '||' (Ctrl+F). 
@@ -216,6 +218,8 @@ nav a:focus {
 
 /* |...... AESTHETIC CLASSES */
 
+/* Coloration */
+
 .call-to-action,
 .bg-tertiary {
     padding: 1rem;
@@ -244,6 +248,15 @@ nav a:focus {
     
     **) https://github.com/microsoft/vscode/issues/176698
 */
+
+/* Containers */
+
+.card {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 36px;
+    margin: 24px;
+}
 
 .elevation-1 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
