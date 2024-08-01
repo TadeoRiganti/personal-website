@@ -12,6 +12,8 @@
 |.. Animation
 |.. Elevations
 |.. Typography
+|.... Utility classes
+|...... Aesthetic classes
 |.. Elements
 |.... Utility classes
 |...... Aesthetic classes
@@ -86,9 +88,14 @@
 
     /* |.... TYPOGRAPHY */
 
-    --display-font-family: font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    --font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --display-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   
+
+    /* NOTE TO MY FUTURE SELF: 
+    The following settings are from the Kevin's Powell project.
+    It's imperative to adjust them, using a more robust system; ideally using the dynamic variations 'Inter' font allows. */
+
     --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
     --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
     --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
@@ -157,12 +164,28 @@ html {
 
 /* |.. TYPOGRAPHY */
 
+/* Display */
 
-/* |.. ELEMENTS */
-
-html {
-    color-scheme: var(--color-scheme);
+.bebas-neue-regular {
+    font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+/* Content */
+
+.inter-400 {
+  font-family: "Inter", 'Segoe UI', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Notes: 
+    <uniquifier>: Use a unique and descriptive class name
+    <weight>: Use a value from 100 to 900
+*/
+
+
 
 body {
     margin: 0;
@@ -170,6 +193,37 @@ body {
     font-size: var(--fs-400);
     line-height: 1.6;
 }
+
+
+/* |.... UTILITY CLASSES */
+
+/* |...... AESTETHICS CLASSES */
+
+.site-title {
+    font-family: var(--display-font-family);
+    font-size: var(--fs-900);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+  
+.section-title {
+    font-size: var(--fs-800);
+    line-height: 1.1;
+}
+
+.toc-title,
+.aside-title {
+    font-size: var(--fs-400);
+    line-height: 2;
+}
+
+/* |.. ELEMENTS */
+
+html {
+    color-scheme: var(--color-scheme);
+}
+
+
 
 h1,
 h2,
@@ -330,24 +384,6 @@ table tbody tr a {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Text */
-
-.site-title {
-    font-size: var(--fs-900);
-    line-height: 1.05;
-    text-transform: uppercase;
-}
-  
-.section-title {
-    font-size: var(--fs-800);
-    line-height: 1.1;
-}
-
-.toc-title,
-.aside-title {
-    font-size: var(--fs-400);
-    line-height: 2;
-}
 
 /* Images */
 
