@@ -146,26 +146,11 @@
 
 /* |.. ANIMATIONS */
 
-/* Transitions */
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
 }
 
-/* |.. ELEVATIONS */
-
-.elevation-1 {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
-
-.elevation-2 {
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
-}
-
-.elevation-3 {
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
-}
 
 
 /* |.. TYPOGRAPHY */
@@ -259,6 +244,20 @@ nav a:focus {
     
     **) https://github.com/microsoft/vscode/issues/176698
 */
+
+.elevation-1 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.elevation-2 {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.elevation-3 {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Fonts */
 
 .site-title {
     font-size: var(--fs-900);
