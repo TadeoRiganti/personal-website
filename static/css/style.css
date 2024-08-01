@@ -6,11 +6,16 @@
 |.... Typography
 |.... Layout settigns
 |.. Reset browser style
+|.. Color Palette
+|.... Utility classes
+|...... Aesthetic classes
+|.. Animation
+|.. Elevations
 |.. Typography
 |.. Elements
-|.. Utility classes
-|.... Aesthetic classes
-|.... Layout classes
+|.... Utility classes
+|...... Aesthetic classes
+|...... Layout classes
 
 || Layout
 |.. Landing page (Movil-first)
@@ -114,6 +119,54 @@
   box-sizing: border-box;
 }
 
+/* |.. COLOR PALETTE */
+
+/* |.... UTILITY CLASSES */
+
+/* |...... AESTETHIC CLASSES */
+
+.light-theme {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+.tonal {
+    background-color: var(--color-neutral-95);
+    color: var(--secondary-color);
+}
+
+.dark-theme {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.brand-color {
+    background-color: var(--tertiary-color);
+}
+
+/* |.. ANIMATIONS */
+
+/* Transitions */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+/* |.. ELEVATIONS */
+
+.elevation-1 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.elevation-2 {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.elevation-3 {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
 
 /* |.. TYPOGRAPHY */
 
@@ -174,9 +227,9 @@ nav a:focus {
     text-decoration: underline;
 }
 
-/* |.. UTILITY CLASSES */
+/* |.... UTILITY CLASSES */
 
-/* |.... AESTHETIC CLASSES */
+/* |...... AESTHETIC CLASSES */
 
 .call-to-action,
 .bg-tertiary {
@@ -225,7 +278,7 @@ nav a:focus {
 }
 
 
-/* |.... LAYOUT CLASSES */
+/* |...... LAYOUT CLASSES */
 
 .visually-hidden {
     clip: rect(0 0 0 0);
@@ -253,7 +306,7 @@ nav a:focus {
   }
 
 
-/* |.... SPACING CLASSES */
+/* |...... SPACING CLASSES */
 
 .section-padding {
     padding-block: 2.5rem;
@@ -313,7 +366,9 @@ Notes:
 /* Allows to use the grid of it's PARENT container */
     
 
-/* |.... LAYOUT CLASSES */
+/* |.... UTILITY CLASSES */
+
+/* |...... LAYOUT CLASSES */
 
 img.full-width {
     width: 100%;
