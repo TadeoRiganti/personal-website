@@ -478,41 +478,37 @@ body.wiki-page :is(.ads) {
     display: none;
 }
 
-/* Extends the width of the container */
-
 model-viewer {
     height: inherit;
     width: inherit;
 }
-
+/* Extends the width of the container */
 
 div > model-viewer {
     height: 400px;
 }
 
+/* |.... UTILITY CLASSES */
+
+/* |...... LAYOUT CLASSES */
 
 div.wide > model-viewer {
     height: 200px;
 }
-/* El atributo 'camera-orbit="360deg 80deg 60%"', donde '60%' acerca la distancia entre la camara y el objeto. */
+/* Changes the aspect ratio of its PARENT container */
 
-/* Hotspots */
-
-/* Hide hotspot */
 model-viewer .hotspot{
     width: 0px;
     height: 0px;
     border: none;
-  }
-
-
-/* Annotations */
+}
+/* Hide hotspot element as default */
 
 model-viewer button {
     --min-hotspot-opacity: 0;
 }
+/* Hide annotation element as default */
 
-/* Change max-with with clamp like font treatment */
 model-viewer .annotation {
     border-radius:10px;
     border: none;
@@ -530,15 +526,4 @@ model-viewer .annotation {
     height: max-content;
     transform: translate3d(-50%, -50%, 90);
 }
-
-/* Top head annotation */
-model-viewer .hotspot[slot=hotspot-4] {
-    /* Meaning:            X      Y */
-    transform: translate(-125px, -50px);
-}
-
-/* Right ear annotation */
-model-viewer .hotspot[slot=hotspot-7] {
-    /* Meaning:            X      Y */
-    transform: translate(-125px, 50px);
-}
+/* Change max-with with clamp like font treatment */
