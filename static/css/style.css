@@ -368,8 +368,8 @@ table tbody tr a {
 .card {
     background-color: var(--primary-color);
     border-radius: 20px;
-    padding: 36px;
-    margin: 24px;
+    padding: 2rem;
+    margin: 0;
 }
 
 .elevation-1 {
@@ -617,6 +617,11 @@ div.wide > model-viewer {
     height: clamp(150px, 33svw, 360px);
 }
 /* Changes the aspect ratio of its PARENT container */
+
+body.blog-page div.wide > model-viewer {
+    height: clamp(150px, 25svw, 300px);
+}
+/* QUICK FIX FOR TESTING: Delete later */
 
 model-viewer .hotspot{
     width: 0px;
