@@ -34,7 +34,7 @@
 |.. Footer
 
 || Components
-|.. Form
+|.. Model-viewer
 
 
 • Protip: You can navigate through principal sections looking for '||' (Ctrl+F). 
@@ -468,3 +468,77 @@ body.wiki-page :is(.ads) {
 
 
 /* |.... SECONDARY NAVIGATION BAR */
+
+
+/* || COMPONENTS */
+
+/* |.. MODEL-VIEWER */
+
+:not(:defined) > * {
+    display: none;
+}
+
+/* Extends the width of the container */
+
+model-viewer {
+    height: inherit;
+    width: inherit;
+}
+
+
+div > model-viewer {
+    height: 400px;
+}
+
+
+div.wide > model-viewer {
+    height: 200px;
+}
+/* El atributo 'camera-orbit="360deg 80deg 60%"', donde '60%' acerca la distancia entre la camara y el objeto. */
+
+/* Hotspots */
+
+/* Hide hotspot */
+model-viewer .hotspot{
+    width: 0px;
+    height: 0px;
+    border: none;
+  }
+
+
+/* Annotations */
+
+model-viewer button {
+    --min-hotspot-opacity: 0;
+}
+
+/* Change max-with with clamp like font treatment */
+model-viewer .annotation {
+    border-radius:10px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    max-width: 250px;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding: 0.5em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate3d(-50%, -50%, 90);
+}
+
+/* Top head annotation */
+model-viewer .hotspot[slot=hotspot-4] {
+    /* Meaning:            X      Y */
+    transform: translate(-125px, -50px);
+}
+
+/* Right ear annotation */
+model-viewer .hotspot[slot=hotspot-7] {
+    /* Meaning:            X      Y */
+    transform: translate(-125px, 50px);
+}
