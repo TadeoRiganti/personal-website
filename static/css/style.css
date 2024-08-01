@@ -171,12 +171,6 @@ body {
     line-height: 1.6;
 }
 
-.logo {
-    max-width: 250px;
-    color: inherit;
-    text-decoration: none;
-}
-
 h1,
 h2,
 h3,
@@ -188,11 +182,32 @@ figure {
     margin: 0;
 }
 
+/* IMAGES */
+
 img {
     max-width: 100%;
     display: block;
 }
 /* Keeps images from overflowing in the X axis */
+
+a .logo{
+    max-width: 250px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 24
+}
+/* Default setting for OUTLINED icons */
+
+
+
+/* NAVIGATION */
 
 nav ul {
     list-style: none;
@@ -211,6 +226,51 @@ nav ul {
 nav a:hover,
 nav a:focus {
     color: var(--tertiary-color);
+    text-decoration: underline;
+}
+
+/* TABLES */
+
+table {
+    margin: 30px 0px;
+    width: 100%;
+    margin-bottom: 1rem;
+    vertical-align: top;
+}
+
+table th,
+table td {
+    padding: 8px; 
+    text-align: left;
+}
+
+table th {
+    border-bottom: 2px solid var(--color-neutral-50);
+}
+
+table td {
+    border-bottom: 1px solid var(--color-neutral-90);
+}
+
+table td > img {
+    width: clamp(32px, 64px, 10vh);
+}
+
+/* RESPONSIVE */
+
+ @media (max-width: 720px) {
+    table {
+        margin: 0 auto;
+        display: table;
+    }
+}
+ /*Allows to overflow in small sizes, preventing a displacement of the general layout */
+
+table thead {}
+
+table tbody tr a {
+    font-weight: 700;
+    color :#00A650;
     text-decoration: underline;
 }
 
@@ -288,6 +348,18 @@ nav a:focus {
     font-size: var(--fs-400);
     line-height: 2;
 }
+
+/* Images */
+
+.icon--big {
+    font-size: 36px; 
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 36
+  }
+  /* Enlarge icons */
 
 
 /* |...... LAYOUT CLASSES */
