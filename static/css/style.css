@@ -111,6 +111,8 @@
     THIRD: I'll transform those values to 'rem' and then in a clamp formula
     https://clamp.font-size.app/ */
 
+    /* NOTE 2: Althought I think body size (22px) is too big, look up this site font sizes https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/ */
+
      --fs-xs: 14px;
      --lh-xs: calc(var(--fs-xs) * 1.15);
 
@@ -300,9 +302,6 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: max(5vw, 1rem);
 }
   
 :is(nav, ul, ol) a {
@@ -605,6 +604,15 @@ body.wiki-page :is(.ads) {
 
 /* |.... PRINCIPAL NAVIGATION BAR */
 
+.primary-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(5vw, 1rem);
+}
+
 .primary-header {
     padding-block: 1rem;
     margin-block-end: 3rem;
@@ -624,14 +632,19 @@ body.wiki-page :is(.ads) {
 
 /* |.. ASIDE */
 
+aside li {
+    font-size: var(--fs-xs);
+}
+/* Sets a default base size. It can be overwritten for later rule developments. */
+
+aside h2 {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+}
+
 /* |.... SIDEBAR */
 
 /* |...... TABLE OF CONTENTS */
-
-aside > * {
-    font-size: var(--fs-xs);
-}
-/* Sets a default base size. It can be overwritten for later developments. */
 
 
 
