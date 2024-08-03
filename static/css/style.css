@@ -535,19 +535,26 @@ img.full-width {
     margin: 0 auto;
     display: grid;
     grid-template: 
+    "cover"
     "sidebar" 
     "main" 
     "ads";
 }
 /* In order to properly work, there has to be a <div> containing
 the main and at least one asides element. */
+
+.cover {
+    grid-area: cover;
+    color: aliceblue;
+    background-color: #252525;
+}
   
 .sidebar {
     grid-area: sidebar;
     width: var(--aside-width);
 }
   
-.main {
+.article {
     grid-area: main;
 }
   
@@ -562,7 +569,8 @@ the main and at least one asides element. */
 
 @media (min-width: 640px) {
     .holy-grail {
-      grid-template: 
+      grid-template:
+      "cover cover" 
       "sidebar    main"
       "ads        main" / 
       auto        1fr;
@@ -574,6 +582,7 @@ the main and at least one asides element. */
   @media (min-width: 960px) {
     .holy-grail {
       grid-template: 
+      "cover cover cover"
       "sidebar   main    ads" /
       auto       1fr     auto ;
     }
@@ -628,6 +637,8 @@ body.wiki-page :is(.ads) {
 
 
 /* |.... SECONDARY NAVIGATION BAR */
+
+
 
 
 /* |.. ASIDE */
