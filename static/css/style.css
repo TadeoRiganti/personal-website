@@ -632,7 +632,7 @@ body.wiki-page :is(.ads) {
 
 /* |.. ASIDE */
 
-aside li {
+aside > * {
     font-size: var(--fs-xs);
 }
 /* Sets a default base size. It can be overwritten for later rule developments. */
