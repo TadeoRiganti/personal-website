@@ -322,8 +322,6 @@ table td > img {
 }
  /*Allows to overflow in small sizes, preventing a displacement of the general layout */
 
-table thead {}
-
 table tbody tr a {
     font-weight: 700;
     color :#00A650;
