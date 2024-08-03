@@ -69,7 +69,7 @@
 
     /* |.... COLOR PALETTE */
 
-    --primary-color:    white;
+    --fs-srimary-color:    white;
     --secondary-color:  #252525;
     --tertiary-color:   #00A650;
     
@@ -88,7 +88,7 @@
 
     /* |.... TYPOGRAPHY */
 
-    --display-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --fs-xl-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   
@@ -97,37 +97,52 @@
     The following settings are from the Kevin's Powell project.
     It's imperative to adjust them, using a more robust system; ideally using the dynamic variations 'Inter' font allows. */
 
-    /* --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
+    /* --fs-s: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-l: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-xl: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
 
-    /* Trying different values
+     
+    /*
+    NOTE FOR FUTURE ME:
+    FIRST I'll find the sizes that works well on desktop Full HD.
+    SECOND I'll find the sizes that works best on movile xs.
+    THIRD: I'll transform those values to 'rem' and then in a clamp formula
     https://clamp.font-size.app/ */
 
-    /* --fs-400: clamp(1rem, 1rem + 0.15vw, 3rem);
-    --fs-800: clamp(2rem, 1.2174rem + 2.3188vw, 4rem);
-    --fs-900: clamp(3rem, 2.2174rem + 2.3188vw, 5rem); */
+     --fs-xs: 14px;
+     --lh-xs: calc(var(--fs-xs) * 1.15);
 
-    /* Random blogs */
-    --fs-400: 18px; /* p */
-    --fs-700: 28px; /* h3 */
-    --fs-800: 38px; /* h2 */
-    --fs-900: 48px; /* h1 */
+     --fs-s: 16px;
+     --lh-s: calc(var(--fs-xs) * 1.5);
 
-    /* MDN blog */
-     --fs-400: 1rem; /* p */
-     --fs-700: 1.2rem; /* h3 */
-     --fs-800: 2.1rem; /* h2 */
-     --fs-900: 2.5rem; /* h1 */
-     
-    
+     --fs-m: 22px; 
+     --lh-m: calc(var(--fs-xs) * 1.27);
+
+     --fs-l: 32px;
+     --lh-l: calc(var(--fs-xs) * 1.33);
+
+     --fs-xl: 45px; 
+     --lh-xl: calc(var(--fs-xs) * 1.155);
+
+     /* 
+     NOTES:
+     *)  Semantic approach: --attribute-size
+     **) Sizes based om Material design system:
+            xl == Display Medium
+            l  == Headline Medium
+            m  == Title Large
+            s  == Body large
+            xs == Title small / Body medium 
+
+
+      */
 
 
      /* |.... LAYOUT SETTINGS */
 
     --aside-width: clamp(12rem, 20rem, 10svw);
     --grid-max-width: 80rem; /* == 1280px */
-    --padding-inline: 1rem;
+    --fs-sadding-inline: 1rem;
 
 }
 
@@ -159,7 +174,7 @@ h1 {
 /* |...... AESTETHIC CLASSES */
 
 .light-theme {
-    background-color: var(--primary-color);
+    background-color: var(--fs-srimary-color);
     color: var(--secondary-color)
 }
 
@@ -170,7 +185,7 @@ h1 {
 
 .dark-theme {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--fs-srimary-color);
 }
 
 .brand-color {
@@ -213,7 +228,7 @@ html {
 body {
     margin: 0;
     font-family: var(--font-family);
-    font-size: var(--fs-400);
+    font-size: var(--fs-s);
     line-height: 1.6;
 }
 
@@ -223,22 +238,17 @@ body {
 /* |...... AESTETHICS CLASSES */
 
 .site-title {
-    font-family: var(--display-font-family);
-    font-size: var(--fs-900);
+    font-family: var(--fs-xl-font-family);
+    font-size: var(--fs-xl);
     line-height: 1.05;
     text-transform: uppercase;
 }
   
 .section-title {
-    font-size: var(--fs-800);
+    font-size: var(--fs-l);
     line-height: 1.1;
 }
 
-.toc-title,
-.aside-title {
-    font-size: var(--fs-700);
-    line-height: 2;
-}
 
 /* |.. ELEMENTS */
 
@@ -387,7 +397,7 @@ table tbody tr a {
 /* Containers */
 
 .card {
-    background-color: var(--primary-color);
+    background-color: var(--fs-srimary-color);
     border-radius: 20px;
     padding: 2rem;
     margin: 0;
@@ -478,15 +488,15 @@ Notes:
     
     display: grid;
     grid-template-columns:
-      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [full-width-start] minmax(var(--fs-sadding-inline), 1fr)
       [breakout-start] minmax(0, var(--breakout-size))
       [content-start] min(
-        100% - (var(--padding-inline) * 2),
+        100% - (var(--fs-sadding-inline) * 2),
         var(--content-max-width)
       )
       [content-end]
       minmax(0, var(--breakout-size)) [breakout-end]
-      minmax(var(--padding-inline), 1fr) [full-width-end];
+      minmax(var(--fs-sadding-inline), 1fr) [full-width-end];
 }
 
 .content-grid > :not(.breakout, .full-width),
@@ -610,6 +620,24 @@ body.wiki-page :is(.ads) {
 
 
 /* |.... SECONDARY NAVIGATION BAR */
+
+
+/* |.. ASIDE */
+
+/* |.... SIDEBAR */
+
+/* |...... TABLE OF CONTENTS */
+
+aside > * {
+    font-size: var(--fs-xs);
+}
+/* Sets a default base size. It can be overwritten for later developments. */
+
+.toc__title,
+.aside__title {
+    line-height: 2rem;
+}
+
 
 
 /* || COMPONENTS */
