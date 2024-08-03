@@ -143,6 +143,8 @@
 
 h1 {
     font-weight: normal;
+    /* Alredy using a display font for h1 title, so no additional weight
+    is needed to look as a display font. */
 }
 
 *::before,
