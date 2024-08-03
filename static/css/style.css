@@ -113,16 +113,16 @@
      --lh-xs: calc(var(--fs-xs) * 1.15);
 
      --fs-s: 16px;
-     --lh-s: calc(var(--fs-xs) * 1.5);
+     --lh-s: calc(var(--fs-s) * 1.5);
 
      --fs-m: 22px; 
-     --lh-m: calc(var(--fs-xs) * 1.27);
+     --lh-m: calc(var(--fs-m) * 1.27);
 
      --fs-l: 32px;
-     --lh-l: calc(var(--fs-xs) * 1.33);
+     --lh-l: calc(var(--fs-l) * 1.33);
 
      --fs-xl: 45px; 
-     --lh-xl: calc(var(--fs-xs) * 1.155);
+     --lh-xl: calc(var(--fs-xl) * 1.05);
 
      /* 
      NOTES:
@@ -133,8 +133,6 @@
             m  == Title Large
             s  == Body large
             xs == Title small / Body medium 
-
-
       */
 
 
@@ -229,7 +227,7 @@ body {
     margin: 0;
     font-family: var(--font-family);
     font-size: var(--fs-s);
-    line-height: 1.6;
+    line-height: var(--lh-s);
 }
 
 
@@ -240,13 +238,13 @@ body {
 .site-title {
     font-family: var(--fs-xl-font-family);
     font-size: var(--fs-xl);
-    line-height: 1.05;
+    line-height: var(--lh-xl);
     text-transform: uppercase;
 }
   
 .section-title {
     font-size: var(--fs-l);
-    line-height: 1.1;
+    line-height: var(--lh-l);
 }
 
 
