@@ -96,11 +96,16 @@
     The following settings are from the Kevin's Powell project.
     It's imperative to adjust them, using a more robust system; ideally using the dynamic variations 'Inter' font allows. */
 
-    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    /* --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
     --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
 
+    /* Trying different values
+    https://clamp.font-size.app/ */
 
+    --fs-400: clamp(1rem, 1rem + 0.15vw, 3rem);
+    --fs-800: clamp(2rem, 1.2174rem + 2.3188vw, 4rem);
+    --fs-900: clamp(3rem, 2.2174rem + 2.3188vw, 5rem);;
 
 
      /* |.... LAYOUT SETTINGS */
