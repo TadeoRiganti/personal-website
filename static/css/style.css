@@ -33,6 +33,8 @@
 |.... Secondary navigation bar
 |.. Main
 |.. Aside
+|.... Sidebar
+|...... Table of contents
 |.. Footer
 
 || Components
@@ -630,11 +632,6 @@ aside > * {
     font-size: var(--fs-xs);
 }
 /* Sets a default base size. It can be overwritten for later developments. */
-
-.toc__title,
-.aside__title {
-    line-height: 2rem;
-}
 
 
 
