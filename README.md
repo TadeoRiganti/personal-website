@@ -133,6 +133,7 @@ _Furthermore research is needed._
 - Variable fonts: https://codepen.io/glyphe/pen/XxZzYV
 - Layout (wiki): https://rachelandrew.co.uk/
 - Layout (blog): https://cloudfour.com/thinks/breaking-out-with-css-grid-layout/
+- Layout (blog: [zenbrief](https://zenbrief.com/blog/table-of-contents-for-seo/)
 
 #### B) Section:
 
