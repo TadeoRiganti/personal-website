@@ -89,6 +89,7 @@
     /* |.... TYPOGRAPHY */
 
     --display-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
     --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   
 
@@ -103,9 +104,23 @@
     /* Trying different values
     https://clamp.font-size.app/ */
 
-    --fs-400: clamp(1rem, 1rem + 0.15vw, 3rem);
+    /* --fs-400: clamp(1rem, 1rem + 0.15vw, 3rem);
     --fs-800: clamp(2rem, 1.2174rem + 2.3188vw, 4rem);
-    --fs-900: clamp(3rem, 2.2174rem + 2.3188vw, 5rem);;
+    --fs-900: clamp(3rem, 2.2174rem + 2.3188vw, 5rem); */
+
+    /* Random blogs */
+    --fs-400: 18px; /* p */
+    --fs-700: 28px; /* h3 */
+    --fs-800: 38px; /* h2 */
+    --fs-900: 48px; /* h1 */
+
+     /* MDN blogs */
+     --fs-400: 16px; /* p */
+     --fs-700: 19.2px; /* h3 */
+     --fs-800: 33.184px; /* h2 */
+     --fs-900: 39.08px; /* h1 */
+     
+    
 
 
      /* |.... LAYOUT SETTINGS */
@@ -124,6 +139,10 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+}
+
+h1 {
+    font-weight: normal;
 }
 
 *::before,
@@ -215,7 +234,7 @@ body {
 
 .toc-title,
 .aside-title {
-    font-size: var(--fs-400);
+    font-size: var(--fs-700);
     line-height: 2;
 }
 
