@@ -673,6 +673,7 @@ body.wiki-page :is(.ads) {
     object-fit: cover;
     height: 33vh;
     width: 100%;
+    border-radius: 10px;
 }
 
 .cover .description {
