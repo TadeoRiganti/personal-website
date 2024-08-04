@@ -279,9 +279,9 @@ img {
 }
 /* Keeps images from overflowing in the X axis */
 
-body.blog-page img {
+/* body.blog-page img {
     border-radius: 10px;
-}
+} */
 
 a .logo{
     max-width: 250px;
@@ -378,6 +378,10 @@ table tbody tr a {
 .bg-secondary {
     padding: 1rem;
     background: var(--color-neutral-80);
+}
+
+.high-light {
+    border-radius: 10px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -696,11 +700,21 @@ body.wiki-page :is(.ads) {
 
 /* |...... ARTICLE */
 
-article :is(.full-width, .breakout) {
-    border-radius: 10px;
+@media (min-width: 960px) {
+    article :is(.full-width) {
+        border-radius: 10px;
+    }
 }
 /* As full-width doesn't work well in surrounded layouts, this rule acts as a 'prettyfier'
 making it pass as a container rather than full-width. */
+
+@media (min-width: 640px) {
+    article :is(.full-width) {
+        border-radius: 10px 0px 0px 10px;
+    }
+}
+/* In tablet size viewport, only one side of the elements get in contact with the visor side.
+So, this part (rigth side) doesn't get any border radius. */
 
 
 /* |...... ASIDE */
