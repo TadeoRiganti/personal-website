@@ -17,12 +17,12 @@
 
     <title>Blog page - Layout</title>
 </head>
-<body class="blog-page content-grid">
+<body class="blog-page">
 <!-- Layout can be altered changing the body's class:
       - 'blog-page' → "Holy-grail" layout
       - 'wiki-page' → "Dashbord" layout -->
 
-    <header class="primary-header breakout">
+    <header class="primary-header content-grid">
         <div class="primary-header__layout breakout">
           <a href="#" class="logo">LAYOUTS</a>
           <nav>
@@ -34,38 +34,45 @@
           </nav>
         </div>
     </header>
-      
     
-        <main class="flow breakout holy-grail ">
-          <section class="cover">
-            <H1>ARTICLE'S TITLE</H1>
-          </section>
-          <article class="main content-grid">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iure velit tenetur sunt eaque, quo mollitia dicta ipsam, magni molestias pariatur. Amet ad beatae sit quod ab aut aliquid eaque voluptatem quos.</p>
-          </article>
-          <aside class="sidebar toc">
-            <nav>
-              <div class="toc-container">
-                <h2 class="toc__title"> Table of contents</h2>
-                <ul class="toc__list">
-                  <li><a href="#">Section 1</a></li>
-                  <li><a href="#">Section 2</a></li>
-                  <li><a href="#">Section 3</a></li>
-                </ul>
+    <main class="flow breakout">
+          <section class="cover content-grid  ">
+            <div class="container breakout even-columns bg-tertiary">
+              <div class="description">
+                <H1>ARTICLE'S TITLE</H1>
+                <p>Brief introduction to the content of the article.</p>
+                <caption>Author | August 3, 2024 | 5 min reading</caption>
               </div>
-            </nav>
-          </aside>
-  
-          <aside class="ads">
-            <h2 class="aside__title">Unrelated stuff</h2>
-          </aside>
-        </main>
+              <div class="display">
+                <img src="https://clickup.com/blog/wp-content/uploads/2024/06/How-ClickUps-marketing-team-uses-ClickUp-700x525.png" alt="Image related to the article's content.">
+              </div>
+            </div>
+          </section>
 
+          <div class="breakout holy-grail">
+            <article class="main content-grid">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iure velit tenetur sunt eaque, quo mollitia dicta ipsam, magni molestias pariatur. Amet ad beatae sit quod ab aut aliquid eaque voluptatem quos.</p>
+             </article>
+             <aside class="sidebar toc">
+               <nav>
+                 <div class="toc-container">
+                   <h2 class="toc__title"> Table of contents</h2>
+                   <ul class="toc__list">
+                     <li><a href="#">Section 1</a></li>
+                     <li><a href="#">Section 2</a></li>
+                     <li><a href="#">Section 3</a></li>
+                   </ul>
+                 </div>
+               </nav>
+             </aside>
+             <aside class="ads">
+               <h2 class="aside__title">Unrelated stuff</h2>
+             </aside>
+          </div>
+    </main>
 
-    
-
-    <footer class="breakout">
-      <p>@ 2024</p>  
+    <footer class="content-grid">
+      <p class="breakout">@ 2024</p>  
     </footer>
 </body>
 </html>
