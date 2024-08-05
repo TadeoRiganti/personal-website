@@ -386,7 +386,7 @@ table tbody tr a {
 .high-light,
 .bg-secondary {
     padding: 1rem;
-    background: var(--color-neutral-80);
+    background: var(--color-neutral-95);
 }
 
 .high-light {
@@ -587,8 +587,6 @@ the main and at least one asides element. */
 
 .cover {
     grid-area: cover;
-    color: aliceblue;
-    background-color: #252525;
 }
   
 .sidebar {
@@ -685,9 +683,9 @@ body.wiki-page :is(.ads) {
 
 /* |.... COVER */
 
-.cover {
+/* .cover {
     background-color: whitesmoke;
-}
+} */
 
 .cover .container {
     margin: 2rem auto;
