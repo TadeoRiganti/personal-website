@@ -146,6 +146,8 @@
     --grid-max-width: 80rem; /* == 1280px */
     --fs-sadding-inline: 1rem;
 
+    --flow-spacing: 1em;
+
 }
 
 
@@ -180,7 +182,7 @@ h1 {
     color: var(--secondary-color)
 }
 
-.tonal {
+.bg-tonal {
     background-color: var(--color-neutral-95);
     color: var(--secondary-color);
 }
@@ -234,6 +236,10 @@ body {
     line-height: var(--lh-s);
 }
 
+caption {
+    font-style: italic;
+}
+
 
 /* |.... UTILITY CLASSES */
 
@@ -258,6 +264,9 @@ html {
     color-scheme: var(--color-scheme);
 }
 
+:is(ul, ol) {
+    list-style: inside;
+}
 
 
 h1,
@@ -410,20 +419,30 @@ table tbody tr a {
     margin: 0;
 }
 
+.description  {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* Adds a gap at the top of each element */
+
+
+.product {
+    display: grid;
+}
+
+
+
+
+
 @media (min-width: 940px) {
      .product:not(.wide) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+       grid-template-columns: 1fr 1fr;
+       gap: 2rem;
     }
 }
 
-.card > .description {
-    background-color: #ba1a1a;
-}
-
-.card > .content {
-    background-color: #00A650;
-}
+/* Elevations */
 
 .elevation-1 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
@@ -463,15 +482,10 @@ table tbody tr a {
     width: 1px;
 }
 
-/* .wrapper {
-    width: calc(100% - 3rem);
-    max-width: 900px;
-    margin-inline: auto;
-} */
-
 .flow > * + * {
     margin-top: var(--flow-spacing, 1em);
 }
+/* Adds an extra margin at the top of each element */
 
 .even-columns {
     display: flex;
@@ -677,7 +691,6 @@ body.wiki-page :is(.ads) {
 
 .cover .container {
     margin: 2rem auto;
-    /* height: auto; */
     display: grid;
     gap: 2rem;
 }
@@ -715,7 +728,6 @@ body.wiki-page :is(.ads) {
 /* |.... CONTENT  */
 
 .container.holy-grail {
-    /* background-color: #ba1a1a; */
     margin-top: 4rem;
 }
 
@@ -774,43 +786,7 @@ model-viewer {
 
 /* |.... UTILITY CLASSES */
 
-/* |...... LAYOUT CLASSES */
-
-.wrapper > model-viewer {
-    background-color: #252525;
-    aspect-ratio: 1 / 1;
-}
-
-.wider > .content > .wrapper > model-viewer {
-    aspect-ratio: 3 / 2;
-}
-
-.wider > .content > .wrapper > model-viewer {
-    aspect-ratio: 2 / 1;
-}
-
-.narrow > .content > .wrapper > model-viewer {
-    aspect-ratio: 2 / 3;
-}
-
-.narrower > .content > .wrapper > model-viewer {
-    aspect-ratio: 1 / 2;
-}
-
-
-
-
-
-
-/* div.wide > model-viewer {
-    height: clamp(150px, 33svw, 360px);
-} */
-/* Changes the aspect ratio of its PARENT container */
-
-/* body.blog-page div.wide > model-viewer {
-    height: clamp(150px, 25svw, 300px);
-} */
-/* QUICK FIX FOR TESTING: Delete later */
+/* |...... AESTHETHIC CLASSES */
 
 model-viewer .hotspot{
     width: 0px;
@@ -844,11 +820,28 @@ model-viewer .annotation {
 /* Change max-with with clamp like font treatment */
 
 
-/* div > model-viewer {
-    height: 400px;
+/* |...... LAYOUT CLASSES */
+
+.wrapper > model-viewer {
+    aspect-ratio: 1 / 1;
+}
+
+.wider > .content > .wrapper > model-viewer {
+    aspect-ratio: 3 / 2;
+}
+
+.wider > .content > .wrapper > model-viewer {
+    aspect-ratio: 2 / 1;
+}
+
+.narrow > .content > .wrapper > model-viewer {
+    aspect-ratio: 2 / 3;
+}
+
+.narrower > .content > .wrapper > model-viewer {
+    aspect-ratio: 1 / 2;
 }
 
 
-div.wide > model-viewer {
-    height: 240px;
-} */
+
+
