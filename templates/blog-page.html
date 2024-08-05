@@ -39,8 +39,8 @@
           <section class="cover content-grid">
             <div class="container breakout">
               <div class="description">
-                <h1 class="site-title">ARTICLE'S TITLE</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem accusantium iste nisi nesciunt reiciendis. Fugiat ipsa excepturi.</p>
+                <h1 class="site-title">Bog layout template</h1>
+                <p>A brief documentation about it's anatomy and how to use it</p>
                 <caption>Author | August 3, 2024 | 5 min</caption>
               </div>
               <div class="display">
@@ -102,31 +102,86 @@
                 Quos, animi expedita facere iste soluta accusamus et facilis, temporibus nemo praesentium iusto aliquam
                 voluptas magnam pariatur blanditiis optio, corporis laborum quas? Quis libero aperiam est fuga veniam eos tenetur?
               </p>
-              <section class="full-width bg-secondary section-padding flow"">
-                <h2>Some examples Virtual try-ons!</h2>
-                <div class="product card elevation-2">
+              <section class="full-width bg-secondary section-padding flow">
+                <h2>Display options for 3D models:</h2>
+                <p>
+                  If you have to display a collection, the ideal way is to present each object in a self-contained space. Everything displayed in this card has to be related to the object displayed.
+                </p>
+                <div class="card elevation-2 product">
                   <div class="description">
-                      <h3>3 body sofa</h2>
+                      <h3>Card's product</h2>
                       <p>
-                          With a <strong>modular</strong> and <strong> minimalystic stile</strong>, features simple shapes that makes it super easy to pair with any style of decoration.
+                        There are 2 containers inside a card, one for product's 'description' and another for its 'display. When viewport reaches 960px wide, it changes from 1 column to a 2 column layout.
                       </p>
                   </div>
-                  <div class="content wide">
+                  <div class="content">
                       <model-viewer
                           alt="Modelo 3D de un sofa de 3 cuerpos"
-                          src="..\static\assets\sofa_3c.glb"
+                          src="..\static\assets\rack-tv.glb"
                           ar
                           camera-controls
-                          camera-orbit="360deg 80deg 60%"
+                          camera-orbit="360deg 80deg"
                           max-camera-orbit="Infinity 94deg auto"
                           min-camera-orbit="-Infinity 22.5deg auto"
                           disable-pan
                           disable-zoom
                           shadow-intensity="1"
                           tone-mapping="aces">
-                          </model-viewer>
+                      </model-viewer>
+                      <small><caption>You can add an epigraph if its needed. </caption></small>
                   </div>
-              </div>
+                </div>
+                <div class="card elevation-2 product wide">
+                  <div class="description">
+                      <h3>Wide product's displays</h2>
+                      <p>
+                        Some products are too wide for display in a 2 columns layout. Adding the '.wide' class, it maintains a 1 column layout. 
+                      </p>
+                  </div>
+                  <div class="content">
+                      <model-viewer
+                          alt="Modelo 3D de un sofa de 3 cuerpos"
+                          src="..\static\assets\sofa-3c.glb"
+                          ar
+                          camera-controls
+                          camera-orbit="360deg 80deg"
+                          max-camera-orbit="Infinity 94deg auto"
+                          min-camera-orbit="-Infinity 22.5deg auto"
+                          disable-pan
+                          disable-zoom
+                          shadow-intensity="1"
+                          tone-mapping="aces">
+                      </model-viewer>
+                      <small><caption>You can add an epigraph if its needed. </caption></small>
+                  </div>
+                </div>
+                <div class="card elevation-2 product">
+                  <div class="description">
+                      <h3>Why this class is needed?</h2>
+                      <p>
+                        The size of a model-viewer component depends on its parent element size. For some reason, it doesn't allow to inherit or use % units. So it must be 'hardcoded' (untill I learn how to solve it).
+                      </p>
+                      <p>
+                        The '.wide' class is a quick-fix, a bandait I hope can replace in the future.
+                      </p>
+                  </div>
+                  <div class="content">
+                      <model-viewer
+                          alt="Modelo 3D de un sofa de 3 cuerpos"
+                          src="..\static\assets\sofa-3c.glb"
+                          ar
+                          camera-controls
+                          camera-orbit="360deg 80deg"
+                          max-camera-orbit="Infinity 94deg auto"
+                          min-camera-orbit="-Infinity 22.5deg auto"
+                          disable-pan
+                          disable-zoom
+                          shadow-intensity="1"
+                          tone-mapping="aces">
+                      </model-viewer>
+                      <small><caption>You can add an epigraph if its needed. </caption></small>
+                  </div>
+                </div>
               </section>
              </article>
              <aside class="sidebar toc">

@@ -410,6 +410,21 @@ table tbody tr a {
     margin: 0;
 }
 
+@media (min-width: 940px) {
+     .product:not(.wide) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card > .description {
+    background-color: #ba1a1a;
+}
+
+.card > .content {
+    background-color: #00A650;
+}
+
 .elevation-1 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
@@ -487,7 +502,7 @@ Notes:
     --breakout-max-width: var(--grid-max-width);
     /* Maximum width size for the breakout container */
        
-    --content-max-width: var(--breakout-max-width) * 0.75;
+    --content-max-width: var(--breakout-max-width) * 0.85;
     /* Calculates the content's width*/
       
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
@@ -505,6 +520,12 @@ Notes:
       minmax(0, var(--breakout-size)) [breakout-end]
       minmax(var(--fs-sadding-inline), 1fr) [full-width-end];
 }
+
+
+body.blog-page .holy-grail .content-grid {
+    --breakout-max-width: 180%;
+}
+/* Minimizes the distance between the breakout and the main container. */
 
 .content-grid > :not(.breakout, .full-width),
 .full-width > :not(.breakout, .full-width) {
@@ -750,22 +771,23 @@ model-viewer {
 }
 /* Extends the width of the container */
 
-/* div > model-viewer {
-    height: 360px;
-} */
 
 /* |.... UTILITY CLASSES */
 
 /* |...... LAYOUT CLASSES */
 
-div.wide > model-viewer {
-    height: clamp(150px, 33svw, 360px);
+div > model-viewer {
+    height: 250px;
 }
+
+/* div.wide > model-viewer {
+    height: clamp(150px, 33svw, 360px);
+} */
 /* Changes the aspect ratio of its PARENT container */
 
-body.blog-page div.wide > model-viewer {
+/* body.blog-page div.wide > model-viewer {
     height: clamp(150px, 25svw, 300px);
-}
+} */
 /* QUICK FIX FOR TESTING: Delete later */
 
 model-viewer .hotspot{
@@ -798,3 +820,13 @@ model-viewer .annotation {
     transform: translate3d(-50%, -50%, 90);
 }
 /* Change max-with with clamp like font treatment */
+
+
+/* div > model-viewer {
+    height: 400px;
+}
+
+
+div.wide > model-viewer {
+    height: 240px;
+} */
