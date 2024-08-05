@@ -463,11 +463,11 @@ table tbody tr a {
     width: 1px;
 }
 
-.wrapper {
+/* .wrapper {
     width: calc(100% - 3rem);
     max-width: 900px;
     margin-inline: auto;
-}
+} */
 
 .flow > * + * {
     margin-top: var(--flow-spacing, 1em);
@@ -769,16 +769,38 @@ model-viewer {
     height: inherit;
     width: inherit;
 }
-/* Extends the width of the container */
+/* Chain its size to the wrapper. */
 
 
 /* |.... UTILITY CLASSES */
 
 /* |...... LAYOUT CLASSES */
 
-div > model-viewer {
-    height: 250px;
+.wrapper > model-viewer {
+    background-color: #252525;
+    aspect-ratio: 1 / 1;
 }
+
+.wider > .content > .wrapper > model-viewer {
+    aspect-ratio: 3 / 2;
+}
+
+.wider > .content > .wrapper > model-viewer {
+    aspect-ratio: 2 / 1;
+}
+
+.narrow > .content > .wrapper > model-viewer {
+    aspect-ratio: 2 / 3;
+}
+
+.narrower > .content > .wrapper > model-viewer {
+    aspect-ratio: 1 / 2;
+}
+
+
+
+
+
 
 /* div.wide > model-viewer {
     height: clamp(150px, 33svw, 360px);

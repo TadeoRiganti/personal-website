@@ -50,6 +50,7 @@
           </section>
           <div class="container breakout holy-grail">
             <article class="main flow content-grid">
+              <h2>About the "Breakout SMOL grid" / "No container grid"</h2>
               <p>
                 It can be useful to have a system in place that's easy to go full-width, or have a "breakout" section for calls to action or blockquotes, or other things you want to call attention to.
               </p>
@@ -102,6 +103,7 @@
                 Quos, animi expedita facere iste soluta accusamus et facilis, temporibus nemo praesentium iusto aliquam
                 voluptas magnam pariatur blanditiis optio, corporis laborum quas? Quis libero aperiam est fuga veniam eos tenetur?
               </p>
+              
               <section class="full-width bg-secondary section-padding flow">
                 <h2>Display options for 3D models:</h2>
                 <p>
@@ -115,7 +117,8 @@
                       </p>
                   </div>
                   <div class="content">
-                      <model-viewer
+                      <div class="wrapper">
+                        <model-viewer
                           alt="Modelo 3D de un sofa de 3 cuerpos"
                           src="..\static\assets\rack-tv.glb"
                           ar
@@ -128,60 +131,126 @@
                           shadow-intensity="1"
                           tone-mapping="aces">
                       </model-viewer>
+                      </div>
                       <small><caption>You can add an epigraph if its needed. </caption></small>
                   </div>
                 </div>
-                <div class="card elevation-2 product wide">
-                  <div class="description">
-                      <h3>Wide product's displays</h2>
-                      <p>
-                        Some products are too wide for display in a 2 columns layout. Adding the '.wide' class, it maintains a 1 column layout. 
-                      </p>
-                  </div>
-                  <div class="content">
-                      <model-viewer
-                          alt="Modelo 3D de un sofa de 3 cuerpos"
-                          src="..\static\assets\sofa-3c.glb"
-                          ar
-                          camera-controls
-                          camera-orbit="360deg 80deg"
-                          max-camera-orbit="Infinity 94deg auto"
-                          min-camera-orbit="-Infinity 22.5deg auto"
-                          disable-pan
-                          disable-zoom
-                          shadow-intensity="1"
-                          tone-mapping="aces">
-                      </model-viewer>
-                      <small><caption>You can add an epigraph if its needed. </caption></small>
-                  </div>
-                </div>
+
+                <h2>Viewport and aspect ratio</h2>
+                <p>
+                  By default model-viewer components have an aspect ratio of 1:1. Height is the main attribute that this component will take into consideration to calculate its own size. 
+                </p>
                 <div class="card elevation-2 product">
                   <div class="description">
-                      <h3>Why this class is needed?</h2>
+                      <h3>Aspect ratio issues</h2>
                       <p>
-                        The size of a model-viewer component depends on its parent element size. For some reason, it doesn't allow to inherit or use % units. So it must be 'hardcoded' (untill I learn how to solve it).
+                        What was said before means that, wider objects will produce unwanted margins in the Y axis; above and below the object. 
                       </p>
                       <p>
-                        The '.wide' class is a quick-fix, a bandait I hope can replace in the future.
+                        This is more noticeable in 1 column layouts. And as AR features are only displayed on movile devices, it's not a good thing to let it happen.
                       </p>
                   </div>
                   <div class="content">
-                      <model-viewer
-                          alt="Modelo 3D de un sofa de 3 cuerpos"
-                          src="..\static\assets\sofa-3c.glb"
-                          ar
-                          camera-controls
-                          camera-orbit="360deg 80deg"
-                          max-camera-orbit="Infinity 94deg auto"
-                          min-camera-orbit="-Infinity 22.5deg auto"
-                          disable-pan
-                          disable-zoom
-                          shadow-intensity="1"
-                          tone-mapping="aces">
-                      </model-viewer>
-                      <small><caption>You can add an epigraph if its needed. </caption></small>
+                     <div class="wrapper">
+                        <model-viewer
+                        alt="Modelo 3D de un sofa de 3 cuerpos"
+                        src="..\static\assets\sofa-3c.glb"
+                        ar
+                        camera-controls
+                        camera-orbit="360deg 80deg 100%"
+                        max-camera-orbit="Infinity 94deg auto"
+                        min-camera-orbit="-Infinity 22.5deg auto"
+                        disable-pan
+                        disable-zoom
+                        shadow-intensity="1"
+                        tone-mapping="aces">
+                        </model-viewer>
+                     </div>
+                      <small><caption>This distance also dissociates their epigraphs </caption></small>
                   </div>
                 </div>
+
+                <h2>Wrapper & utilitarian classes</h2>
+                <p>
+                  Model-viewer components doesn't have a default size. They inherit its size from its parent container.
+                </p>
+                <p>
+                  This means that we can use a '.wrapper' to manipulate it's size and aspect ratio via utilitarian classes (remember that by default viewports are square by default).
+                </p>
+                <div class="card elevation-2 product wider">
+                  <div class="description">
+                      <h3>Wrapper and aspect ratio</h3>
+                      <p>
+                        Just add one of the following classes wherever the 'product' class lives.
+                      </p>
+                        <ul>
+                          <li>'.wide' = 3:2</li>
+                          <li>'.wider' = 2:1</li>
+                          <li>'.narrow' = 2:3</li>
+                          <li>'.narrower' = 1:2</li>
+                        </ul>
+                  </div>
+                  <div class="content">
+                    <div class="wrapper">
+                      <model-viewer
+                      alt="Modelo 3D de un sofa de 3 cuerpos"
+                      src="..\static\assets\sofa-3c.glb"
+                      ar
+                      camera-controls
+                      camera-orbit="360deg 80deg"
+                      max-camera-orbit="Infinity 94deg auto"
+                      min-camera-orbit="-Infinity 22.5deg auto"
+                      disable-pan
+                      disable-zoom
+                      shadow-intensity="1"
+                      tone-mapping="aces">
+                      </model-viewer>
+                    </div>
+                    <small><caption>You can add an epigraph if its needed. </caption></small>
+                  </div>
+                </div>
+
+                <h2>Model-viewer attributes: Zoom</h2>
+                <p>
+                  Althought aspect-ratio is now correct, a new problem has arise; our 3D model has shrinked 😱!
+                </p>
+                <p>
+                  As you may guessed, solving the viewport's aspect-ratio issue, it's just half of the solution. Luckily this can be easily solve by adjusting the "zoom" of the virtual camera of the viewport.
+                </p>
+                <p>
+                  This attribute is implicit on the 'camera-orbit' attribute. by default there are 2 values, [X-axis] and [Y-axis], but we can add a third to control the zoom:
+                </p>
+                <div class="card elevation-2 product wider">
+                  <div class="description">
+                      <h3>Ajdusting the zoom</h3>
+                      <ul>
+                        <li>No value = No zoom</li>
+                        <li>50% = doubles the zoom</li>
+                      </ul>
+                      <p>In this case we have used 60% zoom.</p>
+                  </div>
+                  <div class="content">
+                    <div class="wrapper">
+                      <model-viewer
+                      alt="Modelo 3D de un sofa de 3 cuerpos"
+                      src="..\static\assets\sofa-3c.glb"
+                      ar
+                      camera-controls
+                      camera-orbit="360deg 80deg 60%"
+                      max-camera-orbit="Infinity 94deg auto"
+                      min-camera-orbit="-Infinity 22.5deg auto"
+                      disable-pan
+                      disable-zoom
+                      shadow-intensity="1"
+                      tone-mapping="aces">
+                      </model-viewer>
+                    </div>
+                    <small><caption>You can add an epigraph if its needed. </caption></small>
+                  </div>
+                </div>
+                <p>
+                  Sadly there is no way to change this via CSS rules, so it has to be hardcoded. In the future I'll have to craft a JS script.
+                </p>
               </section>
              </article>
              <aside class="sidebar toc">
