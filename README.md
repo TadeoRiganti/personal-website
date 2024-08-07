@@ -269,7 +269,35 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 [Technique to alter focus order](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)
 
 
+## BACKLOG
 
+### DEV-HEADER
+
+Component design:
+
+The header component will morph in shape and motion placement between pages; adapting to the user's need.
+
+There are 3 use case scenarios, from left to right:
+- Landing and regular pages (in between)
+- Blog / Wiki pages
+- Portfolio
+
+#### User flow
+
+![Header component](static\img\des-header.png)
+
+I'll describe first this one as it is the complete version. The other case scenarios are an adaptation of this organism.
+
+Heavily inspired on [MDN Guides](https://developer.mozilla.org/en-US/docs/Web/HTML) pages. The secondary navigation bar allows to always be possible to breadcrumb navigation bar and in movile devices it is a good place to put a hamburger menu for the Table of Components / related articles.
+
+The only difference is that I add a progress bar for anxious readers (maybe because I want to have at least an Ultimate guide of some sorts).
+
+#### Design exploration
+
+![Brainstorming](static\img\des-header-exploration.png)
+
+In this section, I'm basicaclly brainstorming options I often see in the websites I've researched. I had added a few inside notes, as a memo. 
+Thanks to this quick exploration; 20-30' (in fact, I spend more time writing this update), I started to define wich options are pertinent and wich not (It's kind of obvious now, but before this excercise I was willing to spend time developing something it wouldn't be an effective solution).
 
 
 ___
