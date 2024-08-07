@@ -1,20 +1,39 @@
 Hello world! 
 
-This will be my very first draft for my personal website. 
-Althought I've just finished learning the basics of HTML and a bit of CSS, my idea is to keep it pretty simple, in a minimalistic fashion.
+This will be my first personal website.
+Althought I started this project last year (brutalist site), a few months ago I finished a "Full stack (with Python)" course, and decided to keep practicing everything I learn and more.
 
-I don't know yet how to write a proper project's documentation, but for now I want to keep a non exhaustive list (althought it will get more specific overtime)of the requisites I think would be cool to implement in the future.  
+I want to build a something I can both use for work (Freelance services) and show as a live project for my portfolio.
+Also I can experiment with various features and technologies otherwise wouldn't what to do. 
+
+I choose to develop it with no frameworks, so I can experience firsthand why I should use a framework to begin with. 
+So, I challenged myself to build it with a classic front-end stack (CSS, HTML & JS), as little JS as possible, because I'll experiment with Modern CSS. 
+I'll keep it deployed in github page, but I'll use my own web domain. 
+Once its done I'll build the backend in another repository with flask and host it in 'Python anywhere'. 
+<br>
+<br>
+<hr>
+
+
 
 # TABLE OF CONTENTS
 1. [Requirements](#requirements)
+    
+    1. [Webiste architecture](#website-architecture)
+    2. [Optimization](#optimization)
+    3. [Features](#features)
 2. [References](#references)
 3. [Discovery](#discovery)
 4. [Backlog](#backlog)
 
 
+<br>
+
 ## REQUIREMENTS 
 
+
 ### WEBSITE ARCHITECTURE
+
 
 #### 1) Landing pages
 
@@ -37,6 +56,7 @@ _However, I'm not sure if separate them into 2 sections or present them in the s
 2. Side projects:
   a. AR developer
   b. Experience Developer (CX features).
+  c. Game design (Wreck project)
 
 3. Freebies or Tools I develop for the community (Most of them are the prototypes for :
    a. Quotation / budget calculator for freelancers.
@@ -62,11 +82,14 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 1. Blog posts.
 2. Newsletter subscription (with prefered topics selection if possible).
 
+#### 5) Documentation (Wiki)
+
 #### 5) Resources
 
-##### Freebies
+- Freebies
+- Tools
 
-##### Tools
+<br>
 
 ### OPTIMIZATION
 
@@ -75,7 +98,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 #### B) Accesibilty
 
 1. 
-      a. Keyboard navigation; focus elements in a logic way; first by DOM order. If not possible (for UX reasons, such as ([Table of contents ubication](https://www.nngroup.com/articles/table-of-contents/)), [usage of 'tabindex'] (https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)).
+      a. Keyboard navigation; focus elements in a logic way; first by DOM order. If not possible (for UX reasons, such as [Table of contents ubication](https://www.nngroup.com/articles/table-of-contents/)), by using a technique with ['tabindex'](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex) tag.
 
       b. Add a "Skip to content" at the very start of every webpage.
 
@@ -90,6 +113,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 4. [Contrast theme](https://blog.hubspot.es/) (configurated by browser preferences if possible).
 5. Add CSS rules to include a Fallback Preference-reduced-motion.
 
+
 #### C) Keyboard Navigation 
 
 - Focus state visible when an element is selected ([but make it invisible for mouse](https://www.youtube.com/watch?v=j68WvpUX41c)).
@@ -99,9 +123,10 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 #### E) SEO
 
 - Main content after header. 
+- [Human search](https://humanstxt.org/)
+- [Robot search](https://www.robotstxt.org/)
 
-- Human search: https://humanstxt.org/
-- Robot search: https://www.robotstxt.org/
+<br>
 
 ### FEATURES
 
@@ -120,10 +145,13 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### B) Extras / Experimental
 - Add some motion (but trying to setting up in a way that users can deactivate it; for accesibility reasons)
-- Model-viewer (because I work on AR/3D solutions).
+- [Model-viewer](https://modelviewer.dev/) (because I work on AR/3D solutions).
 - "Blog post to Email HTML system subsription" (Don't know if it's a thing, yet).
 - "Data visualization / interactive infography feeded with a post tag system" (idem). Now I'm thinking about an interactive infographic connected to a timeline; featuring how I went from a T to Pi-shaped skills, letting users to expand information and link projects... but, on second thought, my inner project manager & developer thinks it's a wat too much for me to handle.. 
 - https://realestate-neotix.vercel.app/
+
+
+<br>
 
 ## REFERENCES
 
@@ -131,11 +159,10 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### A) Visual style: 
 
-- General: https://modelviewer.dev/
-- General: [https://phuctm97.com/](https://stephvanlinden.com/)
-- General: https://timog.org/permanently-moved/
-- Animations: https://brittanychiang.com/
-- Navigation bar: https://phuctm97.com/
+- General: [Zenbrief](https://zenbrief.com/blog/table-of-contents-for-seo/), [Model-viewer](https://modelviewer.dev/), 
+- Animations: [Brittany Chang](https://brittanychiang.com/), .
+- Navigation bar: [Zenbrief](https://zenbrief.com/blog/table-of-contents-for-seo/), 
+- Article-bar: [MDN Guides](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
 - Variable fonts: https://codepen.io/glyphe/pen/XxZzYV
 - Layout (wiki): https://rachelandrew.co.uk/
 - Layout (blog): https://cloudfour.com/thinks/breaking-out-with-css-grid-layout/
@@ -147,6 +174,8 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 - Secondary Navigation bar; Only for Blog and Wiki layouts, and it will be related to the main content / articles. It will have Breadcrumbs and a hamburger menu for TOC sidebar (visible on movile).
 - Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
+
+<br>
 
 ### WEBSITE ARCHITECTURE
 
@@ -183,6 +212,8 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 #### F) Contact 
 - https://adamgreenough.net/contact/ 
 
+<br>
+
 ### FEATURES
 
 #### A) UI
@@ -192,6 +223,8 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 #### B) Addons
 
 - 3D visualization: https://colorcube.io/
+
+<br>
 
 ## DISCOVERY 
 
@@ -221,12 +254,16 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 - https://www.mjvinnovation.com/blog/innovation-strategy-unleashing-growth-through-strategic-ingenuity/
 - https://www.foxgr.com/insights/the-role-of-a-strategy-consultant
 
+<br>
+
 ## ADDITIONAL RESOURCES
 
 ### USER INTERFACE:
 
 #### Table of contents:
 [UX Layout study](https://www.nngroup.com/articles/table-of-contents/)
+
+<br>
 
 ### ACCESIBILITY:
 [Technique to alter focus order](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)
