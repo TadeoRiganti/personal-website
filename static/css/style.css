@@ -696,10 +696,12 @@ body.wiki-page :is(.ads) {
 @media (min-width: 640px) {
     #cover .container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
         gap: 2rem;
     }
 }
+/* 'grid-auto-flow' allows the container '.description' to grow
+if there is no image in the container '.display' */
 
 #cover img {
     height: 100%;
@@ -707,8 +709,8 @@ body.wiki-page :is(.ads) {
     border-radius: 10px;
     object-fit: cover;
 }
-/* Image will match the size of its parent container.
-Use case scenario: Cliparts */
+/* By default, the display image will match the size of its parent container. */
+
 
 #cover .description {
     display: flex;
