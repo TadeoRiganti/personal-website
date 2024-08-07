@@ -776,6 +776,12 @@ aside h2 {
 
 /* |...... TABLE OF CONTENTS */
 
+@media (max-width: 640px) {
+    .toc-container {
+        display: none;
+    }
+}
+/* NOTE: Continue developing in 'dev-aside-toc' */
 
 
 /* || COMPONENTS */
