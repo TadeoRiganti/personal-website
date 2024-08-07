@@ -690,7 +690,7 @@ body.wiki-page :is(.ads) {
 #cover .container {
     margin: 2rem auto;
     display: grid;
-    gap: 2rem;
+    gap: calc(var(--flow-spacing) * 1.5);
 }
 
 @media (min-width: 640px) {
@@ -702,11 +702,12 @@ body.wiki-page :is(.ads) {
 }
 
 #cover img {
-    height: 33vh;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
+    object-fit: cover;
 }
-/* By default image will shrink rather than clip.
+/* Image will match the size of its parent container.
 Use case scenario: Cliparts */
 
 #cover .description {
@@ -725,11 +726,10 @@ Use case scenario: Cliparts */
 
 /* |........AESTHETIC CLASSES */
 
-#cover.clip img {
-    object-fit: cover;
+#cover.clipart img {
+    object-fit: contain;
 }
-/* Use it when you want display image to clip.
-Use case scenario; Texture, abstract or well centered images */
+/* Use it when you don't want display image to clip. */
 
 
 /* |.... CONTENT  */
