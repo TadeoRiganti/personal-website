@@ -72,27 +72,33 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### A) Mobile first
 
-- Absolute responsive.
-- Variable fonts; local hosted to increase performance. 
-
 #### B) Accesibilty
 
-1. Screen reader (Good descriptions for alt text, strength and emphasis tags, etc).
-2. Contrast Themes (Outline color of the focus state rather Transparent than 0 px).
-3. Color blind themes (/ preferences if possible).
-4. Preference reduced motion.
+1. 
+      a. Keyboard navigation; focus elements in a logic way; first by DOM order. If not possible (for UX reasons, such as ([Table of contents ubication](https://www.nngroup.com/articles/table-of-contents/)), [usage of 'tabindex'] (https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)).
+
+      b. Add a "Skip to content" at the very start of every webpage.
+
+2. Screen reader:
+
+      a. Heavy usage of ARIA attributes.
+      
+      b. Follow good practices for alt text.
+      
+      c. Adecuate use of strength and emphasis tags (instead of 'b' and 'i'), etc.
+3. Contrast Theme (Outline color of the focus state rather Transparent than 0 px).
+4. [Contrast theme](https://blog.hubspot.es/) (configurated by browser preferences if possible).
+5. Add CSS rules to include a Fallback Preference-reduced-motion.
 
 #### C) Keyboard Navigation 
 
-- Focus state visible when an element is selected.
+- Focus state visible when an element is selected ([but make it invisible for mouse](https://www.youtube.com/watch?v=j68WvpUX41c)).
 
 #### D) Light-weight site
 
-~~Aiming for a 512 kb / 1MB site.~~ Fast 
-
 #### E) SEO
 
-_Furthermore research is needed._
+- Main content after header. 
 
 - Human search: https://humanstxt.org/
 - Robot search: https://www.robotstxt.org/
@@ -215,12 +221,15 @@ _Furthermore research is needed._
 - https://www.mjvinnovation.com/blog/innovation-strategy-unleashing-growth-through-strategic-ingenuity/
 - https://www.foxgr.com/insights/the-role-of-a-strategy-consultant
 
-## COMPONENTS:
+## ADDITIONAL RESOURCES
 
-### Blog / Wiki
+### USER INTERFACE:
+
 #### Table of contents:
 [UX Layout study](https://www.nngroup.com/articles/table-of-contents/)
 
+### ACCESIBILITY:
+[Technique to alter focus order](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)
 
 
 
