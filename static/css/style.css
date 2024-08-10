@@ -71,7 +71,7 @@
 
     /* |.... COLOR PALETTE */
 
-    --fs-srimary-color:    white;
+    --font-size-smallrimary-color:    white;
     --secondary-color:  #252525;
     --tertiary-color:   #00A650;
     
@@ -90,7 +90,7 @@
 
     /* |.... TYPOGRAPHY */
 
-    --fs-xl-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --font-size-extra-large-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   
@@ -99,9 +99,9 @@
     The following settings are from the Kevin's Powell project.
     It's imperative to adjust them, using a more robust system; ideally using the dynamic variations 'Inter' font allows. */
 
-    /* --fs-s: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-    --fs-l: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-    --fs-xl: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
+    /* --font-size-small: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --font-size-large: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --font-size-extra-large: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
 
      
     /*
@@ -113,20 +113,20 @@
 
     /* NOTE 2: Althought I think body size (22px) is too big, look up this site font sizes https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/ */
 
-     --fs-xs: 14px;
-     --lh-xs: calc(var(--fs-xs) * 1.15);
+     --font-size-extra-small: 14px;
+     --line-height-extra-small: calc(var(--font-size-extra-small) * 1.15);
 
-     --fs-s: 16px;
-     --lh-s: calc(var(--fs-s) * 1.5);
+     --font-size-small: 16px;
+     --line-height-small: calc(var(--font-size-small) * 1.5);
 
-     --fs-m: 22px; 
-     --lh-m: calc(var(--fs-m) * 1.27);
+     --font-size-medium: 22px; 
+     --line-height-medium: calc(var(--font-size-medium) * 1.27);
 
-     --fs-l: 32px;
-     --lh-l: calc(var(--fs-l) * 1.33);
+     --font-size-large: 32px;
+     --line-height-large: calc(var(--font-size-large) * 1.33);
 
-     --fs-xl: 45px; 
-     --lh-xl: calc(var(--fs-xl) * 1.05);
+     --font-size-extra-large: 45px; 
+     --line-height-extra-large: calc(var(--font-size-extra-large) * 1.05);
 
      /* 
      NOTES:
@@ -144,19 +144,32 @@
 
      /* General */
     --flow-spacing: 1em;
-    --flow-padding: 1rem;
     --section-spacing: 5rem;
     --document-section-spacing: 1rem;
 
     /* Aside */
     --aside-width: clamp(12rem, 20rem, 10svw);
     --grid-max-width: 80rem; /* == 1280px */
-    --fs-sadding-inline: 1rem;
+    --font-size-smalladding-inline: 1rem;
 
     /* Pseudo containers, eg: .card */
-    --highlight-padding: 1rem;
+    --minimum-padding: 1rem;
     --card-padding: 2rem;
 
+
+    /* |.... OTHER STYLES */
+
+    /* Shapes */
+
+    --radius: 10px;
+    --small-radius: calc(var(--radius) / 2);
+    --large-radius: calc(var(--radius) * 2);
+
+    --all-corners: var(--radius);
+    --left-corners: var(--radius) 0 0 var(--radius);
+    --right-corners: 0 var(--radius) var(--radius) 0;
+
+    
 
 }
 
@@ -188,7 +201,7 @@ h1 {
 /* |...... AESTETHIC CLASSES */
 
 .light-theme {
-    background-color: var(--fs-srimary-color);
+    background-color: var(--font-size-smallrimary-color);
     color: var(--secondary-color)
 }
 
@@ -199,7 +212,7 @@ h1 {
 
 .dark-theme {
     background-color: var(--secondary-color);
-    color: var(--fs-srimary-color);
+    color: var(--font-size-smallrimary-color);
 }
 
 .brand-color {
@@ -242,8 +255,8 @@ html {
 body {
     margin: 0;
     font-family: var(--font-family);
-    font-size: var(--fs-s);
-    line-height: var(--lh-s);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }
 
 caption {
@@ -256,15 +269,15 @@ caption {
 /* |...... AESTETHICS CLASSES */
 
 .site-title {
-    font-family: var(--fs-xl-font-family);
-    font-size: var(--fs-xl);
-    line-height: var(--lh-xl);
+    font-family: var(--font-size-extra-large-font-family);
+    font-size: var(--font-size-extra-large);
+    line-height: var(--line-height-extra-large);
     text-transform: uppercase;
 }
   
 .section-title {
-    font-size: var(--fs-l);
-    line-height: var(--lh-l);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
 }
 
 
@@ -398,8 +411,8 @@ table tbody tr a {
 }
 
 .high-light {
-    padding: 1rem;
-    border-radius: 10px;
+    padding: var(--minimum-padding);
+    border-radius: var(--all-corners);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -424,7 +437,7 @@ table tbody tr a {
 :is(body.blog-page, body.wiki-page) {
     --section-spacing: var(--document-section-spacing);
 }
-/* If the body has one of this classes, use that value.
+/* If the body has one of this classes, use the new value.
 Otherwise, use the default value. */
 
 section:not(:first-child) {
@@ -437,8 +450,11 @@ section:first-child {
 
 
 .card {
-    background-color: var(--fs-srimary-color);
-    border-radius: 20px;
+    --radius: var(--large-radius);
+    --all-corners: var(--radius);
+
+    background-color: var(--font-size-smallrimary-color);
+    border-radius: var(--all-corners);
     padding: var(--card-padding);
     margin: 0;
 }
@@ -544,15 +560,15 @@ Notes:
     
     display: grid;
     grid-template-columns:
-      [full-width-start] minmax(var(--fs-sadding-inline), 1fr)
+      [full-width-start] minmax(var(--font-size-smalladding-inline), 1fr)
       [breakout-start] minmax(0, var(--breakout-size))
       [content-start] min(
-        100% - (var(--fs-sadding-inline) * 2),
+        100% - (var(--font-size-smalladding-inline) * 2),
         var(--content-max-width)
       )
       [content-end]
       minmax(0, var(--breakout-size)) [breakout-end]
-      minmax(var(--fs-sadding-inline), 1fr) [full-width-end];
+      minmax(var(--font-size-smalladding-inline), 1fr) [full-width-end];
 }
 
 
@@ -726,7 +742,7 @@ if there is no image in the container '.display' */
 #cover img {
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius);
     object-fit: cover;
 }
 /* By default, the display image will match the size of its parent container. */
@@ -741,7 +757,7 @@ if there is no image in the container '.display' */
 }
 
 #cover .description p {
-    font-size: var(--fs-m);
+    font-size: var(--font-size-medium);
 }
 
 /* |...... UTILITARIAN CLASSES */
@@ -766,7 +782,7 @@ if there is no image in the container '.display' */
 
 @media (min-width: 640px) {
     :is(body.blog-page, body.wiki-page) .main :is(section, .full-width) {
-        border-radius: 10px 0px 0px 10px;
+        border-radius: var(--left-corners);
     }
 }
 /* In tablet size viewport, only one side of the elements get in contact with the visor side.
@@ -774,7 +790,7 @@ The rigth side doesn't get any border radius. */
 
 @media (min-width: 960px) {
     body.blog-page .main :is(section, .full-width) {
-        border-radius: 10px;
+        border-radius: var(--all-corners);
     }
 }
 /* In a blog-page, main content is wrapped by 2 asides (Holy-grail layout).
@@ -782,7 +798,7 @@ This rule round their corners to hide this error in design (negative aspect of t
 
 @media (min-width: 1280px) {
     body.wiki-page .main :is(section, .full-width) {
-        border-radius: 10px;
+        border-radius: var(--all-corners);
     }
 }
 /* In a wiki-page, there is a dashboard layout, so full-width elements reach the right side
@@ -792,12 +808,12 @@ at a different breakpoint compared to blog-page layout. */
 /* |...... ASIDE */
 
 aside > * {
-    font-size: var(--fs-xs);
+    font-size: var(--font-size-extra-small);
 }
 /* Sets a default base size. It can be overwritten for later rule developments. */
 
 aside h2 {
-    font-size: var(--fs-xs);
+    font-size: var(--font-size-extra-small);
     text-transform: uppercase;
 }
 
@@ -845,7 +861,7 @@ model-viewer button {
 /* Hide annotation element as default */
 
 model-viewer .annotation {
-    border-radius:10px;
+    border-radius: var(--all-corners);
     border: none;
     box-sizing: border-box;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
