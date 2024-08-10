@@ -379,7 +379,6 @@ table tbody tr a {
 
 .call-to-action,
 .bg-tertiary {
-    
     background: var(--tertiary-color);
 }
 
@@ -430,10 +429,6 @@ table tbody tr a {
 .product {
     display: grid;
 }
-
-
-
-
 
 @media (min-width: 940px) {
      .product:not(.wide) {
@@ -744,9 +739,8 @@ if there is no image in the container '.display' */
 /* |...... ARTICLE */
 
 
-
 @media (min-width: 640px) {
-    :is(body.blog-page, body.wiki-page) .main :is(.full-width) {
+    :is(body.blog-page, body.wiki-page) .main :is(section, .full-width) {
         border-radius: 10px 0px 0px 10px;
     }
 }
@@ -754,7 +748,7 @@ if there is no image in the container '.display' */
 The rigth side doesn't get any border radius. */
 
 @media (min-width: 960px) {
-    body.blog-page .main :is(.full-width) {
+    body.blog-page .main :is(section, .full-width) {
         border-radius: 10px;
     }
 }
@@ -762,7 +756,7 @@ The rigth side doesn't get any border radius. */
 This rule round their corners to hide this error in design (negative aspect of the "breakout-grid"). */
 
 @media (min-width: 1280px) {
-    body.wiki-page .main :is(.full-width) {
+    body.wiki-page .main :is(section, .full-width) {
         border-radius: 10px;
     }
 }
