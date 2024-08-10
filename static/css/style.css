@@ -379,7 +379,7 @@ table tbody tr a {
 
 .call-to-action,
 .bg-tertiary {
-    padding: 1rem;
+    
     background: var(--tertiary-color);
 }
 
