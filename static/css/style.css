@@ -145,7 +145,7 @@
      /* General */
     --flow-spacing: 1em;
     --section-spacing: 5rem;
-    --document-section-spacing: 1rem;
+    --document-section-spacing: 1.5rem;
 
     /* Aside */
     --aside-width: clamp(12rem, 20rem, 10svw);
