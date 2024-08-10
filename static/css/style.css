@@ -744,20 +744,40 @@ if there is no image in the container '.display' */
 /* |...... ARTICLE */
 
 
+
 @media (min-width: 640px) {
-    article :is(.full-width) {
+    :is(body.blog-page, body.wiki-page) .main :is(.full-width) {
         border-radius: 10px 0px 0px 10px;
     }
 }
-/* In tablet size viewport, only one side of the elements get in contact with the visor side. So, this part (rigth side) doesn't get any border radius. */
+/* In tablet size viewport, only one side of the elements get in contact with the visor side.
+The rigth side doesn't get any border radius. */
 
 @media (min-width: 960px) {
-    article :is(.full-width) {
+    body.blog-page .main :is(.full-width) {
         border-radius: 10px;
     }
 }
-/* As full-width doesn't work well in surrounded layouts, this rule acts as a 'prettyfier'
-making it pass as a container rather than full-width. */
+/* In a blog-page, main content is wrapped by 2 asides (Holy-grail layout).
+This rule round their corners to hide this error in design (negative aspect of the "breakout-grid"). */
+
+@media (min-width: 1280px) {
+    body.wiki-page .main :is(.full-width) {
+        border-radius: 10px;
+    }
+}
+/* In a wiki-page, there is a dashboard layout, so full-width elements reach the right side
+at a different breakpoint compared to blog-page layout. */
+
+
+/* @media (max-width: 1280px) {
+    body.wiki-page article :is(.full-width) {
+        background-color: #ba1a1a;
+        border-radius: 10px 0px 0px 10px;
+    }
+} */
+
+
 
 
 /* |...... ASIDE */
