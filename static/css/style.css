@@ -482,7 +482,7 @@ table tbody tr a {
     width: 1px;
 }
 
-.flow > * + * {
+:is(.flow, section, article) > * + * {
     margin-top: var(--flow-spacing, 1em);
 }
 /* Adds an extra margin at the top of each element */
