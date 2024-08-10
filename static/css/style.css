@@ -142,11 +142,21 @@
 
      /* |.... LAYOUT SETTINGS */
 
+     /* General */
+    --flow-spacing: 1em;
+    --flow-padding: 1rem;
+    --section-spacing: 5rem;
+    --document-section-spacing: 1rem;
+
+    /* Aside */
     --aside-width: clamp(12rem, 20rem, 10svw);
     --grid-max-width: 80rem; /* == 1280px */
     --fs-sadding-inline: 1rem;
 
-    --flow-spacing: 1em;
+    /* Pseudo containers, eg: .card */
+    --highlight-padding: 1rem;
+    --card-padding: 2rem;
+
 
 }
 
@@ -411,10 +421,25 @@ table tbody tr a {
 
 /* Containers */
 
+:is(body.blog-page, body.wiki-page) {
+    --section-spacing: var(--document-section-spacing);
+}
+/* If the body has one of this classes, use that value.
+Otherwise, use the default value. */
+
+section:not(:first-child) {
+    padding-block: var(--section-spacing);
+}
+
+section:first-child {
+    padding-bottom: var(--section-spacing);
+}
+
+
 .card {
     background-color: var(--fs-srimary-color);
     border-radius: 20px;
-    padding: 2rem;
+    padding: var(--card-padding);
     margin: 0;
 }
 
@@ -478,7 +503,7 @@ table tbody tr a {
 }
 
 :is(.flow, section, article) > * + * {
-    margin-top: var(--flow-spacing, 1em);
+    margin-block-start: var(--flow-spacing, 1em);
 }
 /* Adds an extra margin at the top of each element */
 
@@ -491,7 +516,7 @@ table tbody tr a {
 /* |...... SPACING CLASSES */
 
 .section-padding {
-    padding-block: 2.5rem;
+    padding-block: var(--section-spacing);
 }
 
 
@@ -762,16 +787,6 @@ This rule round their corners to hide this error in design (negative aspect of t
 }
 /* In a wiki-page, there is a dashboard layout, so full-width elements reach the right side
 at a different breakpoint compared to blog-page layout. */
-
-
-/* @media (max-width: 1280px) {
-    body.wiki-page article :is(.full-width) {
-        background-color: #ba1a1a;
-        border-radius: 10px 0px 0px 10px;
-    }
-} */
-
-
 
 
 /* |...... ASIDE */
