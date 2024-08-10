@@ -742,7 +742,7 @@ if there is no image in the container '.display' */
 #cover img {
     height: 100%;
     width: 100%;
-    border-radius: var(--radius);
+    border-radius: var(--all-corners);
     object-fit: cover;
 }
 /* By default, the display image will match the size of its parent container. */
