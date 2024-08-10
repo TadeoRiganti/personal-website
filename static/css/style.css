@@ -385,11 +385,11 @@ table tbody tr a {
 
 .high-light,
 .bg-secondary {
-    padding: 1rem;
     background: var(--color-neutral-95);
 }
 
 .high-light {
+    padding: 1rem;
     border-radius: 10px;
 }
 
