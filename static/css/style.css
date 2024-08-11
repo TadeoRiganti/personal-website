@@ -462,14 +462,14 @@ table tbody tr a {
 }
 
 @media (min-width: 940px) {
-     .product:not(.wide) {
+     .product {
        grid-template-columns: 1fr 1fr;
        gap: 2rem;
     }
 }
 
 @media (min-width: 720px) {
-    body.landing-page .product:not(.wide) {
+    body.landing-page .product {
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
    }
