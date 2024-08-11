@@ -468,6 +468,16 @@ table tbody tr a {
     }
 }
 
+@media (min-width: 720px) {
+    body.landing-page .product:not(.wide) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+   }
+}
+/* As landing-pages have no asides, breakpoint is different.
+I would love to use variable to avoid this, but apparently
+I can't use them to set dynamic breakpoints. So I'll flag it as
+a quick-fix. */
 
 /* Elevations */
 
