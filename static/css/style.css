@@ -618,7 +618,8 @@ body.blog-page .holy-grail .content-grid {
 /* Minimizes the distance between the breakout and the main container. */
 
 body.blog-page .content-grid {
-    --content-max-width: var(--breakout-max-width) * 0.5;
+    /* --content-max-width: var(--breakout-max-width) * 0.5; */
+    --content-max-width: 40rem;
 }
 /* Adjust the container width size in relation to the sidebar */
 
@@ -626,7 +627,8 @@ body.blog-page .content-grid {
 /* |...... WIKI-PAGE LAYOUT */
 
 body.wiki-page .content-grid {
-    --content-max-width: var(--breakout-max-width) * 0.625;
+    /* --content-max-width: var(--breakout-max-width) * 0.625; */
+    --content-max-width: 50rem;
 }
 /* Adjust the container width size in relation to the sidebar */
 
