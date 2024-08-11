@@ -147,10 +147,12 @@
     --section-spacing: 5rem;
     --document-section-spacing: 1.5rem;
 
+    /* Breakout-grid */
+    --grid-max-width: 80rem; /* == 1280px */
+    --padding-inline: 1rem;
+
     /* Aside */
     --aside-width: clamp(12rem, 20rem, 10svw);
-    --grid-max-width: 80rem; /* == 1280px */
-    --font-size-smalladding-inline: 1rem;
 
     /* Pseudo containers, eg: .card */
     --minimum-padding: 1rem;
@@ -560,15 +562,15 @@ Notes:
     
     display: grid;
     grid-template-columns:
-      [full-width-start] minmax(var(--font-size-smalladding-inline), 1fr)
+      [full-width-start] minmax(var(--padding-inline), 1fr)
       [breakout-start] minmax(0, var(--breakout-size))
       [content-start] min(
-        100% - (var(--font-size-smalladding-inline) * 2),
+        100% - (var(--padding-inline) * 2),
         var(--content-max-width)
       )
       [content-end]
       minmax(0, var(--breakout-size)) [breakout-end]
-      minmax(var(--font-size-smalladding-inline), 1fr) [full-width-end];
+      minmax(var(--padding-inline), 1fr) [full-width-end];
 }
 
 
