@@ -1,4 +1,4 @@
-/* TABLE OF CONTENTS:
+/* TABLE OF CONTENTS:Elevations
 
 || GENERAL STYLES
 |.. Variables
@@ -20,6 +20,7 @@
 |...... Layout classes
 
 || Layout
+|.. General rules
 |.. Landing page (Movil-first)
 |.. Regular page
 |.... Responsive queries
@@ -63,9 +64,13 @@
 */
 
 
-/* || GENERAL STYLES */
 
-/* |.. VARIABLES */
+
+/* =================================================
+|| GENERAL STYLES */
+
+/* -------------------------------------------------
+|.. VARIABLES */
 
 :root {
 
@@ -94,7 +99,6 @@
 
     --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   
-
     /* NOTE TO MY FUTURE SELF: 
     The following settings are from the Kevin's Powell project.
     It's imperative to adjust them, using a more robust system; ideally using the dynamic variations 'Inter' font allows. */
@@ -102,7 +106,6 @@
     /* --font-size-small: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
     --font-size-large: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
     --font-size-extra-large: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
-
      
     /*
     NOTE FOR FUTURE ME:
@@ -147,11 +150,12 @@
     --section-spacing: 5rem;
     --document-section-spacing: 1.5rem;
 
-    /* Breakout-grid */
+    /* Breakout-grid layout */
     --grid-max-width: 80rem; /* == 1280px */
     --padding-inline: 1rem;
 
-    /* Aside */
+    /* Holy-grid layout */
+    --gap-main-content: 2.5rem;
     --aside-width: clamp(12rem, 20rem, 10svw);
 
 
@@ -171,13 +175,11 @@
     --all-corners: var(--radius);
     --left-corners: var(--radius) 0 0 var(--radius);
     --right-corners: 0 var(--radius) var(--radius) 0;
-
-    
-
 }
 
 
-/* |.. RESET BROWSER STYLE */
+/* -------------------------------------------------
+|.. RESET BROWSER STYLE */
 
 * {
     margin: 0;
@@ -197,7 +199,9 @@ h1 {
   box-sizing: border-box;
 }
 
-/* |.. COLOR PALETTE */
+
+/* -------------------------------------------------
+|.. COLOR PALETTE */
 
 /* |.... UTILITY CLASSES */
 
@@ -222,7 +226,8 @@ h1 {
     background-color: var(--tertiary-color);
 }
 
-/* |.. ANIMATIONS */
+/* -------------------------------------------------
+|.. ANIMATIONS */
 
 html {
     scroll-behavior: smooth;
@@ -230,7 +235,8 @@ html {
 }
 
 
-/* |.. TYPOGRAPHY */
+/* -------------------------------------------------
+|.. TYPOGRAPHY */
 
 /* Display */
 
@@ -252,8 +258,6 @@ html {
     <uniquifier>: Use a unique and descriptive class name
     <weight>: Use a value from 100 to 900
 */
-
-
 
 body {
     margin: 0;
@@ -284,7 +288,8 @@ caption {
 }
 
 
-/* |.. ELEMENTS */
+/* -------------------------------------------------
+|.. ELEMENTS */
 
 html {
     color-scheme: var(--color-scheme);
@@ -306,6 +311,7 @@ figure {
     margin: 0;
 }
 
+
 /* IMAGES */
 
 img {
@@ -313,10 +319,6 @@ img {
     display: block;
 }
 /* Keeps images from overflowing in the X axis */
-
-/* body.blog-page img {
-    border-radius: 10px;
-} */
 
 a .logo{
     max-width: 250px;
@@ -332,7 +334,6 @@ a .logo{
     'opsz' 24
 }
 /* Default setting for OUTLINED icons */
-
 
 
 /* NAVIGATION */
@@ -353,6 +354,7 @@ nav a:focus {
     color: var(--tertiary-color);
     text-decoration: underline;
 }
+
 
 /* TABLES */
 
@@ -381,6 +383,7 @@ table td > img {
     width: clamp(32px, 64px, 10vh);
 }
 
+
 /* RESPONSIVE */
 
  @media (max-width: 720px) {
@@ -396,6 +399,7 @@ table tbody tr a {
     color :#00A650;
     text-decoration: underline;
 }
+
 
 /* |.... UTILITY CLASSES */
 
@@ -435,22 +439,8 @@ table tbody tr a {
     **) https://github.com/microsoft/vscode/issues/176698
 */
 
+
 /* Containers */
-
-:is(body.blog-page, body.wiki-page) {
-    --section-spacing: var(--document-section-spacing);
-}
-/* If the body has one of this classes, use the new value.
-Otherwise, use the default value. */
-
-section:not(:first-child) {
-    padding-block: var(--section-spacing);
-}
-
-section:first-child {
-    padding-bottom: var(--section-spacing);
-}
-
 
 .card {
     --radius: var(--large-radius);
@@ -469,7 +459,6 @@ section:first-child {
 }
 /* Adds a gap at the top of each element */
 
-
 .product {
     display: grid;
 }
@@ -480,6 +469,7 @@ section:first-child {
        gap: 2rem;
     }
 }
+
 
 /* Elevations */
 
@@ -505,8 +495,8 @@ section:first-child {
     'wght' 700,
     'GRAD' 0,
     'opsz' 36
-  }
-  /* Enlarge icons */
+}
+/* Enlarge icons */
 
 
 /* |...... LAYOUT CLASSES */
@@ -539,11 +529,14 @@ section:first-child {
 }
 
 
-/* || LAYOUT */
 
-/* |.. LANDING PAGE 
 
-Notes:
+/* =================================================
+|| LAYOUT */
+
+/* |.. BREAKOUT GRID LAYOUT
+
+    Notes:
     Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
     *) References::after
         - Youtube: https://www.youtube.com/watch?v=c13gpBrnGEw
@@ -610,7 +603,7 @@ img.full-width {
 /* Makes an image to extend full width */
 
 
-/* |.. REGULAR PAGE */
+/* |.... HOLY-GRAIL LAYOUT */
 
 .holy-grail {
     max-width: var(--grid-max-width);
@@ -642,6 +635,7 @@ the main and at least one asides element. */
     width: var(--aside-width);
 }
 
+
 /* |.... RESPONSIVE QUERIES */
 
 /* |...... TABLET */
@@ -666,7 +660,26 @@ the main and at least one asides element. */
   }
 
 
-/* |.... SPACING CLASSES */
+/* |.... fdgdg */
+
+section {
+    padding-block: var(--section-spacing);
+}
+
+:is(body.blog-page, body.wiki-page) {
+    --section-spacing: var(--document-section-spacing);
+}
+
+/* section {
+    padding-block: var(--section-spacing);
+}
+
+:is(body.blog-page, body.wiki-page) {
+    --section-spacing: var(--document-section-spacing);
+} */
+
+/* If the body has one of this classes, use the new value.
+Otherwise, use the default value. */
 
 body.blog-page .content-grid {
     --content-max-width: var(--breakout-max-width) * 0.5;
@@ -684,9 +697,13 @@ body.wiki-page :is(.ads) {
 /* Hides auxiliar sidebar */
 
 
-/* || SITEWIDE */
 
-/* |.. HEADER */
+
+/* =================================================
+|| SITEWIDE */
+
+/* -------------------------------------------------
+|.. HEADER */
 
 /* |.... PRINCIPAL NAVIGATION BAR */
 
@@ -716,18 +733,13 @@ body.wiki-page :is(.ads) {
 /* |.... SECONDARY NAVIGATION BAR */
 
 
-/* |.. MAIN */
-
-
+/* -------------------------------------------------
+|.. MAIN */
 
 /* |.... COVER */
 
-/* #cover {
-    background-color: whitesmoke;
-} */
-
 #cover .container {
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     display: grid;
     gap: calc(var(--flow-spacing) * 1.5);
 }
@@ -763,6 +775,7 @@ if there is no image in the container '.display' */
     font-size: var(--font-size-medium);
 }
 
+
 /* |...... UTILITARIAN CLASSES */
 
 /* |........AESTHETIC CLASSES */
@@ -776,13 +789,17 @@ if there is no image in the container '.display' */
 /* |.... CONTENT  */
 
 .container.holy-grail {
-    margin-top: 3rem;
+    margin-top: var(--gap-main-content);
 }
 /* Separates the article's content from its cover */
 
 
 /* |...... ARTICLE */
 
+article section:first-child {
+    padding-block-start: 0px;
+}
+/* (Quick-fix) Removes top padding to the first section inside the article's main content*/
 
 @media (min-width: 640px) {
     :is(body.blog-page, body.wiki-page) .main :is(section, .full-width) {
@@ -821,6 +838,7 @@ aside h2 {
     text-transform: uppercase;
 }
 
+
 /* |.... SIDEBAR */
 
 /* |...... TABLE OF CONTENTS */
@@ -833,9 +851,13 @@ aside h2 {
 /* NOTE: Continue developing in 'dev-aside-toc' */
 
 
-/* || COMPONENTS */
 
-/* |.. MODEL-VIEWER */
+
+/* =================================================
+|| COMPONENTS */
+
+/* -------------------------------------------------
+|.. MODEL-VIEWER */
 
 :not(:defined) > * {
     display: none;
