@@ -154,6 +154,7 @@
     /* Aside */
     --aside-width: clamp(12rem, 20rem, 10svw);
 
+
     /* Pseudo containers, eg: .card */
     --minimum-padding: 1rem;
     --card-padding: 2rem;
@@ -775,8 +776,9 @@ if there is no image in the container '.display' */
 /* |.... CONTENT  */
 
 .container.holy-grail {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
+/* Separates the article's content from its cover */
 
 
 /* |...... ARTICLE */
