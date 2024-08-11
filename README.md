@@ -1,6 +1,6 @@
 Hello world! 
 
-This will be my first [personal website]([url](https://tadeoriganti.github.io/personal-website/)). However, as that repository won't be public I'm constructing this repository as a template you can fork and use it as you please.
+This will be my first [personal website](https://tadeoriganti.github.io/personal-website/). However, as that repository won't be public I'm constructing this repository as a template you can fork and use it as you please.
 Once I finish up polyshing the frontend, I'll create proper documentation and licence, but for now, it is ~~a mess~~ what it is.
 
 Althought I started this project last year (brutalist site), a few months ago I finished a "Full stack (with Python)" course, and decided to keep practicing everything I learn and more.
