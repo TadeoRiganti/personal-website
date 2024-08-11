@@ -21,12 +21,18 @@
 
 || Layout
 |.. General rules
-|.. Landing page (Movil-first)
-|.. Regular page
+|.. Breakout-grid
+|.... Layout classes
+|.... Adaptations
+|...... Blog-page
+|...... Wiki-page
+|.. Holy-grail layout
 |.... Responsive queries
 |...... Tablet
 |...... Desktop PC
-|.... Layout classes
+|.... Adaptations
+|...... Blog-page
+|...... Wiki-page
 
 || Sitewide
 |.. Header
@@ -114,7 +120,9 @@
     THIRD: I'll transform those values to 'rem' and then in a clamp formula
     https://clamp.font-size.app/ */
 
-    /* NOTE 2: Althought I think body size (22px) is too big, look up this site font sizes https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/ */
+    /* NOTE 2: Althought I think body size (22px) is too big, look up this site font sizes https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/ 
+    
+    NOTE 3: Actual values are derived from Material system design. */
 
      --font-size-extra-small: 14px;
      --line-height-extra-small: calc(var(--font-size-extra-small) * 1.15);
@@ -131,46 +139,35 @@
      --font-size-extra-large: 45px; 
      --line-height-extra-large: calc(var(--font-size-extra-large) * 1.05);
 
-     /* 
-     NOTES:
-     *)  Semantic approach: --attribute-size
-     **) Sizes based om Material design system:
-            xl == Display Medium
-            l  == Headline Medium
-            m  == Title Large
-            s  == Body large
-            xs == Title small / Body medium 
-      */
-
 
      /* |.... LAYOUT SETTINGS */
 
-     /* General */
-    --flow-spacing: 1em;
-    --section-spacing: 5rem;
-    --document-section-spacing: 1.5rem;
+     /* Spacing */
+    --spacing-extra-small: 1em;
+    --spacing-small: 1rem;
+    --spacing-medium: 1.5rem;
+    --spacing-large: 2rem;
+    --spacing-extra-large: 5rem;
 
     /* Breakout-grid layout */
     --grid-max-width: 80rem; /* == 1280px */
-    --padding-inline: 1rem;
+    --padding-inline: var(--spacing-small);
 
     /* Holy-grid layout */
-    --gap-main-content: 2.5rem;
+    --gap-main-content: var(--spacing-large);
     --aside-width: clamp(12rem, 20rem, 10svw);
+   
+    
 
-
-    /* Pseudo containers, eg: .card */
-    --minimum-padding: 1rem;
-    --card-padding: 2rem;
-
-
-    /* |.... OTHER STYLES */
+    /* |.... STYLES */
 
     /* Shapes */
 
-    --radius: 10px;
+    --radius: .5rem;
     --small-radius: calc(var(--radius) / 2);
     --large-radius: calc(var(--radius) * 2);
+
+    /* Preset corners */
 
     --all-corners: var(--radius);
     --left-corners: var(--radius) 0 0 var(--radius);
@@ -418,7 +415,7 @@ table tbody tr a {
 }
 
 .high-light {
-    padding: var(--minimum-padding);
+    padding: var(--spacing-small);
     border-radius: var(--all-corners);
 }
 
@@ -448,7 +445,7 @@ table tbody tr a {
 
     background-color: var(--font-size-smallrimary-color);
     border-radius: var(--all-corners);
-    padding: var(--card-padding);
+    padding: var(--spacing-large);
     margin: 0;
 }
 
@@ -511,11 +508,6 @@ table tbody tr a {
     width: 1px;
 }
 
-:is(.flow, section, article) > * + * {
-    margin-block-start: var(--flow-spacing, 1em);
-}
-/* Adds an extra margin at the top of each element */
-
 .even-columns {
     display: flex;
     gap: 1rem;
@@ -525,7 +517,7 @@ table tbody tr a {
 /* |...... SPACING CLASSES */
 
 .section-padding {
-    padding-block: var(--section-spacing);
+    padding-block: var(--spacing-medium);
 }
 
 
@@ -534,7 +526,25 @@ table tbody tr a {
 /* =================================================
 || LAYOUT */
 
-/* |.. BREAKOUT GRID LAYOUT
+/* -------------------------------------------------
+|.. GENERAL RULES */
+
+:is(.flow, section, article) > * + * {
+    margin-block-start: var(--spacing-extra-small, 1em);
+}
+/* Adds an extra margin at the top of each element */
+
+section {
+    padding-block: var(--spacing-medium);
+}
+
+body.landing-page section {
+    padding-block: var(--spacing-extra-large);
+} 
+
+
+/* -------------------------------------------------
+|.. BREAKOUT GRID LAYOUT
 
     Notes:
     Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
@@ -603,7 +613,26 @@ img.full-width {
 /* Makes an image to extend full width */
 
 
-/* |.... HOLY-GRAIL LAYOUT */
+/* |.... ADAPTATIONS  (Quick-fix)*/
+
+/* |...... BLOG-PAGE LAYOUT */
+
+body.blog-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.5;
+}
+/* Adjust the container width size in relation to the sidebar */
+
+
+/* |...... WIKI-PAGE LAYOUT */
+
+body.wiki-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.625;
+}
+/* Adjust the container width size in relation to the sidebar */
+
+
+/* -------------------------------------------------
+|.. HOLY-GRAIL LAYOUT */
 
 .holy-grail {
     max-width: var(--grid-max-width);
@@ -659,42 +688,11 @@ the main and at least one asides element. */
     }
   }
 
-
-/* |.... fdgdg */
-
-section {
-    padding-block: var(--section-spacing);
-}
-
-:is(body.blog-page, body.wiki-page) {
-    --section-spacing: var(--document-section-spacing);
-}
-
-/* section {
-    padding-block: var(--section-spacing);
-}
-
-:is(body.blog-page, body.wiki-page) {
-    --section-spacing: var(--document-section-spacing);
-} */
-
-/* If the body has one of this classes, use the new value.
-Otherwise, use the default value. */
-
-body.blog-page .content-grid {
-    --content-max-width: var(--breakout-max-width) * 0.5;
-}
-/* Adjust the container width size in relation to the sidebar */
-
-body.wiki-page .content-grid {
-    --content-max-width: var(--breakout-max-width) * 0.625;
-}
-/* Adjust the container width size in relation to the sidebar */
+ /* |.... ADAPTATIONS */
   
 body.wiki-page :is(.ads) {
     display: none;
 }
-/* Hides auxiliar sidebar */
 
 
 
@@ -741,7 +739,7 @@ body.wiki-page :is(.ads) {
 #cover .container {
     /* margin: 2rem auto; */
     display: grid;
-    gap: calc(var(--flow-spacing) * 1.5);
+    gap: calc(var(--spacing-extra-small) * 1.5);
 }
 
 @media (min-width: 640px) {
