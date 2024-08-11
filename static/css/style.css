@@ -20,12 +20,19 @@
 |...... Layout classes
 
 || Layout
-|.. Landing page (Movil-first)
-|.. Regular page
+|.. General rules
+|.. Breakout-grid
+|.... Layout classes
+|.... Adaptations
+|...... Blog-page
+|...... Wiki-page
+|.. Holy-grail layout
 |.... Responsive queries
 |...... Tablet
 |...... Desktop PC
-|.... Layout classes
+|.... Adaptations
+|...... Blog-page
+|...... Wiki-page
 
 || Sitewide
 |.. Header
@@ -63,15 +70,19 @@
 */
 
 
-/* || GENERAL STYLES */
 
-/* |.. VARIABLES */
+
+/* =================================================
+|| GENERAL STYLES */
+
+/* -------------------------------------------------
+|.. VARIABLES */
 
 :root {
 
     /* |.... COLOR PALETTE */
 
-    --fs-srimary-color:    white;
+    --font-size-smallrimary-color:    white;
     --secondary-color:  #252525;
     --tertiary-color:   #00A650;
     
@@ -90,19 +101,17 @@
 
     /* |.... TYPOGRAPHY */
 
-    --fs-xl-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --font-size-extra-large-font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   
-
     /* NOTE TO MY FUTURE SELF: 
     The following settings are from the Kevin's Powell project.
     It's imperative to adjust them, using a more robust system; ideally using the dynamic variations 'Inter' font allows. */
 
-    /* --fs-s: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-    --fs-l: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
-    --fs-xl: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
-
+    /* --font-size-small: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --font-size-large: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --font-size-extra-large: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem); */
      
     /*
     NOTE FOR FUTURE ME:
@@ -111,45 +120,64 @@
     THIRD: I'll transform those values to 'rem' and then in a clamp formula
     https://clamp.font-size.app/ */
 
-    /* NOTE 2: Althought I think body size (22px) is too big, look up this site font sizes https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/ */
+    /* NOTE 2: Althought I think body size (22px) is too big, look up this site font sizes https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/ 
+    
+    NOTE 3: Actual values are derived from Material system design. */
 
-     --fs-xs: 14px;
-     --lh-xs: calc(var(--fs-xs) * 1.15);
+     --font-size-extra-small: 14px;
+     --line-height-extra-small: calc(var(--font-size-extra-small) * 1.15);
 
-     --fs-s: 16px;
-     --lh-s: calc(var(--fs-s) * 1.5);
+     --font-size-small: 16px;
+     --line-height-small: calc(var(--font-size-small) * 1.5);
 
-     --fs-m: 22px; 
-     --lh-m: calc(var(--fs-m) * 1.27);
+     --font-size-medium: 22px; 
+     --line-height-medium: calc(var(--font-size-medium) * 1.27);
 
-     --fs-l: 32px;
-     --lh-l: calc(var(--fs-l) * 1.33);
+     --font-size-large: 32px;
+     --line-height-large: calc(var(--font-size-large) * 1.33);
 
-     --fs-xl: 45px; 
-     --lh-xl: calc(var(--fs-xl) * 1.05);
-
-     /* 
-     NOTES:
-     *)  Semantic approach: --attribute-size
-     **) Sizes based om Material design system:
-            xl == Display Medium
-            l  == Headline Medium
-            m  == Title Large
-            s  == Body large
-            xs == Title small / Body medium 
-      */
+     --font-size-extra-large: 45px; 
+     --line-height-extra-large: calc(var(--font-size-extra-large) * 1.05);
 
 
      /* |.... LAYOUT SETTINGS */
 
-    --aside-width: clamp(12rem, 20rem, 10svw);
-    --grid-max-width: 80rem; /* == 1280px */
-    --fs-sadding-inline: 1rem;
+     /* Spacing */
+    --spacing-extra-small: 1em;
+    --spacing-small: 1rem;
+    --spacing-medium: 1.5rem;
+    --spacing-large: 2rem;
+    --spacing-extra-large: 5rem;
 
+    /* Breakout-grid layout */
+    /* --grid-max-width: 80rem; */
+    --grid-max-width: 75rem;
+    --padding-inline: var(--spacing-small);
+
+    /* Holy-grid layout */
+    --gap-main-content: var(--spacing-large);
+    --aside-width: clamp(12rem, 20rem, 10svw);
+   
+    
+
+    /* |.... STYLES */
+
+    /* Shapes */
+
+    --radius: .5rem;
+    --small-radius: calc(var(--radius) / 2);
+    --large-radius: calc(var(--radius) * 2);
+
+    /* Preset corners */
+
+    --all-corners: var(--radius);
+    --left-corners: var(--radius) 0 0 var(--radius);
+    --right-corners: 0 var(--radius) var(--radius) 0;
 }
 
 
-/* |.. RESET BROWSER STYLE */
+/* -------------------------------------------------
+|.. RESET BROWSER STYLE */
 
 * {
     margin: 0;
@@ -169,32 +197,35 @@ h1 {
   box-sizing: border-box;
 }
 
-/* |.. COLOR PALETTE */
+
+/* -------------------------------------------------
+|.. COLOR PALETTE */
 
 /* |.... UTILITY CLASSES */
 
 /* |...... AESTETHIC CLASSES */
 
 .light-theme {
-    background-color: var(--fs-srimary-color);
+    background-color: var(--font-size-smallrimary-color);
     color: var(--secondary-color)
 }
 
-.tonal {
+.bg-tonal {
     background-color: var(--color-neutral-95);
     color: var(--secondary-color);
 }
 
 .dark-theme {
     background-color: var(--secondary-color);
-    color: var(--fs-srimary-color);
+    color: var(--font-size-smallrimary-color);
 }
 
 .brand-color {
     background-color: var(--tertiary-color);
 }
 
-/* |.. ANIMATIONS */
+/* -------------------------------------------------
+|.. ANIMATIONS */
 
 html {
     scroll-behavior: smooth;
@@ -202,7 +233,8 @@ html {
 }
 
 
-/* |.. TYPOGRAPHY */
+/* -------------------------------------------------
+|.. TYPOGRAPHY */
 
 /* Display */
 
@@ -225,13 +257,15 @@ html {
     <weight>: Use a value from 100 to 900
 */
 
-
-
 body {
     margin: 0;
     font-family: var(--font-family);
-    font-size: var(--fs-s);
-    line-height: var(--lh-s);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
+caption {
+    font-style: italic;
 }
 
 
@@ -240,24 +274,28 @@ body {
 /* |...... AESTETHICS CLASSES */
 
 .site-title {
-    font-family: var(--fs-xl-font-family);
-    font-size: var(--fs-xl);
-    line-height: var(--lh-xl);
+    font-family: var(--font-size-extra-large-font-family);
+    font-size: var(--font-size-extra-large);
+    line-height: var(--line-height-extra-large);
     text-transform: uppercase;
 }
   
 .section-title {
-    font-size: var(--fs-l);
-    line-height: var(--lh-l);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
 }
 
 
-/* |.. ELEMENTS */
+/* -------------------------------------------------
+|.. ELEMENTS */
 
 html {
     color-scheme: var(--color-scheme);
 }
 
+:is(ul, ol) {
+    list-style: inside;
+}
 
 
 h1,
@@ -270,6 +308,7 @@ p,
 figure {
     margin: 0;
 }
+
 
 /* IMAGES */
 
@@ -295,7 +334,6 @@ a .logo{
 /* Default setting for OUTLINED icons */
 
 
-
 /* NAVIGATION */
 
 nav ul {
@@ -314,6 +352,7 @@ nav a:focus {
     color: var(--tertiary-color);
     text-decoration: underline;
 }
+
 
 /* TABLES */
 
@@ -342,6 +381,7 @@ table td > img {
     width: clamp(32px, 64px, 10vh);
 }
 
+
 /* RESPONSIVE */
 
  @media (max-width: 720px) {
@@ -358,6 +398,7 @@ table tbody tr a {
     text-decoration: underline;
 }
 
+
 /* |.... UTILITY CLASSES */
 
 /* |...... AESTHETIC CLASSES */
@@ -366,14 +407,17 @@ table tbody tr a {
 
 .call-to-action,
 .bg-tertiary {
-    padding: 1rem;
     background: var(--tertiary-color);
 }
 
 .high-light,
 .bg-secondary {
-    padding: 1rem;
-    background: var(--color-neutral-80);
+    background: var(--color-neutral-95);
+}
+
+.high-light {
+    padding: var(--spacing-small);
+    border-radius: var(--all-corners);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -393,14 +437,49 @@ table tbody tr a {
     **) https://github.com/microsoft/vscode/issues/176698
 */
 
+
 /* Containers */
 
 .card {
-    background-color: var(--fs-srimary-color);
-    border-radius: 20px;
-    padding: 2rem;
+    --radius: var(--large-radius);
+    --all-corners: var(--radius);
+
+    background-color: var(--font-size-smallrimary-color);
+    border-radius: var(--all-corners);
+    padding: var(--spacing-large);
     margin: 0;
 }
+
+.description  {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* Adds a gap at the top of each element */
+
+.product {
+    display: grid;
+}
+
+@media (min-width: 940px) {
+     .product {
+       grid-template-columns: 1fr 1fr;
+       gap: 2rem;
+    }
+}
+
+@media (min-width: 720px) {
+    body.landing-page .product {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+   }
+}
+/* As landing-pages have no asides, breakpoint is different.
+I would love to use variable to avoid this, but apparently
+I can't use them to set dynamic breakpoints. So I'll flag it as
+a quick-fix. */
+
+/* Elevations */
 
 .elevation-1 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
@@ -424,8 +503,8 @@ table tbody tr a {
     'wght' 700,
     'GRAD' 0,
     'opsz' 36
-  }
-  /* Enlarge icons */
+}
+/* Enlarge icons */
 
 
 /* |...... LAYOUT CLASSES */
@@ -440,16 +519,6 @@ table tbody tr a {
     width: 1px;
 }
 
-.wrapper {
-    width: calc(100% - 3rem);
-    max-width: 900px;
-    margin-inline: auto;
-}
-
-.flow > * + * {
-    margin-top: var(--flow-spacing, 1em);
-}
-
 .even-columns {
     display: flex;
     gap: 1rem;
@@ -459,15 +528,36 @@ table tbody tr a {
 /* |...... SPACING CLASSES */
 
 .section-padding {
-    padding-block: 2.5rem;
+    padding-block: var(--spacing-medium);
 }
 
 
-/* || LAYOUT */
 
-/* |.. LANDING PAGE 
 
-Notes:
+/* =================================================
+|| LAYOUT */
+
+/* -------------------------------------------------
+|.. GENERAL RULES */
+
+:is(.flow, section, article) > * + * {
+    margin-block-start: var(--spacing-extra-small, 1em);
+}
+/* Adds an extra margin at the top of each element */
+
+section {
+    padding-block: var(--spacing-medium);
+}
+
+body.landing-page section {
+    padding-block: var(--spacing-extra-large);
+} 
+
+
+/* -------------------------------------------------
+|.. BREAKOUT GRID LAYOUT
+
+    Notes:
     Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
     *) References::after
         - Youtube: https://www.youtube.com/watch?v=c13gpBrnGEw
@@ -487,15 +577,15 @@ Notes:
     
     display: grid;
     grid-template-columns:
-      [full-width-start] minmax(var(--fs-sadding-inline), 1fr)
+      [full-width-start] minmax(var(--padding-inline), 1fr)
       [breakout-start] minmax(0, var(--breakout-size))
       [content-start] min(
-        100% - (var(--fs-sadding-inline) * 2),
+        100% - (var(--padding-inline) * 2),
         var(--content-max-width)
       )
       [content-end]
       minmax(0, var(--breakout-size)) [breakout-end]
-      minmax(var(--fs-sadding-inline), 1fr) [full-width-end];
+      minmax(var(--padding-inline), 1fr) [full-width-end];
 }
 
 .content-grid > :not(.breakout, .full-width),
@@ -528,7 +618,26 @@ img.full-width {
 /* Makes an image to extend full width */
 
 
-/* |.. REGULAR PAGE */
+/* |.... ADAPTATIONS  (Quick-fix)*/
+
+/* |...... BLOG-PAGE LAYOUT */
+
+body.blog-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.5;
+}
+/* Adjust the container width size in relation to the sidebar */
+
+
+/* |...... WIKI-PAGE LAYOUT */
+
+body.wiki-page .content-grid {
+    --content-max-width: var(--breakout-max-width) * 0.625;
+}
+/* Adjust the container width size in relation to the sidebar */
+
+
+/* -------------------------------------------------
+|.. HOLY-GRAIL LAYOUT */
 
 .holy-grail {
     max-width: var(--grid-max-width);
@@ -541,13 +650,17 @@ img.full-width {
 }
 /* In order to properly work, there has to be a <div> containing
 the main and at least one asides element. */
+
+#cover {
+    grid-area: cover;
+}
   
 .sidebar {
     grid-area: sidebar;
     width: var(--aside-width);
 }
   
-.main {
+.article {
     grid-area: main;
 }
   
@@ -556,13 +669,14 @@ the main and at least one asides element. */
     width: var(--aside-width);
 }
 
+
 /* |.... RESPONSIVE QUERIES */
 
 /* |...... TABLET */
 
 @media (min-width: 640px) {
     .holy-grail {
-      grid-template: 
+      grid-template:
       "sidebar    main"
       "ads        main" / 
       auto        1fr;
@@ -579,28 +693,20 @@ the main and at least one asides element. */
     }
   }
 
-
-/* |.... SPACING CLASSES */
-
-body.blog-page .content-grid {
-    --content-max-width: var(--breakout-max-width) * 0.5;
-}
-/* Adjust the container width size in relation to the sidebar */
-
-body.wiki-page .content-grid {
-    --content-max-width: var(--breakout-max-width) * 0.625;
-}
-/* Adjust the container width size in relation to the sidebar */
+ /* |.... ADAPTATIONS */
   
 body.wiki-page :is(.ads) {
     display: none;
 }
-/* Hides auxiliar sidebar */
 
 
-/* || SITEWIDE */
 
-/* |.. HEADER */
+
+/* =================================================
+|| SITEWIDE */
+
+/* -------------------------------------------------
+|.. HEADER */
 
 /* |.... PRINCIPAL NAVIGATION BAR */
 
@@ -615,7 +721,7 @@ body.wiki-page :is(.ads) {
 
 .primary-header {
     padding-block: 1rem;
-    margin-block-end: 3rem;
+    margin-block-end: auto;
     background: var(--clr-accent-200);
     color: var(--clr-primary-500);
 }
@@ -630,27 +736,131 @@ body.wiki-page :is(.ads) {
 /* |.... SECONDARY NAVIGATION BAR */
 
 
-/* |.. ASIDE */
+/* -------------------------------------------------
+|.. MAIN */
+
+/* |.... COVER */
+
+#cover .container {
+    /* margin: 2rem auto; */
+    display: grid;
+    gap: calc(var(--spacing-extra-small) * 1.5);
+}
+
+@media (min-width: 640px) {
+    #cover .container {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 2rem;
+    }
+}
+/* 'grid-auto-flow' allows the container '.description' to grow
+if there is no image in the container '.display' */
+
+#cover img {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--all-corners);
+    object-fit: cover;
+}
+/* By default, the display image will match the size of its parent container. */
+
+
+#cover .description {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 1rem;    
+}
+
+#cover .description p {
+    font-size: var(--font-size-medium);
+}
+
+
+/* |...... UTILITARIAN CLASSES */
+
+/* |........AESTHETIC CLASSES */
+
+#cover.clipart img {
+    object-fit: contain;
+}
+/* Use it when you don't want display image to clip. */
+
+
+/* |.... CONTENT  */
+
+.container.holy-grail {
+    margin-top: var(--gap-main-content);
+}
+/* Separates the article's content from its cover */
+
+
+/* |...... ARTICLE */
+
+article section:first-child {
+    padding-block-start: 0px;
+}
+/* (Quick-fix) Removes top padding to the first section inside the article's main content*/
+
+@media (min-width: 640px) {
+    :is(body.blog-page, body.wiki-page) .main :is(section, .full-width) {
+        border-radius: var(--left-corners);
+    }
+}
+/* In tablet size viewport, only one side of the elements get in contact with the visor side.
+The rigth side doesn't get any border radius. */
+
+@media (min-width: 960px) {
+    body.blog-page .main :is(section, .full-width) {
+        border-radius: var(--all-corners);
+    }
+}
+/* In a blog-page, main content is wrapped by 2 asides (Holy-grail layout).
+This rule round their corners to hide this error in design (negative aspect of the "breakout-grid"). */
+
+@media (min-width: 1280px) {
+    body.wiki-page .main :is(section, .full-width) {
+        border-radius: var(--all-corners);
+    }
+}
+/* In a wiki-page, there is a dashboard layout, so full-width elements reach the right side
+at a different breakpoint compared to blog-page layout. */
+
+
+/* |...... ASIDE */
 
 aside > * {
-    font-size: var(--fs-xs);
+    font-size: var(--font-size-extra-small);
 }
 /* Sets a default base size. It can be overwritten for later rule developments. */
 
 aside h2 {
-    font-size: var(--fs-xs);
+    font-size: var(--font-size-extra-small);
     text-transform: uppercase;
 }
+
 
 /* |.... SIDEBAR */
 
 /* |...... TABLE OF CONTENTS */
 
+@media (max-width: 640px) {
+    .toc-container {
+        display: none;
+    }
+}
+/* NOTE: Continue developing in 'dev-aside-toc' */
 
 
-/* || COMPONENTS */
 
-/* |.. MODEL-VIEWER */
+
+/* =================================================
+|| COMPONENTS */
+
+/* -------------------------------------------------
+|.. MODEL-VIEWER */
 
 :not(:defined) > * {
     display: none;
@@ -660,25 +870,12 @@ model-viewer {
     height: inherit;
     width: inherit;
 }
-/* Extends the width of the container */
+/* Chain its size to the wrapper. */
 
-/* div > model-viewer {
-    height: 360px;
-} */
 
 /* |.... UTILITY CLASSES */
 
-/* |...... LAYOUT CLASSES */
-
-div.wide > model-viewer {
-    height: clamp(150px, 33svw, 360px);
-}
-/* Changes the aspect ratio of its PARENT container */
-
-body.blog-page div.wide > model-viewer {
-    height: clamp(150px, 25svw, 300px);
-}
-/* QUICK FIX FOR TESTING: Delete later */
+/* |...... AESTHETHIC CLASSES */
 
 model-viewer .hotspot{
     width: 0px;
@@ -693,7 +890,7 @@ model-viewer button {
 /* Hide annotation element as default */
 
 model-viewer .annotation {
-    border-radius:10px;
+    border-radius: var(--all-corners);
     border: none;
     box-sizing: border-box;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -710,3 +907,30 @@ model-viewer .annotation {
     transform: translate3d(-50%, -50%, 90);
 }
 /* Change max-with with clamp like font treatment */
+
+
+/* |...... LAYOUT CLASSES */
+
+.wrapper > model-viewer {
+    aspect-ratio: 1 / 1;
+}
+
+.wider > .content > .wrapper > model-viewer {
+    aspect-ratio: 3 / 2;
+}
+
+.wider > .content > .wrapper > model-viewer {
+    aspect-ratio: 2 / 1;
+}
+
+.narrow > .content > .wrapper > model-viewer {
+    aspect-ratio: 2 / 3;
+}
+
+.narrower > .content > .wrapper > model-viewer {
+    aspect-ratio: 1 / 2;
+}
+
+
+
+
