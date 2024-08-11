@@ -612,9 +612,9 @@ img.full-width {
 /* |...... BLOG-PAGE LAYOUT */
 
 
-body.blog-page .holy-grail .content-grid {
+/* body.blog-page .holy-grail .content-grid {
     --breakout-max-width: 180%;
-}
+} */
 /* Minimizes the distance between the breakout and the main container. */
 
 body.blog-page .content-grid {
