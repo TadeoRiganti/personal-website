@@ -1,4 +1,4 @@
-/* TABLE OF CONTENTS:Elevations
+/* TABLE OF CONTENTS:
 
 || GENERAL STYLES
 |.. Variables
@@ -577,12 +577,6 @@ body.landing-page section {
       minmax(var(--padding-inline), 1fr) [full-width-end];
 }
 
-
-body.blog-page .holy-grail .content-grid {
-    --breakout-max-width: 180%;
-}
-/* Minimizes the distance between the breakout and the main container. */
-
 .content-grid > :not(.breakout, .full-width),
 .full-width > :not(.breakout, .full-width) {
     grid-column: content;
@@ -616,6 +610,12 @@ img.full-width {
 /* |.... ADAPTATIONS  (Quick-fix)*/
 
 /* |...... BLOG-PAGE LAYOUT */
+
+
+body.blog-page .holy-grail .content-grid {
+    --breakout-max-width: 180%;
+}
+/* Minimizes the distance between the breakout and the main container. */
 
 body.blog-page .content-grid {
     --content-max-width: var(--breakout-max-width) * 0.5;
