@@ -150,7 +150,8 @@
     --spacing-extra-large: 5rem;
 
     /* Breakout-grid layout */
-    --grid-max-width: 80rem; /* == 1280px */
+    /* --grid-max-width: 80rem; */
+    --grid-max-width: 75rem;
     --padding-inline: var(--spacing-small);
 
     /* Holy-grid layout */
@@ -558,7 +559,7 @@ body.landing-page section {
     --breakout-max-width: var(--grid-max-width);
     /* Maximum width size for the breakout container */
        
-    --content-max-width: var(--breakout-max-width) * 0.85;
+    --content-max-width: var(--breakout-max-width) * 0.75;
     /* Calculates the content's width*/
       
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
@@ -611,15 +612,8 @@ img.full-width {
 
 /* |...... BLOG-PAGE LAYOUT */
 
-
-/* body.blog-page .holy-grail .content-grid {
-    --breakout-max-width: 180%;
-} */
-/* Minimizes the distance between the breakout and the main container. */
-
 body.blog-page .content-grid {
-    /* --content-max-width: var(--breakout-max-width) * 0.5; */
-    --content-max-width: 40rem;
+    --content-max-width: var(--breakout-max-width) * 0.5;
 }
 /* Adjust the container width size in relation to the sidebar */
 
@@ -627,8 +621,7 @@ body.blog-page .content-grid {
 /* |...... WIKI-PAGE LAYOUT */
 
 body.wiki-page .content-grid {
-    /* --content-max-width: var(--breakout-max-width) * 0.625; */
-    --content-max-width: 50rem;
+    --content-max-width: var(--breakout-max-width) * 0.625;
 }
 /* Adjust the container width size in relation to the sidebar */
 
