@@ -1,0 +1,206 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* ------------------------------------------------------------------Based on  "Crea un DROPDOWN Menú **solo CSS** by AlexCG Design: https://www.youtube.com/watch?v=uupOWz65O4M&t=645s*/
+
+.nav {
+    background-color: antiquewhite;
+
+    --img1: scale(1);
+    /* Show '☰' element */
+    --img2: scale(0);
+    /* Hide 'X' element */
+}
+/* Navigation bar */
+
+.nav:has( .dropdown:target) {
+    --img1: scale(0);
+    /* Hide '☰' element */
+    --img2: scale(1);
+    /* Show 'X' element */
+
+    --clip: inset(0 0 0% 0%);
+    /* Variable setted in .dropdown */
+}
+/* The pseudoclass 'target' indicates when an element has been targeted by anchors or links.
+This rule closes the circuit and creates a switch:  
+
+Everytime an user clicks the anchor '☰' will add a target to the element with class '.dropdown' (the nav-links tab menu; 'ul' element. 
+
+Whenever this class is being targeted, swap the property variables (scale 0 / 1), hidding the icon '☰' and showing 'X' icon. 
+
+If the user touches the anchor 'X', as it is referencing other thing than '.dropdown', this class stops being targeted, thus this rule doesn't apply and this transform properties return to '.nav''s rule values. */
+
+.nav__container {
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    justify-content: space-between;
+    align-items: center;
+    
+    overflow: hidden;
+}
+/* top-header */
+
+.nav__title {
+    color: black;
+    grid-area: title;
+}
+/* Home */
+
+.nav__menu {
+    grid-area: img;
+    position: relative;
+    z-index: 10;
+    /* Icons will be always at the front */
+
+    transform: var(--img1);
+    /* Is a control property to change wich img will be shown: 
+    Works as a switch ON as it scales the img to 1*/
+}
+/* buttons */
+
+.nav__menu--second {
+    transform: var(--img2);
+    /* Works as a switch OFF  as it scales the image to 0*/
+    /* Wouldn't be better to name them as ON/OFF? */
+}
+
+.nav__icon {
+    width: 30px;
+    display: block;
+}
+/* Controls the icon's size (toogle On/Off) */
+
+.dropdown {
+    position: absolute;
+    /* This also stop messing with the elements position inside the top header (HOME and toogle menu icons), as it gets outside the grid. */
+    
+    background-color: darkgray;
+
+    width: 75%;
+    max-width: 300px;
+    /* This can be optimized with a clamp */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* This will definitely change, but it's nice for the TOC component. */
+    /* Position to the right side, from top to bottom.*/
+    padding: 1em;
+    /* --spacing-extra-small */
+
+    display: grid;
+    align-items: center;
+    /* Nah uh. Not a fan. This must be changed.  */
+    gap: 1rem;
+    /* --spacing-small */
+
+    overflow-y: auto;
+    /* Scrollbar */
+
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: .5s;
+    /* https://bennettfeely.com/clippy/ */
+}
+
+.dropdown__list {
+    list-style: none;
+    /* This would be alredy set-up. So it's not neccesary.. unless..
+    Do BEM methodology don't use global settings? Investigate it.  */
+}
+
+.dropdown__link {
+    color: black;
+    /* Color variables */
+    padding: 1em .7em;
+    /* Space between links and its container'.dropdown__list' */
+    /* --Spacing-extra-small */
+    text-decoration: none;
+    /* This would be alredy set-up. So it's not neccesary.. unless its a bad practice for BEM methodolgy.
+    If that the case.. I'll have a lot more job than expected when I will refactor the CSS stylesheet.*/
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    /* Space between icon and label */
+
+    position: relative;
+
+    background-color: var(--bg, transparent);
+    /* As this variable is local to this rule, as it is undefined, it will fallback to transparent */
+    border-radius: 6px;
+}
+
+.dropdown__list:has(:checked) {
+    --rows: 1fr;
+    --rotate: rotate(90deg);
+    /* It surprisingly work out! */
+    --bg: rgb(208, 208, 208);
+    /* When checked this variable pop out in the cascade and background color will switch from transparent to the value declared. */
+}
+/* If it has an element checked, change the size of .dropdown__content.
+As that class has a transition property, it will look like it's opening and closing.*/
+/* The same problem with focus occurs. I need to find a fix, I think there is a Kevin Powells or A11y content related to that. 
+
+In keyboard navigation, when a user needs to check a checkbox or open a dropdown menu, spacebar as the equivalent to mouse's click. 
+However as the dropdown menu item doesn't have the checkbox, when a user tries to open it, it needs to hit the next item(invisible, by the way) and then hit spacebar. This is bad enginiering.*/
+
+/* In the post https://stackoverflow.com/questions/55171150/buttons-in-nav-instead-of-anchor
+Andrew Mcpherson states "It's semantically equivalent, but it doesn't have the same behaviour. Buttons, when focused, are activated using the enter or space keys; however focused links are only activated using the enter key. Links with a button role also need an extra keypress listener to fire a click event when the user presses the space key. It's simpler just to use a real button" 
+
+So... I might try to develop this pattern with a button instead.
+
+ */
+
+
+.dropdown__check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Space from its parent */
+    opacity: 0;
+    /* Found out a problem with FOCUS:
+    Whenever a user navigates with their keyboard it kinda focuses on the checkbox wich is not visible. 
+    Must be resolved or I won't implement this; */
+    cursor: pointer;
+}
+
+.dropdown__content {
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    /* Makes submenu to dissapear */
+    transition: .3s grid-template-rows;
+    background-color: rgb(150, 150, 150);
+    /* Can't figure it out why background color is not reaching the full width of the sidebar. Inspect it later.  */
+}
+
+.dropdown__sub {
+    overflow: hidden;
+}
+
+.dropdown__li {
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.dropdown__anchor {
+    padding: 1em;
+    display: block;
+}
+
+.dropdown__arrow {
+    margin-left: auto;
+    transform: var(--rotate, 0);
+    transition: .2s;
+}
