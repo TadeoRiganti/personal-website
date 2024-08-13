@@ -1,6 +1,7 @@
 .nav {
     background-color: antiquewhite;
 }
+/* Navigation bar */
 
 .nav__container {
     width: 90%;
@@ -15,4 +16,15 @@
     
     overflow: hidden;
 }
+/* top-header */
 
+.nav__title {
+    color: black;
+    grid-area: title;
+}
+/* Home */
+
+.nav__menu {
+    grid-area: img;
+}
+/* buttons */
