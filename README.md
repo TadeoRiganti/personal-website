@@ -103,6 +103,9 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
       b. Add a "Skip to content" at the very start of every webpage.
 
+      c. Dropdown menus MUST be clicked (or use the key 'enter') to display the submenu. 
+      This way keyboard navigation users don't have to tab all the menu. Avoid adding a hover feature as long as you don't want to do extra work with accesibility issues. More info [here](https://blog.pope.tech/2024/01/30/how-to-create-accessible-navigations-and-sub-menus/)
+
 2. Screen reader:
 
       a. Heavy usage of ARIA attributes.
@@ -133,7 +136,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### A) Essential
 
-- Hover navigation bar (opaque or glossy effect). 
+- ~~Hover~~ Focusable navigation bar. Skip to content.
 - Themes button; dark / light / color blind / high contrast / font size.
 - Variable fonts; weight, style and width.
 
@@ -267,7 +270,8 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 <br>
 
 ### ACCESIBILITY:
-[Technique to alter focus order](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)
+- [Keyboard navigation - BEST PRACTICES](https://blog.pope.tech/2024/01/30/how-to-create-accessible-navigations-and-sub-menus/)
+- [Technique to alter focus order](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)
 
 
 ## BACKLOG
