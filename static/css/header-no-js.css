@@ -75,9 +75,32 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     background-color: darkgray;
 
     width: 75%;
-
     right: 0;
     top: 0;
     bottom: 0;
+    /* This will definitely change, but it's nice for the TOC component. */
     /* Position to the right side, from top to bottom.*/
+
+    padding: 1em;
+    /* --Spacing-extra-small */
+}
+
+.dropdown__list {
+    list-style: none;
+    /* This would be alredy set-up. So it's not neccesary.. unless..
+    Do BEM methodology don't use global settings? Investigate it.  */
+}
+
+.dropdown__link {
+    color: black;
+    /* Color variables */
+    padding: 1em .7em;
+    /* --Spacing-extra-small */
+    text-decoration: none;
+    /* This would be alredy set-up. So it's not neccesary.. unless its a bad practice for BEM methodolgy.
+    If that the case.. I'll have a lot more job than expected when I will refactor the CSS stylesheet.*/
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
 }
