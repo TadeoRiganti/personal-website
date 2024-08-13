@@ -1,5 +1,10 @@
 .nav {
     background-color: antiquewhite;
+
+    --img1: scale(1);
+    /* Show element */
+    --img2: scale(0);
+    /* Hide element */
 }
 /* Navigation bar */
 
@@ -29,6 +34,9 @@
     position: relative;
     z-index: 10;
     /* Icons will be always at the front */
+
+    transform: var(--img1);
+    /* Controls wich img will be shown: works as a switch on/off*/
 }
 /* buttons */
 
