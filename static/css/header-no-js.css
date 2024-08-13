@@ -129,11 +129,8 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
 
 .dropdown__list:has(:checked) {
     --rows: 1fr;
-    text-orientation: sideways-right;
-    /* This obviously didn't work as I'm using a span icon and author was using an image */
-    /* I suppose that, using the same logic I can make it dissapear when this is checked and make visible another character.
-    
-    Or maybe, I can text rotate?*/
+    --rotate: rotate(90deg);
+    /* It surprisingly work out! */
 }
 /* If it has an element checked, change the size of .dropdown__content.
 As that class has a transition property, it will look like it's opening and closing.*/
@@ -162,6 +159,7 @@ However as the dropdown menu item doesn't have the checkbox, when a user tries t
     transition: .3s grid-template-rows;
     background-color: rgb(150, 150, 150);
     /* Can't figure it out why background color is not reaching the full width of the sidebar. Inspect it later.  */
+}
 
 .dropdown__sub {
     overflow: hidden;
@@ -180,7 +178,6 @@ However as the dropdown menu item doesn't have the checkbox, when a user tries t
 
 .dropdown__arrow {
     margin-left: auto;
-    text-orientation: initial;
-    /* transform: var(--rotate, 0);
-    transition: .2s; */
+    transform: var(--rotate, 0);
+    transition: .2s;
 }
