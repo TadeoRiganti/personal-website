@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="..\static\css\style.css">
     <!-- Header No JS -->
     <link rel="stylesheet" href="..\static\css\header-no-js.css">
-    <title>Home - Beta test</title>
+    <!-- Material design icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Top navigation bar: No JS</title>
 </head>
 
 <body>
@@ -56,7 +59,11 @@
                             <!-- Label -->
                             <span class="dropdown__span">Parent dropdown</span>
                             <!-- Handle indicator (Open / Close) -->
-                            <span class="dropdown__arrow"></span>
+                            <span class="dropdown__arrow material-symbols-outlined">
+                                chevron_right
+                                </span>
+                                <!-- Original pen uses an 'img' element that later will rotate. Will need to figure it out a way to do the same (please) or hack it with a solution similar to the toogle button -->
+
                              <input type="checkbox" class="dropdown__check">
                         </a>
                         <!-- Dropdown content -->
@@ -70,13 +77,11 @@
                                 </li>
                                 <!-- Dropdown child -->
                                 <li class="dropdown__li">
-                                    <a href="
-                                    " class="dropdown__anchor">Dropdown child item 2</a>
+                                    <a href="" class="dropdown__anchor">Dropdown child item 2</a>
                                 </li>
                                 <!-- Dropdown child -->
                                 <li class="dropdown__li">
-                                    <a href="
-                                    " class="dropdown__anchor">Dropdown child item 3</a>
+                                    <a href="" class="dropdown__anchor">Dropdown child item 3</a>
                                 </li>
                             </ul>
                         </div>
