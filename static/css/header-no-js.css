@@ -19,7 +19,9 @@ This rule closes the circuit and creates a switch:
 
 Everytime an user clicks the anchor '☰' will add a target to the element with class '.dropdown' (the nav-links tab menu; 'ul' element. 
 
-Whenever this class is being targeted, swap the property variables (scale 0 / 1), hidding the icon '☰' and showing 'X' icon.  */
+Whenever this class is being targeted, swap the property variables (scale 0 / 1), hidding the icon '☰' and showing 'X' icon. 
+
+If the user touches the anchor 'X', as it is referencing other thing than '.dropdown', this class stops being targeted, thus this rule doesn't apply and this transform properties return to '.nav''s rule values. */
 
 .nav__container {
     width: 90%;
