@@ -26,5 +26,8 @@
 
 .nav__menu {
     grid-area: img;
+    position: relative;
+    z-index: 10;
+    /* Icons will be always at the front */
 }
 /* buttons */
