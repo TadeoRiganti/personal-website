@@ -157,8 +157,10 @@ However as the dropdown menu item doesn't have the checkbox, when a user tries t
 
 /* In the post https://stackoverflow.com/questions/55171150/buttons-in-nav-instead-of-anchor
 Andrew Mcpherson states "It's semantically equivalent, but it doesn't have the same behaviour. Buttons, when focused, are activated using the enter or space keys; however focused links are only activated using the enter key. Links with a button role also need an extra keypress listener to fire a click event when the user presses the space key. It's simpler just to use a real button" 
+Well, no. It kinda doesn't mix well with this tecnique. And adds a lot of problems for later, so 'll keep developing this solution.
 
-So... I might try to develop this pattern with a button instead.
+2nd solution: Add rules to change focus behaviour:
+https://dev.to/dailydevtips1/css-focus-powered-dropdown-menu-49ai#:~:text=CSS%20menu%20on%20focus&text=For%20the%20dropdown%20we%20add,target%20the%20next%20(~)%20dropdown.
 
  */
 
