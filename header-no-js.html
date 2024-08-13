@@ -31,6 +31,7 @@
                 NOTE: This anchor tag is referencing the <ul> 'Nav-links.' -->
                 <a href="#menu" class="nav__menu">
                     <span class="nav__icon">☰</span>
+                    <!-- Original pen is developed with an <img> element. But I'm gonna use Material icons wich uses a <span> element. Hopefully I can adapt this code on the run. -->
                 </a>
                 
                 <!-- Toogle OFF icon -->
@@ -39,7 +40,14 @@
                 </a>
 
                 <!--Nav-links / Tab menu -->
-                <ul class="dropdown" id="menu"></ul>
+                <ul class="dropdown" id="menu">
+                    <li class="dropdown__list">
+                        <a href="" class="dropdown__link">
+                            <span class="dropdown__icon">○</span>
+                            <span class="dropdown__span">Label</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
