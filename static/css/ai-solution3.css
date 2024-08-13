@@ -66,3 +66,7 @@
     }
   }
   
+
+  .nav__dropdown.show {
+    display: block;
+  }
