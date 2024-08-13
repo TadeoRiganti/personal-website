@@ -2,11 +2,24 @@
     background-color: antiquewhite;
 
     --img1: scale(1);
-    /* Show element */
+    /* Show '☰' element */
     --img2: scale(0);
-    /* Hide element */
+    /* Hide 'X' element */
 }
 /* Navigation bar */
+
+.nav:has( .dropdown:target) {
+    --img1: scale(0);
+    /* Hide '☰' element */
+    --img2: scale(1);
+    /* Show 'X' element */
+}
+/* The pseudoclass 'target' indicates when an element has been targeted by anchors or links.
+This rule closes the circuit and creates a switch:  
+
+Everytime an user clicks the anchor '☰' will add a target to the element with class '.dropdown' (the nav-links tab menu; 'ul' element. 
+
+Whenever this class is being targeted, swap the property variables (scale 0 / 1), hidding the icon '☰' and showing 'X' icon.  */
 
 .nav__container {
     width: 90%;
