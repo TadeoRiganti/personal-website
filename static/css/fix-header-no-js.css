@@ -206,3 +206,9 @@ https://dev.to/dailydevtips1/css-focus-powered-dropdown-menu-49ai#:~:text=CSS%20
     transform: var(--rotate, 0);
     transition: .2s;
 }
+
+/* SOLUTION 2 */
+
+.dropdown__list ~ .dropdown__link:focus-within {
+    background-color: aqua;
+}
