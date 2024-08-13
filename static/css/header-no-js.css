@@ -62,8 +62,13 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     /* Wouldn't be better to name them as ON/OFF? */
 }
 
-.nav__icons {
+.nav__icon {
     width: 30px;
     display: block;
 }
 /* Controls the icon's size */
+
+.dropdown {
+    position: absolute;
+    /* This also stop messing with the elements position inside the top header (HOME and toogle menu icons), as it gets outside the grid. */
+}
