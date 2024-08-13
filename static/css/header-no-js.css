@@ -24,6 +24,9 @@
     /* Hide '☰' element */
     --img2: scale(1);
     /* Show 'X' element */
+
+    --clip: inset(0 0 0% 0%);
+    /* Variable setted in .dropdown */
 }
 /* The pseudoclass 'target' indicates when an element has been targeted by anchors or links.
 This rule closes the circuit and creates a switch:  
@@ -103,6 +106,11 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     /* --spacing-small */
 
     overflow-y: auto;
+    /* Scrollbar */
+
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: .5s;
+    /* https://bennettfeely.com/clippy/ */
 }
 
 .dropdown__list {
