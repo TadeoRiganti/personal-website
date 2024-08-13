@@ -72,7 +72,7 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     position: absolute;
     /* This also stop messing with the elements position inside the top header (HOME and toogle menu icons), as it gets outside the grid. */
     
-    background-color: black;
+    background-color: darkgray;
 
     width: 75%;
 
