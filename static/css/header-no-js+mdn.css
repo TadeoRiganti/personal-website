@@ -1,0 +1,67 @@
+:root {
+    /* Layout variables */
+
+    /* Sizes */
+
+    --h-header: minmax(auto, 80px);
+    --h-footer: minmax(auto, 40px);
+    --h-fitcontent: auto;
+    --h-fill: 1fr;
+
+    --w-fullwidth: 100%;
+    --w-aside: clamp(12rem, 20rem, 15vw);
+    --w-fill: 1fr;
+}
+
+
+/* Demo style */
+
+
+.content-grid > * {
+    background-color: aliceblue;
+    overflow: auto;
+}
+
+
+
+/* HEADER */
+
+
+.header-container {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    z-index: 999;
+}
+
+.top-navigation {
+    background-color: red;
+    padding: 1rem;
+}
+
+.article-actions-container {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+}
+
+.breadcrumb-container {
+    padding: .5rem;
+}
+  
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .breadcrumb-container li:not(:last-child):after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: "→";
+  }
+
+

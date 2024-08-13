@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- General style -->
-     <link rel="stylesheet" href="..\static\css\style.css">
      <!-- Layout style -->
-    <link rel="stylesheet" href="..\static\css\header-mdn.css">
+    <link rel="stylesheet" href="..\static\css\header-no-js+mdn.css">
     <title>Grid layout: Holy grail</title>
 </head>
 <body class="content-grid">
+
+    <header>
+        <!-- Principal navigation bar -->
+        <nav class="primary-nav">
+            <div class="primary-nav__container">
+                <a href="#" class="nav__title">HOME</a>
+                <button class="primary-nav__menu" onclick="">
+                    <span class="nav__icon">≡</span>
+                    <span class="nav__icon">≡</span>
+                    <!-- No, no. This will be a problem as well, or at least it can't be helped: It's a fundamentall for this tecnhique the use of Href.
+                     So, let's try to fix the focus issue or scrap the No-js solution and try with a traditional yes JS solution. -->
+                </button> 
+                <!-- This will go in replacement of <a href="#menu" class="nav__menu"> 
+                    However I still need to find a way to reference '#menu'. Maybe with an 'event-listener', something like this https://www.geeksforgeeks.org/how-to-create-an-html-button-that-acts-like-a-link/-->
+            </div>
+        </nav>
+        <!-- Secondary navigation bar -->
+        <nav class="secondary-nav"></nav>
+    </header>
+
+
 
     <div class="header-container">
         <header class="top-navigation">
@@ -58,40 +77,5 @@
             </nav>
         </div>
     </div>
-
-    <main class="content">
-        <article>
-            <img src="https://picsum.photos/300/200" alt="Random image">
-            <div class="article__data">Author | Date | Reading time</div>
-            <h1>Title of the article</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio autem atque unde nesciunt repudiandae asperiores in, explicabo odio dolorum tempora, harum omnis suscipit eos, magni architecto ducimus. Aliquam minima doloremque quisquam quis.</p>
-            <h2>Title of the section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam sequi suscipit eligendi neque magnam incidunt earum necessitatibus, inventore alias, ipsum dolorem vel quo enim rem doloribus repellendus impedit officiis numquam libero, consequatur eos placeat laudantium sit nihil. Unde, ipsam! Delectus dolorem quibusdam quos iste facilis, esse laborum reprehenderit.</p>
-        </article>
-
-    </main>
-
-    <!-- Use aside if it's not the principal navigation bar. If it's a dashbord, then this tag should be <nav class="navbar"> -->
-    <aside class="sidebar">
-        <!-- MDN Barebone Structure -->
-        <nav class="related-topics">
-            <section class="toc">
-                <header>
-                    <h2>Table of contents</h2>
-                </header>
-                <ul class="toc-list">
-                    <li>Introduction</li>
-                    <li>Subsection X</li>
-                    <li>Conclusion</li>
-                </ul>
-            </section>
-            <!-- Another section could be used with the same structure to add a Wiki-ish / document navigation. If so, take in mind that if the list of links have a certain order, then it should be used an <ol> tag not <ul>. -->
-        </nav>
-    </aside>
-
-    <aside class="ads">Optional content / Ads</aside>
-
-    <footer class="footer">Footer</footer>
-    
 </body>
 </html>
