@@ -127,12 +127,17 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     /* Space between icon and label */
 
     position: relative;
+
+    background-color: var(--bg, transparent);
+    /* As this variable is local to this rule, as it is undefined, it will fallback to transparent */
 }
 
 .dropdown__list:has(:checked) {
     --rows: 1fr;
     --rotate: rotate(90deg);
     /* It surprisingly work out! */
+    --bg: rgb(208, 208, 208);
+    /* When checked this variable pop out in the cascade and background color will switch from transparent to the value declared. */
 }
 /* If it has an element checked, change the size of .dropdown__content.
 As that class has a transition property, it will look like it's opening and closing.*/
