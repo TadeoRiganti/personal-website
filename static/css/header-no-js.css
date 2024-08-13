@@ -155,6 +155,13 @@ As that class has a transition property, it will look like it's opening and clos
 In keyboard navigation, when a user needs to check a checkbox or open a dropdown menu, spacebar as the equivalent to mouse's click. 
 However as the dropdown menu item doesn't have the checkbox, when a user tries to open it, it needs to hit the next item(invisible, by the way) and then hit spacebar. This is bad enginiering.*/
 
+/* In the post https://stackoverflow.com/questions/55171150/buttons-in-nav-instead-of-anchor
+Andrew Mcpherson states "It's semantically equivalent, but it doesn't have the same behaviour. Buttons, when focused, are activated using the enter or space keys; however focused links are only activated using the enter key. Links with a button role also need an extra keypress listener to fire a click event when the user presses the space key. It's simpler just to use a real button" 
+
+So... I might try to develop this pattern with a button instead.
+
+ */
+
 
 .dropdown__check {
     position: absolute;
