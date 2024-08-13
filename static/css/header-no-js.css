@@ -31,3 +31,9 @@
     /* Icons will be always at the front */
 }
 /* buttons */
+
+.nav__icons {
+    width: 30px;
+    display: block;
+}
+/* Controls the icon's size */
