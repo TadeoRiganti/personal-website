@@ -130,6 +130,7 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
 
     background-color: var(--bg, transparent);
     /* As this variable is local to this rule, as it is undefined, it will fallback to transparent */
+    border-radius: 6px;
 }
 
 .dropdown__list:has(:checked) {
