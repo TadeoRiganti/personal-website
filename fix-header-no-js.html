@@ -77,7 +77,26 @@
                         <!-- 
                             SOLUTION 1: Add a checkbox inside a label. Then associate the label with the checkbox -->
 
-                        <label class="dropdown__link">
+                        <!-- <label class="dropdown__link"> -->
+                            <!-- Icon -->
+                            <!-- <span class="dropdown__icon material-symbols-outlined">pregnant_woman</span> -->
+
+                            <!-- Label -->
+                            <!-- <span class="dropdown__span">Parent dropdown</span> -->
+
+                            <!-- Handle indicator (Open / Close) -->
+                            <!-- <span class="dropdown__arrow material-symbols-outlined">chevron_right</span> -->
+
+                            <!-- <input type="checkbox" class="dropdown__check">
+                        </label> -->
+
+                        <!-- RESULT: Doesn't work, label is not in focus. In order to I would have to use an id, but it kinda defeats the purpose as I would have to code a different ID every time. -->
+
+                        <!-- SOLUTION 2: Apparently this can be fixed with CSS. The idea is to make the 'dropdown__link' focusable and hide the checkpoint from being focusable.
+                         If I didn't understand wrong, the rule would target the checkpoint whenever someone lands to the 'dropdown__link', thus it will automatically check the input and next tab would ignore the checkpoint and will land into the dropdown__submenu child item. -->
+
+                        <a href="" class="dropdown__link">
+
                             <!-- Icon -->
                             <span class="dropdown__icon material-symbols-outlined">pregnant_woman</span>
 
@@ -87,11 +106,10 @@
                             <!-- Handle indicator (Open / Close) -->
                             <span class="dropdown__arrow material-symbols-outlined">chevron_right</span>
 
+                            <!-- Interactive element -->
                             <input type="checkbox" class="dropdown__check">
-                        </label>
 
-                        <!-- RESULT: Doesn't work, label is not in focus. In order to I would have to use an id, but it kinda defeats the purpose as I would have to code a different ID every time. -->
-
+                        </a>
                         <!-- Dropdown content -->
                         <div class="dropdown__content">
                             <!-- Nav-links / Submenu -->
