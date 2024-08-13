@@ -55,7 +55,7 @@
                         <!-- Dropdown parent BEFORE -->
                         <!-- 
                             TASK: Change 'dropdown parent' to a label with an input check.
-                            OBJECTIVE: To remove the extra step in order to open the dropdown
+                            OBJECTIVE: Remove the extra step in order to open the dropdown
                         -->
                         <!-- <a href="" class="dropdown__link"> -->
 
@@ -70,11 +70,27 @@
 
                             <!-- Interactive element -->
                              <!-- <input type="checkbox" class="dropdown__check">
-                              
+
                         </a> -->
 
                         <!-- Dropdown parent AFTER -->
+                        <!-- 
+                            SOLUTION 1: Add a checkbox inside a label. Then associate the label with the checkbox -->
 
+                        <label class="dropdown__link">
+                            <!-- Icon -->
+                            <span class="dropdown__icon material-symbols-outlined">pregnant_woman</span>
+
+                            <!-- Label -->
+                            <span class="dropdown__span">Parent dropdown</span>
+
+                            <!-- Handle indicator (Open / Close) -->
+                            <span class="dropdown__arrow material-symbols-outlined">chevron_right</span>
+
+                            <input type="checkbox" class="dropdown__check">
+                        </label>
+
+                        <!-- RESULT: Doesn't work, label is not in focus. In order to I would have to use an id, but it kinda defeats the purpose as I would have to code a different ID every time. -->
 
                         <!-- Dropdown content -->
                         <div class="dropdown__content">
