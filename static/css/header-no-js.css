@@ -141,11 +141,15 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
 }
 
 .dropdown__content {
-
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    /* Makes submenu to dissapear */
+    transition: .3s grid-template-rows;
 }
 
 .dropdown__sub {
     overflow: hidden;
+    background-color: teal;
 }
 
 .dropdown__li {
@@ -156,5 +160,7 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
 }
 
 .dropdown__anchor {
-    
+    padding: 1em;
+    display: block;
+    color: green
 }
