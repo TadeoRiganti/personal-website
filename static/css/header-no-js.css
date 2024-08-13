@@ -71,4 +71,13 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
 .dropdown {
     position: absolute;
     /* This also stop messing with the elements position inside the top header (HOME and toogle menu icons), as it gets outside the grid. */
+    
+    background-color: black;
+
+    width: 75%;
+
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* Position to the right side, from top to bottom.*/
 }
