@@ -132,7 +132,10 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
 }
 /* If it has an element checked, change the size of .dropdown__content.
 As that class has a transition property, it will look like it's opening and closing.*/
-/* The same problem with focus occurs. I need to find a fix, I think there is a Kevin Powells or A11y content related to that. */
+/* The same problem with focus occurs. I need to find a fix, I think there is a Kevin Powells or A11y content related to that. 
+
+In keyboard navigation, when a user needs to check a checkbox or open a dropdown menu, spacebar as the equivalent to mouse's click. 
+However as the dropdown menu item doesn't have the checkbox, when a user tries to open it, it needs to hit the next item(invisible, by the way) and then hit spacebar. This is bad enginiering.*/
 
 
 .dropdown__check {
