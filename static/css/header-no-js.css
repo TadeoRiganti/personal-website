@@ -36,9 +36,16 @@
     /* Icons will be always at the front */
 
     transform: var(--img1);
-    /* Controls wich img will be shown: works as a switch on/off*/
+    /* Is a control property to change wich img will be shown: 
+    Works as a switch ON as it scales the img to 1*/
 }
 /* buttons */
+
+.nav__menu--second {
+    transform: var(--img2);
+    /* Works as a switch OFF  as it scales the image to 0*/
+    /* Wouldn't be better to name them as ON/OFF? */
+}
 
 .nav__icons {
     width: 30px;
