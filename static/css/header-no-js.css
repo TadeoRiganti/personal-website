@@ -101,6 +101,8 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     /* Nah uh. Not a fan. This must be changed.  */
     gap: 1rem;
     /* --spacing-small */
+
+    overflow-y: auto;
 }
 
 .dropdown__list {
