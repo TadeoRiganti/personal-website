@@ -75,14 +75,21 @@ If the user touches the anchor 'X', as it is referencing other thing than '.drop
     background-color: darkgray;
 
     width: 75%;
+    max-width: 300px;
+    /* This can be optimized with a clamp */
     right: 0;
     top: 0;
     bottom: 0;
     /* This will definitely change, but it's nice for the TOC component. */
     /* Position to the right side, from top to bottom.*/
-
     padding: 1em;
-    /* --Spacing-extra-small */
+    /* --spacing-extra-small */
+
+    display: grid;
+    align-items: center;
+    /* Nah uh. Not a fan. This must be changed.  */
+    gap: 1rem;
+    /* --spacing-small */
 }
 
 .dropdown__list {
