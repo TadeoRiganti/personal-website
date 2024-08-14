@@ -99,8 +99,11 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 - __Framework__: Vainilla stack
     - HTML 5
-    - CSS 3
+    - CSS 3:
+        - [BEM nomenclature](https://getbem.com/)
     - JS
+        - __Global variables__: UPPERCASE.
+        - __Local variables & functions__: camelCase naming.
 
 <!-- - __Databases__:
     - ...
@@ -124,10 +127,15 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 - __Browsers__:
     - Chrome
-    - Mozillla Firefox    
+    - Mozillla Firefox   
+
+ - __Debugging tools__:
+    - Chrome DevTools
+    - Firefox Developer Tools    
+    - Visual Studio Code Debugger 
     
-- __[Testing](https://www.w3.org/WAI/test-evaluate/tools/list/)__:
-    - __Accesibility issues__: [Axe Devtools Linter](https://www.deque.com/axe/devtools/linter/)
+- __[Accesibility](https://www.w3.org/WAI/test-evaluate/tools/list/)__:
+    - __General issues__: [Axe Devtools Linter](https://www.deque.com/axe/devtools/linter/)
     - __Color contrast__: 
       - [Adobe Color Contrast](https://color.adobe.com/es/create/color-contrast-analyzer)
     - __Screen reader__: ...
@@ -142,34 +150,31 @@ This is an ongoing project, it's far away from being finished, but you can check
 <!-- - __...__:
     - ...
     - ...    
-    - ... -->    
+    - ... -->  
     
 
 ## Development enviroment
 
+- __OS System__:
+    - Windows *(Later on I'll migrate to Linux)*
+    
 <!-- - __...__:
     - ...
     - ...    
     - ... -->
+<br><br>
 
-<!-- - __...__:
-    - ...
-    - ...    
-    - ... -->
-    
-<!-- - __...__:
-    - ...
-    - ...    
-    - ... -->
-    
-  
 
 <!-- # 5. Install & Configuration
+<br><br>
+
 
 # 6. Contribution
-
-# 7. Licence -->
 <br><br>
+
+
+# 7. Licence 
+<br><br>-->
 
 
 # 8. Contact
