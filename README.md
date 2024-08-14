@@ -1,5 +1,5 @@
 
-# Introduction
+# 1. Introduction
 
 While developing my own website, I found myself immersed in studying best practices for accessible development (No surprises here, i'm a UX designer).
 
@@ -10,7 +10,30 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 
 
-# TABLE OF CONTENTS
+# Product vision
+
+- __Built-in accessibility__: Compliant with WCAG standards.
+- __Responsive design__: Works on any device.
+- __SEO friendly__: Improve your online visibility.
+- __Customization__: Adapt the template to your style.
+- __Pre-built components__ (Perhaps): Save time in development.
+- __Light weight documentation__: and external references.
+- __Open source__: Contribute to the community.
+
+
+# Features
+
+# Requirements
+
+<!-- # 5. Install & Configuration
+
+# 6. Contribution
+
+# 7. Licence -->
+
+# Contact
+
+#  
 
 
 
@@ -25,25 +48,6 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 
 
-
-
-
-Hello world! 
-
-This will be my first [personal website](https://tadeoriganti.github.io/personal-website/). However, as that repository won't be public I'm constructing this repository as a template you can fork and use it as you please.
-Once I finish up polyshing the frontend, I'll create proper documentation and licence, but for now, it is ~~a mess~~ what it is.
-
-Althought I started this project last year (brutalist site), a few months ago I finished a "Full stack (with Python)" course, and decided to keep practicing everything I learn and more.
-
-For this project I want to build a something I can both use for work (Freelance services) and show as a live project for my portfolio. Also I can experiment with various features and technologies otherwise wouldn't what to do. 
-
-I choose to develop it with no frameworks (vainilla), so I can experience firsthand why I should use a framework to begin with. 
-So, I challenged myself to build it with a classic front-end stack (CSS, HTML & JS), as little JS as possible, because I'll experiment with Modern CSS. 
-I'll keep it deployed in github page, but I'll use my own web domain. 
-Once its done I'll build the backend in another repository with flask and host it in 'Python anywhere'. 
-<br>
-<br>
-<hr>
 
 
 
