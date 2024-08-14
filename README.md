@@ -95,6 +95,75 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 # 4. Requirements
 
+## Technology
+
+- __Framework__: Vainilla stack
+    - HTML 5
+    - CSS 3
+    - JS
+
+<!-- - __Databases__:
+    - ...
+    - ...
+    - ... -->
+
+<!-- - __Cloud platforms__:
+    - ...
+    - ...
+    - ... -->
+
+- __Other relevant tools and technologies__:
+    - Material design Symbols
+    - Google Fonts
+    - Model-viewer
+
+## Tools
+
+- __Code Editor__:
+    - VSCode
+
+- __Browsers__:
+    - Chrome
+    - Mozillla Firefox    
+    
+- __[Testing](https://www.w3.org/WAI/test-evaluate/tools/list/)__:
+    - __Accesibility issues__: [Axe Devtools Linter](https://www.deque.com/axe/devtools/linter/)
+    - __Color contrast__: 
+      - [Adobe Color Contrast](https://color.adobe.com/es/create/color-contrast-analyzer)
+    - __Screen reader__: ...
+
+- __Design tools__:
+    - Quick drafts: Penpot
+    - High-end Prototype: Figma
+
+- __Managing tools__:
+    - Markdown *(Just for now, later on I'll use Trello or some open source tool)*   
+
+<!-- - __...__:
+    - ...
+    - ...    
+    - ... -->    
+    
+
+## Development enviroment
+
+<!-- - __...__:
+    - ...
+    - ...    
+    - ... -->
+
+<!-- - __...__:
+    - ...
+    - ...    
+    - ... -->
+    
+<!-- - __...__:
+    - ...
+    - ...    
+    - ... -->
+    
+  
+
 <!-- # 5. Install & Configuration
 
 # 6. Contribution
