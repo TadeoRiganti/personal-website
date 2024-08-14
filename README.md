@@ -1,3 +1,33 @@
+
+# Introduction
+
+While developing my own website, I found myself immersed in studying best practices for accessible development (No surprises here, i'm a UX designer).
+
+Since there is a lot of information on the internet but it is rarely applied, I came up with the idea of ​​developing this project as a template, so that you can use it in your projects.
+Is being built with a vanilla stack and follows accessibility best practices. It is compatible with modern browsers and assistive devices.
+
+This is an ongoing project, it's far away from being finished, but you can check it out [here](https://tadeoriganti.github.io/personal-website) and if you like, fork it and modify as needed for your projects! Feel free to reach out, any feedback will be appreciated.
+
+
+
+# TABLE OF CONTENTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Hello world! 
 
 This will be my first [personal website](https://tadeoriganti.github.io/personal-website/). However, as that repository won't be public I'm constructing this repository as a template you can fork and use it as you please.
@@ -19,7 +49,6 @@ Once its done I'll build the backend in another repository with flask and host i
 
 # TABLE OF CONTENTS
 1. [Requirements](#requirements)
-    
     1. [Webiste architecture](#website-architecture)
     2. [Optimization](#optimization)
     3. [Features](#features)
@@ -272,7 +301,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 ### ACCESIBILITY:
 - [Keyboard navigation - BEST PRACTICES](https://blog.pope.tech/2024/01/30/how-to-create-accessible-navigations-and-sub-menus/)
 - [Technique to alter focus order](https://accessibility.huit.harvard.edu/technique-focus-order-and-tabindex)
-
+- [Responsive and Accessible Navigation (HTML, CSS, Vanilla JS) by Andrew Ladd](https://www.youtube.com/watch?v=IdZ-ZHLyEHs)
 
 ## BACKLOG
 
