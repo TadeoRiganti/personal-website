@@ -179,6 +179,8 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 # 8. Contact
 
+- __Email__: tadeoriganti@gmail.com
+- __Chat__: For bugs or issues, send me a [message](https://api.whatsapp.com/send?phone=542236691467&text=Hello%20there!%20I%20%27ve%20some%20feedback%20for%20the%20%27Personal-website-template%27%22) *(it has a predefined opening, feel free to change it)*.
 
 <br><br>
 
@@ -199,7 +201,7 @@ This is an ongoing project, it's far away from being finished, but you can check
 
 
 
-___TASK: Reorganizate information in further documentation.__
+<!-- ___TASK: Reorganizate information in further documentation.__
 
 # TABLE OF CONTENTS
 1. [Requirements](#requirements)
@@ -491,4 +493,4 @@ Thanks to this quick exploration; 20-30' (in fact, I spend more time writing thi
 ___
 
 Well, that's all for today. Thanks for reading!
-
+ -->
