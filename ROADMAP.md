@@ -14,6 +14,10 @@
 
 ### Top-down breakdown brainstorming:
 
+<!-- The idea is to brain fucking storm this list. Divergent mentality. 
+IMPORTANT! Take etra time to properly identify actions derivated from objectives.
+Later on I'll converge it in a much more simpler artifact-->
+
 - #1 Goal) Easy to use template for developers.
   - Objective) Simple implementation
     - Framework) Vainilla stack:
@@ -25,17 +29,21 @@
 
 - #2 Goal) Inclusive experience for final users:
 
-  - Objective) Accesiblity compliance:
-    - Research) [WCAG web certification](https://accessible.org/wcag-certification/)
+  - Objective) Accesiblity compliance by WCAG Standards:
+    - Research) __[Guidelines](https://www.w3.org/WAI/WCAG22/Understanding/)__
+    - Resources) [WCAG web certification](https://accessible.org/wcag-certification/)
     - Resources) A11s resources.
 
-    - Feature) Compatibility with assistive technollogy:
-      - Architecture) Semantic HTML.
-      - Feat) Skip to main-content.
-      - Task) Apply Aria-label attributes for non semantic HTML.
-        - Tip): Whenever in doubt, "NO ARIA is better than BAD ARIA".
+    - WCAG Principle) __[Perceivable]()__:
+      <!-- TASK 1) Add links. -->
+      <!-- TASK 2) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      - 1.1 Text Alternatives
+      - 1.2 Time-based Media
+      - 1.3 Adaptable
+      - 1.4 Distinguishable
 
-    - WCAG Principle) Visual:
+
+      <!-- TASK 3) Reorder following items into relevant sub-items --> 
       - Objective) Provide alternative descriptions for images.
         - Task) Alt descriptions.
       - Objective) Ensure content is resizable.
@@ -49,58 +57,102 @@
       - Objective) Help with color sensitivty
         - Feature) Color mode scheme (dark/light).
           - Task) Configurate with preference-color-scheme.
-          - Task) Add an UI switch.
+          - Task) Add an UI switch. 
 
-    - WCAG Principle) Auditive:
-      -Objctive) Provide audiovisual transcriptions
-      - Tasks) Add subtitles & close-captions.
-      - Feature) Support Audio Transcripts.
-
-    - WCAG Principle) Motor:
-      - Objective) Allow Keyboard navigation.
+      - WCAG Principle) Auditive:
+        -Objctive) Provide audiovisual transcriptions
+        - Tasks) Add subtitles & close-captions.
+        - Feature) Support Audio Transcripts.
+   
+    <!-- TASK 4) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+    - WCAG Principle) __Operable__:
+    
+      - Objective) __[Guideline - 2.1 Keyboard Accessible](https://www.w3.org/WAI/WCAG22/Understanding/keyboard-accessible)__: Make all functionality available from a keyboard.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      <!-- Reorder existent derivations -->
         - Feat) Skip to main-content.
         - Feat) Keyboard accessible drop-down menus. 
         - Architecture) Use Semantic HTML (otherwise means extra-work to solve FOCUS Management issues and ARIA labelling).
         - Architecture) Logical structure.
           - Task) Add tabindex if it's not possible.
       - Objective) Avoid small size targets.
-      - Objective) [Guideline 2.2 - Enough time](https://www.w3.org/WAI/WCAG22/Understanding/enough-time): Provide users enough time to read and use content.
-        - Task) Research about "Spoon theory".
+
+      - Objective) __[Guideline - 2.2 Enough Time]()__: Provide users enough time to read and use content.
+        - Research) Investigate about the "Spoon theory".
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+
+      - Objective) __[Guideline - 2.3 Seizures and Physical Reactions](https://www.w3.org/WAI/WCAG22/Understanding/seizures-and-physical-reactions)__: Do not design content in a way that is known to cause seizures or physical reactions.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+
+      - Objective) __[Guideline - 2.4 Navigable](https://www.w3.org/WAI/WCAG22/Understanding/navigable)__: Provide ways to help users navigate, find content, and determine where they are.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      
+      - Objective) __[Guideline 2.5 Input Modalities](https://www.w3.org/WAI/WCAG22/Understanding/input-modalities)__: Make it easier for users to operate functionality through various inputs beyond keyboard.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      
+    - WCAG principle) __[Understandable]()__
+    <!-- TASK 5) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      
+    - WCAG principle) __[Robust]()__
+    <!-- TASK 6) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+
+
+    <!-- TASK 7) Reorder following items as it correspond -->
+    - Feature) Compatibility with assistive technollogy:
+      - Architecture) Semantic HTML.
+      - Feat) Skip to main-content.
+      - Task) Apply Aria-label attributes for non semantic HTML.
+        - Tip): Whenever in doubt, "NO ARIA is better than BAD ARIA".
+     
+      
+        
 
     - WCAG Principle) __[Cognitive](https://www.w3.org/WAI/cognitive/#cognitive-accessibility-in-w3c-standards)__:
 
       - Resources) __[Cognitive Accessibility Guidance](https://www.w3.org/WAI/WCAG2/supplemental/#cognitiveaccessibilityguidance)__
       
       - Objective: __[Guideline 1.3 - Adaptable](https://www.w3.org/WAI/WCAG22/Understanding/adaptable)__: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
 
       - Objective) __[Guideline 1.4 - Distinguishable](https://www.w3.org/WAI/WCAG22/Understanding/distinguishable)__: Make it easier for users to see and hear content including separating foreground from background.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      <!-- Reorder existent derivations -->
         - Task) Check contrast values for text above images. 
         - Design) Make it clear distinction between buttons (actions) and anchors (links). 
 
       - Objective) __[Guideline 2.4 - Navigable](https://www.w3.org/WAI/WCAG22/Understanding/navigable)__; Provide ways to help users navigate, find content, and determine where they are.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      <!-- Reorder existent derivations -->
         - Design) Give space to breath; the simpler layouts, the better. 
         - Design) Stick with familliar design patterns. 
 
       - Objective) __[Guideline 3.1 - Redeable](https://www.w3.org/WAI/WCAG22/Understanding/readable)__: Make text content readable and understandable.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      <!-- Reorder existent derivations -->
         - Content) Use simple language.
         - Design) Avoid using small font sizes.
         - Task) Use clamp values that works proportionally on big screens. 
 
       - Objective) __[Guideline 3.2 - Predictable](https://www.w3.org/WAI/WCAG22/Understanding/predictable)__: Make Web pages appear and operate in predictable ways.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
 
       - Objective) __[Guideline 3.3 - Input assistance](https://www.w3.org/WAI/WCAG22/Understanding/input-assistance)__: Help users avoid and correct mistakes.
+      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
         
 
+        <!-- TASK 8) Find out wich category corresponds. This was transcripted from a Kevin Powell's interview about Accesibility -->
         - Autoplay videos:
           - Overwhelmed. ADHD. Autism.
             - Dont autoplay. de ultima, Give controls 
        - Animations: 
         - no-motion-first approach. (Kevin powell video)
 
-     
-
-
-  - Objective) 
+     <br><br>
+     <!-- TASK 9: Elaborate a structure capable to sustain research made up to this point -->
+     -Objective) UX Navigation patterns
+      - Resources) [The Accessibility And Usability Journey Of Drupal’s Primary Navigation](https://www.smashingmagazine.com/2022/09/accessibility-usability-drupal-primary-navigation/)
+      - Resources) [Designing Navigation for Mobile: Design Patterns and Best Practices](https://www.smashingmagazine.com/2022/11/navigation-design-mobile-ux/) 
+      - Resources) [A Complete Guide To Accessible Front-End Components](https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/) 
 
 
 
@@ -108,12 +160,12 @@
 
 # Process
 
-A) __Planification & Requirements__:
+A) __Planification & Requirements__: ← I'm still here.
 
   - Scope definition:
-    - Define goals.
-    - Define the target audience and their needs.
-    - Establish the functionalities and characteristics that the website will have.
+    - Define goals. __Done!__
+    - Define the target audience and their needs. __Pending__
+    - Establish the functionalities and characteristics that the website will have. __Ongoing.__
 
 B) __Analysis & design__:
 
