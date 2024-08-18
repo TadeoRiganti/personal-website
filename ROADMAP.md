@@ -7,7 +7,7 @@
 1. Develop a multi-purpose website for personal branding.
    1. Easy to use template.
    2. Inclusive user experience.
-      1. Accesibility compliance.
+      1. Accesibility compliance (Level A-AA).
       2. Navigation experience.
    3. SEO.
 
@@ -29,53 +29,114 @@ Later on I'll converge it in a much more simpler artifact-->
 
 - #2 Goal) Inclusive experience for final users:
 
-  - Objective) Accesiblity compliance by WCAG Standards:
+  - Objective) Accesiblity compliance by __WCAG Standards__ for __Level A to AA__:
     - Research) __[Guidelines](https://www.w3.org/WAI/WCAG22/Understanding/)__
     - Resources) [WCAG web certification](https://accessible.org/wcag-certification/)
     - Resources) A11s resources.
 
-    - WCAG Principle) __[Perceivable]()__:
-      <!-- TASK 1) Add links. -->
-      <!-- TASK 2) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
-      - 1.1 Text Alternatives
-      - 1.2 Time-based Media
-      - 1.3 Adaptable
-      - 1.4 Distinguishable
-
-
-      <!-- TASK 3) Reorder following items into relevant sub-items --> 
-      - Objective) Provide alternative descriptions for images.
+    - WCAG Principle) __[Perceivable](https://www.w3.org/WAI/WCAG22/Understanding/#perceivable)__:
+      - [1.1 Text Alternatives](https://www.w3.org/WAI/WCAG22/Understanding/text-alternatives): Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language
+        - Objective) __[1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)__ (Level A): Create a text alternative for visual and auditory content.
         - Task) Alt descriptions.
-      - Objective) Ensure content is resizable.
-        - Feat) Offer font and size customization options.
-        - Design) Avoid using small font sizes.
-      - Objective) Use adecuate color contrast.
-        - Feat) High-Contrast theme.
-        - Task) Check color contrast.
-        - Design) Don't depend only with color.
-          - Task) Use safe colors (as possible).
-      - Objective) Help with color sensitivty
-        - Feature) Color mode scheme (dark/light).
-          - Task) Configurate with preference-color-scheme.
-          - Task) Add an UI switch. 
 
-      - WCAG Principle) Auditive:
         -Objctive) Provide audiovisual transcriptions
         - Tasks) Add subtitles & close-captions.
         - Feature) Support Audio Transcripts.
+
+      - [1.2 Time-based Media](https://www.w3.org/WAI/WCAG22/Understanding/time-based-media): Provide alternatives for time-based media.
+        - Objective) __[1.2.1 Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)__ (Level A): Provide an alternative when content is perceivable with only one sense.
+          - Feature) Provide a [descriptive transcription](https://www.w3.org/WAI/media/av/transcripts/) of any media content.
+            - Task) Add a section or a mean to access to the transcript.
+            - Research) [Transcribing audio to text](https://www.w3.org/WAI/media/av/transcribing/).
+        - Objective) __[1.2.2 Captions (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)__ (Level A): Provide synchronized text for audio content in existing videos.
+          <!-- This only apply to those media wich doesn't have captions -->
+          - Research) [H96: Using the track element (HTML) to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html).
+
+        <!-- Not a requirement for this project -->
+        <!-- - Task) [1.2.3 Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded) -->
+        <!-- - [1.2.4 Captions (Live)](https://www.w3.org/WAI/WCAG22/Understanding/captions-live) -->
+        <!-- - Objective) __[1.2.5 Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded)__: Provide a synchronized spoken description of the visual content in videos. -->
+        <!-- - [1.2.6 Sign Language (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/sign-language-prerecorded) -->
+        <!-- - [1.2.7 Extended Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/extended-audio-description-prerecorded) -->
+        <!-- - [1.2.8 Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded) -->
+        <!-- - [1.2.9 Audio-only (Live)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-live) -->
+
+      - [1.3 Adaptable](https://www.w3.org/WAI/WCAG22/Understanding/adaptable): Create content that can be presented in different ways (for example simpler layout) without losing information or structure.
+        - Objective) __[1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)__ (Level A): Provide semantic code to reinforce relationships and information conveyed through presentation.
+          - Research) [Semantic Structure: Regions, Headings, and Lists](https://webaim.org/techniques/semanticstructure/).
+          - Research) [H101: Using semantic HTML elements to identify regions of a page](https://www.w3.org/WAI/WCAG22/Techniques/html/H101). 
+          - Feature) Input fields on a form use both color and text to indicate required fields.
+          - Task) [ARIA11: Aria Landmarks](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA11).
+          - Research) [Exhaustive list of techniques](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships).
+
+        - Objective) __[1.3.2 Meaningful Sequence](https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence)__ (Level A): The order of content can be understood by more people.
+          - Research) [G57: Ordering the content in a meaningful sequence](https://www.w3.org/WAI/WCAG22/Techniques/general/G57).
+          - Architecture) [C27: Making the DOM order match the visual order](https://www.w3.org/WAI/WCAG22/Techniques/css/C27).
+          - Style) [C6: Positioning content based on structural markup](https://www.w3.org/WAI/WCAG22/Techniques/css/C6).
+          - Research) [G59: Placing the interactive elements in an order that follows sequences and relationships within the content](https://www.w3.org/WAI/WCAG22/Techniques/general/G59).
+        - Design) __[1.3.3 Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics)__ (Level A): Describe controls by name, not just by appearance or location.
+        - Objective) [1.3.4 Orientation](https://www.w3.org/WAI/WCAG22/Understanding/orientation) (Level AA): Don't lock content to either portrait or landscape presentation. 
+          - Design) Movile-first.
+        - Objective) __[1.3.5 Identify Input Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) (Level AA): It is easier to fill out forms.
+          - Feature) Use code to indicate the purpose of common inputs, where technology allows.
+          - Research) [3.3 Table 3: Entering Data, Error Prevention, & Recovery](https://www.w3.org/TR/coga-gap-analysis/#table3).
+        - Objective) __[1.3.6 Identify Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-purpose)__ (Level AAA):It is easier to operate and navigate content.
+          - Feature) Use code to indicate the meaning of all controls and other key information, where available.
+            - Task) Implement feature in forms, icons, navi items.
+            - Research) [Tips for WCAG Success Criterion 1.3.6: Identify Purpose](https://www.boia.org/blog/tips-for-wcag-success-criterion-1.3.6-identify-purpose)
+
+
+      - [1.4 Distinguishable](https://www.w3.org/WAI/WCAG22/Understanding/distinguishable): Make it easier for users to see and hear content including separating foreground from background.
+        - Objective) __[1.4.1 Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color)__ (Level A): Color is not the only way of distinguishing information. 
+          - Design) Use information in addition to color, such as shape or text, to convey meaning.
+          - Technique) [G14: Ensuring that information conveyed by color differences is also available in text](https://www.w3.org/WAI/WCAG22/Techniques/general/G14).
+          - Task) Use safe colors (as possible).
+            - Resource) Color blind image simulator: [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/).
+        <!-- - Content) [1.4.2 Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control) (Level A) -->
+        - Objective) __[1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum)__ (Level AA):Provide sufficient contrast between text and its background.
+          - Task) Check color contrast.
+          - Tool) [Adobe color analyzer](https://color.adobe.com/es/create/color-contrast-analyzer).
+        - Objective) __[1.4.4 Resize Text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text)__ (Level AA): Ensure content is resizable (at least 200%).        
+          - Feat) Offer font and size customization options.
+          - Design) Avoid using small font sizes.
+        - Objective) __[1.4.5 Images of Text](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text)__ (Level AA): Users can adjust how text is presented.
+          - Feature) Use text instead of pictures of text.
+          - Technique) C13) Using named font sizes (Stylesheet).
+        <!-- - [1.4.6 Contrast (Enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced) (Level AAA): Text can be seen by people who need strong contrast (Contrast related to the size of the text elements). -->
+        <!-- - Content) [1.4.7 Low or No Background Audio](https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio) (Level AAA) -->
+        - Objective) __[1.4.8 Visual Presentation](https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation)__ (Level AAA): Text appearance can be altered by users to meet preferences.
+            - Feat) High-Contrast theme.
+              - Task) Configurate with preference-color-scheme.
+            - Objective) Help with color sensitivty
+            - Feature) Color mode scheme (dark/light).
+              - Task) Check contrast ratio in dark mode.
+              - Task) Configurate with preference-color-scheme.
+              - Task) Add an UI switch. 
+        <!-- - [1.4.9 Images of Text (No Exception)](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception). (Level AAA) -->
+        - Objective) __[1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow)__ (Level AA): Content can be enlarged without increasing line length.
+          - Design) Movile-first.
+          - Task) In desktop / tablet screen sizes, ensure lines of text reflow within the viewport (do not overflow horizontally).
+        - Objective) [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast): Important visual information meets the same minimum contrast required for larger text.
+          - Design) Ensure meaningful visual cues achieve 3:1 against the background.
+          - Task) Check color contrast.
+          - Tool) [Adobe color analyzer](https://color.adobe.com/es/create/color-contrast-analyzer).
+        - Objective) __[1.4.12 Text Spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing)__ (Level AA): Users can adjust text spacing to make it easier to read.
+          - Feature) Ensure content adapts to user-defined text settings.
+          - Style) [Text property suggested](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing#success-criterion).
+          - Task) Ensure text doesn't cut off or overlapg.
+        - Objective) __[1.4.13 Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus)__ (Level AA): More users can perceive and dismiss non-persistent (dynamic) content (Note: Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus are examples of additional content covered by this criterion.).
+          - Feature) If hover or focus causes content changes, ensure interaction is predictable.
+            - Task) Ensure content is fully readeable.
+            - Research) [1.4.13 Content on Hover or Focus: #Intent](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus#intent).
+      
    
-    <!-- TASK 4) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
-    - WCAG Principle) __Operable__:
+      <!-- TASK 1) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      <!-- TASK 2) Add level specifity and commit those rule wich are level AAA -->
+    - WCAG Principle) __[Operable](https://www.w3.org/WAI/WCAG22/Understanding/#operable)__:
     
       - Objective) __[Guideline - 2.1 Keyboard Accessible](https://www.w3.org/WAI/WCAG22/Understanding/keyboard-accessible)__: Make all functionality available from a keyboard.
       <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
-      <!-- Reorder existent derivations -->
-        - Feat) Skip to main-content.
-        - Feat) Keyboard accessible drop-down menus. 
-        - Architecture) Use Semantic HTML (otherwise means extra-work to solve FOCUS Management issues and ARIA labelling).
-        - Architecture) Logical structure.
-          - Task) Add tabindex if it's not possible.
-      - Objective) Avoid small size targets.
+      
 
       - Objective) __[Guideline - 2.2 Enough Time]()__: Provide users enough time to read and use content.
         - Research) Investigate about the "Spoon theory".
@@ -90,14 +151,33 @@ Later on I'll converge it in a much more simpler artifact-->
       - Objective) __[Guideline 2.5 Input Modalities](https://www.w3.org/WAI/WCAG22/Understanding/input-modalities)__: Make it easier for users to operate functionality through various inputs beyond keyboard.
       <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
       
-    - WCAG principle) __[Understandable]()__
-    <!-- TASK 5) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+
+    <!-- TASK 3) Reorder following items as it correspond -->
+        - Feat) Skip to main-content.
+        - Feat) Keyboard accessible drop-down menus. 
+        - Architecture) Use Semantic HTML (otherwise means extra-work to solve FOCUS Management issues and ARIA labelling).
+        - Architecture) Logical structure.
+          - Task) Add tabindex if it's not possible.
+      - Objective) Avoid small size targets.
+
+
+    - WCAG principle) __[Understandable](https://www.w3.org/WAI/WCAG22/Understanding/#understandable)__
+    <!-- TASK 4) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
       
-    - WCAG principle) __[Robust]()__
-    <!-- TASK 6) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
 
 
-    <!-- TASK 7) Reorder following items as it correspond -->
+    - WCAG principle) __[Robust](https://www.w3.org/WAI/WCAG22/Understanding/#robust)__
+    <!-- TASK 5) Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+
+
+    <!-- TASK 6) Reorder following items as it correspond -->
+        - Feat) Skip to main-content.
+        - Feat) Keyboard accessible drop-down menus. 
+        - Architecture) Use Semantic HTML (otherwise means extra-work to solve FOCUS Management issues and ARIA labelling).
+        - Architecture) Logical structure.
+          - Task) Add tabindex if it's not possible.
+      - Objective) Avoid small size targets.
+
     - Feature) Compatibility with assistive technollogy:
       - Architecture) Semantic HTML.
       - Feat) Skip to main-content.
@@ -107,6 +187,7 @@ Later on I'll converge it in a much more simpler artifact-->
       
         
 
+    <!-- TASK 7) Comment all those objectives that alredy exist in another principle -->
     - WCAG Principle) __[Cognitive](https://www.w3.org/WAI/cognitive/#cognitive-accessibility-in-w3c-standards)__:
 
       - Resources) __[Cognitive Accessibility Guidance](https://www.w3.org/WAI/WCAG2/supplemental/#cognitiveaccessibilityguidance)__
