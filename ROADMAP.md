@@ -155,12 +155,49 @@ Later on I'll converge it in a much more simpler artifact-->
             - Feature) Provide a cancel button and/or an 'X' icon.
               - Task) If 'X' icon is implemented, provide semantic attributes.
               - Research) Investigate wich attributes are needed.
+
         - Goal) [2.1.4 Character Key Shortcuts](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts) (Level A): Reduce accidental activation of keyboard shortcuts.
+          - Objective: Ensure character-only shortcut keys can be turned off or modified.
+            - Feature) Key-shortcut is is only active when that component has focus (This is one of the 3 possible [Success Criterions](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts#success-criterion)). 
       
 
       - Objective) __[Guideline - 2.2 Enough Time]()__: Provide users enough time to read and use content.
         - Research) Investigate about the "Spoon theory".
-      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      
+        <!-- - Goal) [2.2.1 Timing Adjustable](https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable) (Level A): Users have adequate time to complete tasks.
+          - Note) Criterion applies only to time limits that are set by the content itself.
+          - Objective) Let users turn off, adjust, or extend time limits.
+            - Feature) Allow to extend time. -->
+        
+        - Goal) [2.2.2 Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide) (Level A): Fewer users are distracted by content that updates or moves.
+         - Objective: Let users control content changes that occur in parallel with other content.
+            - Feature) 'No-motion-first' approach.
+            - Feature) Disable auto-display content. If not possible:
+              - Feature) For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential.
+              - Feature) For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.
+
+        - Goal) [2.2.3 No Timing](https://www.w3.org/WAI/WCAG22/Understanding/no-timing) (Level AAA): 
+          - Objective) Users do not face time limits.
+          - Tecnhique) [G5 - Allowing users to complete an activity without any time limit.](https://www.w3.org/WAI/WCAG22/Techniques/general/G5).
+            - Note) If not possible see Goal 2.2.1 (Commented by default).
+
+        <!-- - Goal) [2.2.4 Interruptions](https://www.w3.org/WAI/WCAG22/Understanding/interruptions) (Level AAA): Users are not interrupted.
+          - Objective) Let people delay or turn off updates, except in emergencies.
+            - Techinque) [G75: Providing a mechanism to postpone any updating of content](https://www.w3.org/WAI/WCAG22/Techniques/general/G75).
+            - Technique) [SCR14: Using scripts to make nonessential alerts optional](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR14). -->
+
+        <!-- - Goal) [2.2.5 Re-authenticating](https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating) (Level AAA): Users do not lose information or context due to reauthentication.
+          - Objective) Preserve users' prior activity and data through reauthentication.
+          - Research) [The 6 WCAG 2.2 AA changes you need to implement right away](https://youtu.be/vOGvBuwsD8o?list=LL&t=689). -->
+
+        <!-- - Goal) [2.2.6 Timeouts](https://www.w3.org/WAI/WCAG22/Understanding/timeouts) (Level AAA): Users do not lose data due to unknown timeouts.
+          - Objective) Tell users how long their session can be inactive before they may lose information.
+          - Techniques) Setting a session timeout to occur following at least 20 hours of inactivity. -->
+
+
+
+
+
 
       - Objective) __[Guideline - 2.3 Seizures and Physical Reactions](https://www.w3.org/WAI/WCAG22/Understanding/seizures-and-physical-reactions)__: Do not design content in a way that is known to cause seizures or physical reactions.
       <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
@@ -241,12 +278,8 @@ Later on I'll converge it in a much more simpler artifact-->
       <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
         
 
-        <!-- TASK 8) Find out wich category corresponds. This was transcripted from a Kevin Powell's interview about Accesibility -->
-        - Autoplay videos:
-          - Overwhelmed. ADHD. Autism.
-            - Dont autoplay. de ultima, Give controls 
-       - Animations: 
-        - no-motion-first approach. (Kevin powell video)
+        
+       
 
      <br><br>
      <!-- TASK 9: Elaborate a structure capable to sustain research made up to this point -->
@@ -264,6 +297,8 @@ Organize it in a concept map (table):
 |---|---|---|---|
 | Examplifacte this goal | To provide an example | Writing an example | (Must/Should/Could/Will-not) Have |
 
+NOTE: Commented lines are by default a Wouldn't have.
+
 Once done, create a MoSCoW diagram (eg. Visual diagram:
 https://cdn-cpbbb.nitrocdn.com/XhgHSOSscJOLnjwQnerkrAMfxQMvSkWr/assets/images/optimized/rev-a1dda4e/i0.wp.com/kecg.co/wp-content/uploads/2024/01/fb2c4be3fa389d45d9043da1d4c89299.MoSCoW-Prioritisation-by-KECG-640px-1.webp) -->
 
@@ -276,7 +311,10 @@ A) __Planification & Requirements__: ← I'm still here.
   - Scope definition:
     - Define goals. __Done!__
     - Define the target audience and their needs. __Pending__
-    - Establish the functionalities and characteristics that the website will have. __Ongoing.__
+    - Establish the functionalities and characteristics that the website will have:
+      - Brainstorming __Ongoing__
+      - Priorization __Awaiting__
+      - MVP __Pending__
 
 B) __Analysis & design__:
 
