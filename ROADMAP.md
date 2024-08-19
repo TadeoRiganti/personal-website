@@ -27,6 +27,8 @@ Later on I'll converge it in a much more simpler artifact-->
 
 <br><br>
 
+<!-- TASK: Replace objectives in WCAG Perceivable for Goals and Add an objective line wich can represent its child items; tasks / features -->
+
 - #2 Goal) Inclusive experience for final users:
 
   - Objective) Accesiblity compliance by __WCAG Standards__ for __Level A to AA__:
@@ -104,14 +106,18 @@ Later on I'll converge it in a much more simpler artifact-->
           - Technique) C13) Using named font sizes (Stylesheet).
         <!-- - [1.4.6 Contrast (Enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced) (Level AAA): Text can be seen by people who need strong contrast (Contrast related to the size of the text elements). -->
         <!-- - Content) [1.4.7 Low or No Background Audio](https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio) (Level AAA) -->
-        - Objective) __[1.4.8 Visual Presentation](https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation)__ (Level AAA): Text appearance can be altered by users to meet preferences.
-            - Feat) High-Contrast theme.
-              - Task) Configurate with preference-color-scheme.
+        - Goal) __[1.4.8 Visual Presentation](https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation)__ (Level AAA): Text appearance can be altered by users to meet preferences.
+          - Example) [Wikipedia's 'Appearence menu'](https://en.wikipedia.org/wiki/MoSCoW_method).
             - Objective) Help with color sensitivty
-            - Feature) Color mode scheme (dark/light).
-              - Task) Check contrast ratio in dark mode.
-              - Task) Configurate with preference-color-scheme.
-              - Task) Add an UI switch. 
+              - Feat) High-Contrast theme.
+                - Task) Configurate with preference-color-scheme.
+              - Feature) Color mode scheme (dark/light).
+                - Task) Check contrast ratio in dark mode.
+                - Task) Configurate with preference-color-scheme.
+                - Task) Add an UI switch. 
+            - Objective) Users can adjust font-size:
+              - Feature) Font size configuration.
+            
         <!-- - [1.4.9 Images of Text (No Exception)](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception). (Level AAA) -->
         - Objective) __[1.4.10 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow)__ (Level AA): Content can be enlarged without increasing line length.
           - Design) Movile-first.
@@ -134,8 +140,22 @@ Later on I'll converge it in a much more simpler artifact-->
       <!-- TASK 2) Add level specifity and commit those rule wich are level AAA -->
     - WCAG Principle) __[Operable](https://www.w3.org/WAI/WCAG22/Understanding/#operable)__:
     
-      - Objective) __[Guideline - 2.1 Keyboard Accessible](https://www.w3.org/WAI/WCAG22/Understanding/keyboard-accessible)__: Make all functionality available from a keyboard.
-      <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
+      - Guideline) __[Guideline - 2.1 Keyboard Accessible](https://www.w3.org/WAI/WCAG22/Understanding/keyboard-accessible)__: Make all functionality available from a keyboard.
+      
+        - Goal) __[2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard) (Level A)__: Everything can be done with a keyboard except freehand movements.
+          - Objective) Ensure pointer actions have a keyboard equivalent.
+            - Task) Analyze UI and take inventory.
+            - Task) Assign keys / key combinations and document them.
+            - Feature) Arrow map navigation for hold and drag actions.
+            - Feature) Implement a key for the 'Cancel' action (eg Modals; see guideline 2.1.2).  
+
+        - Goal) [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap) (Level A): Keyboard users don't get stuck.
+          - Objective) Prevent situations where users are unable to leave a component or focusable element using the keyboard.
+            - Task) Analyze UI and identify situations where users might get stuck (e.g. modals).
+            - Feature) Provide a cancel button and/or an 'X' icon.
+              - Task) If 'X' icon is implemented, provide semantic attributes.
+              - Research) Investigate wich attributes are needed.
+        - Goal) [2.1.4 Character Key Shortcuts](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts) (Level A): Reduce accidental activation of keyboard shortcuts.
       
 
       - Objective) __[Guideline - 2.2 Enough Time]()__: Provide users enough time to read and use content.
@@ -236,6 +256,16 @@ Later on I'll converge it in a much more simpler artifact-->
       - Resources) [A Complete Guide To Accessible Front-End Components](https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/) 
 
 
+<!-- 
+When above task are resolved:
+
+Organize it in a concept map (table):
+| GOALS | Objectives | Tasks | Priority (MoSCoW) |
+|---|---|---|---|
+| Examplifacte this goal | To provide an example | Writing an example | (Must/Should/Could/Will-not) Have |
+
+Once done, create a MoSCoW diagram (eg. Visual diagram:
+https://cdn-cpbbb.nitrocdn.com/XhgHSOSscJOLnjwQnerkrAMfxQMvSkWr/assets/images/optimized/rev-a1dda4e/i0.wp.com/kecg.co/wp-content/uploads/2024/01/fb2c4be3fa389d45d9043da1d4c89299.MoSCoW-Prioritisation-by-KECG-640px-1.webp) -->
 
 <br><br><br><br>
 
