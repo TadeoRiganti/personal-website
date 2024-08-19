@@ -2,7 +2,7 @@
 
 ## A) Planification & Requirements
 
-### Goals
+### I) GOALS
 
 1. Develop a multi-purpose website for personal branding.
    1. Easy to use template.
@@ -11,8 +11,9 @@
       2. Navigation experience.
    3. SEO.
 
+### II) TARGET AUDIENCE & NEEDS
 
-### Top-down breakdown brainstorming:
+### III) TOP-DOWN REQUIREMENTS (Brainstorming):
 
 <!-- The idea is to brain fucking storm this list. Divergent mentality. 
 IMPORTANT! Take etra time to properly identify actions derivated from objectives.
@@ -306,7 +307,7 @@ Later on I'll converge it in a much more simpler artifact-->
       <!-- Expand sub-items (Add all, then coment those that are apparently not relevant or out of scope) -->
        
      <br><br>
-     
+
      <!-- TASK 9: Elaborate a structure capable to sustain research made up to this point -->
      -Objective) UX Navigation patterns
       - Resources) [The Accessibility And Usability Journey Of Drupal’s Primary Navigation](https://www.smashingmagazine.com/2022/09/accessibility-usability-drupal-primary-navigation/)
