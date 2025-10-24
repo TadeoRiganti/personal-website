@@ -243,6 +243,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 - https://thewismit.com/
 - https://salem.io/
 - https://macwright.com/about/
+- [UXHints](https://uxhints.com/ux-research/customer-journey-map-template/): I like the visual separation between content (as a window) and the aside as part of the background.
 
 #### C) Brutalistic style: 
 
