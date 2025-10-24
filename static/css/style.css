@@ -531,7 +531,9 @@ a quick-fix. */
     padding-block: var(--spacing-medium);
 }
 
-
+aside {
+    padding-inline-start: 1rem;
+} /* Temporal fix */
 
 
 /* =================================================
