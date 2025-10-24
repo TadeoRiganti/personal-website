@@ -727,6 +727,9 @@ body.wiki-page :is(.ads) {
     background: var(--clr-accent-200);
     color: var(--clr-primary-500);
 
+    /* From here I copied the solution from w3schools: 
+    https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp 
+    */
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
