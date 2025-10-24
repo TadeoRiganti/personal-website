@@ -1,11 +1,4 @@
-/* Hide navbar on scroll v2
-
-If I copy the code in this pentest, it works
-https://codepen.io/Senatrius/pen/jOqYjBQ?editors=1111
-
-But for some reason it doesn't work on my project..
-
-*/
+/* Hide navbar on scroll v2 */
 
 const header = document.querySelector("header");
 let prev = window.pageYOffset; // 0 when page loads, otherwise stores previous 'current' value
