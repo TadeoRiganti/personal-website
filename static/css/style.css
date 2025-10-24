@@ -147,7 +147,7 @@
     --spacing-small: 1rem;
     --spacing-medium: 1.5rem;
     --spacing-large: 2rem;
-    --spacing-extra-large: 5rem;
+    --spacing-extra-large: 4rem;
 
     /* Breakout-grid layout */
     /* --grid-max-width: 80rem; */
@@ -229,7 +229,7 @@ h1 {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: var(--spacing-extra-large);
 }
 
 
@@ -722,6 +722,7 @@ body.wiki-page :is(.ads) {
 }
 
 .primary-header {
+    height: var(--spacing-extra-large);
     padding-block: 1rem;
     margin-block-end: auto;
     background: var(--clr-accent-200);
@@ -730,7 +731,9 @@ body.wiki-page :is(.ads) {
     /* From here I copied the solution from w3schools: 
     https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp 
     */
+    background-color: white; /* White background color */
     position: fixed; /* Make it stick/fixed */
+    width: 100%; /* Full width */
     top: 0; /* Stay on top */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
