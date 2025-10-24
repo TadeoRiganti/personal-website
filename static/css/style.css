@@ -726,6 +726,10 @@ body.wiki-page :is(.ads) {
     margin-block-end: auto;
     background: var(--clr-accent-200);
     color: var(--clr-primary-500);
+
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 .primary-header__layout {
