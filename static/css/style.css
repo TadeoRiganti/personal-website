@@ -733,6 +733,7 @@ body.wiki-page :is(.ads) {
     */
     background-color: white; /* White background color */
     position: fixed; /* Make it stick/fixed */
+    z-index: 999; /* Ensures it keeps at front of the page*/
     width: 100%; /* Full width */
     top: 0; /* Stay on top */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
