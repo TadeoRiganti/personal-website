@@ -551,7 +551,7 @@ section {
     padding-block: var(--spacing-medium);
 }
 
-:is(body.landing-page, body.blog-page, body.wiki-page) section {
+:is(body.landing-page, body.blog-page, body.wiki-page) {
     padding-block: var(--spacing-extra-large);
 } 
 
