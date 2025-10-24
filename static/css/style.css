@@ -736,6 +736,7 @@ body.wiki-page :is(.ads) {
     z-index: 999; /* Ensures it keeps at front of the page*/
     width: 100%; /* Full width */
     top: 0; /* Stay on top */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 .primary-header__layout {
@@ -744,7 +745,7 @@ body.wiki-page :is(.ads) {
     justify-content: space-between;
 }
 
-header.hide {
+.hide {
     display: none;
 } /* Hides on scroll. Added via js script. */
 
