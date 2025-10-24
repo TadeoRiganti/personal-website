@@ -1,22 +1,16 @@
-/* Hide navbar on scroll v2 */
 
-const header = document.querySelector("header");
-let prev = window.pageYOffset; // 0 when page loads, otherwise stores previous 'current' value
+/* HIDE NAVBAR ON SCROLL 
 
-window.addEventListener("scroll", function () {
-  let current = window.pageYOffset; // your current offset from the top of the document
+Source: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
 
-  // Add console.log(current, prev) here if you want to see how the offset changes, you'll notice that prev value is always smaller when you scroll down and bigger when you scroll up
-
-  if (prev < current) {
-    header.classList.add("hide");
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
   } else {
-    header.classList.remove("hide");
+    document.getElementById("navbar").style.top = "-100px"; /* Harcoded; fix later.*/
   }
-
-  prev = current; // Set current variable to prev variable so there's something to compare
-});
-
-/* Copied from the solution proposed by the user "Senatrius"
-https://stackoverflow.com/questions/63776378/understanding-hide-nav-bar-on-scroll-code-javascript
-*/
+  prevScrollpos = currentScrollPos;
+}
