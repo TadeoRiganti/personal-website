@@ -446,7 +446,7 @@ table tbody tr a {
 
     background-color: var(--primary-color);
     border-radius: var(--all-corners);
-    padding: var(--spacing-large);
+    padding: var(--spacing-medium);
     margin: 0;
 }
 
