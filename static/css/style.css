@@ -206,7 +206,7 @@ h1 {
 /* |...... AESTETHIC CLASSES */
 
 .light-theme {
-    background-color: var(--font-size-smallrimary-color);
+    background-color: var(--primary-color);
     color: var(--secondary-color)
 }
 
@@ -217,7 +217,7 @@ h1 {
 
 .dark-theme {
     background-color: var(--secondary-color);
-    color: var(--font-size-smallrimary-color);
+    color: var(--primary-color);
 }
 
 .brand-color {
@@ -444,7 +444,7 @@ table tbody tr a {
     --radius: var(--large-radius);
     --all-corners: var(--radius);
 
-    background-color: var(--font-size-smallrimary-color);
+    background-color: var(--primary-color);
     border-radius: var(--all-corners);
     padding: var(--spacing-large);
     margin: 0;
