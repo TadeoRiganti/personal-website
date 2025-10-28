@@ -382,12 +382,6 @@ nav a:focus {
 
 /* TABLES */
 
-/* table {
-    margin: 30px 0px;
-    width: 100%;
-    margin-bottom: 1rem;
-    vertical-align: top;
-} */
 
 table {
     width: auto;
@@ -478,7 +472,7 @@ table th:has(span){
 
 table tbody tr a {
     font-weight: 700;
-    color :#00A650;
+    color: var(--tertiary-color);
     text-decoration: underline;
 }
 
