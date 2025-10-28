@@ -479,6 +479,24 @@ table tbody tr a {
 
 /* |.... UTILITY CLASSES */
 
+span.material-symbols-outlined.button-icon {
+    border-radius: 12px;
+    padding: 12px;
+}
+/* Reshapes FAB button (only icons) */
+
+/* The link feature doesn't have a real utility on movile devices.
+Therefore, before having overflowing issues, the link column will hide.
+This way, small mobile devices won't notice display issues */
+
+@media (max-width: 480px) {
+    span.material-symbols-outlined.button-icon {
+        display: none;
+    }
+} /* Removes FAB buttons of tables */
+/* This should'nt be hardcoded; so I'll mark it like TEMPORARY FIX */
+
+
 /* |...... AESTHETIC CLASSES */
 
 /* Coloration */
