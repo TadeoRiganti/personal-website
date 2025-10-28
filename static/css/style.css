@@ -232,6 +232,12 @@ h1 {
     background-color: var(--tertiary-color);
 }
 
+.white-text-with-contrast-shadow {
+    color: var(--primary-color);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    /* X, Y, Size, Color, Transparency*/
+  }
+
 /* -------------------------------------------------
 |.. ANIMATIONS */
 
@@ -549,7 +555,10 @@ table tbody tr a {
     body.landing-page .product {
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-   }
+    }
+    .card {
+    padding: var(--spacing-medium);
+    }
 }
 /* As landing-pages have no asides, breakpoint is different.
 I would love to use variable to avoid this, but apparently
