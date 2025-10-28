@@ -522,6 +522,11 @@ table tbody tr a {
     margin: 0;
 }
 
+#ranking-table  {
+    padding: .5em var(--spacing-extra-small);
+}
+/* Optically adjust margins on card container */
+
 .description  {
     display: flex;
     flex-direction: column;
