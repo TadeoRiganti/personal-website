@@ -402,15 +402,51 @@ table td > img {
     width: clamp(32px, 64px, 10vh);
 }
 
-table tbody tr:hover {
+/* table tbody tr:hover {
     background-color: var(--color-neutral-95);
-}
+} */
+ /* Paints whole range on hover with a soft darker color*/
 
 table th:has(span){
     text-align: center;
     vertical-align: baseline;
 }
 
+
+/* Ranking table */
+
+/* #ranking-table td:not(.title) {
+    width: 1%;
+    white-space: nowrap;
+} */
+
+
+/* td.album span {
+    cursor: pointer;
+} */
+ /* Makes span objects to show a cursor */
+
+
+/* td.album > span.display-image {
+    color: rgba(255, 255, 255, 0);
+    font-size: var(--font-size-large);
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--social-media-gradient);
+} */
+/* Re-shape icon on span block */
+
+/* tr:hover > td.album span.display-image {
+    color: rgba(255, 255, 255, 0.5);
+} */
+/* Reveal icon on span block */
+
+/* td.link button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+} */
+/* Removes button style on table */
 
 /* RESPONSIVE */
 
