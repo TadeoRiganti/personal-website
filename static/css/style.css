@@ -282,6 +282,18 @@ caption {
     font-style: italic;
 }
 
+	
+/* Responsive (TEMPORARY FIX) */
+/* NOTE: This is the original setup of the tutorial from Kevin Powell. I find it works very well on desktop devices, but it doesn't scale well on movile.
+This is a temporary fix. Ideally I should adjust the calc formula on :ROOT */
+@media (min-width: 720px) {
+    * {
+    --font-size-small: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --font-size-large: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --font-size-extra-large: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem);
+    }
+}
+
 
 /* |.... UTILITY CLASSES */
 
