@@ -486,6 +486,12 @@ table tbody tr a {
     border-radius: var(--all-corners);
 }
 
+/* Alignment */
+
+.center {
+    text-align: center;
+}
+
 /* @media (prefers-color-scheme: dark) {
     .high-light,
     .bg-secondary {
