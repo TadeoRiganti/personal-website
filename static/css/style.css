@@ -629,12 +629,17 @@ a quick-fix. */
     gap: 1rem;
   }
 
+  /* HERO */
+section.hero-banner {
+    height: 100dvw;
+}
 
 /* |...... SPACING CLASSES */
 
-.section-padding {
-    padding-block: var(--spacing-medium);
-}
+/* .top-padding {
+    padding-top: var(--spacing-large);
+} */
+ /* MDN recommends to use a section inside a section if its semantically correct. Therefore wrapping content with a section tag should add top padding. */
 
 aside {
     padding-inline-start: 1rem;
@@ -647,18 +652,22 @@ aside {
 /* -------------------------------------------------
 |.. GENERAL RULES */
 
+.top-padding {
+    padding-top: var(--spacing-extra-large);
+}
+
 :is(.flow, section, article) > * + * {
-    margin-block-start: var(--spacing-extra-small, 1em);
+    margin-block-start: var(--spacing-medium, 1em);
 }
 /* Adds an extra margin at the top of each element */
 
-section {
-    padding-block: var(--spacing-medium);
-}
 
-:is(body.landing-page, body.blog-page, body.wiki-page) {
+:is(body.landing-page, body.blog-page, body.wiki-page) section {
     padding-block: var(--spacing-extra-large);
 } 
+
+
+
 
 
 /* -------------------------------------------------
