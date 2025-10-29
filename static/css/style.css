@@ -547,7 +547,7 @@ This way, small mobile devices won't notice display issues */
     background-color: var(--primary-color);
     border-radius: var(--all-corners);
     padding: var(--spacing-medium);
-    margin: 0;
+    margin-block: var(--spacing-medium); /* Temporal fix */ 
 }
 
 #ranking-table  {
@@ -574,7 +574,7 @@ This way, small mobile devices won't notice display issues */
 }
 
 @media (min-width: 720px) {
-    body.landing-page .product {
+    body .product {
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
@@ -654,7 +654,7 @@ body {
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
 :is(.flow, div, section, article) > :not(section) + :not(section) {
-    margin-block-start: var(--spacing-medium, 1em)
+    margin-block-start: var(--spacing-medium, 1em) /* 🔗4 */
 }
 /* Adds an extra margin at the top of each element 🛋️*/
 
