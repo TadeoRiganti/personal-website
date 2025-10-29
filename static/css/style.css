@@ -164,14 +164,14 @@
     /* NOTE: This is the original setup of the tutorial from Kevin Powell. I find it works very well on desktop devices, but it doesn't scale well on movile.
     This is a temporary fix. Ideally I should adjust the calc formula on :ROOT */
 
-    @media (min-width: 720px) {
+    /* @media (min-width: 720px) {
         * {
         --font-size-small: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
         --font-size-large: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
         --font-size-extra-large: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem);
         }
     }
-    
+     */
     /* NOTE TO MY FUTURE SELF:
     FIRST I'll find the sizes that works well on desktop Full HD.
     SECOND I'll find the sizes that works best on movile xs.
@@ -640,16 +640,6 @@ section.hero-banner {
 
 /* |...... SPACING CLASSES */
 
-/* .top-padding {
-    padding-top: var(--spacing-large);
-} */
- /* MDN recommends to use a section inside a section if its semantically correct. Therefore wrapping content with a section tag should add top padding. */
-
-aside {
-    padding-inline-start: 1rem;
-} /* Temporal fix */
-
-
 /* =================================================
 || LAYOUT */
 
@@ -658,7 +648,7 @@ aside {
 
 body {
     padding-top: var(--spacing-extra-large);
-}
+} /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
 :is(.flow, section, article) > * + * {
     margin-block-start: var(--spacing-medium, 1em);
@@ -667,8 +657,12 @@ body {
 
 
 :is(body.landing-page, body.blog-page, body.wiki-page) section {
-    padding-block: var(--spacing-extra-large);
+    padding-block: var(--spacing-large);
 } 
+
+aside {
+    padding-inline-start: 1rem;
+} /* Temporal fix */
 
 
 
