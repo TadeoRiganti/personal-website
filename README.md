@@ -236,6 +236,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### B) Minimalist style: 
 
+- https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html
 - https://jakob.kaivo.net/ 
 - https://blog.skiserv.eu/index.html/
 - https://jarbus.net/
