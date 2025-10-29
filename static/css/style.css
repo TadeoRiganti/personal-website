@@ -656,6 +656,10 @@ aside {
 /* -------------------------------------------------
 |.. GENERAL RULES */
 
+body {
+    padding-top: var(--spacing-extra-large);
+}
+
 :is(.flow, section, article) > * + * {
     margin-block-start: var(--spacing-medium, 1em);
 }
@@ -665,12 +669,6 @@ aside {
 :is(body.landing-page, body.blog-page, body.wiki-page) section {
     padding-block: var(--spacing-extra-large);
 } 
-
-body {
-    scroll-padding-top: 48px;
-}
-
-
 
 
 
