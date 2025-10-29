@@ -253,7 +253,7 @@ h1 {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--spacing-extra-large);
+    scroll-padding-top: var(--spacing-extra-large); /* 🔗1 */
 }
 
 
@@ -650,21 +650,22 @@ section.hero-banner {
 |.. GENERAL RULES */
 
 body {
-    padding-top: var(--spacing-extra-large);
+    padding-top: var(--spacing-large); /* 🔗1 */
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
-:is(.flow, section, article) > * + * {
-    margin-block-start: var(--spacing-medium, 1em);
+:is(.flow, section, article) > :not(section) + :not(section) {
+    margin-block-start: var(--spacing-medium, 1em)
 }
 /* Adds an extra margin at the top of each element */
 
 
 :is(body.landing-page, body.blog-page, body.wiki-page) section {
-    padding-block: var(--spacing-large);
+    padding-block: var(--spacing-extra-large);
 } 
+/* Adds an extra margin between sections */
 
 aside {
-    padding-inline-start: 1rem;
+    padding-inline-start: 1rem; /* 🔗3 */
 } /* Temporal fix */
 
 
@@ -835,7 +836,7 @@ body.wiki-page :is(.ads) {
 }
 
 .primary-header {
-    height: var(--spacing-extra-large);
+    height: var(--spacing-extra-large); /* 🔗1 */
     padding-block: 1rem;
     margin-block-end: auto;
     background: var(--clr-accent-200);
@@ -921,9 +922,10 @@ if there is no image in the container '.display' */
 /* |.... CONTENT  */
 
 .container.holy-grail {
-    margin-top: var(--gap-main-content);
+    margin-top: var(--spacing-extra-large); /* 🔗2 */ 
 }
-/* Separates the article's content from its cover */
+/* Separates the article's content from its cover 
+Figure a way to link values somehow */
 
 
 /* |...... ARTICLE */
