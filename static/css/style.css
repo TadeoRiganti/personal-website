@@ -638,8 +638,10 @@ a quick-fix. */
 
   /* HERO */
 section.hero-banner {
-    height: 100dvw;
-} /* FIX */
+    height: 50dvw;
+    align-content: center;
+    justify-content: center;
+} /* IMPROVE */
 
 /* |...... SPACING CLASSES */
 
