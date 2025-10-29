@@ -109,15 +109,18 @@
      --font-size-extra-small: 14px;
      --line-height-extra-small: calc(var(--font-size-extra-small) * 1.15);
 
+     --font-size-small: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
      --font-size-small: 16px;
      --line-height-small: calc(var(--font-size-small) * 1.5);
 
      --font-size-medium: 22px; 
      --line-height-medium: calc(var(--font-size-medium) * 1.27);
 
+     --font-size-large: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
      --font-size-large: 32px;
      --line-height-large: calc(var(--font-size-large) * 1.33);
 
+     --font-size-extra-large: clamp(2.8rem, calc(1.85rem + 4.74vw), 5rem);
      --font-size-extra-large: 45px; 
      --line-height-extra-large: calc(var(--font-size-extra-large) * 1.05);
 
