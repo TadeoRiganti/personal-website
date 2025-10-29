@@ -558,7 +558,7 @@ This way, small mobile devices won't notice display issues */
 .description  {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    /* gap: 16px; */ /* Redundant by 🛋️ rule*/
 }
 /* Adds a gap at the top of each element */
 
@@ -653,10 +653,10 @@ body {
     padding-top: var(--spacing-large); /* 🔗1 */
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
-:is(.flow, section, article) > :not(section) + :not(section) {
+:is(.flow, div, section, article) > :not(section) + :not(section) {
     margin-block-start: var(--spacing-medium, 1em)
 }
-/* Adds an extra margin at the top of each element */
+/* Adds an extra margin at the top of each element 🛋️*/
 
 
 :is(body.landing-page, body.blog-page, body.wiki-page) section {
