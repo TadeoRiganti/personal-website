@@ -614,6 +614,10 @@ a quick-fix. */
 
 /* |...... LAYOUT CLASSES */
 
+.top-padding {
+    padding-top: var(--spacing-extra-large);
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -632,7 +636,7 @@ a quick-fix. */
   /* HERO */
 section.hero-banner {
     height: 100dvw;
-}
+} /* FIX */
 
 /* |...... SPACING CLASSES */
 
@@ -652,10 +656,6 @@ aside {
 /* -------------------------------------------------
 |.. GENERAL RULES */
 
-.top-padding {
-    padding-top: var(--spacing-extra-large);
-}
-
 :is(.flow, section, article) > * + * {
     margin-block-start: var(--spacing-medium, 1em);
 }
@@ -665,6 +665,10 @@ aside {
 :is(body.landing-page, body.blog-page, body.wiki-page) section {
     padding-block: var(--spacing-extra-large);
 } 
+
+body {
+    scroll-padding-top: 48px;
+}
 
 
 
