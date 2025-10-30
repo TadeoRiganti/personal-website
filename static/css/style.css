@@ -729,7 +729,7 @@ section.hero-banner {
 |.. GENERAL RULES */
 
 body {
-    padding-top: var(--spacing-large); /* 🔗1 */
+    padding-top: var(--spacing-extra-large); /* 🔗1 */
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
 /* MARGIN ELEMENTS */
@@ -743,21 +743,16 @@ article > * > *:not(:first-child) {
     margin-block-start: var(--spacing-extra-small); /* 🔗6 */
 } 
 
-.card, .card > * {
+.card {
     display: grid;
-    color: red;
-    gap: var(--spacing-extra-small); /* 🔗6 */
+    gap: var(--spacing-small);
 }
 
- /* :is(.flow, .card, section, article) > :not(section) + :not(section) {
-    margin-block-start: var(--spacing-small, 1em) 
-}   /*🔗4 */
-/* Adds an extra margin at the top of each element */
+.card > * >  *:not(:first-child) {
+    margin-block-start: var(--spacing-extra-small);
+}
 
-
-/* :is(body.landing-page, body.blog-page, body.wiki-page) section {
-    padding-block: var(--spacing-large);
-}  */
+/* PADDING SEMANTIC BLOCKS */
 
 section {
     padding-block: min(5vh, var(--spacing-extra-large));
@@ -768,6 +763,7 @@ based on KP's solution: https://www.youtube.com/watch?v=7khSaA91e04*/
 aside {
     padding-inline-start: var(--spacing-small); /* 🔗3 */
 } /* Temporal fix */
+
 
 /* -------------------------------------------------
 |.. AUTO-GRID LAYOUT
