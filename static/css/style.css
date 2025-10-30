@@ -21,6 +21,7 @@
 
 || Layout
 |.. General rules
+|.. Auto-grid 
 |.. Breakout-grid
 |.... Layout classes
 |.... Adaptations
@@ -142,7 +143,12 @@
     /* Holy-grid layout */
     --gap-main-content: var(--spacing-large);
     --aside-width: clamp(12rem, 20rem, 10svw);
-   
+
+    /* Auto-grid | 🔗5 */
+    --grid-max-col-count: 3;
+    --grid-min-col-size: 240px;
+    --grid-gap: 1rem;
+
     
     /* |.... STYLES */
 
@@ -187,25 +193,80 @@
 
 
 /* -------------------------------------------------
-|.. RESET BROWSER STYLE */
+|.. RESET BROWSER STYLE }
 
+Based on Jhon Corneau's solution: 
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+
+
+/* 1. Use a more-intuitive box-sizing model */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: calc(1em + 0.5rem);
+
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
     font-weight: normal;
-    /* Alredy using a display font for h1 title, so no additional weight
-    is needed to look as a display font. */
 }
 
-*::before,
-*::after {
-  box-sizing: border-box;
+/* 6. Improve media defaults */
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
+
+/* 7. Inherit fonts for form controls */
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
 
 
 /* -------------------------------------------------
@@ -327,7 +388,7 @@ html {
 }
 
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -335,8 +396,8 @@ h5,
 h6,
 p,
 figure {
-    margin: 0;
-}
+    margin: 0px;
+} */
 
 
 /* IMAGES */
@@ -552,7 +613,6 @@ This way, small mobile devices won't notice display issues */
     background-color: var(--primary-color);
     border-radius: var(--all-corners);
     padding: var(--spacing-medium);
-    margin-block: var(--spacing-medium); /* Temporal fix */ 
 }
 
 #ranking-table  {
@@ -563,7 +623,7 @@ This way, small mobile devices won't notice display issues */
 .description  {
     display: flex;
     flex-direction: column;
-    gap: 16px; 
+    /* gap: 16px;  */
 }
 /* Adds a gap at the top of each element */
 
@@ -622,10 +682,6 @@ a quick-fix. */
 
 /* |...... LAYOUT CLASSES */
 
-.top-padding {
-    padding-top: var(--spacing-extra-large);
-}
-
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -643,12 +699,16 @@ a quick-fix. */
 
   /* HERO */
 section.hero-banner {
-    height: 50dvw;
+    height: 40dvw;
     align-content: center;
     justify-content: center;
 } /* IMPROVE */
 
 /* |...... SPACING CLASSES */
+
+.top-padding {
+    padding-top: var(--spacing-extra-large);
+}
 
 /* =================================================
 || LAYOUT */
@@ -660,14 +720,15 @@ body {
     padding-top: var(--spacing-large); /* 🔗1 */
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
-:is(.flow, section, article) > :not(section) + :not(section) {
-    margin-block-start: var(--spacing-medium, 1em) /* 🔗4 */
-}
+
+ /* :is(.flow, .card, section, article) > :not(section) + :not(section) {
+    margin-block-start: var(--spacing-small, 1em) 
+}  */ /* 🔗4 */
 /* Adds an extra margin at the top of each element */
 
 
 :is(body.landing-page, body.blog-page, body.wiki-page) section {
-    padding-block: var(--spacing-extra-large);
+    padding-block: var(--spacing-large);
 } 
 /* Adds an extra margin between sections */
 
@@ -675,6 +736,32 @@ aside {
     padding-inline-start: 1rem; /* 🔗3 */
 } /* Temporal fix */
 
+/* -------------------------------------------------
+|.. AUTO-GRID LAYOUT
+
+/* Auto Grid | 🔗5 */
+.auto-grid {
+    /* calculations, do not touch */
+  --grid-col-size-calc: calc(
+    (100% - var(--grid-gap) * var(--grid-max-col-count)) /
+      var(--grid-max-col-count)
+  );
+  --grid-col-min-size-calc: min(
+    100%,
+    max(var(--grid-min-col-size), var(--grid-col-size-calc))
+  );
+
+  display: grid;
+  gap: var(--grid-gap);
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-col-min-size-calc), 1fr)
+  );
+} 
+/* Kevin Powell's solution:
+• Codepen: https://codepen.io/kevinpowell/pen/GgRwqxJ
+• Explanation: https://www.youtube.com/watch?v=CHULPvkXIRo&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998 */
 
 
 /* -------------------------------------------------
