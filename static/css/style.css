@@ -719,7 +719,7 @@ section.hero-banner {
 /* |...... SPACING CLASSES */
 
 .top-padding {
-    padding-top: var(--spacing-extra-large);
+    padding-top: var(--spacing-large);
 }
 
 /* =================================================
@@ -756,6 +756,10 @@ article > * > *:not(:first-child) {
 
 section {
     padding-block: min(5vh, var(--spacing-extra-large));
+}
+
+.landing-page section {
+    padding-block: min(10vh, var(--spacing-extra-large));
 }
 /* Adds an extra margin between sections 
 based on KP's solution: https://www.youtube.com/watch?v=7khSaA91e04*/
