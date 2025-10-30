@@ -130,10 +130,10 @@
 
      /* Spacing */
     --spacing-extra-small: 1em;
-    --spacing-small: 1rem;
+    --spacing-small: 1rem; /* 🔗3 */   
     --spacing-medium: 1.5rem;
     --spacing-large: 2rem;
-    --spacing-extra-large: 4rem;
+    --spacing-extra-large: 4rem; /* 🔗1 🔗2 🔗4 */
 
     /* Breakout-grid layout */
     /* --grid-max-width: 80rem; */
@@ -147,7 +147,7 @@
     /* Auto-grid | 🔗5 */
     --grid-max-col-count: 3;
     --grid-min-col-size: 240px;
-    --grid-gap: 1rem;
+    --grid-gap: var(--spacing-small); /* 🔗3 */   
 
     
     /* |.... STYLES */
@@ -461,7 +461,7 @@ nav a:focus {
 
 table {
     width: auto;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-small); /* 🔗3 */   
     vertical-align: top;
     border-collapse: collapse;
 }
@@ -706,7 +706,7 @@ a quick-fix. */
 
 .even-columns {
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing-small); /* 🔗3 */   
   }
 
   /* HERO */
@@ -735,17 +735,22 @@ body {
 
  /* :is(.flow, .card, section, article) > :not(section) + :not(section) {
     margin-block-start: var(--spacing-small, 1em) 
-}  */ /* 🔗4 */
+}   /*🔗4 */
 /* Adds an extra margin at the top of each element */
 
 
-:is(body.landing-page, body.blog-page, body.wiki-page) section {
+/* :is(body.landing-page, body.blog-page, body.wiki-page) section {
     padding-block: var(--spacing-large);
-} 
-/* Adds an extra margin between sections */
+}  */
+
+section {
+    padding-block: min(5vh, var(--spacing-extra-large));
+}
+/* Adds an extra margin between sections 
+based on KP's solution: https://www.youtube.com/watch?v=7khSaA91e04*/
 
 aside {
-    padding-inline-start: 1rem; /* 🔗3 */
+    padding-inline-start: var(--spacing-small); /* 🔗3 */
 } /* Temporal fix */
 
 /* -------------------------------------------------
@@ -938,12 +943,12 @@ body.wiki-page :is(.ads) {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: max(5vw, 1rem);
+    gap: max(5vw, var(--spacing-small)); /* 🔗3 */
 }
 
 .primary-header {
     height: var(--spacing-extra-large); /* 🔗1 */
-    padding-block: 1rem;
+    padding-block: var(--spacing-small); /* 🔗3 */
     margin-block-end: auto;
     background: var(--clr-accent-200);
     color: var(--clr-primary-500);
@@ -1007,7 +1012,7 @@ if there is no image in the container '.display' */
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    gap: 1rem;    
+    gap: var(--spacing-small); /* 🔗3 */   
 }
 
 #cover .description p {
