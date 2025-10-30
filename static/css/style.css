@@ -129,7 +129,7 @@
      /* |.... LAYOUT SETTINGS */
 
      /* Spacing */
-    --spacing-extra-small: 1em;
+    --spacing-extra-small: 1em; /* 🔗6  */
     --spacing-small: 1rem; /* 🔗3 */   
     --spacing-medium: 1.5rem;
     --spacing-large: 2rem;
@@ -355,6 +355,7 @@ html {
     <uniquifier>: Use a unique and descriptive class name
     <weight>: Use a value from 100 to 900
 */
+
 
 h1 {
     font-family:  var(--font-family-display);
@@ -731,6 +732,22 @@ body {
     padding-top: var(--spacing-large); /* 🔗1 */
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
+/* MARGIN ELEMENTS */
+/* Inspired on Kevin Powell's video: https://www.youtube.com/watch?v=Gx0iZrN-0L4*/
+
+main > *:not(:has(article)) > *:not(:first-child) {
+    margin-block-start: var(--spacing-extra-small); /* 🔗6 */
+} 
+ 
+article > * > *:not(:first-child) {
+    margin-block-start: var(--spacing-extra-small); /* 🔗6 */
+} 
+
+.card, .card > * {
+    display: grid;
+    color: red;
+    gap: var(--spacing-extra-small); /* 🔗6 */
+}
 
  /* :is(.flow, .card, section, article) > :not(section) + :not(section) {
     margin-block-start: var(--spacing-small, 1em) 
