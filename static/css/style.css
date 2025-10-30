@@ -416,6 +416,16 @@ a .logo{
 }
 /* Default setting for OUTLINED icons */
 
+/* FIX Josh Corneau Reset */
+
+/* img.oversized {
+  position: absolute;
+  width: 120%;
+  max-width: revert;
+  left: -10%;
+  right: -10%;
+} */
+
 
 /* NAVIGATION */
 
