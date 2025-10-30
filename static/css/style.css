@@ -219,6 +219,14 @@ https://www.joshwcomeau.com/css/custom-css-reset/
   html {
     interpolate-size: allow-keywords;
   }
+  
+  /* Kevin Powell's adition
+  • Source: https://gist.github.com/Lego2012/7b7956734f2ab4a95fd0c311cd8bbe95 */
+
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
 }
 
 body {
