@@ -362,7 +362,6 @@ h1 {
 }
 
 body {
-    margin: 0;
     font-family: var(--font-family);
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
