@@ -711,7 +711,7 @@ a quick-fix. */
 
   /* HERO */
 section.hero-banner {
-    height: 40dvw;
+    height: calc(100vh - var(--spacing-extra-large)); /* TEMPORAL FIX */
     align-content: center;
     justify-content: center;
 } /* IMPROVE */
