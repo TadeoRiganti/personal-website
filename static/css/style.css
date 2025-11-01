@@ -160,7 +160,8 @@
 
     --radius: .5rem;
     --small-radius: calc(var(--radius) / 2);
-    --large-radius: calc(var(--radius) * 2);
+    --medium-radius: calc(var(--radius) * 2);
+    --large-radius: calc(var(--radius) * 3);
 
     /* Preset corners */
 
@@ -258,7 +259,7 @@ img, picture, video, canvas, svg {
 
 /* 7. Buttons */
 
-button {
+/* button {
   box-sizing: border-box;
   -webkit-appearance: none;
   border-radius: 0;
@@ -269,7 +270,7 @@ button {
   cursor: pointer;
   border: none;
   color: inherit;
-}
+} */
 
 
 /* 8. Inherit fonts for form controls */
@@ -585,39 +586,45 @@ table tbody tr a {
 /* Block: Button 
 (ahestetic utility class)*/
 
-button, .button {
+/* button, .button {
+  padding: 0.5em 1em;
   border-radius: var(--large-radius);
-  transition: background-color 0.3s ease;
+} */
+
+.button-group {
+    display: flex;
+    justify-content: inherit;
+    gap: var(--spacing-small);
 }
 
 
 /* Modifier: Filled 
 (ahestetic utility class) */
 
-.button--filled {
-  background-color: var(--primary-color); /* REFACTOR: Let it inherit by its parent */
-  color: var(--secondary-color); /* REFACTOR: Let it inherit by its parent */
-  outline: 2px solid var(--primary-color);
+/* .button--filled {
+  background-color: var(--primary-color); 
+  color: var(--secondary-color); 
+  outline: 2px solid currentColor;
 }
 
 .button--filled:hover {
   opacity: 0.85;
-}
+} */
 
 /* Modifier: Tonal 
 (ahestetic utility class)*/
 
-.button--tonal {
-  background-color: color-mix(in srgb, var(--primary-color), transparent 40%); /* REFACTOR: Let it inherit by its parent */
-  color: var(--secondary-color); /* REFACTOR: Let it inherit by its parent */
-  outline: 2px solid var(--primary-color);
+/* .button--tonal {
+  background-color: color-mix(in srgb, var(--primary-color), transparent 40%); 
+  color: var(--secondary-color); 
+  outline: 2px solid currentColor;
 }
 
 .button--outline {
   background-color: transparent; 
-  color: var(--primary-color); /* REFACTOR: Let it inherit by its parent */
+  color: var(--primary-color); 
   outline: 2px solid currentColor;
-}
+} */
 
 
 /* |.... UTILITY CLASSES */ /* UPS! Inside Utility Classes I should arrange the rules, in 3 categories; aesthetic, layour and spacing.. but not like subcategories but order of redaction:
@@ -850,6 +857,8 @@ article > * > *:not(:first-child) {
 .card > * >  *:not(:first-child) {
     margin-block-start: var(--spacing-extra-small);
 }
+
+
 
 /* PADDING SEMANTIC BLOCKS */
 
