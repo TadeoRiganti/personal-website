@@ -585,10 +585,10 @@ table tbody tr a {
 /* Block: Button 
 (ahestetic utility class)*/
 
-/* button, .button {
+button, .button {
   padding: 0.5em 1em;
   border-radius: var(--large-radius);
-} */
+}
 
 .button-group {
     display: flex;
@@ -600,7 +600,7 @@ table tbody tr a {
 /* Modifier: Filled 
 (ahestetic utility class) */
 
-/* .button--filled {
+.button--filled {
   background-color: var(--primary-color); 
   color: var(--secondary-color); 
   outline: 2px solid currentColor;
@@ -608,22 +608,25 @@ table tbody tr a {
 
 .button--filled:hover {
   opacity: 0.85;
-} */
+}
 
 /* Modifier: Tonal 
 (ahestetic utility class)*/
 
-/* .button--tonal {
+.button--tonal {
   background-color: color-mix(in srgb, var(--primary-color), transparent 40%); 
   color: var(--secondary-color); 
   outline: 2px solid currentColor;
 }
 
+/* Modifier: Outline
+(ahestetic utility class)*/
+
 .button--outline {
   background-color: transparent; 
   color: var(--primary-color); 
   outline: 2px solid currentColor;
-} */
+}
 
 
 /* |.... UTILITY CLASSES */ /* UPS! Inside Utility Classes I should arrange the rules, in 3 categories; aesthetic, layour and spacing.. but not like subcategories but order of redaction:
