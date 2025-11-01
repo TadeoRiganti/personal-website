@@ -609,7 +609,39 @@ button, .button {
 }
 
 
-/* |.... UTILITY CLASSES */ /* UPS!*/
+/* |.... UTILITY CLASSES */ /* UPS! Inside Utility Classes I should arrange the rules, in 3 categories; aesthetic, layour and spacing.. but not like subcategories but order of redaction:
+
+|... section
+
+|.... Element
+
+.block__element {
+    rules
+}
+
+--Modifiers 
+
+(1° level: ahestetic)
+
+block__element--modifier {
+   rules
+}
+
+(2° level: layout)
+
+block__element--modifier {
+   rules
+}
+
+(3° level: Spacing)
+
+block__element--modifier {
+   rules for spacing
+}
+
+REFACTOR STYLESHEET: I'll have to review and refactor stylesheet to accomodate rules before advancing on another stuff.
+
+*/
 
 span.material-symbols-outlined.button-icon {
     border-radius: 12px;
