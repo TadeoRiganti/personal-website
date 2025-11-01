@@ -256,20 +256,36 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-/* 7. Inherit fonts for form controls */
+/* 7. Buttons */
+
+button {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+
+/* 8. Inherit fonts for form controls */
 
 input, button, textarea, select {
   font: inherit;
 }
 
-/* 8. Avoid text overflows */
+/* 9. Avoid text overflows */
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-/* 9. Improve line wrapping */
+/* 10. Improve line wrapping */
 
 p {
   text-wrap: pretty;
@@ -279,17 +295,14 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/* 10. Create a root stacking context */
+/* 11. Create a root stacking context */
 
 #root, #__next {
   isolation: isolate;
 }
 
-/* 11. Buttons */
 
-button {
-    all: unset;
-}
+
 
 /* -------------------------------------------------
 |.. COLOR PALETTE */
@@ -569,37 +582,35 @@ table tbody tr a {
 /*
 |... BUTTONS */
 
-/* Block: Button */
+/* Block: Button 
+(ahestetic utility class)*/
 
 button, .button {
-  display: inline-block;
-  padding: 0.5em 1em;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: none;
   border-radius: var(--large-radius);
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Modifier: Filled */
+
+/* Modifier: Filled 
+(ahestetic utility class) */
 
 .button--filled {
   background-color: var(--primary-color); /* REFACTOR: Let it inherit by its parent */
   color: var(--secondary-color); /* REFACTOR: Let it inherit by its parent */
+  outline: 2px solid var(--primary-color);
 }
 
-/* .button--filled:hover {
+.button--filled:hover {
   opacity: 0.85;
-} */
+}
 
-/* Modifier: Tonal */
+/* Modifier: Tonal 
+(ahestetic utility class)*/
 
 .button--tonal {
   background-color: color-mix(in srgb, var(--primary-color), transparent 40%); /* REFACTOR: Let it inherit by its parent */
   color: var(--secondary-color); /* REFACTOR: Let it inherit by its parent */
+  outline: 2px solid var(--primary-color);
 }
 
 .button--outline {
