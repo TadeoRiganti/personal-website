@@ -257,9 +257,9 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-/* 7. Buttons */
+/* 7. Reset button's style */
 
-/* button {
+button {
   box-sizing: border-box;
   -webkit-appearance: none;
   border-radius: 0;
@@ -270,8 +270,7 @@ img, picture, video, canvas, svg {
   cursor: pointer;
   border: none;
   color: inherit;
-} */
-
+}
 
 /* 8. Inherit fonts for form controls */
 
