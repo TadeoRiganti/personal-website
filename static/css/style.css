@@ -15,6 +15,10 @@
 |.... Utility classes
 |...... Aesthetic classes
 |.. Elements
+|... General
+|... Navigation
+|... Tables
+|... Buttons
 |.... Utility classes
 |...... Aesthetic classes
 |...... Layout classes
@@ -281,7 +285,11 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* 11. Buttons */
 
+button {
+    all: unset;
+}
 
 /* -------------------------------------------------
 |.. COLOR PALETTE */
@@ -391,7 +399,11 @@ caption {
 
 
 /* -------------------------------------------------
-|.. ELEMENTS */
+|.. ELEMENTS 
+
+|... GENERAL */
+
+
 
 html {
     color-scheme: var(--color-scheme);
@@ -436,7 +448,8 @@ a .logo{
 } */
 
 
-/* NAVIGATION */
+/*
+|... NAVIGATION */
 
 nav ul {
     list-style: none;
@@ -456,7 +469,8 @@ nav a:focus {
 }
 
 
-/* TABLES */
+/*
+|... TABLES */
 
 
 table {
@@ -552,8 +566,50 @@ table tbody tr a {
     text-decoration: underline;
 }
 
+/*
+|... BUTTONS */
 
-/* |.... UTILITY CLASSES */
+/* Block: Button */
+
+button, .button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--large-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Modifier: Filled */
+
+.button--filled {
+  background-color: var(--primary-color); /* REFACTOR: Let it inherit by its parent */
+  color: var(--secondary-color); /* REFACTOR: Let it inherit by its parent */
+}
+
+/* .button--filled:hover {
+  opacity: 0.85;
+} */
+
+/* Modifier: Tonal */
+
+.button--tonal {
+  background-color: color-mix(in srgb, var(--primary-color), transparent 40%); /* REFACTOR: Let it inherit by its parent */
+  color: var(--secondary-color); /* REFACTOR: Let it inherit by its parent */
+}
+
+.button--outline {
+  background-color: transparent; 
+  color: var(--primary-color); /* REFACTOR: Let it inherit by its parent */
+  outline: 2px solid currentColor;
+}
+
+
+/* |.... UTILITY CLASSES */ /* UPS!*/
 
 span.material-symbols-outlined.button-icon {
     border-radius: 12px;
