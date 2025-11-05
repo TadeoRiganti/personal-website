@@ -308,12 +308,15 @@ h1, h2, h3, h4, h5, h6 {
 |.. COLOR PALETTE */
 
 :focus, :focus-visible {
-    outline-color: var(--tertiary-color);
+    outline: 2px solid #E81AE4;
 }
-/* Adds a glow around the outline border  */
+/* For accesibility purposes, the best alternative color is this magenta./
+/* REFACTOR NEEDED → STYLE Create a variable wich takes the --tertiary-color and inverts it  */
+
 /* button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 7px var(--tertiary-color-social-media);
 } */
+ /* Adds a glow around the outline border  */
 
 /* |.... UTILITY CLASSES */
 
