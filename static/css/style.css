@@ -91,6 +91,9 @@
     --secondary-color:  #252525;
     --tertiary-color:   #00A650;
     
+    --focus-color: ;
+    /* Safe color */
+
     --error-color:      #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-95: hsl(216, 8%, 95%);
@@ -310,8 +313,10 @@ h1, h2, h3, h4, h5, h6 {
 :focus, :focus-visible {
     outline: 2px solid #E81AE4;
 }
-/* For accesibility purposes, the best alternative color is this magenta./
-/* REFACTOR NEEDED → STYLE Create a variable wich takes the --tertiary-color and inverts it  */
+/* For accesibility purposes, the best alternative color is this magenta
+https://davidmathlogic.com/colorblind/#%2300A650-%23E81AE4/ */
+
+/* ↑ REFACTOR NEEDED = STYLE Create a variable wich takes the --tertiary-color and inverts it  */
 
 /* button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 7px var(--tertiary-color-social-media);
