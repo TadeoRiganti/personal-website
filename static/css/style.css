@@ -280,6 +280,15 @@ button {
   color: inherit;
 }
 
+/* Only anchors styled as buttons */
+a.button {
+  display: inline-block;   /* makes padding and background work */
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* inherit text color unless overridden */
+  cursor: pointer;         /* button-like cursor */
+  box-sizing: border-box;  /* consistent sizing */
+}
+
 /* 8. Inherit fonts for form controls */
 
 input, button, textarea, select {
@@ -1092,7 +1101,7 @@ body.wiki-page :is(.ads) {
 }
 
 @media (min-width: 768px) {
-  .primary-header__link {
+  .primary-header__link, .primary-header__logo {
     padding: .5em 1em; /* more space on larger screens */
   }
 }
