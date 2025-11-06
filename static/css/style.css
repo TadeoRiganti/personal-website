@@ -312,19 +312,18 @@ h1, h2, h3, h4, h5, h6 {
 /* -------------------------------------------------
 |.. COLOR PALETTE */
 
-:focus {
-    outline: 2px solid var(--focus-color);
-}
+/* :focus {
+    outline: 1px solid var(--focus-color);
+} */
+ /* Deactivated by default as its function will be replaced by :hover styling*/
 
 :focus-visible {
-    outline: 2px solid var(--tab--focus-color);
+    outline: 3px solid var(--tab--focus-color);
 }
-/* Color for TAB navigation;  */
 
-
-/* button:focus, input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 7px var(--tertiary-color-social-media);
-} */
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--focus-color);
+}
  /* Adds a glow around the outline border  */
 
 /* |.... UTILITY CLASSES */
@@ -621,7 +620,7 @@ button, .button {
 .button--filled {
   color: var(--primary-color);
   background-color: var(--default-background-color);
-  outline: 1px solid var(--default-background-color);
+  /* outline: 1px solid var(--default-background-color); */
 }
 
 /* Modifier: Tonal 
@@ -630,7 +629,7 @@ button, .button {
 .button--tonal {
   color: hsl(from var(--default-background-color) h calc(s - 100) calc(l - 20));
   background-color: hsl(from var(--default-background-color) h calc(s - 100) calc(l + 60));
-  outline: 1px solid hsl(from var(--default-background-color) h calc(s - 100) calc(l + 60));
+  /* outline: 1px solid hsl(from var(--default-background-color) h calc(s - 100) calc(l + 60)); */
 }
 
 /* Modifier: Outline
@@ -639,8 +638,19 @@ button, .button {
 .button--outline {
   color: hsl(from var(--default-background-color) h calc(s - 100) calc(l -20 ));
   background-color: transparent; 
+  border-style:none;
   outline: 1px solid hsl(from var(--default-background-color) h calc(s - 100) calc(l + 30));
+
+    /* &:focus {
+        outline: 1px solid var(--focus-color);
+    } */
+
+    &:focus-visible {
+        outline: 3px solid var(--tab--focus-color);
+    } 
+    /* REFACTOR Find a way to not need this patch rule*/
 }
+
 
 
 /* |.... UTILITY CLASSES */ /* UPS! Inside Utility Classes I should arrange the rules, in 3 categories; aesthetic, layour and spacing.. but not like subcategories but order of redaction:
