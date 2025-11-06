@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
     outline: 3px solid var(--tab--focus-color);
 }
 
-button:focus, input:focus, select:focus, textarea:focus {
+button:focus, .button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 7px var(--focus-color);
 }
  /* Adds a glow around the outline border  */
