@@ -1086,15 +1086,10 @@ body.wiki-page :is(.ads) {
   display: inline-block; /* allows padding */
 
   &:hover {
-    background-color: white;
+    background-color: var(--foreground-color);
     filter: brightness(.95);
   }
 }
-
-.primary-header__link {
-    outline: 1px solid #ba1a1a;
-}
-/* Only to see layout*/
 
 .primary-header {
     height: var(--spacing-extra-large); /* 🔗1 */
