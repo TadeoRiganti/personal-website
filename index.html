@@ -28,8 +28,20 @@
     <header id="navbar" class="primary-header content-grid">
       <div class="primary-header__layout breakout">
       
+        
+
         <!-- Logo -->
-        <a href="index.html" class="primary-header__logo">Tadeo Riganti</a>
+          <div class="primary-header__logo">
+            <a href="../index.html" class="primary-header__logo-link">
+              <img src="/logo.svg" alt="Brand name" class="primary-header__logo-image">
+            </a>
+          </div>
+
+        <!-- Hamburger menu (tablet/mobile only) -->
+          <button class="primary-header__menu-toggle" aria-controls="primary-header__nav" aria-expanded="false">
+            <span class="primary-header__menu-icon">☰</span>
+            <span class="primary-header__menu-label">Menu</span>
+          </button>
       
         <!-- Navigation -->
         <nav class="primary-header__nav">
