@@ -64,9 +64,30 @@
       
     <main class="main">
       <section class="content-grid hero-banner center brand-color">
-        <h1>Hello world</h2>
+        <h1>Hello, world!</h2>
         <h2>This is my personal website</h2>
-        <p>Vainilla, modest, simple to use & dynamic</p>
+        <p>Simple to use, dynamic and <strong>interactive!</strong></p>
+        <div class="wider">
+          <div class="content">
+            <div class="wrapper">
+              <model-viewer
+              alt="Modelo 3D de un sofa de 3 cuerpos"
+              src="..\static\assets\sofa-3c.glb"
+              ar
+              camera-controls
+              camera-orbit="360deg 90deg 60%"
+              max-camera-orbit="Infinity 90deg auto"
+              min-camera-orbit="-Infinity 90deg auto"
+              disable-pan
+              disable-zoom
+              shadow-intensity="1"
+              tone-mapping="aces">
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+          
+        
       </section> 
 
       <section class="content-grid center">
