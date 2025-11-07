@@ -46,6 +46,8 @@
 |.. Main
 |.. Aside
 |.... Sidebar
+|...... Ads
+|...... Documents
 |...... Table of contents
 |.. Footer
 
@@ -1254,6 +1256,38 @@ aside h2 {
 
 
 /* |.... SIDEBAR */
+
+/* |...... ADS */
+
+
+
+/* |...... DOCUMENTS */
+
+/* Block */
+
+.doc-sidebar {
+    ___
+}
+
+/* Elements */
+
+.doc-sidebar__header {
+    ___
+}
+
+.doc-sidebar__title{
+    ___
+}
+
+.doc-sidebar__nav {
+    ___
+}
+
+.doc-sidebar__item {
+    ___
+}
+
+
 
 /* |...... TABLE OF CONTENTS */
 
