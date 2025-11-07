@@ -25,51 +25,86 @@
       - 'blog-page' → "Holy-grail" layout
       - 'wiki-page' → "Dashbord" layout -->
 
-    <header id="navbar" class="primary-header content-grid">
+    <!-- <header id="navbar" class="primary-header content-grid">
       <div class="primary-header__layout breakout">
       
-        <!-- Logo -->
+       
         <a href="../index.html" class="primary-header__logo">Tadeo Riganti</a>
       
-        <!-- Navigation -->
+       
         <nav class="primary-header__nav">
-        <ul class="primary-header__menu">
-          <li class="primary-header__item">
-              <a href="landing.html" class="primary-header__link">Landing</a>
-            </li>
-          <li class="primary-header__item">
-            <a href="blog-page.html" class="primary-header__link">Blog</a>
-          </li>
+          <ul class="primary-header__menu">
             <li class="primary-header__item">
-            <a href="wiki-page.html" class="primary-header__link">Wiki</a>
-          </li>
-        </ul>
+                <a href="landing.html" class="primary-header__link">Landing</a>
+              </li>
+            <li class="primary-header__item">
+              <a href="blog-page.html" class="primary-header__link">Blog</a>
+            </li>
+              <li class="primary-header__item">
+              <a href="wiki-page.html" class="primary-header__link">Wiki</a>
+            </li>
+          </ul>
         </nav>
       
       </div>
-    </header>
-      
+    </header> -->
+
+    <header id="navbar" class="primary-header content-grid">
+      <div class="primary-header__layout breakout">
+
+        <!-- Hamburger menu (tablet/mobile only) -->
+        <button class="primary-header__menu-toggle" aria-controls="primary-header__nav" aria-expanded="false">
+          <span class="primary-header__menu-icon">☰</span>
+          <span class="primary-header__menu-label">Menu</span>
+        </button>
+
+        <!-- Logo -->
+        <div class="primary-header__logo">
+          <a href="../index.html" class="primary-header__logo-link">
+            <img src="/logo.svg" alt="Brand name" class="primary-header__logo-image">
+          </a>
+        </div>
+
+        <!-- Navigation items -->
+        <nav class="primary-header__nav" id="primary-header__nav">
+          <ul class="primary-header__menu">
+            <li class="primary-header__item"><a href="#docs" class="primary-header__link">Docs</a></li>
+            <li class="primary-header__item"><a href="#blog" class="primary-header__link">Blog</a></li>
+            <li class="primary-header__item"><a href="#about" class="primary-header__link">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search -->
+        <div class="primary-header__search">
+          <form action="/search" method="get" class="primary-header__search-form">
+            <input type="text" name="q" class="primary-header__search-input" placeholder="Search…">
+            <button type="submit" class="primary-header__search-button">🔍</button>
+          </form>
+        </div>
+
+      </div>
+      </header>
     <div class="holy-grail">
 
-        <aside class="doc-sidebar">
-  <div class="doc-sidebar__header">
-    <h2 class="doc-sidebar__title">Documentation</h2>
-  </div>
+      <aside class="menu doc-sidebar">
+        <div class="doc-sidebar__header">
+          <h2 class="doc-sidebar__title">Documentation</h2>
+        </div>
 
-  <nav class="doc-sidebar__nav">
-    <ul class="doc-sidebar__list">
-      <li class="doc-sidebar__item">
-        <a href="#introduction" class="doc-sidebar__link">Introduction</a>
-      </li>
-      <li class="doc-sidebar__item">
-        <a href="#getting-started" class="doc-sidebar__link">Getting Started</a>
-      </li>
-      <li class="doc-sidebar__item">
-        <a href="#api" class="doc-sidebar__link">API Reference</a>
-      </li>
-    </ul>
-  </nav>
-</aside>
+        <nav class="doc-sidebar__nav">
+          <ul class="doc-sidebar__list">
+            <li class="doc-sidebar__item">
+              <a href="#introduction" class="doc-sidebar__link">Introduction</a>
+            </li>
+            <li class="doc-sidebar__item">
+              <a href="#getting-started" class="doc-sidebar__link">Getting Started</a>
+            </li>
+            <li class="doc-sidebar__item">
+              <a href="#api" class="doc-sidebar__link">API Reference</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
       
       <main class="main">
@@ -93,7 +128,7 @@
           </article>
         </main>
 
-      <aside class="sidebar">
+      <aside class="aside">
         <nav>
           <div class="toc-container">
             <h2 class="toc__title"> Table of contents</h2>
