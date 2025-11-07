@@ -1018,9 +1018,9 @@ body.wiki-page .content-grid {
     margin: 0 auto;
     display: grid;
     grid-template: 
-    "sidebar" 
-    "main" 
-    "ads";
+    "menu" 
+    "aside" 
+    "main";
 }
 /* In order to properly work, there has to be a <div> containing
 the main and at least one asides element. */
@@ -1029,8 +1029,8 @@ the main and at least one asides element. */
     grid-area: cover;
 }
   
-.sidebar {
-    grid-area: sidebar;
+.menu {
+    grid-area: menu;
     width: var(--aside-width);
 }
   
@@ -1038,8 +1038,8 @@ the main and at least one asides element. */
     grid-area: main;
 }
   
-.ads {
-    grid-area: ads;
+.aside{
+    grid-area: aside;
     width: var(--aside-width);
 }
 
@@ -1051,9 +1051,9 @@ the main and at least one asides element. */
 @media (min-width: 640px) {
     .holy-grail {
       grid-template:
-      "sidebar    main"
-      "ads        main" / 
-      auto        1fr;
+      "menu   aside"
+      "menu   main" / 
+       auto   1fr;
     }
   }
   
@@ -1062,16 +1062,16 @@ the main and at least one asides element. */
   @media (min-width: 960px) {
     .holy-grail {
       grid-template: 
-      "sidebar   main    ads" /
-      auto       1fr     auto ;
+      "menu   main   aside" /
+       auto   1fr    auto ;
     }
   }
 
  /* |.... ADAPTATIONS */
   
-body.wiki-page :is(.ads) {
+/* body.wiki-page :is(.ads) {
     display: none;
-}
+} */
 
 
 
@@ -1259,8 +1259,6 @@ aside h2 {
 
 /* |...... ADS */
 
-
-
 /* |...... DOCUMENTS */
 
 /* Block */
@@ -1291,12 +1289,11 @@ aside h2 {
 
 /* |...... TABLE OF CONTENTS */
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
     .toc-container {
         display: none;
     }
-}
-/* NOTE: Continue developing in 'dev-aside-toc' */
+} */
 
 /* |.. FOOTER */
 
