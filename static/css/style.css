@@ -619,7 +619,6 @@ button, .button {
 (ahestetic utility class)*/
 
 .button--tonal {
-  color: hsl(from var(--default-background-color) h calc(s - 100) calc(l - 20));
   background-color: hsl(from var(--default-background-color) h calc(s - 100) calc(l + 60));
   /* outline: 1px solid hsl(from var(--default-background-color) h calc(s - 100) calc(l + 60)); */
 }
@@ -858,6 +857,10 @@ body {
 
 /* MARGIN ELEMENTS */
 /* Inspired on Kevin Powell's video: https://www.youtube.com/watch?v=Gx0iZrN-0L4*/
+
+main {
+    min-height: 100vh;
+}
 
 main > *:not(:has(article)) > *:not(:first-child) {
     margin-block-start: var(--spacing-extra-small); /* 🔗6 */
