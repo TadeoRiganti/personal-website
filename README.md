@@ -210,6 +210,10 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 - https://phuctm97.com/
 - https://stephvanlinden.com/
 
+#### F) Wiki
+- https://www.electronjs.org/docs/latest
+- https://developer.mozilla.org/es/
+
 #### F) Contact 
 - https://adamgreenough.net/contact/ 
 
