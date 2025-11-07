@@ -42,7 +42,11 @@
 || Sitewide
 |.. Header
 |.... Principal navigation bar
-|.... Secondary navigation bar
+|...... Primary header
+|...... Logo
+|...... Menu items
+|...... Hamburguer menu
+|.......
 |.. Main
 |.. Aside
 |.... Sidebar
@@ -1084,6 +1088,23 @@ the main and at least one asides element. */
 
 /* |.... PRINCIPAL NAVIGATION BAR */
 
+.primary-header {
+    height: var(--spacing-extra-large); /* 🔗1 */
+    margin-block-end: auto;
+    background: var(--clr-accent-200);
+    color: var(--clr-primary-500);
+
+    /* From here I copied the solution from w3schools: 
+    https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp 
+    */
+    background-color: white; /* White background color */
+    position: fixed; /* Make it stick/fixed */
+    z-index: 999; /* Ensures it keeps at front of the page*/
+    width: 100%; /* Full width */
+    top: 0; /* Stay on top */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
 /* Reset list styles for the menu */
 .primary-header__menu {
   list-style: none;
@@ -1111,23 +1132,19 @@ the main and at least one asides element. */
   }
 }
 
+/* === Hamburger toggle button === */
 
-.primary-header {
-    height: var(--spacing-extra-large); /* 🔗1 */
-    margin-block-end: auto;
-    background: var(--clr-accent-200);
-    color: var(--clr-primary-500);
-
-    /* From here I copied the solution from w3schools: 
-    https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp 
-    */
-    background-color: white; /* White background color */
-    position: fixed; /* Make it stick/fixed */
-    z-index: 999; /* Ensures it keeps at front of the page*/
-    width: 100%; /* Full width */
-    top: 0; /* Stay on top */
-    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+.primary-header__menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* hidden by default (desktop) */
+  padding: 0.5rem;
 }
+
+
+
+
 
 .primary-header__layout {
     display: flex;
@@ -1143,9 +1160,6 @@ the main and at least one asides element. */
     flex-wrap: wrap;
     gap: max(3vw, .5rem); /* 3 */
 }
-
-
-/* |.... SECONDARY NAVIGATION BAR */
 
 
 /* -------------------------------------------------
