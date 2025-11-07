@@ -430,6 +430,16 @@ code {
     border-radius: var(--small-radius);
 }
 
+mark {
+    padding: .2em .4rem;
+    border-radius: var(--small-radius);
+
+    &.error {
+        background-color: hsl(from var(--error-color) h s calc(l + 50));
+        color: hsl(from var(--error-color) h s calc(l - 30));
+    }
+}
+
 
 /* |.... UTILITY CLASSES */
 
