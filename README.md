@@ -176,6 +176,10 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 - Blog: https://andrewhwanpark.github.io/brutalist-blog/2021/07/16/this-post-demonstrates-post-content-styles/
 - About me / Skill: Infography: https://tinyurl.com/5n7unf4p
 
+#### C) Tables:
+
+- https://tadeoriganti.github.io/Top-50-canciones-Instagram-en-Argentina/
+
 <br>
 
 ### WEBSITE ARCHITECTURE
@@ -216,7 +220,7 @@ _As for the Who, what and how, I'll rely on tag system, because the final idea i
 
 #### F) Contact 
 - https://adamgreenough.net/contact/
-- https://github.com/aleze89/One-page-CAC
+- https://aleze89.github.io/One-page-CAC/
 
 <br>
 
