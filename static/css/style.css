@@ -1112,7 +1112,72 @@ the main and at least one asides element. */
   padding: 0;
 }
 
-/* Base link styles */
+.primary-header .primary-header__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(3vw, .5rem); /* 3 */
+}
+
+
+/* === Hamburger toggle button === */
+
+.primary-header__menu-toggle {
+  background: none;       /* Remove default button background */
+  border: none;           /* Remove default button border */
+  cursor: pointer;        /* Show pointer cursor on hover */
+  display: none;          /* Hidden by default (desktop view) */
+  padding: 0.5rem;        /* Add clickable area around icon */
+}
+
+/* === Responsive behavior === */
+
+@media (max-width: 768px) {
+  .primary-header__menu-toggle {
+    display: block;       /* Show hamburger on tablet/mobile */
+  }
+
+  .primary-header__nav {
+    display: none;        /* Hide navigation by default */
+  }
+
+  .primary-header__nav--open {
+    display: block;       /* Show navigation when toggled open */
+  }
+}
+
+
+/* === Search component === */
+
+/* Default: show full search bar */
+.primary-header__search-form {
+  display: flex;
+  align-items: center;
+}
+
+.primary-header__search-input {
+  display: inline-block;   /* visible by default */
+}
+
+.primary-header__search-button {
+  display: inline-block;   /* magnifier icon always visible */
+}
+
+/* Mobile breakpoint: hide input, keep magnifier */
+@media (max-width: 600px) {
+  .primary-header__search-input {
+    display: none;         /* hide text field */
+  }
+
+  .primary-header__search-button {
+    display: inline-block; /* keep magnifier icon visible */
+  }
+}
+
+/* === Base link styles === */
+
 .primary-header__link, .primary-header__logo {
   border-radius: var(--large-radius);
   padding: .25em .5em;
@@ -1132,16 +1197,6 @@ the main and at least one asides element. */
   }
 }
 
-/* === Hamburger toggle button === */
-
-.primary-header__menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none; /* hidden by default (desktop) */
-  padding: 0.5rem;
-}
-
 
 
 
@@ -1152,14 +1207,6 @@ the main and at least one asides element. */
     justify-content: space-between;
 }
 
-.primary-header .primary-header__menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: max(3vw, .5rem); /* 3 */
-}
 
 
 /* -------------------------------------------------
