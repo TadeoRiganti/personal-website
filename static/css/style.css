@@ -774,6 +774,23 @@ This way, small mobile devices won't notice display issues */
     padding: var(--spacing-medium);
 }
 
+.card__title {
+  font-family: inherit;
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-medium);
+}
+
+.card__message {
+  display: block;
+  align-self: start;
+  overflow-wrap: break-word;     /* Ensures wrapping */
+}
+
+.card__button {
+  align-self: end;             /* Prevents vertical stretching */
+}
+
+
 #ranking-table  {
     padding: .5em var(--spacing-extra-small);
 }
