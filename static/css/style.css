@@ -614,7 +614,7 @@ table tbody tr a {
 
 .button-group {
     display: flex;
-    justify-content: inherit;
+    /* justify-content: center; */
     gap: var(--spacing-small);
 }
 
@@ -741,6 +741,7 @@ This way, small mobile devices won't notice display issues */
 /* Alignment */
 
 .center {
+    justify-content: center;
     text-align: center;
 }
 
