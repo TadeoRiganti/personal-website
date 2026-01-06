@@ -153,6 +153,10 @@
     --spacing-large: 2rem;
     --spacing-extra-large: 4rem; /* 🔗1 🔗2 🔗4 */
 
+    /* Breakpoints */
+    --break-point-tablet: 640px;
+    --break-point-pc: 960px;
+
     /* Breakout-grid layout */
     /* --grid-max-width: 80rem; */
     --grid-max-width: 75rem;
