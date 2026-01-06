@@ -8,16 +8,16 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   var navbar = document.getElementById("navbar");
-  var toc = document.getElementById("toc"); // your aside TOC element
+  var aside = document.querySelector("aside"); // your aside TOC element
 
   if (prevScrollpos > currentScrollPos) {
     // scrolling up → show navbar
     navbar.style.top = "0";
-    toc.style.top = "var(--spacing-extra-large)";
+    aside.style.top = "var(--spacing-extra-large)";
   } else {
     // scrolling down → hide navbar
     navbar.style.top = `-${navbar.offsetHeight}px`;
-    toc.style.top = "var(--spacing-large)";
+    aside.style.top = "var(--spacing-large)";
   }
   prevScrollpos = currentScrollPos;
 }

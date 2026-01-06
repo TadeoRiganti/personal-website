@@ -1339,7 +1339,7 @@ aside h2 {
     text-transform: uppercase;
 }
 
-aside .toc__nav {
+aside {
     position: sticky;
 	top: var(--spacing-large);
 	align-self: start;
