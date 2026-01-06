@@ -1079,7 +1079,7 @@ the main and at least one asides element. */
 /* |.... RESPONSIVE QUERIES */
 
 /* |...... TABLET */
-
+ /*--break-point-tablet*/
 @media (min-width: 640px) {
     .holy-grail {
       grid-template:
@@ -1090,7 +1090,7 @@ the main and at least one asides element. */
   }
   
   /* |...... DESKTOP PC */
-  
+   /*--break-point-pc*/
   @media (min-width: 960px) {
     .holy-grail {
       grid-template: 
@@ -1248,6 +1248,7 @@ the main and at least one asides element. */
     gap: calc(var(--spacing-extra-small) * 1.5);
 }
 
+ /*--break-point-tablet*/
 @media (min-width: 640px) {
     #cover .container {
         display: grid;
@@ -1306,6 +1307,7 @@ article section:first-child {
 }
 /* (Quick-fix) Removes top padding to the first section inside the article's main content*/
 
+ /*--break-point-tablet*/
 @media (min-width: 640px) {
     :is(body.blog-page, body.wiki-page) .main :is(section, .full-width) {
         border-radius: var(--left-corners);
@@ -1314,6 +1316,7 @@ article section:first-child {
 /* In tablet size viewport, only one side of the elements get in contact with the visor side.
 The rigth side doesn't get any border radius. */
 
+   /*--break-point-pc*/
 @media (min-width: 960px) {
     body.blog-page .main :is(section, .full-width) {
         border-radius: var(--all-corners);
@@ -1384,7 +1387,7 @@ aside {
 
 
 /* |...... TABLE OF CONTENTS */
-
+ /*--break-point-tablet*/
 /* @media (max-width: 640px) {
     .toc-container {
         display: none;
