@@ -1358,6 +1358,11 @@ aside {
     aside { position: static; /* no sticky behavior */ }
 }
 
+/* Tablet breakpoint: disable sticky */
+@media (max-width: 960px) {
+    aside:last-of-type { position: static; /* no sticky behavior on WIKI layout */ }
+}
+
 
 /* |.... SIDEBAR */
 
