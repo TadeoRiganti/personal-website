@@ -1353,6 +1353,11 @@ aside {
     transition: top 0.2s ease-in-out; /* Smoothly move the ToC when nav appears */
 }
 
+/* Mobile breakpoint: disable sticky */ 
+@media (max-width: 640px) {
+    aside { position: static; /* no sticky behavior */ }
+}
+
 
 /* |.... SIDEBAR */
 
