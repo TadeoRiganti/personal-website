@@ -4,20 +4,27 @@
 Source: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+/* HIDE NAVBAR ON SCROLL 
+Source: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp */
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   var navbar = document.getElementById("navbar");
-  var aside = document.querySelector("aside"); // your aside TOC element
+  var asides = document.querySelectorAll("aside"); // all aside TOC elements
 
   if (prevScrollpos > currentScrollPos) {
     // scrolling up → show navbar
     navbar.style.top = "0";
-    aside.style.top = "var(--spacing-extra-large)";
+    asides.forEach(function(aside) {
+      aside.style.top = "var(--spacing-extra-large)";
+    });
   } else {
     // scrolling down → hide navbar
     navbar.style.top = `-${navbar.offsetHeight}px`;
-    aside.style.top = "var(--spacing-large)";
+    asides.forEach(function(aside) {
+      aside.style.top = "var(--spacing-large)";
+    });
   }
   prevScrollpos = currentScrollPos;
 }
