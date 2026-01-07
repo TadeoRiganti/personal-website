@@ -1041,6 +1041,13 @@ body.wiki-page .content-grid {
 }
 /* Adjust the container width size in relation to the sidebar */
 
+body.wiki-page article {
+    margin-top: 12px; /* hardcoded */
+}
+/*FIX: Article Header title (h1) was partially hidden by the navbar.
+This little patch fix that, however is hard-coded.
+Ideally layout should lineup with asides, without this patch.
+Investigate why and fix it*/
 
 /* -------------------------------------------------
 |.. HOLY-GRAIL LAYOUT */
@@ -1167,14 +1174,13 @@ the main and at least one asides element. */
     display: block;       /* Show hamburger on tablet/mobile */
   }
 
-  .primary-header__nav {
-    display: none;        /* Hide navigation by default */
-  }
+    .primary-header__nav { display: none; 
+    } 
 
-  .primary-header__nav--open {
-    display: block;       /* Show navigation when toggled open */
-  }
+    .primary-header__nav--open { display: block; 
+    }
 }
+
 
 
 /* === Search component === */
