@@ -78,129 +78,126 @@
         </nav>
       </aside>
 
-      
-      <main class="main">
+      <main class="main content-grid">
           <article>
-              <section class="content-grid">
+              <h1>Wiki Articles</h1>
+              <section>
+                <h2>Overview</h2>
+                <p>
+                  A <strong>wiki article</strong> is a structured, collaborative document designed
+                  to present information in a clear, neutral, and verifiable way. Wiki articles
+                  are the fundamental building blocks of a wiki, a platform that allows multiple
+                  users to create, edit, and maintain content collectively.
+                </p>
+              </section>
+              <section>
+                <h2>Purpose of Wiki Articles</h2>
+                <p>Wiki articles exist to:</p>
+                <ul>
+                  <li>Document knowledge on a specific topic</li>
+                  <li>Provide factual, well-organized information</li>
+                  <li>Enable collaborative authorship and continuous improvement</li>
+                  <li>Serve as reference material rather than opinion pieces</li>
+                </ul>
+                </section>
+                <section>
+                  <h2>Common Structure</h2>
 
-                <h1>Model Viewer</h1>
-                <h2>About</h2>
+                  <h3>Title</h3>
+                  <p>
+                    The title clearly identifies the subject of the article. It should be concise,
+                    unambiguous, and use commonly recognized terminology.
+                  </p>
 
-                <p>Is a web component and tool for easily displaying interactive 3D models on websites and in augmented reality (AR) on supported devices, using the standardized glTF/GLB format for realistic, fast-loading visualizations. It simplifies integrating 3D content by providing an HTML tag that developers can use with minimal code, allowing users to rotate, zoom, and experience models in their own space via AR.</p>
-                <h2>Technicall stuff</h2>
-                <h3>Viewport and aspect ratio</h3>
-                <p>
-                  By default model-viewer components have an aspect ratio of 1:1. Height is the main attribute that this component will take into consideration to calculate its own size. 
-                </p>
-                <div class="card elevation-2 product">
-                  <div class="description">
-                      <h4>Aspect ratio issues</h4>
-                      <p>
-                        What was said before means that, wider objects will produce unwanted margins in the Y axis; above and below the object. 
-                      </p>
-                      <p>
-                        This is more noticeable in 1 column layouts. And as AR features are only displayed on movile devices, it's not a good thing to let it happen.
-                      </p>
-                  </div>
-                  <div class="content">
-                     <div class="wrapper">
-                        <model-viewer
-                        alt="Modelo 3D de un sofa de 3 cuerpos"
-                        src="..\static\assets\sofa-3c.glb"
-                        ar
-                        camera-controls
-                        camera-orbit="360deg 80deg 100%"
-                        max-camera-orbit="Infinity 94deg auto"
-                        min-camera-orbit="-Infinity 22.5deg auto"
-                        disable-pan
-                        disable-zoom
-                        shadow-intensity="1"
-                        tone-mapping="aces">
-                        </model-viewer>
-                     </div>
-                      <small><caption>This distance also dissociates their epigraphs </caption></small>
-                  </div>
-                </div>
+                  <h3>Lead Section</h3>
+                  <p>
+                    The lead section summarizes the topic and provides essential context, answering
+                    what the subject is, why it matters, and what key aspects are covered.
+                  </p>
 
-                <h3>Wrapper & utilitarian classes</h3>
-                <p>
-                  Model-viewer components doesn't have a default size. They inherit its size from its parent container.
-                </p>
-                <p>
-                  This means that we can use a '.wrapper' to manipulate it's size and aspect ratio via utilitarian classes (remember that by default viewports are square by default).
-                </p>
-                <div class="card elevation-2 product wider">
-                  <div class="description">
-                      <h4>Wrapper and aspect ratio</h4>
-                      <p>
-                        Just add one of the following classes wherever the 'product' class lives.
-                      </p>
-                        <ul>
-                          <li>'.wide' = 3:2</li>
-                          <li>'.wider' = 2:1</li>
-                          <li>'.narrow' = 2:3</li>
-                          <li>'.narrower' = 1:2</li>
-                        </ul>
-                  </div>
-                  <div class="content">
-                    <div class="wrapper">
-                      <model-viewer
-                      alt="Modelo 3D de un sofa de 3 cuerpos"
-                      src="..\static\assets\sofa-3c.glb"
-                      ar
-                      camera-controls
-                      camera-orbit="360deg 80deg"
-                      max-camera-orbit="Infinity 94deg auto"
-                      min-camera-orbit="-Infinity 22.5deg auto"
-                      disable-pan
-                      disable-zoom
-                      shadow-intensity="1"
-                      tone-mapping="aces">
-                      </model-viewer>
-                    </div>
-                    <small><caption>You can add an epigraph if its needed. </caption></small>
-                  </div>
-                </div>
+                  <h3>Body Sections</h3>
+                  <p>
+                    The main content is divided into sections and subsections, each addressing a
+                    specific aspect of the topic. Common sections include:
+                  </p>
+                  <ul>
+                    <li>History</li>
+                    <li>Background</li>
+                    <li>Features or characteristics</li>
+                    <li>Usage or applications</li>
+                    <li>Impact or significance</li>
+                  </ul>
 
-                <h3>Model-viewer attributes: Zoom</h3>
+                  <h3>References and Sources</h3>
+                  <p>
+                    Reliable sources are used to support factual claims. References allow readers
+                    to verify information and ensure credibility.
+                  </p>
+              </section>
+              <section>
+                <h2>Writing Style</h2>
+
+                  <h3>Neutral Point of View</h3>
+                  <p>
+                    Wiki articles are written from a neutral perspective, avoiding opinionated or
+                    promotional language.
+                  </p>
+
+                  <h3>Verifiability</h3>
+                  <p>
+                    Information included in a wiki article should be backed by published,
+                    trustworthy sources.
+                  </p>
+
+                  <h3>Clarity and Accessibility</h3>
+                  <p>
+                    Content is written to be understandable to a broad audience, with technical
+                    terms explained when necessary.
+                  </p>
+              </section>
+              <section>
+                <h2>Collaboration and Editing</h2>
+
+              <h3>Open Editing</h3>
+              <p>
+                Many wikis allow open editing, enabling contributors from around the world to
+                improve and expand articles.
+              </p>
+
+              <h3>Revision History</h3>
+              <p>
+                Each change made to a wiki article is typically recorded, allowing users to
+                review previous versions and track modifications.
+              </p>
+
+              <h3>Discussion Pages</h3>
+              <p>
+                Discussion pages provide a space for contributors to propose changes, debate
+                content, and resolve disputes.
+              </p>
+              </section>
+              <section>
+                <h2>Maintenance and Evolution</h2>
+              <p>
+                Wiki articles are continuously updated as new information becomes available,
+                errors are corrected, and community standards evolve.
+              </p>
+              </section>
+              <section>
+                <h2>Types of Wiki Articles</h2>
+                <ul>
+                  <li><strong>Stub articles:</strong> Short entries that require expansion</li>
+                  <li><strong>Featured articles:</strong> Comprehensive, high-quality entries</li>
+                  <li><strong>Disambiguation pages:</strong> Pages that clarify multiple meanings</li>
+                  <li><strong>List articles:</strong> Organized collections of related items</li>
+                </ul>
+              </section>
+              <section>
+                <h2>Conclusion</h2>
                 <p>
-                  Althought aspect-ratio is now correct, a new problem has arise; our 3D model has shrinked 😱!
-                </p>
-                <p>
-                  As you may guessed, solving the viewport's aspect-ratio issue, it's just half of the solution. Luckily this can be easily solve by adjusting the "zoom" of the virtual camera of the viewport.
-                </p>
-                <p>
-                  This attribute is implicit on the 'camera-orbit' attribute. by default there are 2 values, [X-axis] and [Y-axis], but we can add a third to control the zoom:
-                </p>
-                <div class="card elevation-2 product wider">
-                  <div class="description">
-                      <h4>Adjusting the zoom</h4>
-                      <ul>
-                        <li>No value = No zoom</li>
-                        <li>50% = doubles the zoom</li>
-                      </ul>
-                  </div>
-                  <div class="content">
-                    <div class="wrapper">
-                      <model-viewer
-                      alt="Modelo 3D de un sofa de 3 cuerpos"
-                      src="..\static\assets\sofa-3c.glb"
-                      ar
-                      camera-controls
-                      camera-orbit="360deg 80deg 60%"
-                      max-camera-orbit="Infinity 94deg auto"
-                      min-camera-orbit="-Infinity 22.5deg auto"
-                      disable-pan
-                      disable-zoom
-                      shadow-intensity="1"
-                      tone-mapping="aces">
-                      </model-viewer>
-                    </div>
-                    <small><caption>In this case we have used 60% zoom. </caption></small>
-                  </div>
-                </div>
-                <p>
-                  Sadly there is no way to change this via CSS rules, so it has to be hardcoded. In the future I'll have to craft a JS script.
+                  Wiki articles combine structured writing with collaborative editing to create
+                  a living body of knowledge. They are designed to be accurate, neutral, and
+                  adaptable over time.
                 </p>
               </section>
           </article>

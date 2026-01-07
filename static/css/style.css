@@ -236,6 +236,11 @@ https://www.joshwcomeau.com/css/custom-css-reset/
   margin: 0;
 }
 
+/* Te follloing rule fixes every issue I had with text, but I must refactor all other CSS that were built in order to fix those issues */
+/* *:not(h1, h2, h3, h4, h5, h6, p, ul, ol, li ) {
+  margin: 0;
+} */
+
 /* 3. Enable keyword animations */
 
 @media (prefers-reduced-motion: no-preference) {
