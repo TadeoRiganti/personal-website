@@ -923,7 +923,11 @@ article > * > *:not(:first-child) {
 /* PADDING SEMANTIC BLOCKS */
 
 section {
-    padding-block: min(5vh, var(--spacing-extra-large));
+    padding-block: min(5vh, var(--spacing-small));
+}
+
+.blog-page section {
+    padding-block: min(5vh, var(--spacing-medium));
 }
 
 .landing-page section {
