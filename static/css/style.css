@@ -1441,6 +1441,11 @@ footer section.site-footer__section {
     display: block;
 }
 
+.contact-form__input, .contact-form__textarea {
+    display: block;
+    width: 100%;
+}
+
 
 /* =================================================
 || COMPONENTS */
