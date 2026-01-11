@@ -1426,11 +1426,11 @@ aside {
 
 /* |...... LAYOUT */
 
-footer {
-    padding-block: var(--spacing-extra-small);
+
+footer section.site-footer__section {
+    --section-vh: 5vh;
+    --section-spacing: var(--spacing-small);
 }
-
-
 
 
 /* =================================================
