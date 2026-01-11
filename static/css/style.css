@@ -1432,6 +1432,10 @@ footer section.site-footer__section {
     --section-spacing: var(--spacing-small);
 }
 
+.contact-form__label {
+    display: block;
+}
+
 
 /* =================================================
 || COMPONENTS */
