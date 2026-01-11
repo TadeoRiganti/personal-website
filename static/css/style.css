@@ -169,7 +169,7 @@
     /* Auto-grid | 🔗5 */
     --grid-max-col-count: 3;
     --grid-min-col-size: 240px;
-    --grid-gap: var(--spacing-small); /* 🔗3 */   
+    --grid-gap: var(--spacing-largesmall); /* 🔗3 */   
 
     
     /* |.... STYLES */
@@ -882,6 +882,10 @@ section.hero-banner {
 
 .top-padding {
     padding-top: var(--spacing-large);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1em);
 }
 
 /* =================================================
