@@ -98,7 +98,7 @@
     --tertiary-color:   #00A650;
 
     --focus-color: var(--tertiary-color);
-    --tab--focus-color: #E81AE4;
+    --tab--focus-color: #17ff87;
     /* Safe color: https://davidmathlogic.com/colorblind/#%2300A650-%23E81AE4/ */
     /* ↑ REFACTOR NEEDED = STYLE Create a variable wich takes the --tertiary-color and inverts it automatically*/
 
@@ -295,8 +295,7 @@ button {
   color: inherit;
 }
 
-/* Only anchors styled as buttons */
-a.button {
+a.button, button {
   display: inline-block;   /* makes padding and background work */
   text-decoration: none;   /* remove underline */
   color: inherit;          /* inherit text color unless overridden */
