@@ -872,12 +872,13 @@ a quick-fix. */
     gap: var(--spacing-small); /* 🔗3 */   
   }
 
-  /* HERO */
+  /* HERO BANNER*/
+
 section.hero-banner {
-    height: calc(100vh - var(--spacing-extra-large)); /* TEMPORAL FIX */
+    height: calc(100vh); 
     align-content: center;
     justify-content: center;
-} /* IMPROVE */
+} 
 
 /* |...... SPACING CLASSES */
 
