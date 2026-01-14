@@ -1515,12 +1515,16 @@ model-viewer .annotation {
     aspect-ratio: 1 / 1;
 }
 
-.wider > .content > .wrapper > model-viewer {
+.wide > .content > .wrapper > model-viewer {
     aspect-ratio: 3 / 2;
 }
 
 .wider > .content > .wrapper > model-viewer {
     aspect-ratio: 2 / 1;
+}
+
+.widest > .content > .wrapper > model-viewer {
+    aspect-ratio: 3 / 1;
 }
 
 .narrow > .content > .wrapper > model-viewer {
@@ -1530,3 +1534,4 @@ model-viewer .annotation {
 .narrower > .content > .wrapper > model-viewer {
     aspect-ratio: 1 / 2;
 }
+
