@@ -897,9 +897,15 @@ section.hero-banner {
 |.. GENERAL RULES */
 
 /* Adds a top padding to ensure navbar doesn't hide content */ /* 🔗1 */
-#first-section:not(.hero-banner)  {
+#first-section:not(.hero-banner), #cover {
     padding-top: calc(var(--spacing-extra-large) + var(--section-spacing) ); 
 }
+
+/* Quickfix */
+.wiki-page {
+    padding-top: var(--spacing-extra-large); 
+}
+
 
 
 /* MARGIN ELEMENTS */
