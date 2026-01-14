@@ -272,7 +272,58 @@
       </section>
     </main>
 
-    <footer class="content-grid dark-theme">
+    <footer class="site-footer content-grid dark-theme top-padding">
+        <div class="site-footer__container auto-grid">
+          
+          <section class="site-footer__section site-footer__section--info flow">
+            <h2 class="site-footer__title">Let's connect</h2>
+            <p class="site-footer__text">
+              Get in touch to start a conversation about your project. You can expect a same-day response.
+            </p>
+            <ul class="site-footer__contact-list">
+              <li class="site-footer__contact-item">
+                <span class="site-footer__label">Phone:</span>
+                <a href="tel:+1234567890" class="site-footer__link">+1 (234) 567-890</a>
+              </li>
+              <li class="site-footer__contact-item">
+                <span class="site-footer__label">Email:</span>
+                <a href="mailto:hello@example.com" class="site-footer__link">hello@example.com</a>
+              </li>
+            </ul>
+            <br><mark class="error">REFACTOR Change list items to icons and present them with '.autogrid'.</mark>
+          </section>
+
+          <section class="site-footer__section site-footer__section--form flow">
+            <h2 class="site-footer__title">Contact me</h2>
+            <form action="#" method="POST" class="contact-form flow">
+              <div class="contact-form__group">
+                <label for="footer-name" class="contact-form__label">Name *</label>
+                <input type="text" id="footer-name" name="name" class="contact-form__input" required>
+              </div>
+
+              <div class="contact-form__group">
+                <label for="footer-email" class="contact-form__label">Email *</label>
+                <input type="email" id="footer-email" name="email" class="contact-form__input" required>
+              </div>
+
+              <div class="contact-form__group">
+                <label for="footer-message" class="contact-form__label">Message *</label>
+                <textarea id="footer-message" name="message" class="contact-form__textarea" rows="4" required></textarea>
+              </div>
+
+              <div class="contact-form__consent">
+                <input type="checkbox" id="footer-privacy" name="privacy" class="contact-form__checkbox" required>
+                <label for="footer-privacy" class="contact-form__consent-text">
+                  I understand my details will be used to process my enquiry in line with the privacy notice.*
+                </label>
+              </div>
+
+              <button type="submit" class="contact-form__submit button button--filled">Submit</button>
+            </form>
+            <br><mark class="error">STYLE Color '*' to red'.</mark>
+          </section>
+
+        </div>
       <p class="breakout">@ 2025-2024</p>  
     </footer>
 </body>
