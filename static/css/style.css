@@ -900,6 +900,14 @@ body {
     padding-top: var(--spacing-extra-large); /* 🔗1 */
 } /* FIX: Adds a top padding to ensure navbar doesn't hide content */
 
+/* 
+REFACTOR
+SCOPE: Whenever navbar gets hidden, if the first section doesn't have a white background, it shows a white blank where navbar was sitting.
+
+Find the simplest way to fix it.
+*/
+
+
 /* MARGIN ELEMENTS */
 /* Inspired on Kevin Powell's video: https://www.youtube.com/watch?v=Gx0iZrN-0L4*/
 
