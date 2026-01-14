@@ -896,16 +896,10 @@ section.hero-banner {
 /* -------------------------------------------------
 |.. GENERAL RULES */
 
-body {
-    padding-top: var(--spacing-extra-large); /* 🔗1 */
-} /* FIX: Adds a top padding to ensure navbar doesn't hide content */
-
-/* 
-REFACTOR
-SCOPE: Whenever navbar gets hidden, if the first section doesn't have a white background, it shows a white blank where navbar was sitting.
-
-Find the simplest way to fix it.
-*/
+/* Adds a top padding to ensure navbar doesn't hide content */ /* 🔗1 */
+#first-section {
+    padding-top: calc(var(--spacing-extra-large) + var(--section-spacing) ); 
+}
 
 
 /* MARGIN ELEMENTS */
@@ -1530,7 +1524,3 @@ model-viewer .annotation {
 .narrower > .content > .wrapper > model-viewer {
     aspect-ratio: 1 / 2;
 }
-
-
-
-
