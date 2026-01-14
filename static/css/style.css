@@ -1166,6 +1166,13 @@ the main and at least one asides element. */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
+/* Hides navigation bar on landing pages */
+body.landing-page > .primary-header {
+    top: -100px; /* hard-coded*/
+}
+/* REFACTOR Find a way to use a negative variable if possible */
+
+
 /* Reset list styles for the menu */
 .primary-header__menu {
   list-style: none;
