@@ -897,7 +897,7 @@ section.hero-banner {
 |.. GENERAL RULES */
 
 /* Adds a top padding to ensure navbar doesn't hide content */ /* 🔗1 */
-#first-section {
+#first-section:not(.hero-banner)  {
     padding-top: calc(var(--spacing-extra-large) + var(--section-spacing) ); 
 }
 
