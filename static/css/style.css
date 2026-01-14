@@ -516,13 +516,6 @@ a .logo{
 /*
 |.... NAVIGATION */
 
-#navbar { 
-    top: -100px; transition: top 0.3s ease;
-} 
-
-#navbar.visible {
-    top: 0;
-}
 
 
 /*
