@@ -471,8 +471,6 @@ mark {
 
 |... GENERAL */
 
-
-
 html {
     color-scheme: var(--color-scheme);
 }
@@ -515,6 +513,16 @@ a .logo{
   right: -10%;
 } */
 
+/*
+|.... NAVIGATION */
+
+#navbar { 
+    top: -100px; transition: top 0.3s ease;
+} 
+
+#navbar.visible {
+    top: 0;
+}
 
 
 /*
