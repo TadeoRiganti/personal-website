@@ -786,6 +786,13 @@ This way, small mobile devices won't notice display issues */
     padding: var(--spacing-medium);
 }
 
+/* QUICKFIX Dynamically change background color based on theme color*/
+/* REFACTOR Find a better way to handle color variation without needing to hard-code values, even if they are also variables.
+   I'm looking for something like var(--background-color) but from a given theme. */
+.dark-theme > * > .card  {
+    background-color: hsl(from var(--secondary-color) h s 20%);
+}
+
 .card > h2 {
   font-size: var(--font-size-medium);
 }
