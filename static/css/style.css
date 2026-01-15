@@ -944,7 +944,7 @@ section {
 }
 
 .blog-page section {
-    --section-spacing: var(--spacing-medium);
+    --section-spacing: var(--spacing-large);
 }
 
 .landing-page section {
