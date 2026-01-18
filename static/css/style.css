@@ -1212,14 +1212,30 @@ body.landing-page > .primary-header {
 
 @media (max-width: 768px) {
   .primary-header__menu-toggle {
-    display: block;       /* Show hamburger on tablet/mobile */
+    display: block;
   }
 
-    .primary-header__nav { display: none; 
-    } 
+  /* Use more specific selector to hide by default */
+  .primary-header__nav:not(.primary-header__nav--open) {
+    display: none;
+  }
 
-    .primary-header__nav--open { display: block; 
-    }
+  /* Show when open */
+  .primary-header__nav.primary-header__nav--open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--clr-accent-200);
+    padding: 1rem;
+  }
+  
+  /* Stack menu items vertically on mobile */
+  .primary-header__nav.primary-header__nav--open .primary-header__menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 
