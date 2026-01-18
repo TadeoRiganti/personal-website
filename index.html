@@ -17,7 +17,7 @@
 
     <!-- Scripts-->
     <script src="static\javascript\hide-navbar-on-scroll.js"></script>
-    <script src="static\javascript\hamburger-menu.js"></script>
+    <script src="static\javascript\hamburger-menu.js" defer></script>
     <script src="static\javascript\Experimental\Initially hidden navbar.js"></script>
 
     <title>Home - Beta test</title>
@@ -30,8 +30,6 @@
     <header id="navbar" class="primary-header content-grid">
       <div class="primary-header__layout breakout">
       
-        
-
         <!-- Logo -->
           <div class="primary-header__logo">
             <a href="index.html" class="primary-header__logo-link">
@@ -40,9 +38,9 @@
           </div>
 
         <!-- Hamburger menu (tablet/mobile only) -->
-          <button class="primary-header__menu-toggle" aria-controls="primary-header__nav" aria-expanded="false">
-            <span class="primary-header__menu-icon">☰</span>
-            <span class="primary-header__menu-label">Menu</span>
+          <button class="primary-header__menu-toggle" aria-controls="primary-header__nav" aria-expanded="false" aria-label="Toggle navigation menu">
+          <span class="primary-header__menu-icon" aria-hidden="true">☰</span>
+          <span class="primary-header__menu-label">Menu</span>
           </button>
       
         <!-- Navigation -->
