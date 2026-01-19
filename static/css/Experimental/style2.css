@@ -1,0 +1,182 @@
+/*
+================================== 
+GENERAL STYLE
+==================================
+*/
+
+
+/*
+---------------------------------- 
+VARIABLES
+----------------------------------
+*/
+
+:root {
+
+    /* COLOR PALETTE */
+
+    --primary-color:    white;
+    --secondary-color:  #252525;
+    --tertiary-color:   #00A650;
+
+}
+
+/*
+---------------------------------- 
+RESET
+----------------------------------
+Based on Jhon Corneau's solution: 
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+
+/* 1. Use a more-intuitive box-sizing model */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+
+* {
+  margin: 0;
+}
+
+/* Te follloing rule fixes every issue I had with text, but I must refactor all other CSS that were built in order to fix those issues */
+/* *:not(h1, h2, h3, h4, h5, h6, p, ul, ol, li ) {
+  margin: 0;
+} */
+
+/* 3. Enable keyword animations */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+  
+  /* Kevin Powell's adition
+  • Source: https://gist.github.com/Lego2012/7b7956734f2ab4a95fd0c311cd8bbe95 */
+
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+
+  line-height: calc(1em + 0.5rem);
+
+  /* 5. Improve text rendering */
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* I'm alredy using a display font */
+
+h1 {
+    font-weight: normal;
+}
+
+/* 6. Improve media defaults */
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Reset button's style */
+
+button {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+a.button, button {
+  display: inline-block;   /* makes padding and background work */
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* inherit text color unless overridden */
+  cursor: pointer;         /* button-like cursor */
+  box-sizing: border-box;  /* consistent sizing */
+}
+
+/* 8. Inherit fonts for form controls */
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 9. Avoid text overflows */
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* 10. Improve line wrapping */
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* 11. Create a root stacking context */
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/*
+================================== 
+GENERAL STYLE
+==================================
+*/
+
+/*
+================================== 
+LAYOUT
+==================================
+*/
+
+
+/*
+================================== 
+SITEWIDE
+==================================
+*/
+
+/*
+---------------------------------- 
+PRIMARY-HEADER
+----------------------------------
+*/
+
+.primary-header {}
+
+/* LOGO */
+
+.primary-header__logo {}
+
+.primary-header__logo-image {}
+
+/* NAVIGATION */
+
+.primary-header__nav {}
+
+.primary-header__menu {}
+
+.primary-header__menu-item {}
+
+.primary-header__menu-link {}
