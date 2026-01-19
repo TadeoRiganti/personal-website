@@ -171,10 +171,35 @@ LAYOUT
 ==================================
 */
 
-/* BREAKOUT CONTENT GRID */
+/* AUTO-GRID 
 
-/* -------------------------------------------------
-|.. BREAKOUT GRID LAYOUT
+Based on Kevin Powell's solution:
+• Codepen: https://codepen.io/kevinpowell/pen/GgRwqxJ
+• Explanation: https://www.youtube.com/watch?v=CHULPvkXIRo&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998
+*/
+
+.auto-grid {
+    /* calculations, do not touch */
+  --grid-col-size-calc: calc(
+    (100% - var(--grid-gap) * var(--grid-max-col-count)) /
+      var(--grid-max-col-count)
+  );
+  --grid-col-min-size-calc: min(
+    100%,
+    max(var(--grid-min-col-size), var(--grid-col-size-calc))
+  );
+
+  display: grid;
+  gap: var(--grid-gap);
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-col-min-size-calc), 1fr)
+  );
+} 
+
+
+/* BREAKOUT CONTENT GRID 
 
     Notes:
     Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
