@@ -1,11 +1,18 @@
 // Hamburger 
 
-// Based on Victor Diaz de Leon's codepen:
-// https://codepen.io/vxdiazdel/pen/wzvNGy
+// Wait until DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
 
-$(function() {
-  $('#hamburger').on('click', function() {
-    $(this).toggleClass('close');
-    $('#nav').toggleClass('visible');
-  });
+    hamburger.addEventListener('click', function () {
+        // Toggle classes
+        this.classList.toggle('close');
+        nav.classList.toggle('visible');
+
+        // Update accessibility state
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+    });
 });
+
