@@ -19,6 +19,27 @@ VARIABLES
     --secondary-color:  #252525;
     --tertiary-color:   #00A650;
 
+    /* LAYOUT */
+
+    /* SPACING */
+    --spacing-extra-small: 1em; 
+    --spacing-small: 1rem;   
+    --spacing-medium: 1.5rem;
+    --spacing-large: 2rem;
+    --spacing-extra-large: 4rem; 
+
+    /* BREAKPOINT */
+    --break-point-tablet: 640px;
+    --break-point-pc: 960px;
+
+    /* BREAKOUT CONTENT GRID */
+    --grid-max-width: 75rem;
+    --padding-inline: var(--spacing-small);
+
+    /* AUTO GRID */
+    --grid-max-col-count: 3;
+    --grid-min-col-size: 240px;
+    --grid-gap: var(--spacing-small); /* 🔗3 */   
 }
 
 /*
@@ -150,6 +171,58 @@ LAYOUT
 ==================================
 */
 
+/* BREAKOUT CONTENT GRID */
+
+/* -------------------------------------------------
+|.. BREAKOUT GRID LAYOUT
+
+    Notes:
+    Based on 'Breakout grid' (SMOL CSS) adaptation by Kevin Powell*
+    *) References::after
+        - Youtube: https://www.youtube.com/watch?v=c13gpBrnGEw
+        - Codepen: https://codepen.io/kevinpowell/pen/ExrZrrw
+*/
+
+.content-grid {
+    
+    --breakout-max-width: var(--grid-max-width);
+    /* Maximum width size for the breakout container */
+       
+    --content-max-width: var(--breakout-max-width) * 0.75;
+    /* Calculates the content's width*/
+      
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+    /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each gutter on the sides */
+    
+    display: grid;
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+    
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+    
+.content-grid > .full-width {
+  grid-column: full-width;
+    
+  display: grid;
+  grid-template-columns: inherit;
+}
+/* Allows to use the grid of it's PARENT container */
 
 /*
 ================================== 
@@ -193,4 +266,8 @@ PRIMARY-HEADER
 
 #hamburger.close .primary-header__toggle-icon {
   /* Add styles to animate into an "X" */
+}
+
+header {
+  background-color: lightgrey;
 }
