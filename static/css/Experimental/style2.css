@@ -180,3 +180,17 @@ PRIMARY-HEADER
 .primary-header__menu-item {}
 
 .primary-header__menu-link {}
+
+/* HAMBURGER MENU */
+
+#nav {
+  display: none;
+}
+
+#nav.visible {
+  display: block;
+}
+
+#hamburger.close .primary-header__toggle-icon {
+  /* Add styles to animate into an "X" */
+}

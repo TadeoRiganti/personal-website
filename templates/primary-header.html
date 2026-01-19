@@ -8,6 +8,10 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="..\static\css\Experimental\style2.css">
+
+  <!-- Scripts -->
+  <script src="..\static\javascript\Experimental\hamburger-menu2.js" defer></script>
+
 </head>
 
 <body>
@@ -19,12 +23,12 @@
       </a>
     </div>
     <!-- Hamburger menu -->
-    <button class="primary-header__toogle" aria-controls="primary-header__menu" aria-expanded="false">
+    <button id="hamburger" class="primary-header__toogle" aria-controls="primary-header__menu" aria-expanded="false">
       <span class="primary-header__toogle-icon" aria-hidden="true">☰</span></span>
       <span class="primary-header__togle-label">Menu</span>
     </button>
     <!-- Navigation -->
-    <nav class="primary-header__nav">
+    <nav id="nav" class="primary-header__nav">
       <ul class="primary-header__menu">
         <li class="primary-header__menu-item">
           <a href="#" class="primary-header__menu-link">Services</a>
