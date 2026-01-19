@@ -261,7 +261,11 @@ PRIMARY-HEADER
 ----------------------------------
 */
 
-.primary-header {}
+.primary-header {
+    height: min(var(--spacing-extra-large), auto);
+    margin-block-end: auto;
+}
+
 
 /* LOGO */
 
@@ -273,7 +277,12 @@ PRIMARY-HEADER
 
 .primary-header__nav {}
 
-.primary-header__menu {}
+/* .primary-header {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(3vw, var(--spacing-extra-small));
+} */
 
 .primary-header__menu-item {}
 
