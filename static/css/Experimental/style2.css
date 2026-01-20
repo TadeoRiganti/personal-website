@@ -289,13 +289,6 @@ PRIMARY-HEADER
 
 /* NAVIGATION */
 
-.primary-header__nav {
-  /* Extend */
-  grid-column: 1 / -1;
-  grid-row: 2;
-  width: 100%;
-}
-
 .primary-header__menu {
   grid-area: nav-menu;
 
