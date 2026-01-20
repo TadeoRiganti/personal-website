@@ -271,8 +271,6 @@ PRIMARY-HEADER
 }
 
 .primary-header__layout {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   align-items: start;
 
@@ -291,14 +289,6 @@ PRIMARY-HEADER
 .primary-header__logo-image {}
 
 /* NAVIGATION */
-
-
-.primary-header__nav-group {
-  background-color: lightgoldenrodyellow;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
 
 .primary-header__menu {
   grid-area: nav-menu;
