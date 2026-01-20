@@ -276,8 +276,7 @@ PRIMARY-HEADER
 
   display: grid;
   grid-template-areas: 
-  "logo        hamburger-menu"
-  "nav-menu    nav-menu";
+  "logo        hamburger-menu";
 }
 
 /* LOGO */
@@ -289,6 +288,13 @@ PRIMARY-HEADER
 .primary-header__logo-image {}
 
 /* NAVIGATION */
+
+.primary-header__nav {
+  /* Extend */
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+}
 
 .primary-header__menu {
   grid-area: nav-menu;
