@@ -286,16 +286,17 @@ PRIMARY-HEADER
 /* NAVIGATION */
 
 .primary-header__nav {
-
+  display: flex;
+  flex-direction: row;
 }
 
-.primary-header__menu-item {
+.primary-header__menu {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: max(5vw, 1rem);
+  gap: max(5vw, var(--spacing-extra-small));
 }
 
 .primary-header__menu-link {
@@ -335,4 +336,8 @@ header {
 
 .primary-header__layout {
   background-color: pink;
+}
+
+.primary-header__nav {
+  background-color: lightblue;
 }
