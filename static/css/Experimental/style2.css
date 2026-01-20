@@ -274,6 +274,7 @@ PRIMARY-HEADER
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-items: start;
 }
 
 /* LOGO */
