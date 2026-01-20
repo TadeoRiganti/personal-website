@@ -285,18 +285,23 @@ PRIMARY-HEADER
 
 /* NAVIGATION */
 
-.primary-header__nav {}
+.primary-header__nav {
 
-/* .primary-header {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: max(3vw, var(--spacing-extra-small));
-} */
+}
 
-.primary-header__menu-item {}
+.primary-header__menu-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(5vw, 1rem);
+}
 
-.primary-header__menu-link {}
+.primary-header__menu-link {
+    color: inherit;
+    text-decoration: none;
+}
 
 /* HAMBURGER MENU */
 
@@ -322,6 +327,12 @@ PRIMARY-HEADER
   }
 }
 
+/* !!!! AUXILIAR !!!!  */
+
 header {
   background-color: lightgrey;
+}
+
+.primary-header__layout {
+  background-color: pink;
 }
