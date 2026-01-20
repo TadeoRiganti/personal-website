@@ -297,8 +297,6 @@ PRIMARY-HEADER
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
   gap: max(5vw, var(--spacing-extra-small));
 }
 
@@ -308,6 +306,14 @@ PRIMARY-HEADER
 }
 
 /* HAMBURGER MENU */
+
+.primary-header__toggle-icon::before {
+  content: '☰';
+}
+
+#hamburger[aria-expanded="true"] .primary-header__toggle-icon::before {
+  content: '✕';
+}
 
 #nav {
   display: none;
@@ -321,10 +327,18 @@ PRIMARY-HEADER
   /* Add styles to animate into an "X" */
 }
 
+/* RESPONSIVE (FIRST-MOBILE) */
+
 @media (min-width: 768px) {
   #nav {
     display: block;
   }
+
+  .primary-header__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(5vw, var(--spacing-extra-small));
+}
     
   #hamburger {
     display: none;
