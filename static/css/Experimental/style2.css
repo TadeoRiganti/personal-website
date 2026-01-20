@@ -275,11 +275,18 @@ PRIMARY-HEADER
   align-items: center;
   justify-content: space-between;
   align-items: start;
+
+  display: grid;
+  grid-template-areas: 
+  "logo        hamburger-menu"
+  "nav-menu    nav-menu";
 }
 
 /* LOGO */
 
-.primary-header__logo {}
+.primary-header__logo {
+    grid-area: logo;
+}
 
 .primary-header__logo-image {}
 
@@ -294,6 +301,8 @@ PRIMARY-HEADER
 }
 
 .primary-header__menu {
+  grid-area: nav-menu;
+
   list-style: none;
   margin: 0;
   padding: 0;
@@ -306,6 +315,10 @@ PRIMARY-HEADER
 }
 
 /* HAMBURGER MENU */
+
+.primary-header__toggle-icon {
+  grid-area: hamburger-menu;
+}
 
 .primary-header__toggle-icon::before {
   content: '☰';
@@ -362,3 +375,10 @@ header {
 .primary-header__nav-group {
   background-color: lightgoldenrodyellow;
 }
+
+
+
+
+
+
+
