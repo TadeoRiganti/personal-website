@@ -261,11 +261,21 @@ PRIMARY-HEADER
 ----------------------------------
 */
 
+
 .primary-header {
-    height: min(var(--spacing-extra-large), auto);
-    margin-block-end: auto;
+  padding-block: var(--spacing-medium);
+  height: min(var(--spacing-extra-large), auto);
+  margin-block-end: var(--spacing-large);
+
+  display: grid;
+  grid
 }
 
+.primary-header__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /* LOGO */
 
@@ -300,6 +310,16 @@ PRIMARY-HEADER
 
 #hamburger.close .primary-header__toggle-icon {
   /* Add styles to animate into an "X" */
+}
+
+@media (min-width: 768px) {
+  #nav {
+    display: block;
+  }
+    
+  #hamburger {
+    display: none;
+  }
 }
 
 header {
