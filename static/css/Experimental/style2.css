@@ -287,8 +287,10 @@ PRIMARY-HEADER
 .primary-header__layout {
   display: grid;
   grid-template-areas:
-    "logo    hamburger-menu"
-    "nav     nav";
+    "logo   1fr  hamburger-menu"
+    "nav   nav  nav";
+  grid-template-columns: auto 1fr auto;
+
 }
 
 .primary-header__logo {
@@ -345,7 +347,7 @@ PRIMARY-HEADER
   .primary-header__menu {
     display: flex;
     flex-wrap: wrap;
-    gap: max(3vw, .5rem);
+    gap: max(5vw, var(--spacing-large));
   }
 }
 
