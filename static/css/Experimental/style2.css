@@ -199,6 +199,14 @@ LAYOUT
 ==================================
 */
 
+/* PADDING SEMANTIC BLOCKS */
+
+section {
+    --section-vh: 5vh;
+    --section-spacing: var(--spacing-small);
+    padding-block: min(var(--section-vh), var(--section-spacing));
+}
+
 /* BREAKOUT CONTENT GRID 
 
     Notes:
