@@ -362,12 +362,10 @@ Brutalist
   border-bottom: 1px solid #252525;
 }
 
-.primary-header__logo {
-  padding-block:  var(--spacing-extra-small);
-}
 
 .primary-header__menu-item,
-.primary-header__toggle {
+.primary-header__toggle,
+.primary-header__logo {
   padding: var(--spacing-extra-small) var(--spacing-small);
   border-radius: 8px;
 }
@@ -386,9 +384,15 @@ Brutalist
 .primary-header__menu-link,
 .primary-header__toggle-icon,
 .primary-header__logo img {
-  padding: 4px;
+
   background-color: white;
 }
+
+main {
+    min-height: 100vh;
+    padding-top: var(--spacing-large);
+}
+
 
 
 /* 
