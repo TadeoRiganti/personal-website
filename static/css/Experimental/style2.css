@@ -13,33 +13,34 @@ VARIABLES
 
 :root {
 
-    /* COLOR PALETTE */
+  /* COLOR PALETTE */
 
-    --primary-color:    white;
-    --secondary-color:  #252525;
-    --tertiary-color:   #00A650;
+  --primary-color: white;
+  --secondary-color: #252525;
+  --tertiary-color: #00A650;
 
-    /* LAYOUT */
+  /* LAYOUT */
 
-    /* SPACING */
-    --spacing-extra-small: 1em; 
-    --spacing-small: 1rem;   
-    --spacing-medium: 1.5rem;
-    --spacing-large: 2rem;
-    --spacing-extra-large: 4rem; 
+  /* SPACING */
+  --spacing-extra-small: 1em;
+  --spacing-small: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 4rem;
 
-    /* BREAKPOINT */
-    --break-point-tablet: 640px;
-    --break-point-pc: 960px;
+  /* BREAKPOINT */
+  --break-point-tablet: 640px;
+  --break-point-pc: 960px;
 
-    /* BREAKOUT CONTENT GRID */
-    --grid-max-width: 75rem;
-    --padding-inline: var(--spacing-small);
+  /* BREAKOUT CONTENT GRID */
+  --grid-max-width: 75rem;
+  --padding-inline: var(--spacing-small);
 
-    /* AUTO GRID */
-    --grid-max-col-count: 3;
-    --grid-min-col-size: 240px;
-    --grid-gap: var(--spacing-small); /* 🔗3 */   
+  /* AUTO GRID */
+  --grid-max-col-count: 3;
+  --grid-min-col-size: 240px;
+  --grid-gap: var(--spacing-small);
+  /* 🔗3 */
 }
 
 /*
@@ -53,7 +54,9 @@ https://www.joshwcomeau.com/css/custom-css-reset/
 
 /* 1. Use a more-intuitive box-sizing model */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -74,7 +77,7 @@ https://www.joshwcomeau.com/css/custom-css-reset/
   html {
     interpolate-size: allow-keywords;
   }
-  
+
   /* Kevin Powell's adition
   • Source: https://gist.github.com/Lego2012/7b7956734f2ab4a95fd0c311cd8bbe95 */
 
@@ -97,12 +100,16 @@ body {
 /* I'm alredy using a display font */
 
 h1 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 /* 6. Improve media defaults */
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -122,23 +129,38 @@ button {
   color: inherit;
 }
 
-a.button, button {
-  display: inline-block;   /* makes padding and background work */
-  text-decoration: none;   /* remove underline */
-  color: inherit;          /* inherit text color unless overridden */
-  cursor: pointer;         /* button-like cursor */
-  box-sizing: border-box;  /* consistent sizing */
+a.button,
+button {
+  display: inline-block;
+  /* makes padding and background work */
+  text-decoration: none;
+  /* remove underline */
+  color: inherit;
+  /* inherit text color unless overridden */
+  cursor: pointer;
+  /* button-like cursor */
+  box-sizing: border-box;
+  /* consistent sizing */
 }
 
 /* 8. Inherit fonts for form controls */
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 9. Avoid text overflows */
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
@@ -149,13 +171,19 @@ p {
   text-wrap: pretty;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /* 11. Create a root stacking context */
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -179,24 +207,17 @@ Based on Kevin Powell's solution:
 */
 
 .auto-grid {
-    /* calculations, do not touch */
-  --grid-col-size-calc: calc(
-    (100% - var(--grid-gap) * var(--grid-max-col-count)) /
-      var(--grid-max-col-count)
-  );
-  --grid-col-min-size-calc: min(
-    100%,
-    max(var(--grid-min-col-size), var(--grid-col-size-calc))
-  );
+  /* calculations, do not touch */
+  --grid-col-size-calc: calc((100% - var(--grid-gap) * var(--grid-max-col-count)) / var(--grid-max-col-count));
+  --grid-col-min-size-calc: min(100%,
+      max(var(--grid-min-col-size), var(--grid-col-size-calc)));
 
   display: grid;
   gap: var(--grid-gap);
 
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--grid-col-min-size-calc), 1fr)
-  );
-} 
+  grid-template-columns: repeat(auto-fit,
+      minmax(var(--grid-col-min-size-calc), 1fr));
+}
 
 
 /* BREAKOUT CONTENT GRID 
@@ -209,44 +230,38 @@ Based on Kevin Powell's solution:
 */
 
 .content-grid {
-    
-    --breakout-max-width: var(--grid-max-width);
-    /* Maximum width size for the breakout container */
-       
-    --content-max-width: var(--breakout-max-width) * 0.75;
-    /* Calculates the content's width*/
-      
-    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
-    /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each gutter on the sides */
-    
-    display: grid;
-    grid-template-columns:
-      [full-width-start] minmax(var(--padding-inline), 1fr)
-      [breakout-start] minmax(0, var(--breakout-size))
-      [content-start] min(
-        100% - (var(--padding-inline) * 2),
-        var(--content-max-width)
-      )
-      [content-end]
-      minmax(0, var(--breakout-size)) [breakout-end]
-      minmax(var(--padding-inline), 1fr) [full-width-end];
+
+  --breakout-max-width: var(--grid-max-width);
+  /* Maximum width size for the breakout container */
+
+  --content-max-width: var(--breakout-max-width) * 0.75;
+  /* Calculates the content's width*/
+
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+  /* Calculates the relative size of each extra space of the breakout width size: Substract the content width of the breakout width and divide it by half for each gutter on the sides */
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--padding-inline) * 2),
+      var(--content-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
 }
 
-.content-grid > :not(.breakout, .full-width),
-.full-width > :not(.breakout, .full-width) {
-    grid-column: content;
+.content-grid> :not(.breakout, .full-width),
+.full-width> :not(.breakout, .full-width) {
+  grid-column: content;
 }
-    
-.content-grid > .breakout {
-    grid-column: breakout;
+
+.content-grid>.breakout {
+  grid-column: breakout;
 }
-    
-.content-grid > .full-width {
+
+.content-grid>.full-width {
   grid-column: full-width;
-    
+
   display: grid;
   grid-template-columns: inherit;
 }
+
 /* Allows to use the grid of it's PARENT container */
 
 /*
@@ -271,9 +286,9 @@ PRIMARY-HEADER
 
 .primary-header__layout {
   display: grid;
-  grid-template-areas: 
-  "logo    hamburger-menu"
-  "nav     nav";
+  grid-template-areas:
+    "logo    hamburger-menu"
+    "nav     nav";
 }
 
 .primary-header__logo {
@@ -284,6 +299,11 @@ PRIMARY-HEADER
   grid-area: hamburger-menu;
 }
 
+.primary-header__toggle-icon {
+  display: block;
+  justify-self: right;
+}
+
 .primary-header__toggle-icon::before {
   content: '☰';
 }
@@ -292,9 +312,8 @@ PRIMARY-HEADER
   content: '✕';
 }
 
-
 .primary-header__nav {
-    grid-area: nav;
+  grid-area: nav;
 }
 
 .primary-header__menu {
@@ -304,6 +323,30 @@ PRIMARY-HEADER
 
 .primary-header__menu-item {
   list-style-type: none;
+}
+
+/* Responsive (Tablet & Desktop) */
+
+@media (min-width: 640px) {
+  #nav {
+    display: block;
+  }
+
+  .primary-header__layout {
+    grid-template-areas:
+      "logo 1fr  nav";
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .primary-header__toggle {
+    display: none;
+  }
+
+  .primary-header__menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(3vw, .5rem);
+  }
 }
 
 /* 
