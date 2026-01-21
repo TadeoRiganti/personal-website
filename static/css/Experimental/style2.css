@@ -347,8 +347,27 @@ PRIMARY-HEADER
   .primary-header__menu {
     display: flex;
     flex-wrap: wrap;
-    gap: max(5vw, var(--spacing-large));
+    gap: max(5vw, var(--spacing-small));
   }
+}
+
+/*
+================================== 
+Brutalist
+==================================
+*/
+
+
+.primary-header {
+  border-bottom: 1px solid #252525;
+}
+
+.primary-header__menu-item {
+  padding: var(--spacing-small) var(--spacing-extra-small);
+}
+
+.primary-header__menu-item:hover {
+  background-color: lightcyan;
 }
 
 /* 
@@ -359,7 +378,7 @@ PRIMARY-HEADER
 
 /* Colors */
 
-.primary-header {
+/* .primary-header {
   background-color: aliceblue;
 }
 
@@ -389,4 +408,4 @@ PRIMARY-HEADER
 
 .primary-header__menu-link {
   background-color: lightskyblue;
-}
+} */
