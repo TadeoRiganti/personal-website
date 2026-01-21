@@ -199,6 +199,15 @@ LAYOUT
 ==================================
 */
 
+.top-padding {
+    padding-top: var(--spacing-large);
+}
+
+main > * > * + *,
+.flow > * + * {
+  margin-top: var(--flow-spacing, var(--spacing-extra-small));
+}
+
 /* PADDING SEMANTIC BLOCKS */
 
 section {
