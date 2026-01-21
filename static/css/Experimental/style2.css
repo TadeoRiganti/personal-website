@@ -261,51 +261,26 @@ PRIMARY-HEADER
 ----------------------------------
 */
 
+#nav {
+  display: none;
+}
 
-.primary-header {
-  padding-block: var(--spacing-medium);
-  height: min(var(--spacing-extra-large), auto);
-  margin-block-end: var(--spacing-large);
-
-  display: grid;
+#nav.visible {
+  display: block;
 }
 
 .primary-header__layout {
-  justify-content: space-between;
-  align-items: start;
-
   display: grid;
   grid-template-areas: 
-  "logo        hamburger-menu";
+  "logo    hamburger-menu"
+  "nav     nav";
 }
-
-/* LOGO */
 
 .primary-header__logo {
-    grid-area: logo;
+  grid-area: logo;
 }
 
-.primary-header__logo-image {}
-
-/* NAVIGATION */
-
-.primary-header__menu {
-  grid-area: nav-menu;
-
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: max(5vw, var(--spacing-extra-small));
-}
-
-.primary-header__menu-link {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* HAMBURGER MENU */
-
-.primary-header__toggle-icon {
+.primary-header__toggle {
   grid-area: hamburger-menu;
 }
 
@@ -317,57 +292,56 @@ PRIMARY-HEADER
   content: '✕';
 }
 
-#nav {
-  display: none;
+
+.primary-header__nav {
+    grid-area: nav;
 }
 
-#nav.visible {
-  display: block;
+.primary-header__menu {
+  padding: 0;
+  margin: 0;
 }
 
-#hamburger.close .primary-header__toggle-icon {
-  /* Add styles to animate into an "X" */
+.primary-header__menu-item {
+  list-style-type: none;
 }
 
-/* RESPONSIVE (FIRST-MOBILE) */
+/* 
+!!!!!!!!!!!!!!!!
+    AUXILIAR 
+!!!!!!!!!!!!!!!!
+*/
 
-@media (min-width: 768px) {
-  #nav {
-    display: block;
-  }
+/* Colors */
 
-  .primary-header__menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: max(5vw, var(--spacing-extra-small));
-}
-    
-  #hamburger {
-    display: none;
-  }
-}
-
-/* !!!! AUXILIAR !!!!  */
-
-header {
-  background-color: lightgrey;
+.primary-header {
+  background-color: aliceblue;
 }
 
 .primary-header__layout {
-  background-color: pink;
+  background-color: rgb(223, 240, 255);
 }
 
-.primary-header__nav {
-  background-color: lightblue;
+.primary-header__logo {
+  background-color: lightgreen;
 }
 
-.primary-header__nav-group {
+.primary-header__toggle {
+  background-color: bisque;
+}
+
+.primary-header__menu {
   background-color: lightgoldenrodyellow;
 }
 
+.primary-header__menu-item {
+  background-color: lightcyan;
+}
 
+.primary-header__menu-item:hover {
+  background-color: lightblue;
+}
 
-
-
-
-
+.primary-header__menu-link {
+  background-color: lightskyblue;
+}
