@@ -348,6 +348,27 @@ PRIMARY-HEADER
 }
 
 /*
+---------------------------------- 
+PRIMARY-HEADER
+----------------------------------
+*/
+
+footer section.site-footer__section {
+    --section-vh: 5vh;
+    --section-spacing: var(--spacing-small);
+}
+
+.contact-form__label {
+    display: block;
+}
+
+.contact-form__input, .contact-form__textarea {
+    display: block;
+    width: 100%;
+}
+
+
+/*
 ================================== 
 Brutalist
 ==================================
