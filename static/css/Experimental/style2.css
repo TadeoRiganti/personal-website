@@ -13,7 +13,7 @@ VARIABLES
 
 :root {
 
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* COLOR PALETTE */
 
@@ -202,6 +202,36 @@ h6 {
 ================================== 
 GENERAL STYLE
 ==================================
+*/
+
+/*
+---------------------------------- 
+ELEMENTS
+----------------------------------
+*/
+
+/* TOOGLE SWITCH */
+
+.theme-toggle {
+  /* font-size: 32px; */
+  /* border: 1px solid var(--secondary-color); */
+  background-color: transparent;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.theme-toggle__icon::before {
+  content: '☼';
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle__icon::before {
+  content: '☾';
+}
+
+/*
+---------------------------------- 
+UTILITARIAN CLASSES
+----------------------------------
 */
 
 /* Aehestetic classes */
@@ -414,7 +444,7 @@ footer section.site-footer__section {
 
 /* FIX */
 .top-padding--small {
-    margin-block-start: var(--spacing-extra-small);
+  margin-block-start: var(--spacing-extra-small);
 }
 
 
