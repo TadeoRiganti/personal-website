@@ -214,7 +214,7 @@ main > * > * + *,
 section {
     --section-vh: 5vh;
     --section-spacing: var(--spacing-small);
-    padding-block: min(var(--section-vh), var(--section-spacing));
+    padding-block: max(var(--section-vh), var(--section-spacing));
 }
 
 
@@ -406,6 +406,11 @@ Brutalist
 .primary-header {
   border-bottom: 1px solid #252525;
 }
+
+footer {
+  border-top: 1px solid #252525;
+}
+
 
 
 .primary-header__menu-item,
