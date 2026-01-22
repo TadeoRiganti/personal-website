@@ -212,6 +212,10 @@ main>*>*+*,
   margin-top: var(--flow-spacing, var(--spacing-extra-small));
 }
 
+/* main {
+  padding-block: var(--spacing-medium);
+} */
+
 
 /* PADDING SEMANTIC BLOCKS */
 
@@ -435,20 +439,16 @@ button,
 .primary-header__logo:hover,
 button:hover,
 .button:hover {
-
   background-image: var(--dot-pattern);
   background-size: var(--dot-spacing);
 }
 
-.primary-header__menu-link,
-.primary-header__toggle-icon,
-.primary-header__logo img,
-.contact-form__submit,
-button>span,
-.button {
-  background-color: white;
-}
 
 main {
   min-height: 100vh;
+}
+
+.dot {
+  background-image: var(--dot-pattern);
+  background-size: var(--dot-spacing);
 }
