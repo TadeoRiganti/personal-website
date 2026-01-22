@@ -37,6 +37,11 @@ VARIABLES
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
 
+    /* LINE HEIGHT */
+  --line-height-tight: calc(1em + var(--spacing-extra-small) * 0.1);
+  --line-height-normal: calc(1em + var(--spacing-small)/2);
+  --line-height-relaxed: calc(1em + var(--spacing-small));
+
   /* BREAKPOINT */
   --break-point-tablet: 640px;
   --break-point-pc: 960px;
@@ -101,14 +106,18 @@ https://www.joshwcomeau.com/css/custom-css-reset/
 body {
   /* 4. Add accessible line-height */
 
-  line-height: calc(1em + 0.5rem);
+  line-height: var(--line-height-normal);
 
   /* 5. Improve text rendering */
 
   -webkit-font-smoothing: antialiased;
 }
 
-/* I'm alredy using a display font */
+/* 4.b Add accessible line-height to headers */
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-tight);
+}
+
 
 /* h1 {
   font-weight: normal;
