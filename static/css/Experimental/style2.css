@@ -350,6 +350,12 @@ PRIMARY-HEADER
   grid-area: logo;
 }
 
+.primary-header__logo-link {
+  display: flex;
+  gap: calc(var(--spacing-extra-small) /2);
+  align-items: center;
+}
+
 /* DARK-MODE */
 
         .primary-header__theme-toggle {
