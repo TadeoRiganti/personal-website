@@ -13,11 +13,20 @@ VARIABLES
 
 :root {
 
+  color-scheme: light dark;
+
   /* COLOR PALETTE */
 
   --primary-color: white;
   --secondary-color: #252525;
   --tertiary-color: #00A650;
+
+  /* Define a radial gradient to create a single dot. 
+     'circle at center' ensures the dot is centered within its tile.
+     '1px' is the dot size, 'transparent 0' makes the rest of the tile transparent. */
+  --dot-pattern: radial-gradient(circle at center, #000000 .5px, transparent 0);
+  /* Define the size of the repeating background tile; spacing between dot centers. */
+  --dot-spacing: 4px 4px;
 
   /* LAYOUT */
 
@@ -66,11 +75,6 @@ https://www.joshwcomeau.com/css/custom-css-reset/
   margin: 0;
 }
 
-/* Te follloing rule fixes every issue I had with text, but I must refactor all other CSS that were built in order to fix those issues */
-/* *:not(h1, h2, h3, h4, h5, h6, p, ul, ol, li ) {
-  margin: 0;
-} */
-
 /* 3. Enable keyword animations */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -99,9 +103,9 @@ body {
 
 /* I'm alredy using a display font */
 
-h1 {
+/* h1 {
   font-weight: normal;
-}
+} */
 
 /* 6. Improve media defaults */
 
@@ -123,7 +127,7 @@ button {
   text-align: inherit;
   background: none;
   box-shadow: none;
-  padding: 0;
+  /* padding: 0; */
   cursor: pointer;
   border: none;
   color: inherit;
@@ -200,11 +204,11 @@ LAYOUT
 */
 
 .top-padding {
-    padding-top: var(--spacing-large);
+  padding-top: var(--spacing-large);
 }
 
-main > * > * + *,
-.flow > * + * {
+main>*>*+*,
+.flow>*+* {
   margin-top: var(--flow-spacing, var(--spacing-extra-small));
 }
 
@@ -212,33 +216,27 @@ main > * > * + *,
 /* PADDING SEMANTIC BLOCKS */
 
 section {
-    --section-vh: 5vh;
-    --section-spacing: var(--spacing-small);
-    padding-block: max(var(--section-vh), var(--section-spacing));
+  --section-vh: 5vh;
+  --section-spacing: var(--spacing-small);
+  padding-block: max(var(--section-vh), var(--section-spacing));
 }
 
 
 /* AUTO GRID */
 
 .auto-grid {
-    /* calculations, do not touch */
-  --grid-col-size-calc: calc(
-    (100% - var(--grid-gap) * var(--grid-max-col-count)) /
-      var(--grid-max-col-count)
-  );
-  --grid-col-min-size-calc: min(
-    100%,
-    max(var(--grid-min-col-size), var(--grid-col-size-calc))
-  );
+  /* calculations, do not touch */
+  --grid-col-size-calc: calc((100% - var(--grid-gap) * var(--grid-max-col-count)) / var(--grid-max-col-count));
+  --grid-col-min-size-calc: min(100%,
+      max(var(--grid-min-col-size), var(--grid-col-size-calc)));
 
   display: grid;
   gap: var(--grid-gap);
 
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--grid-col-min-size-calc), 1fr)
-  );
-} 
+  grid-template-columns: repeat(auto-fit,
+      minmax(var(--grid-col-min-size-calc), 1fr));
+}
+
 /* Kevin Powell's solution:
 • Codepen: https://codepen.io/kevinpowell/pen/GgRwqxJ
 • Explanation: https://www.youtube.com/watch?v=CHULPvkXIRo&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998 */
@@ -382,17 +380,18 @@ PRIMARY-HEADER
 */
 
 footer section.site-footer__section {
-    --section-vh: 5vh;
-    --section-spacing: var(--spacing-small);
+  --section-vh: 5vh;
+  --section-spacing: var(--spacing-small);
 }
 
 .contact-form__label {
-    display: block;
+  display: block;
 }
 
-.contact-form__input, .contact-form__textarea {
-    display: block;
-    width: 100%;
+.contact-form__input,
+.contact-form__textarea {
+  display: block;
+  width: 100%;
 }
 
 
@@ -401,6 +400,11 @@ footer section.site-footer__section {
 Brutalist
 ==================================
 */
+
+button:not(#hamburger),
+.button:not(#hamburger) {
+  border: 1px solid #000;
+}
 
 
 .primary-header {
@@ -412,32 +416,34 @@ footer {
 }
 
 
-
 .primary-header__menu-item,
 .primary-header__toggle,
-.primary-header__logo {
-  padding: var(--spacing-extra-small) var(--spacing-small);
-  border-radius: 8px;
+.primary-header__logo,
+button,
+.button {
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  border-radius: 4px;
 }
 
 .primary-header__menu-item:hover,
 .primary-header__toggle:hover,
-.primary-header__logo:hover {
-  /* Define a radial gradient to create a single dot. 
-     'circle at center' ensures the dot is centered within its tile.
-     '1px' is the dot size, 'transparent 0' makes the rest of the tile transparent. */
-  background-image: radial-gradient(circle at center, #000000 1px, transparent 0);
-  /* Define the size of the repeating background tile; spacing between dot centers. */
-  background-size: 4px 4px;
+.primary-header__logo:hover,
+button:hover,
+.button:hover {
+
+  background-image: var(--dot-pattern);
+  background-size: var(--dot-spacing);
 }
 
 .primary-header__menu-link,
 .primary-header__toggle-icon,
-.primary-header__logo img {
-
+.primary-header__logo img,
+.contact-form__submit,
+button>span,
+.button {
   background-color: white;
 }
 
 main {
-    min-height: 100vh;
+  min-height: 100vh;
 }
