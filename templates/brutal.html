@@ -23,6 +23,10 @@
         <a href="" class="primary-header__logo-link">
           <img src="logo.png" alt="Brutal" class="primary-header__logo-image"></a>
       </div>
+      <!-- Color-theme button -->
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-toggle__icon"></span>
+      </button>
       <!-- Hamburger menu -->
       <button id="hamburger" class="primary-header__toggle" aria-controls="primary-header__menu" aria-expanded="false">
         <span class="primary-header__toggle-icon" aria-hidden="true"></span>
@@ -49,17 +53,13 @@
 
   <main class="content-grid">
     <section>
-    <button 
-        class="theme-toggle" 
-        onclick="toggleTheme()"
-        aria-label="Toggle theme"
-        aria-pressed="false">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" aria-pressed="false">
         <span class="theme-toggle__icon"></span>
-    </button>
+      </button>
     </section>
     <section>
-      <h1>This is a Brutalist Website.</h1>
-      <p>And it's fucking functional.</p>
+      <h1>This is a Neo-Brutalist Website.</h1>
+      <p>And it's fucking awesome</p>
       <p>
         You probably think your 15MB parallax homepage with "smooth scrolling" is special. You think your rounded
         corners and soft gradients make people feel safe. <strong>Wrong.</strong>
