@@ -340,8 +340,8 @@ PRIMARY-HEADER
 .primary-header__layout {
   display: grid;
   grid-template-areas:
-    "logo   1fr  hamburger-menu"
-    "nav   nav  nav";
+    "logo   1fr  hamburger-menu dark-mode"
+    "nav   nav  nav nav";
   grid-template-columns: auto 1fr auto;
 
 }
@@ -353,6 +353,8 @@ PRIMARY-HEADER
 /* DARK-MODE */
 
         .primary-header__theme-toggle {
+            grid-area: dark-mode;
+
             background-color: transparent;
             color: var(--secondary-color);
             cursor: pointer;
@@ -407,7 +409,7 @@ PRIMARY-HEADER
 
   .primary-header__layout {
     grid-template-areas:
-      "logo 1fr  nav";
+      "logo 1fr  nav dark-mode";
     grid-template-columns: auto 1fr auto;
   }
 
