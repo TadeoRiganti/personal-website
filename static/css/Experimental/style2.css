@@ -430,7 +430,7 @@ PRIMARY-HEADER
   .primary-header__menu {
     display: flex;
     flex-wrap: wrap;
-    gap:  clamp(var(--spacing-extra-small), 3vw, var(--spacing-small));
+    /* gap:  clamp(var(--spacing-extra-small), 3vw, var(--spacing-small)); */
   }
 }
 
