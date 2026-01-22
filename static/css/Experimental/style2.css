@@ -476,8 +476,7 @@ Brutalist
 ==================================
 */
 
-button:not(#hamburger),
-.button:not(#hamburger) {
+button:not(.primary-header button) {
   border: 1px solid #000;
 }
 
