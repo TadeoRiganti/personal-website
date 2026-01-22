@@ -210,23 +210,6 @@ ELEMENTS
 ----------------------------------
 */
 
-/* TOOGLE SWITCH */
-
-.theme-toggle {
-  /* font-size: 32px; */
-  /* border: 1px solid var(--secondary-color); */
-  background-color: transparent;
-  color: var(--secondary-color);
-  cursor: pointer;
-}
-
-.theme-toggle__icon::before {
-  content: '☼';
-}
-
-.theme-toggle[aria-pressed="true"] .theme-toggle__icon::before {
-  content: '☾';
-}
 
 /*
 ---------------------------------- 
@@ -366,6 +349,24 @@ PRIMARY-HEADER
 .primary-header__logo {
   grid-area: logo;
 }
+
+/* DARK-MODE */
+
+        .primary-header__theme-toggle {
+            background-color: transparent;
+            color: var(--secondary-color);
+            cursor: pointer;
+        }
+
+        .primary-header__theme-toggle-icon::before {
+            content: '☼';
+        }
+
+        .primary-header__theme-toggle[aria-pressed="true"] .primary-header__theme-toggle-icon::before {
+            content: '☾';
+        }
+
+/* HAMBURGER MENU */
 
 .primary-header__toggle {
   grid-area: hamburger-menu;
