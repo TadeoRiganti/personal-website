@@ -24,7 +24,7 @@ VARIABLES
   /* Define a radial gradient to create a single dot. 
      'circle at center' ensures the dot is centered within its tile.
      '1px' is the dot size, 'transparent 0' makes the rest of the tile transparent. */
-  --dot-pattern: radial-gradient(circle at center, #000000 .5px, transparent 0);
+  --dot-pattern: radial-gradient(circle at center, var(--secondary-color) .5px, transparent 0);
   /* Define the size of the repeating background tile; spacing between dot centers. */
   --dot-spacing: 4px 4px;
 
@@ -50,6 +50,13 @@ VARIABLES
   --grid-min-col-size: 240px;
   --grid-gap: var(--spacing-small);
   /* 🔗3 */
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --primary-color: #252525;
+  --secondary-color: white;
+  --tertiary-color: #006631;
 }
 
 /*
@@ -196,6 +203,13 @@ h6 {
 GENERAL STYLE
 ==================================
 */
+
+/* Aehestetic classes */
+
+.brand-color {
+  background-color: var(--tertiary-color);
+}
+
 
 /*
 ================================== 
