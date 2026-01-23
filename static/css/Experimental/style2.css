@@ -21,6 +21,8 @@ VARIABLES
   --secondary-color: #252525;
   --tertiary-color: #00A650;
 
+  /* PATTERNS */
+
   /* Define a radial gradient to create a single dot. 
      'circle at center' ensures the dot is centered within its tile.
      '1px' is the dot size, 'transparent 0' makes the rest of the tile transparent. */
@@ -28,33 +30,59 @@ VARIABLES
   /* Define the size of the repeating background tile; spacing between dot centers. */
   --dot-spacing: 4px 4px;
 
+
   /* LAYOUT */
 
-  /* SPACING */
+  /* Spacing */
   --spacing-extra-large: 4rem;
   --spacing-large: calc(var(--spacing-extra-large) / 2);
-  --spacing-medium: calc(var(--spacing-extra-large) / 3);
+  --spacing-medium: calc(var(--spacing-extra-large) / 2.67);
   --spacing-small: calc(var(--spacing-extra-large) / 4);
   --spacing-extra-small: 1em;
 
-  /* LINE HEIGHT */
+  /* Header */
+  --header-height: var(--spacing-extra-large);
+
+  /* Breakpoint */
+  --break-point-tablet: 640px;
+  --break-point-pc: 960px;
+
+  /* Breakout content grid */
+  --grid-max-width: 75rem;
+  --padding-inline: var(--spacing-small);
+
+  /* Auto grid */
+  --grid-max-col-count: 3;
+  --grid-min-col-size: 240px;
+  --grid-gap: var(--spacing-small);
+
+
+  /* TIPOGRAPHY */
+
+  /* Line height */
   --line-height-tight: calc(1em + var(--spacing-extra-small) * 0.1);
   --line-height-normal: calc(1em + var(--spacing-small)/2);
   --line-height-relaxed: calc(1em + var(--spacing-small));
 
-  /* BREAKPOINT */
-  --break-point-tablet: 640px;
-  --break-point-pc: 960px;
 
-  /* BREAKOUT CONTENT GRID */
-  --grid-max-width: 75rem;
-  --padding-inline: var(--spacing-small);
+  /* STYLE */
 
-  /* AUTO GRID */
-  --grid-max-col-count: 3;
-  --grid-min-col-size: 240px;
-  --grid-gap: var(--spacing-small);
-  /* 🔗3 */
+  /* Paddings */
+  --padding-width: var(--spacing-medium);
+  --padding-height: var(--spacing-small);
+
+  /* Shapes */
+
+  --radius: .5rem;
+  --small-radius: calc(var(--radius) / 2);
+  --medium-radius: calc(var(--radius) * 2);
+  --large-radius: calc(var(--radius) * 3);
+
+  /* Preset corners */
+
+  --all-corners: var(--radius);
+  --left-corners: var(--radius) 0 0 var(--radius);
+  --right-corners: 0 var(--radius) var(--radius) 0;
 }
 
 [data-theme="dark"] {
@@ -224,6 +252,13 @@ ELEMENTS
 ----------------------------------
 */
 
+/* BUTTONS */
+
+button,
+.button {
+  display: flex;
+  padding: var(--padding-height) var(--padding-width);
+}
 
 /*
 ---------------------------------- 
@@ -257,11 +292,6 @@ main>*>*+*,
 .flow>*+* {
   margin-top: var(--flow-spacing, var(--spacing-extra-small));
 }
-
-/* main {
-  padding-block: var(--spacing-medium);
-} */
-
 
 /* PADDING SEMANTIC BLOCKS */
 
@@ -352,15 +382,14 @@ PRIMARY-HEADER
   grid-template-areas:
     "logo    1fr    hamburger-menu    dark-mode"
     "nav     nav    nav               nav";
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
 
 }
 
 .primary-header__logo-link,
-.primary-header__menu-item, .primary-header__menu-link,
-.primary-header__theme-toggle,
-.primary-header__toggle {
-  padding: var(--spacing-medium);
+.primary-header__menu-link {
+  display: flex;
+  padding: var(--padding-height) var(--padding-width);
 }
 
 .primary-header__logo {
@@ -456,7 +485,7 @@ PRIMARY-HEADER
   .primary-header__menu {
     display: flex;
     flex-wrap: wrap;
-    /* gap:  clamp(var(--spacing-extra-small), 3vw, var(--spacing-small)); */
+    gap: clamp(var(--spacing-extra-small), 5vw, var(--spacing-medium));
   }
 }
 
@@ -495,6 +524,7 @@ Brutalist
 
 button:not(.primary-header button) {
   border: 1px solid var(--secondary-color);
+  border-radius: 2px;
 }
 
 .primary-header {
