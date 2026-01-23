@@ -31,13 +31,13 @@ VARIABLES
   /* LAYOUT */
 
   /* SPACING */
-  --spacing-extra-small: 1em;
-  --spacing-small: 1rem;
-  --spacing-medium: 1.5rem;
-  --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
+  --spacing-large: calc(var(--spacing-extra-large) / 2);
+  --spacing-medium: calc(var(--spacing-extra-large) / 3);
+  --spacing-small: calc(var(--spacing-extra-large) / 4);
+  --spacing-extra-small: 1em;
 
-    /* LINE HEIGHT */
+  /* LINE HEIGHT */
   --line-height-tight: calc(1em + var(--spacing-extra-small) * 0.1);
   --line-height-normal: calc(1em + var(--spacing-small)/2);
   --line-height-relaxed: calc(1em + var(--spacing-small));
@@ -114,7 +114,12 @@ body {
 }
 
 /* 4.b Add accessible line-height to headers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: var(--line-height-tight);
 }
 
@@ -239,6 +244,11 @@ LAYOUT
 ==================================
 */
 
+main {
+  min-height: 100vh;
+}
+
+
 .top-padding {
   padding-top: var(--spacing-large);
 }
@@ -338,12 +348,8 @@ PRIMARY-HEADER
 ----------------------------------
 */
 
-#nav {
-  display: none;
-}
-
-#nav.visible {
-  display: block;
+.primary-header {
+  height: var(--header-height);
 }
 
 .primary-header__layout {
@@ -365,6 +371,8 @@ PRIMARY-HEADER
   align-items: center;
 }
 
+
+
 /* DARK-MODE */
 
 .primary-header__theme-toggle {
@@ -384,6 +392,14 @@ PRIMARY-HEADER
 }
 
 /* HAMBURGER MENU */
+
+#nav {
+  display: none;
+}
+
+#nav.visible {
+  display: block;
+}
 
 .primary-header__toggle {
   grid-area: hamburger-menu;
@@ -445,7 +461,7 @@ PRIMARY-HEADER
 
 /*
 ---------------------------------- 
-PRIMARY-HEADER
+FOOTER
 ----------------------------------
 */
 
@@ -477,42 +493,23 @@ Brutalist
 */
 
 button:not(.primary-header button) {
-  border: 1px solid #000;
+  border: 1px solid var(--secondary-color);
 }
 
-
 .primary-header {
-  border-bottom: 1px solid #252525;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 footer {
-  border-top: 1px solid #252525;
+  border-top: 1px solid var(--secondary-color);
 }
 
-
-.primary-header__menu-item,
-.primary-header__toggle,
-.primary-header__logo,
-button,
-.button {
-  padding: var(--spacing-extra-small) var(--spacing-medium);
-  border-radius: 4px;
-}
-
+.dot,
 .primary-header__menu-item:hover,
 .primary-header__toggle:hover,
 .primary-header__logo:hover,
 button:hover,
 .button:hover {
-  background-image: var(--dot-pattern);
-  background-size: var(--dot-spacing);
-}
-
-main {
-  min-height: 100vh;
-}
-
-.dot {
   background-image: var(--dot-pattern);
   background-size: var(--dot-spacing);
 }
