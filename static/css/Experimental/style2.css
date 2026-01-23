@@ -347,11 +347,6 @@ SITEWIDE
 PRIMARY-HEADER
 ----------------------------------
 */
-
-.primary-header {
-  height: var(--header-height);
-}
-
 .primary-header__layout {
   display: grid;
   grid-template-areas:
@@ -359,6 +354,13 @@ PRIMARY-HEADER
     "nav     nav    nav          nav";
   grid-template-columns: auto 1fr auto;
 
+}
+
+.primary-header__logo-link,
+.primary-header__menu-item, .primary-header__menu-link,
+.primary-header__theme-toggle,
+.primary-header__toggle {
+  padding: var(--spacing-medium);
 }
 
 .primary-header__logo {
@@ -370,7 +372,6 @@ PRIMARY-HEADER
   gap: calc(var(--spacing-extra-small) /2);
   align-items: center;
 }
-
 
 
 /* DARK-MODE */
