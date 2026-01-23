@@ -350,8 +350,8 @@ PRIMARY-HEADER
 .primary-header__layout {
   display: grid;
   grid-template-areas:
-    "logo    1fr    dark-mode    hamburger-menu"
-    "nav     nav    nav          nav";
+    "logo    1fr    hamburger-menu    dark-mode"
+    "nav     nav    nav               nav";
   grid-template-columns: auto 1fr auto;
 
 }

@@ -11,7 +11,7 @@
 
   <!-- Scripts -->
   <script src="..\static\javascript\Experimental\hamburger-menu2.js" defer></script>
-  <script src="..\static\javascript\Experimental\color-theme-mode.js"defer></script>
+  <script src="..\static\javascript\Experimental\color-theme-mode.js" defer></script>
 </head>
 
 <body>
@@ -24,6 +24,11 @@
           <span>Brutal</span>
         </a>
       </div>
+
+      <!-- Hamburger menu -->
+      <button id="hamburger" class="primary-header__toggle" aria-controls="primary-header__menu" aria-expanded="false">
+        <span class="primary-header__toggle-icon" aria-hidden="true"></span>
+      </button>
 
       <!-- Navigation -->
       <nav id="nav" class="primary-header__nav">
@@ -48,12 +53,6 @@
         aria-pressed="false">
         <span class="primary-header__theme-toggle-icon" aria-hidden="true"></span>
       </button>
-
-      <!-- Hamburger menu -->
-      <button id="hamburger" class="primary-header__toggle" aria-controls="primary-header__menu" aria-expanded="false">
-        <span class="primary-header__toggle-icon" aria-hidden="true"></span>
-      </button>
-
     </div>
   </header>
 
