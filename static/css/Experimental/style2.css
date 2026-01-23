@@ -349,8 +349,8 @@ PRIMARY-HEADER
 .primary-header__layout {
   display: grid;
   grid-template-areas:
-    "logo   1fr  hamburger-menu dark-mode"
-    "nav   nav  nav nav";
+    "logo    1fr    dark-mode    hamburger-menu"
+    "nav     nav    nav          nav";
   grid-template-columns: auto 1fr auto;
 
 }
@@ -428,7 +428,7 @@ PRIMARY-HEADER
 
   .primary-header__layout {
     grid-template-areas:
-      "logo 1fr  nav dark-mode";
+      "logo    1fr    nav    dark-mode";
     grid-template-columns: auto 1fr auto;
   }
 
@@ -507,7 +507,6 @@ button:hover,
   background-image: var(--dot-pattern);
   background-size: var(--dot-spacing);
 }
-
 
 main {
   min-height: 100vh;
