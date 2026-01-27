@@ -19,7 +19,7 @@ VARIABLES
 
   --primary-color: white;
   --secondary-color: #252525;
-  --tertiary-color: #00A650;
+  --tertiary-color: #00AD57;
 
   /* PATTERNS */
 
@@ -87,9 +87,9 @@ VARIABLES
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --primary-color: #252525;
+  --primary-color: black;
   --secondary-color: white;
-  --tertiary-color: #5d4586;
+  --tertiary-color: #006633;
 }
 
 /*
@@ -485,7 +485,7 @@ PRIMARY-HEADER
   .primary-header__menu {
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(var(--spacing-extra-small), 5vw, var(--spacing-medium));
+    /* gap: clamp(var(--spacing-extra-small), 3vw, var(--spacing-small)); */
   }
 }
 
