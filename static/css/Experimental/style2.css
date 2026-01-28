@@ -19,7 +19,11 @@ VARIABLES
 
   --primary-color: white;
   --secondary-color: #252525;
-  --tertiary-color: #00AD57;
+  --tertiary-color: #00AD54;
+
+  /* WCAG AAA (Hotfix) */
+  /* It will darken tertiary-color in X% in dark-mode theme */
+  --contrast-adjustment: 20%;
 
 
   /* COLOR-SCHEME */
@@ -100,7 +104,7 @@ VARIABLES
     color-scheme: dark;
     --surface-color: var(--secondary-color);   /* dark background */
     --on-surface-color: var(--primary-color);  /* light text */
-    --accent-color: var(--tertiary-color);     /* accent stays same */
+    --accent-color: hsl(from var(--tertiary-color) h s var(--contrast-adjustment));     /* accent stays same */
   }
 }
 
@@ -116,7 +120,7 @@ VARIABLES
   color-scheme: dark;
   --surface-color: var(--secondary-color);
   --on-surface-color: var(--primary-color);
-  --accent-color: var(--tertiary-color);
+  --accent-color: hsl(from var(--tertiary-color) h s var(--contrast-adjustment));
 }
 
 
