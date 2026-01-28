@@ -445,13 +445,32 @@ PRIMARY-HEADER
   cursor: pointer;
 }
 
+/* Default: assume light mode */
 .primary-header__theme-toggle-icon::before {
   content: '☼';
 }
 
+/* System preference fallback (before JS runs) */
+@media (prefers-color-scheme: dark) {
+  .primary-header__theme-toggle-icon::before {
+    content: '☾';
+  }
+}
+
+/* Explicit theme override via data-theme attribute */
+html[data-theme="dark"] .primary-header__theme-toggle-icon::before {
+  content: '☾';
+}
+
+html[data-theme="light"] .primary-header__theme-toggle-icon::before {
+  content: '☼';
+}
+
+/* Accessibility: aria-pressed state still supported */
 .primary-header__theme-toggle[aria-pressed="true"] .primary-header__theme-toggle-icon::before {
   content: '☾';
 }
+
 
 /* HAMBURGER MENU */
 
