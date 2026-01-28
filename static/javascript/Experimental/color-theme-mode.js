@@ -1,4 +1,6 @@
-// version 3
+// version 3.1.2
+// REFACTOR: switch theme persistence from localStorage to sessionStorage
+// SCOPE  ensures that each new browsing session respects the user’s current OS/UI preference, while still allowing temporary overrides during a session.
 
 function toggleTheme() {
   const html = document.documentElement;
@@ -10,12 +12,12 @@ function toggleTheme() {
   button.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
   button.setAttribute('aria-label', `Toggle theme (${newTheme} mode active)`);
 
-  localStorage.setItem('theme', newTheme);
+  sessionStorage.setItem('theme', newTheme);
 }
 
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = sessionStorage.getItem('theme');
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
   } else {
