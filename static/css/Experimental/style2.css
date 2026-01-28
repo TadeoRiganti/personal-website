@@ -21,12 +21,20 @@ VARIABLES
   --secondary-color: #252525;
   --tertiary-color: #00AD57;
 
+
+  /* COLOR-SCHEME */
+  /* Default role mapping (Light-mode) */
+  --surface-color: var(--primary-color);       /* background surface */
+  --on-surface-color: var(--secondary-color);  /* text on surface */
+  --accent-color: var(--tertiary-color);       /* accent elements */
+
+
   /* PATTERNS */
 
   /* Define a radial gradient to create a single dot. 
      'circle at center' ensures the dot is centered within its tile.
      '1px' is the dot size, 'transparent 0' makes the rest of the tile transparent. */
-  --dot-pattern: radial-gradient(circle at center, var(--secondary-color) .5px, transparent 0);
+  --dot-pattern: radial-gradient(circle at center, var(--on-surface-color) .5px, transparent 0);
   /* Define the size of the repeating background tile; spacing between dot centers. */
   --dot-spacing: 4px 4px;
 
@@ -85,12 +93,32 @@ VARIABLES
   --right-corners: 0 var(--radius) var(--radius) 0;
 }
 
-[data-theme="dark"] {
-  color-scheme: dark;
-  --primary-color: black;
-  --secondary-color: white;
-  --tertiary-color: #006633;
+
+/* Dark mode role mapping (system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --surface-color: var(--secondary-color);   /* dark background */
+    --on-surface-color: var(--primary-color);  /* light text */
+    --accent-color: var(--tertiary-color);     /* accent stays same */
+  }
 }
+
+/* Explicit overrides when user toggles */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --surface-color: var(--primary-color);
+  --on-surface-color: var(--secondary-color);
+  --accent-color: var(--tertiary-color);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-color: var(--secondary-color);
+  --on-surface-color: var(--primary-color);
+  --accent-color: var(--tertiary-color);
+}
+
 
 /*
 ---------------------------------- 
@@ -269,7 +297,7 @@ UTILITARIAN CLASSES
 /* Aehestetic classes */
 
 .brand-color {
-  background-color: var(--tertiary-color);
+  background-color: var(--accent-color);
 }
 
 
@@ -409,7 +437,7 @@ PRIMARY-HEADER
   grid-area: dark-mode;
 
   background-color: transparent;
-  color: var(--secondary-color);
+  color: var(--on-surface-color);
   cursor: pointer;
 }
 
@@ -523,16 +551,16 @@ Brutalist
 */
 
 button:not(.primary-header button) {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--on-surface-color);
   border-radius: 2px;
 }
 
 .primary-header {
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--on-surface-color);
 }
 
 footer {
-  border-top: 1px solid var(--secondary-color);
+  border-top: 1px solid var(--on-surface-color);
 }
 
 .dot,
