@@ -307,10 +307,7 @@ button,
 
 .toc__title {
   width: 100%;
-}
-
-.toc__title-icon {
-  color: red;
+  justify-content: space-between;
 }
 
 /* Default: collapsed */
@@ -325,7 +322,6 @@ button,
   /* up arrow */
 }
 
-
 .toc__list {
   padding: var(--padding-height) var(--padding-width);
 }
@@ -333,8 +329,6 @@ button,
 .toc__list-link {
   display: flex;
 }
-
-
 
 
 /*
