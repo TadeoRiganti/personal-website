@@ -85,6 +85,7 @@ VARIABLES
   /* Paddings */
   --padding-width: var(--spacing-medium);
   --padding-height: var(--spacing-small);
+  --minimum-padding: calc(var(--spacing-small) /2 );
 
   /* Shapes */
 
@@ -328,7 +329,37 @@ button,
 
 .toc__list-link {
   display: flex;
+  padding: var(--minimum-padding) 0 ;
 }
+
+.toc__list-item {
+  list-style-type: none;
+}
+
+.toc__list-item--level-h2 {
+  margin-left: 0; /* indent one step */
+}
+
+.toc__list-item--level-h3 {
+  margin-left: var(--spacing-medium); /* indent deeper */
+}
+
+.toc__list-item--level-h4 {
+  margin-left: calc(var(--spacing-medium) * 2); /* indent deeper */
+}
+
+.toc__list-item--level-h5 {
+  margin-left: calc(var(--spacing-medium) * 3); /* indent deeper */
+}
+
+.toc__list-item--level-h6 {
+  margin-left: calc(var(--spacing-medium) * 4); /* indent deeper */
+}
+
+.toc__list-item--level-h7 {
+  margin-left: calc(var(--spacing-medium) * 5); /* indent deeper */
+}
+
 
 
 /*
