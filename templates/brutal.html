@@ -59,6 +59,18 @@
   </header>
 
   <main class="content-grid">
+    <!-- Table of Contents -->
+    <nav class="toc" aria-label="Table of contents">
+      <!-- Title doubles as toggle -->
+      <button class="toc__title" aria-expanded="false" aria-controls="toc-list">
+        On this page
+      </button>
+
+      <!-- Collapsible list -->
+      <ul id="toc-list" class="toc__list"></ul>
+    </nav>
+
+
     <section>
       <h1>This is a Neo-Brutalist Website.</h1>
       <p>And it's fucking awesome</p>
@@ -72,11 +84,6 @@
         internet into a giant, identical shopping mall.
       </p>
     </section>
-    <!-- Table of Contents -->
-<nav class="toc" aria-label="Table of contents">
-  <ul class="toc__list"></ul>
-</nav>
-
     <section class="brand-color full-width">
       <h2>Why this works</h2>
       <ul class="flow">
