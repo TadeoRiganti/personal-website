@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!heading.id) heading.id = `section-${index + 1}`;
 
     const li = document.createElement("li");
-    li.className = "toc__list-item";
+    li.className = `toc__list-item toc__list-item--level-${heading.tagName.toLowerCase()}`;
 
     const a = document.createElement("a");
     a.className = "toc__list-link";
