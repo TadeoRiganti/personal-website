@@ -427,6 +427,10 @@ UTILITARIAN CLASSES
   background-color: var(--accent-color);
 }
 
+.center {
+  text-align: center;
+}
+
 
 /*
 ================================== 
