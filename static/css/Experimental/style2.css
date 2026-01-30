@@ -28,9 +28,12 @@ VARIABLES
 
   /* COLOR-SCHEME */
   /* Default role mapping (Light-mode) */
-  --surface-color: var(--primary-color);       /* background surface */
-  --on-surface-color: var(--secondary-color);  /* text on surface */
-  --accent-color: var(--tertiary-color);       /* accent elements */
+  --surface-color: var(--primary-color);
+  /* background surface */
+  --on-surface-color: var(--secondary-color);
+  /* text on surface */
+  --accent-color: var(--tertiary-color);
+  /* accent elements */
 
 
   /* PATTERNS */
@@ -102,9 +105,12 @@ VARIABLES
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --surface-color: var(--secondary-color);   /* dark background */
-    --on-surface-color: var(--primary-color);  /* light text */
-    --accent-color: hsl(from var(--tertiary-color) h s var(--contrast-adjustment));     /* accent stays same */
+    --surface-color: var(--secondary-color);
+    /* dark background */
+    --on-surface-color: var(--primary-color);
+    /* light text */
+    --accent-color: hsl(from var(--tertiary-color) h s var(--contrast-adjustment));
+    /* accent stays same */
   }
 }
 
@@ -308,7 +314,19 @@ button,
 }
 
 .toc__list-link {
-    display: flex;
+  display: flex;
+}
+
+/* Default: collapsed */
+.toc__title[aria-expanded="false"] .toc__icon::before {
+  content: "▽";
+  /* down arrow */
+}
+
+/* Expanded */
+.toc__title[aria-expanded="true"] .toc__icon::before {
+  content: "△";
+  /* up arrow */
 }
 
 
@@ -347,7 +365,10 @@ main>*>*+*,
 }
 
 /* Neutralize margin for TOC list */
-.toc__title + .toc__list { margin-top: 0; /* cancel the flow spacing */ }
+.toc__title+.toc__list {
+  margin-top: 0;
+  /* cancel the flow spacing */
+}
 
 /* PADDING SEMANTIC BLOCKS */
 
