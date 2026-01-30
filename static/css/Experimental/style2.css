@@ -309,6 +309,23 @@ button,
   width: 100%;
 }
 
+.toc__title-icon {
+  color: red;
+}
+
+/* Default: collapsed */
+.toc__title[aria-expanded="false"] .toc__title-icon::before {
+  content: "▽";
+  /* down arrow */
+}
+
+/* Expanded */
+.toc__title[aria-expanded="true"] .toc__title-icon::before {
+  content: "△";
+  /* up arrow */
+}
+
+
 .toc__list {
   padding: var(--padding-height) var(--padding-width);
 }
@@ -317,17 +334,6 @@ button,
   display: flex;
 }
 
-/* Default: collapsed */
-.toc__title[aria-expanded="false"] .toc__icon::before {
-  content: "▽";
-  /* down arrow */
-}
-
-/* Expanded */
-.toc__title[aria-expanded="true"] .toc__icon::before {
-  content: "△";
-  /* up arrow */
-}
 
 
 
