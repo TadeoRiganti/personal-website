@@ -292,6 +292,27 @@ button,
   padding: var(--padding-height) var(--padding-width);
 }
 
+
+/* TABLE OF CONTENTS */
+
+.toc {
+  border: 1px solid var(--on-surface-color);
+}
+
+.toc__title {
+  width: 100%;
+}
+
+.toc__list {
+  padding: var(--padding-height) var(--padding-width);
+}
+
+.toc__list-link {
+    display: flex;
+}
+
+
+
 /*
 ---------------------------------- 
 UTILITARIAN CLASSES
@@ -324,6 +345,9 @@ main>*>*+*,
 .flow>*+* {
   margin-top: var(--flow-spacing, var(--spacing-extra-small));
 }
+
+/* Neutralize margin for TOC list */
+.toc__title + .toc__list { margin-top: 0; /* cancel the flow spacing */ }
 
 /* PADDING SEMANTIC BLOCKS */
 
@@ -573,14 +597,17 @@ Brutalist
 ==================================
 */
 
-button:not(.primary-header button) {
+button:not(.primary-header button, .toc__title) {
   border: 1px solid var(--on-surface-color);
   border-radius: 2px;
 }
 
-.primary-header {
+.primary-header,
+.toc__title,
+footer {
   border-bottom: 1px solid var(--on-surface-color);
 }
+
 
 footer {
   border-top: 1px solid var(--on-surface-color);
@@ -590,6 +617,8 @@ footer {
 .primary-header__menu-item:hover,
 .primary-header__toggle:hover,
 .primary-header__logo:hover,
+.toc__title:hover,
+.toc__list-item:hover,
 button:hover,
 .button:hover {
   background-image: var(--dot-pattern);
