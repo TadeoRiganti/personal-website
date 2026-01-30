@@ -87,6 +87,8 @@ VARIABLES
   --padding-height: var(--spacing-small);
   --minimum-padding: calc(var(--spacing-small) /2);
 
+  --card-padding: var(--spacing-large);
+
   /* Shapes */
 
   --radius: 3px;
@@ -371,7 +373,6 @@ button,
 
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: var(--padding-height);
   border-radius: var(--radius);
   box-shadow: 0 0 0.5rem hsl(0 0% 0% / 35%);
