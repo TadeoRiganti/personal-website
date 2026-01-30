@@ -362,63 +362,62 @@ button,
 
 /* CARDS */
 
-.smol-css-grid {
- padding: 0;
+.cards-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
 }
 
-.smol-card-component {
-  --img-ratio: 3/2;
+.card {
+  --img-aspect: 3/2;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  /* Supported for flexbox in modern browsers since April 2021 */
   gap: var(--padding-height);
-  box-shadow: 0 0 0.5rem hsl(0 0% 0% / 35%);
   border-radius: var(--radius);
+  box-shadow: 0 0 0.5rem hsl(0 0% 0% / 35%);
 }
 
-.smol-card-component > img {
-  aspect-ratio: var(--img-ratio);
+/* Explicit BEM elements */
+.card__image {
+  aspect-ratio: var(--img-aspect);
   object-fit: cover;
   width: 100%;
 }
 
-.smol-card-component > img:first-child {
+.card__title,
+.card__text,
+.card__link  {
+  margin: 0 1rem;
+}
+
+.card__text {
+  text-wrap: pretty;
+}
+
+.card__link {
+  align-self: start;
+}
+
+/* Hybrid: structural selectors for dynamic shaping */
+.card > :first-child {
+  margin-top: 1rem;
+}
+
+.card > :last-child {
+  margin-bottom: 1rem;
+}
+
+.card > img:first-child {
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
-.smol-card-component > img:last-child {
+.card > img:last-child {
   border-radius: 0 0 var(--radius) var(--radius);
   margin-top: auto;
 }
 
-.smol-card-component > :not(img) {
-  margin-left: var(--spacing-small);
-  margin-right: var(--spacing-small);
-
-  /* Prevent typography "orphans" */
-  text-wrap: pretty;
-}
-
-.smol-card-component > :not(img):first-child {
-  margin-top: var(--spacing-small);
-}
-
-/* Enhanced `:not()` accepts a selector list,
-but as a fallback you can chain `:not()` instead */
-.smol-card-component > :last-of-type:not(img, h2, h3, h4) {
-  margin-bottom: var(--spacing-small);
-}
-
-.smol-card-component > :not(h2, h3, h4) {
-  font-size: inherit;
-}
-
-.smol-card-component > a {
-  align-self: start;
-}
 
 /*
 ---------------------------------- 
@@ -734,20 +733,20 @@ footer {
   border-top: 1px solid var(--on-surface-color);
 }
 
-.smol-card-component {
+.card {
   box-shadow: none;
   border: 1px solid var(--on-surface-color);
 }
 
-.smol-card-component > img:not(:first-child, :last-child) {
+.card > img:not(:first-child, :last-child) {
   border-block: 1px dashed var(--on-surface-color);
 }
 
-.smol-card-component > img:first-child {
+.card > img:first-child {
   border-bottom: 1px dashed var(--on-surface-color);
 }
 
-.smol-card-component > img:last-child {
+.card > img:last-child {
   border-top: 1px dashed var(--on-surface-color);
 }
 
