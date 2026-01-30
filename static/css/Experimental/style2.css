@@ -363,8 +363,6 @@ button,
 /* CARDS */
 
 .cards-grid {
-  display: grid;
-  gap: 1rem;
   padding: 0;
 }
 
@@ -373,7 +371,7 @@ button,
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: var(--padding-height);
   border-radius: var(--radius);
   box-shadow: 0 0 0.5rem hsl(0 0% 0% / 35%);
@@ -388,35 +386,32 @@ button,
 
 .card__title,
 .card__text,
-.card__link  {
-  margin: 0 1rem;
+.card__action {
+  margin: 0 var(--spacing-small);
 }
 
 .card__text {
   text-wrap: pretty;
 }
 
-.card__link {
+.card__action {
   align-self: start;
-}
-
-/* Hybrid: structural selectors for dynamic shaping */
-.card > :first-child {
-  margin-top: 1rem;
-}
-
-.card > :last-child {
+  margin-top: auto;
+  /* always pushes link to bottom */
+  margin-left: 1rem;
+  margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
-.card > img:first-child {
-  border-radius: var(--radius) var(--radius) 0 0;
+/* Hybrid: structural selectors for dynamic shaping */
+.card> :first-child {
+  margin-top: var(--spacing-small);
 }
 
-.card > img:last-child {
-  border-radius: 0 0 var(--radius) var(--radius);
-  margin-top: auto;
+.card> :last-child {
+  margin-bottom: var(--spacing-small);
 }
+
 
 
 /*
@@ -710,7 +705,7 @@ button:not(.primary-header button, .toc__title) {
   background-color: rgba(from var(--on-surface-color) r g b / .1);
   border: 1px solid var(--on-surface-color);
   border-radius: 3px;
-  padding: calc(var(--minimum-padding) /2) var(--minimum-padding) ;
+  padding: calc(var(--minimum-padding) /2) var(--minimum-padding);
 }
 
 /* .button:hover,
@@ -738,15 +733,15 @@ footer {
   border: 1px solid var(--on-surface-color);
 }
 
-.card > img:not(:first-child, :last-child) {
+.card>img:not(:first-child, :last-child) {
   border-block: 1px dashed var(--on-surface-color);
 }
 
-.card > img:first-child {
+.card>img:first-child {
   border-bottom: 1px dashed var(--on-surface-color);
 }
 
-.card > img:last-child {
+.card>img:last-child {
   border-top: 1px dashed var(--on-surface-color);
 }
 
@@ -761,4 +756,3 @@ button:hover {
   background-image: var(--dot-pattern);
   background-size: var(--dot-spacing);
 }
-
