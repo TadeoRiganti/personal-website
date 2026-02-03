@@ -413,6 +413,7 @@ button,
   text-wrap: pretty;
 }
 
+/* Used for internal interaction */
 .card__action {
   align-self: start;
   margin-top: auto;
