@@ -687,7 +687,7 @@ html[data-theme="light"] .primary-header__theme-toggle-icon::before {
 
 /* Tablet & Desktop*/
 
-@media (min-width: 640px) {
+@media (min-width: 650px) {
   #nav {
     display: block;
   }
