@@ -21,6 +21,8 @@ VARIABLES
   --secondary-color: #252525;
   --tertiary-color: #00AD54;
 
+  --focus-color: magenta;
+
   /* WCAG AAA (Hotfix) */
   /* It will darken tertiary-color in X% in dark-mode theme */
   --contrast-adjustment: 20%;
@@ -45,6 +47,10 @@ VARIABLES
   /* Define the size of the repeating background tile; spacing between dot centers. */
   --dot-spacing: 4px 4px;
 
+  /* OTHER */
+
+    /* Focus style */
+  --focus-style: 3px solid var(--focus-color);
 
   /* LAYOUT */
 
@@ -54,6 +60,9 @@ VARIABLES
   --spacing-medium: calc(var(--spacing-extra-large) / 2.67);
   --spacing-small: calc(var(--spacing-extra-large) / 4);
   --spacing-extra-small: 1em;
+
+  /* Focus */
+  --outset-margin: 0.2rem;
 
   /* Header */
   --header-height: var(--spacing-extra-large);
@@ -113,7 +122,9 @@ VARIABLES
     --on-surface-color: var(--primary-color);
     /* light text */
     --accent-color: hsl(from var(--tertiary-color) h s var(--contrast-adjustment));
-    /* accent stays same */
+    /* 20% more darker */
+
+    --focus-color: #d71ef7;
   }
 }
 
@@ -287,6 +298,13 @@ GENERAL STYLE
 ==================================
 */
 
+:focus-visible {
+  outline: 3px solid var(--focus-color);
+  border-radius: var(--radius);
+  outline-offset: var(--outset-margin);
+}
+
+
 /*
 ---------------------------------- 
 ELEMENTS
@@ -405,12 +423,21 @@ button,
 }
 
 /* Hybrid: structural selectors for dynamic shaping */
-.card> :first-child {
+.card > :first-child {
   margin-top: var(--spacing-small);
 }
 
-.card> :last-child {
+.card > :last-child {
   margin-bottom: var(--spacing-small);
+}
+
+.card:focus-within {
+  outline: var(--focus-style);
+  outline-offset: var(--outset-margin);
+}
+
+.card > a:focus {
+  outline: transparent;
 }
 
 
