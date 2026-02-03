@@ -49,7 +49,7 @@ VARIABLES
 
   /* OTHER */
 
-    /* Focus style */
+  /* Focus style */
   --focus-style: 3px solid var(--focus-color);
 
   /* LAYOUT */
@@ -423,12 +423,16 @@ button,
   margin-bottom: 1rem;
 }
 
+
+
+
+
 /* Hybrid: structural selectors for dynamic shaping */
-.card > :first-child {
+.card> :first-child {
   margin-top: var(--spacing-small);
 }
 
-.card > :last-child {
+.card> :last-child {
   margin-bottom: var(--spacing-small);
 }
 
@@ -437,7 +441,7 @@ button,
   outline-offset: var(--outset-margin);
 }
 
-.card > a:focus {
+.card>a:focus {
   outline: transparent;
 }
 
