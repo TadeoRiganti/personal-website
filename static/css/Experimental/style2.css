@@ -62,7 +62,7 @@ VARIABLES
   --spacing-extra-small: 1em;
 
   /* Focus */
-  --outset-margin: 0.2rem;
+  --outset-margin: 0.1rem;
 
   /* Header */
   --header-height: var(--spacing-extra-large);
