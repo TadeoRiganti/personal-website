@@ -738,17 +738,17 @@ footer {
   border: 1px solid var(--on-surface-color);
 }
 
-.card>img:not(:first-child, :last-child) {
+/* .card>img:not(:first-child, :last-child) {
   border-block: 1px dashed var(--on-surface-color);
-}
+} */
 
-.card>img:first-child {
+/* .card>img:first-child {
   border-bottom: 1px dashed var(--on-surface-color);
 }
 
 .card>img:last-child {
   border-top: 1px dashed var(--on-surface-color);
-}
+} */
 
 .dot,
 .primary-header__menu-item:hover,
