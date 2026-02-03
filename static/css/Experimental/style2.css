@@ -581,13 +581,18 @@ SKIP-LINK
 
 .skip-link {
   position: absolute;
-  top: -40px; /* hide off-screen */
+  top: -40px;
+  /* hide off-screen */
   padding: var(--padding-height) var(--padding-width);
 }
 
 .skip-link:focus {
-  top: 0; /* bring into view */
+  background-color: var(--surface-color);
+  top: 0;
+  /* bring into view */
 }
+
+
 
 /*
 ---------------------------------- 
