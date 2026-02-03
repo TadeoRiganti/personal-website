@@ -575,6 +575,22 @@ SITEWIDE
 
 /*
 ---------------------------------- 
+SKIP-LINK
+----------------------------------
+*/
+
+.skip-link {
+  position: absolute;
+  top: -40px; /* hide off-screen */
+  padding: var(--padding-height) var(--padding-width);
+}
+
+.skip-link:focus {
+  top: 0; /* bring into view */
+}
+
+/*
+---------------------------------- 
 PRIMARY-HEADER
 ----------------------------------
 */
