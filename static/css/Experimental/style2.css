@@ -404,6 +404,12 @@ button,
   color: inherit;
 }
 
+/* Hotfix */
+/* Removes style to li elements if they contains a .card--link class */
+li:has(.card--link) {
+  list-style: none;
+}
+
 /* Explicit BEM elements */
 .card__image {
   aspect-ratio: var(--img-aspect);
